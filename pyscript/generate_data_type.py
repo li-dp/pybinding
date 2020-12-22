@@ -74,13 +74,12 @@ def _process_define(line):
     return py_line
 
 
-def genDataType(dataTypeHeader):
+def gen_data_type(cpp_datatype_header, datatype_py):
     """主函数"""
     try:
-        import os
-        encoding = chardet.detect(open(dataTypeHeader, 'rb').read())['encoding']
-        fcpp = open(dataTypeHeader,'r', encoding=encoding)
-        fpy = open('femasDataType.py', 'w', encoding='utf-8')
+        encoding = chardet.detect(open(cpp_datatype_header, 'rb').read())['encoding']
+        fcpp = open(cpp_datatype_header,'r', encoding=encoding)
+        fpy = open(datatype_py, 'w', encoding='utf-8')
 
         fpy.write('# encoding: UTF-8\n')
         fpy.write('\n')
@@ -97,10 +96,10 @@ def genDataType(dataTypeHeader):
         fcpp.close()
         fpy.close()
 
-        print('data_type.py生成过程完成')
+        print(f'{datatype_py}生成过程完成')
     except Exception as excp:
         print(str(excp))
         traceback.print_exc()
-        print('data_type.py生成过程出错')
+        print(f'{datatype_py}生成过程出错')
 
 

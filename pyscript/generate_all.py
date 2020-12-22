@@ -8,11 +8,14 @@ import os
 import traceback
 import config
 
-from generate_data_type import genDataType
-genDataType(config.cpp_api_datatype)
+from generate_data_type import gen_data_type
+from generate_struct import gen_struct
 
-from generate_struct import genStruct
-genStruct(config.cpp_api_struct)
+gen_data_type(config.md_api_datatype_header, config.md_datatype_py)
+gen_struct(config.md_api_struct_header, config.md_datatype_py, config.md_struct_py)
+
+gen_data_type(config.td_api_datatype_header, config.td_datatype_py)
+gen_struct(config.td_api_struct_header, config.td_datatype_py, config.td_struct_py)
 
 from generate_cppfiles import genCppFiles
 genCppFiles(config.cpp_api_md, apiName='MdApi',

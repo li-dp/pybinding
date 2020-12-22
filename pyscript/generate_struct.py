@@ -3,14 +3,15 @@
 import os
 import traceback
 import chardet
-# genDataType会生成DataType.py
-from femasDataType import *
+import config
+import importlib
 
-def genStruct(dataStructHeader):
+def gen_struct(cpp_struct_header, datatype_py,  struct_py):
     """主函数"""
-    encoding = chardet.detect(open(dataStructHeader, 'rb').read())['encoding']
-    fcpp = open(dataStructHeader, 'r', encoding=encoding)
-    fpy = open('femasDataStruct.py', 'w', encoding='utf-8')
+    dt = importlib.import_module(datatype_py.replace(".py", ""))
+    encoding = chardet.detect(open(cpp_struct_header, 'rb').read())['encoding']
+    fcpp = open(cpp_struct_header, 'r', encoding=encoding)
+    fpy = open(struct_py, 'w', encoding='utf-8')
 
     fpy.write('# encoding: UTF-8\n')
     fpy.write('\n')
@@ -38,7 +39,7 @@ def genStruct(dataStructHeader):
             elif '\t' in line and 'Type' in line and '///' not in line:
                 content = line.split('\t')
                 typedef = content[1]
-                type_ = typedefDict[typedef]
+                type_ = dt.typedefDict[typedef]
                 variable = content[2]
                 variable = variable.replace(';\r\n', "")
                 variable = variable.replace(';\n', "")
