@@ -1,12 +1,12 @@
-/////////////////////////////////////////////////////////////////////////
+ï»¿/////////////////////////////////////////////////////////////////////////
 ///@system QuantDo Platform
-///@company É½Î÷Ö¤È¯¹É·İÓĞÏŞ¹«Ë¾  ½ğÈÚÑÜÉú²úÆ·²¿
-///@author ¹ËºÆ
+///@company å±±è¥¿è¯åˆ¸è‚¡ä»½æœ‰é™å…¬å¸  é‡‘èè¡ç”Ÿäº§å“éƒ¨
+///@author é¡¾æµ©
 ///@file FocusFtdcTraderApi.h
-///@brief ¶¨ÒåÁË¿Í»§¶Ë½Ó¿Ú
+///@brief å®šä¹‰äº†å®¢æˆ·ç«¯æ¥å£
 ///@history
-///20150520	ĞìÖÒ»ª	´´½¨¸ÃÎÄ¼ş
-///20170517	¹ËºÆ	Ôö¼ÓÁËÆÚÈ¨×öÊĞÏà¹Ø½Ó¿Ú
+///20150520	å¾å¿ å	åˆ›å»ºè¯¥æ–‡ä»¶
+///20170517	é¡¾æµ©	å¢åŠ äº†æœŸæƒåšå¸‚ç›¸å…³æ¥å£
 /////////////////////////////////////////////////////////////////////////
 
 #if !defined(FOCUS_FTDCTRADERAPI_H)
@@ -31,268 +31,268 @@
 class CFocusFtdcTraderSpi
 {
 public:
-	///µ±¿Í»§¶ËÓë½»Ò×ºóÌ¨½¨Á¢ÆğÍ¨ĞÅÁ¬½ÓÊ±£¨»¹Î´µÇÂ¼Ç°£©£¬¸Ã·½·¨±»µ÷ÓÃ¡£
+	///å½“å®¢æˆ·ç«¯ä¸äº¤æ˜“åå°å»ºç«‹èµ·é€šä¿¡è¿æ¥æ—¶ï¼ˆè¿˜æœªç™»å½•å‰ï¼‰ï¼Œè¯¥æ–¹æ³•è¢«è°ƒç”¨ã€‚
 	virtual void OnFrontConnected(){};
 	
-	///µ±¿Í»§¶ËÓë½»Ò×ºóÌ¨Í¨ĞÅÁ¬½Ó¶Ï¿ªÊ±£¬¸Ã·½·¨±»µ÷ÓÃ¡£µ±·¢ÉúÕâ¸öÇé¿öºó£¬API»á×Ô¶¯ÖØĞÂÁ¬½Ó£¬¿Í»§¶Ë¿É²»×ö´¦Àí¡£
-	///@param nReason ´íÎóÔ­Òò
-	///        0x1001 ÍøÂç¶ÁÊ§°Ü
-	///        0x1002 ÍøÂçĞ´Ê§°Ü
-	///        0x2001 ½ÓÊÕĞÄÌø³¬Ê±
-	///        0x2002 ·¢ËÍĞÄÌøÊ§°Ü
-	///        0x2003 ÊÕµ½´íÎó±¨ÎÄ
+	///å½“å®¢æˆ·ç«¯ä¸äº¤æ˜“åå°é€šä¿¡è¿æ¥æ–­å¼€æ—¶ï¼Œè¯¥æ–¹æ³•è¢«è°ƒç”¨ã€‚å½“å‘ç”Ÿè¿™ä¸ªæƒ…å†µåï¼ŒAPIä¼šè‡ªåŠ¨é‡æ–°è¿æ¥ï¼Œå®¢æˆ·ç«¯å¯ä¸åšå¤„ç†ã€‚
+	///@param nReason é”™è¯¯åŸå› 
+	///        0x1001 ç½‘ç»œè¯»å¤±è´¥
+	///        0x1002 ç½‘ç»œå†™å¤±è´¥
+	///        0x2001 æ¥æ”¶å¿ƒè·³è¶…æ—¶
+	///        0x2002 å‘é€å¿ƒè·³å¤±è´¥
+	///        0x2003 æ”¶åˆ°é”™è¯¯æŠ¥æ–‡
 	virtual void OnFrontDisconnected(int nReason){};
 		
-	///ĞÄÌø³¬Ê±¾¯¸æ¡£µ±³¤Ê±¼äÎ´ÊÕµ½±¨ÎÄÊ±£¬¸Ã·½·¨±»µ÷ÓÃ¡£
-	///@param nTimeLapse ¾àÀëÉÏ´Î½ÓÊÕ±¨ÎÄµÄÊ±¼ä
+	///å¿ƒè·³è¶…æ—¶è­¦å‘Šã€‚å½“é•¿æ—¶é—´æœªæ”¶åˆ°æŠ¥æ–‡æ—¶ï¼Œè¯¥æ–¹æ³•è¢«è°ƒç”¨ã€‚
+	///@param nTimeLapse è·ç¦»ä¸Šæ¬¡æ¥æ”¶æŠ¥æ–‡çš„æ—¶é—´
 	virtual void OnHeartBeatWarning(int nTimeLapse){};
 	
-	///±¨ÎÄ»Øµ÷¿ªÊ¼Í¨Öª¡£µ±APIÊÕµ½Ò»¸ö±¨ÎÄºó£¬Ê×ÏÈµ÷ÓÃ±¾·½·¨£¬È»ºóÊÇ¸÷Êı¾İÓòµÄ»Øµ÷£¬×îºóÊÇ±¨ÎÄ»Øµ÷½áÊøÍ¨Öª¡£
-	///@param nTopicID Ö÷Ìâ´úÂë£¨ÈçË½ÓĞÁ÷¡¢¹«¹²Á÷¡¢ĞĞÇéÁ÷µÈ£©
-	///@param nSequenceNo ±¨ÎÄĞòºÅ
+	///æŠ¥æ–‡å›è°ƒå¼€å§‹é€šçŸ¥ã€‚å½“APIæ”¶åˆ°ä¸€ä¸ªæŠ¥æ–‡åï¼Œé¦–å…ˆè°ƒç”¨æœ¬æ–¹æ³•ï¼Œç„¶åæ˜¯å„æ•°æ®åŸŸçš„å›è°ƒï¼Œæœ€åæ˜¯æŠ¥æ–‡å›è°ƒç»“æŸé€šçŸ¥ã€‚
+	///@param nTopicID ä¸»é¢˜ä»£ç ï¼ˆå¦‚ç§æœ‰æµã€å…¬å…±æµã€è¡Œæƒ…æµç­‰ï¼‰
+	///@param nSequenceNo æŠ¥æ–‡åºå·
 	virtual void OnPackageStart(int nTopicID, int nSequenceNo){};
 	
-	///±¨ÎÄ»Øµ÷½áÊøÍ¨Öª¡£µ±APIÊÕµ½Ò»¸ö±¨ÎÄºó£¬Ê×ÏÈµ÷ÓÃ±¨ÎÄ»Øµ÷¿ªÊ¼Í¨Öª£¬È»ºóÊÇ¸÷Êı¾İÓòµÄ»Øµ÷£¬×îºóµ÷ÓÃ±¾·½·¨¡£
-	///@param nTopicID Ö÷Ìâ´úÂë£¨ÈçË½ÓĞÁ÷¡¢¹«¹²Á÷¡¢ĞĞÇéÁ÷µÈ£©
-	///@param nSequenceNo ±¨ÎÄĞòºÅ
+	///æŠ¥æ–‡å›è°ƒç»“æŸé€šçŸ¥ã€‚å½“APIæ”¶åˆ°ä¸€ä¸ªæŠ¥æ–‡åï¼Œé¦–å…ˆè°ƒç”¨æŠ¥æ–‡å›è°ƒå¼€å§‹é€šçŸ¥ï¼Œç„¶åæ˜¯å„æ•°æ®åŸŸçš„å›è°ƒï¼Œæœ€åè°ƒç”¨æœ¬æ–¹æ³•ã€‚
+	///@param nTopicID ä¸»é¢˜ä»£ç ï¼ˆå¦‚ç§æœ‰æµã€å…¬å…±æµã€è¡Œæƒ…æµç­‰ï¼‰
+	///@param nSequenceNo æŠ¥æ–‡åºå·
 	virtual void OnPackageEnd(int nTopicID, int nSequenceNo){};
 	
 
-	///´íÎóÓ¦´ğ
+	///é”™è¯¯åº”ç­”
 	virtual void OnRspError(CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {};
 
-	///ÓÃ»§µÇÂ¼Ó¦´ğ
+	///ç”¨æˆ·ç™»å½•åº”ç­”
 	virtual void OnRspUserLogin(CFocusFtdcRspUserLoginField *pRspUserLogin, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {};
 
-	///ÓÃ»§ÍË³öÓ¦´ğ
+	///ç”¨æˆ·é€€å‡ºåº”ç­”
 	virtual void OnRspUserLogout(CFocusFtdcRspUserLogoutField *pRspUserLogout, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {};
 
-	///±¨µ¥Â¼ÈëÓ¦´ğ
+	///æŠ¥å•å½•å…¥åº”ç­”
 	virtual void OnRspOrderInsert(CFocusFtdcInputOrderField *pInputOrder, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {};
 
-	///±¨µ¥²Ù×÷Ó¦´ğ
+	///æŠ¥å•æ“ä½œåº”ç­”
 	virtual void OnRspOrderAction(CFocusFtdcOrderActionField *pOrderAction, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {};
 
-	///³É½»»Ø±¨
+	///æˆäº¤å›æŠ¥
 	virtual void OnRtnTrade(CFocusFtdcTradeField *pTrade) {};
 
-	///±¨µ¥»Ø±¨
+	///æŠ¥å•å›æŠ¥
 	virtual void OnRtnOrder(CFocusFtdcOrderField *pOrder) {};
 
-	///ºÏÔ¼½»Ò××´Ì¬Í¨Öª
+	///åˆçº¦äº¤æ˜“çŠ¶æ€é€šçŸ¥
 	virtual void OnRtnInstrumentStatus(CFocusFtdcInstrumentStatusField *pInstrumentStatus) {};
 
-	///¾¯¸æÏûÏ¢Í¨Öª
+	///è­¦å‘Šæ¶ˆæ¯é€šçŸ¥
 	virtual void OnRtnMessageNotify(CFocusFtdcMessageNotifyField *pMessageNotify) {};
 
-	///±¨µ¥²éÑ¯Ó¦´ğ
+	///æŠ¥å•æŸ¥è¯¢åº”ç­”
 	virtual void OnRspQryOrder(CFocusFtdcOrderField *pOrder, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {};
 
-	///³É½»µ¥²éÑ¯Ó¦´ğ
+	///æˆäº¤å•æŸ¥è¯¢åº”ç­”
 	virtual void OnRspQryTrade(CFocusFtdcTradeField *pTrade, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {};
 
-	///ºÏÔ¼²éÑ¯Ó¦´ğ
+	///åˆçº¦æŸ¥è¯¢åº”ç­”
 	virtual void OnRspQryInstrument(CFocusFtdcRspInstrumentField *pRspInstrument, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {};
 
-	///½»Ò×Ëù²éÑ¯Ó¦´ğ
+	///äº¤æ˜“æ‰€æŸ¥è¯¢åº”ç­”
 	virtual void OnRspQryExchange(CFocusFtdcRspExchangeField *pRspExchange, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {};
 
-	///Í¶×ÊÕß³Ö²Ö²éÑ¯Ó¦´ğ
+	///æŠ•èµ„è€…æŒä»“æŸ¥è¯¢åº”ç­”
 	virtual void OnRspQryInvestorPosition(CFocusFtdcRspInvestorPositionField *pRspInvestorPosition, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {};
 
-	///¶©ÔÄÖ÷ÌâÓ¦´ğ
+	///è®¢é˜…ä¸»é¢˜åº”ç­”
 	virtual void OnRspSubscribeTopic(CFocusFtdcDisseminationField *pDissemination, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {};
 
-	///Ö÷Ìâ²éÑ¯Ó¦´ğ
+	///ä¸»é¢˜æŸ¥è¯¢åº”ç­”
 	virtual void OnRspQryTopic(CFocusFtdcDisseminationField *pDissemination, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {};
 
-	///²úÆ·Ó¦´ğ
+	///äº§å“åº”ç­”
 	virtual void OnRspQryProduct(CFocusFtdcRspProductField *pRspProduct, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {};
 
-	///×öÊĞÈÕÖ¾ÍÆËÍ
+	///åšå¸‚æ—¥å¿—æ¨é€
 	virtual void OnRtnStrategyLog(CFocusFtdcStrategyLogField *pStrategyLog) {};
 
-	///Í¶×ÊÕß³Ö²ÖÍÆËÍ
+	///æŠ•èµ„è€…æŒä»“æ¨é€
 	virtual void OnRtnInvestorPosition(CFocusFtdcRspInvestorPositionField *pRspInvestorPosition) {};
 
-	///ĞÂÄ¸µ¥ĞÅÏ¢ÍÆËÍÍ¨Öª
+	///æ–°æ¯å•ä¿¡æ¯æ¨é€é€šçŸ¥
 	virtual void OnRtnParentOrder(CFocusFtdcParentOrderField *pParentOrder) {};
 
-	///Ä¸µ¥ĞÅÏ¢²Ù×÷Í¨Öª
+	///æ¯å•ä¿¡æ¯æ“ä½œé€šçŸ¥
 	virtual void OnRtnParentOrderAction(CFocusFtdcParentOrderActionField *pParentOrderAction) {};
 
-	///Ä¸µ¥ĞÅÏ¢ĞŞ¸ÄÍ¨Öª
+	///æ¯å•ä¿¡æ¯ä¿®æ”¹é€šçŸ¥
 	virtual void OnRtnAmendParentOrder(CFocusFtdcAmendParentOrderField *pAmendParentOrder) {};
 
-	///Ä¸µ¥²Ù×÷ÊÖ¶¯²Ù×÷ĞÅÏ¢
+	///æ¯å•æ“ä½œæ‰‹åŠ¨æ“ä½œä¿¡æ¯
 	virtual void OnRtnExtraManualParentOrder(CFocusFtdcExtraManualParentOrderField *pExtraManualParentOrder) {};
 
-	///ÊĞ³¡²úÆ·½»Ò×Ê±¼ä²éÑ¯Ó¦´ğ
+	///å¸‚åœºäº§å“äº¤æ˜“æ—¶é—´æŸ¥è¯¢åº”ç­”
 	virtual void OnRspQryMarketTradingTime(CFocusFtdcMarketTradingPeriodInfoField *pMarketTradingPeriodInfo, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {};
 
-	///¹ÉÆ±ÅúÁ¿±¨µ¥Â¼ÈëÇëÇóÓ¦´ğ
+	///è‚¡ç¥¨æ‰¹é‡æŠ¥å•å½•å…¥è¯·æ±‚åº”ç­”
 	virtual void OnRspBatchOrderInsert(CFocusFtdcBatchInputOrderField *pBatchInputOrder, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {};
 
-	///¹ÉÆ±ÅúÁ¿³·µ¥ÇëÇóÓ¦´ğ
+	///è‚¡ç¥¨æ‰¹é‡æ’¤å•è¯·æ±‚åº”ç­”
 	virtual void OnRspBatchOrderAction(CFocusFtdcBatchOrderActionField *pBatchOrderAction, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {};
 
-	///Í¨Öª¿çÆÚ²ßÂÔÔ­Ê¼¶©µ¥ÏêÇé
+	///é€šçŸ¥è·¨æœŸç­–ç•¥åŸå§‹è®¢å•è¯¦æƒ…
 	virtual void OnRtnSpreadInstrStrategy(CFocusFtdcSpreadInstrStrategyField *pSpreadInstrStrategy) {};
 
-	///Í¨ÖªĞŞ¸Ä¿çÆÚ²ßÂÔÔ­Ê¼¶©µ¥ÏêÇé
+	///é€šçŸ¥ä¿®æ”¹è·¨æœŸç­–ç•¥åŸå§‹è®¢å•è¯¦æƒ…
 	virtual void OnRtnAmendPSpreadInstrStrategy(CFocusFtdcSpreadInstrStrategyField *pSpreadInstrStrategy) {};
 };
 
 class TRADER_API_EXPORT CFocusFtdcTraderApi
 {
 public:
-	///´´½¨TraderApi
-	///@param pszFlowPath ´æÖü¶©ÔÄĞÅÏ¢ÎÄ¼şµÄÄ¿Â¼£¬Ä¬ÈÏÎªµ±Ç°Ä¿Â¼
-	///@return ´´½¨³öµÄUserApi
+	///åˆ›å»ºTraderApi
+	///@param pszFlowPath å­˜è´®è®¢é˜…ä¿¡æ¯æ–‡ä»¶çš„ç›®å½•ï¼Œé»˜è®¤ä¸ºå½“å‰ç›®å½•
+	///@return åˆ›å»ºå‡ºçš„UserApi
 	static CFocusFtdcTraderApi *CreateFtdcTraderApi(const char *pszFlowPath = "");
 	
-	///»ñÈ¡ÏµÍ³°æ±¾ºÅ
-	///@param nMajorVersion Ö÷°æ±¾ºÅ
-	///@param nMinorVersion ×Ó°æ±¾ºÅ
-	///@return ÏµÍ³±êÊ¶×Ö·û´®
+	///è·å–ç³»ç»Ÿç‰ˆæœ¬å·
+	///@param nMajorVersion ä¸»ç‰ˆæœ¬å·
+	///@param nMinorVersion å­ç‰ˆæœ¬å·
+	///@return ç³»ç»Ÿæ ‡è¯†å­—ç¬¦ä¸²
 	static const char *GetVersion();
 	
-	///É¾³ı½Ó¿Ú¶ÔÏó±¾Éí
-	///@remark ²»ÔÙÊ¹ÓÃ±¾½Ó¿Ú¶ÔÏóÊ±,µ÷ÓÃ¸Ãº¯ÊıÉ¾³ı½Ó¿Ú¶ÔÏó
+	///åˆ é™¤æ¥å£å¯¹è±¡æœ¬èº«
+	///@remark ä¸å†ä½¿ç”¨æœ¬æ¥å£å¯¹è±¡æ—¶,è°ƒç”¨è¯¥å‡½æ•°åˆ é™¤æ¥å£å¯¹è±¡
 	virtual void Release() = 0;
 	
-	///³õÊ¼»¯
-	///@remark ³õÊ¼»¯ÔËĞĞ»·¾³,Ö»ÓĞµ÷ÓÃºó,½Ó¿Ú²Å¿ªÊ¼¹¤×÷
+	///åˆå§‹åŒ–
+	///@remark åˆå§‹åŒ–è¿è¡Œç¯å¢ƒ,åªæœ‰è°ƒç”¨å,æ¥å£æ‰å¼€å§‹å·¥ä½œ
 	virtual void Init() = 0;
 	
-	///µÈ´ı½Ó¿ÚÏß³Ì½áÊøÔËĞĞ
-	///@return Ïß³ÌÍË³ö´úÂë
+	///ç­‰å¾…æ¥å£çº¿ç¨‹ç»“æŸè¿è¡Œ
+	///@return çº¿ç¨‹é€€å‡ºä»£ç 
 	virtual int Join() = 0;
 	
-	///»ñÈ¡µ±Ç°½»Ò×ÈÕ
-	///@retrun »ñÈ¡µ½µÄ½»Ò×ÈÕ
-	///@remark Ö»ÓĞµÇÂ¼³É¹¦ºó,²ÅÄÜµÃµ½ÕıÈ·µÄ½»Ò×ÈÕ
+	///è·å–å½“å‰äº¤æ˜“æ—¥
+	///@retrun è·å–åˆ°çš„äº¤æ˜“æ—¥
+	///@remark åªæœ‰ç™»å½•æˆåŠŸå,æ‰èƒ½å¾—åˆ°æ­£ç¡®çš„äº¤æ˜“æ—¥
 	virtual const char *GetTradingDay() = 0;
 	
-	///×¢²áÇ°ÖÃ»úÍøÂçµØÖ·
-	///@param pszFrontAddress£ºÇ°ÖÃ»úÍøÂçµØÖ·¡£
-	///@remark ÍøÂçµØÖ·µÄ¸ñÊ½Îª£º¡°protocol://ipaddress:port¡±£¬Èç£º¡±tcp://127.0.0.1:17001¡±¡£ 
-	///@remark ¡°tcp¡±´ú±í´«ÊäĞ­Òé£¬¡°127.0.0.1¡±´ú±í·şÎñÆ÷µØÖ·¡£¡±17001¡±´ú±í·şÎñÆ÷¶Ë¿ÚºÅ¡£
+	///æ³¨å†Œå‰ç½®æœºç½‘ç»œåœ°å€
+	///@param pszFrontAddressï¼šå‰ç½®æœºç½‘ç»œåœ°å€ã€‚
+	///@remark ç½‘ç»œåœ°å€çš„æ ¼å¼ä¸ºï¼šâ€œprotocol://ipaddress:portâ€ï¼Œå¦‚ï¼šâ€tcp://127.0.0.1:17001â€ã€‚ 
+	///@remark â€œtcpâ€ä»£è¡¨ä¼ è¾“åè®®ï¼Œâ€œ127.0.0.1â€ä»£è¡¨æœåŠ¡å™¨åœ°å€ã€‚â€17001â€ä»£è¡¨æœåŠ¡å™¨ç«¯å£å·ã€‚
 	virtual void RegisterFront(char *pszFrontAddress) = 0;
 	
-	///×¢²áÃû×Ö·şÎñÆ÷ÍøÂçµØÖ·
-	///@param pszNsAddress£ºÃû×Ö·şÎñÆ÷ÍøÂçµØÖ·¡£
-	///@remark ÍøÂçµØÖ·µÄ¸ñÊ½Îª£º¡°protocol://ipaddress:port¡±£¬Èç£º¡±tcp://127.0.0.1:12001¡±¡£ 
-	///@remark ¡°tcp¡±´ú±í´«ÊäĞ­Òé£¬¡°127.0.0.1¡±´ú±í·şÎñÆ÷µØÖ·¡£¡±12001¡±´ú±í·şÎñÆ÷¶Ë¿ÚºÅ¡£
-	///@remark RegisterFrontÓÅÏÈÓÚRegisterNameServer
+	///æ³¨å†Œåå­—æœåŠ¡å™¨ç½‘ç»œåœ°å€
+	///@param pszNsAddressï¼šåå­—æœåŠ¡å™¨ç½‘ç»œåœ°å€ã€‚
+	///@remark ç½‘ç»œåœ°å€çš„æ ¼å¼ä¸ºï¼šâ€œprotocol://ipaddress:portâ€ï¼Œå¦‚ï¼šâ€tcp://127.0.0.1:12001â€ã€‚ 
+	///@remark â€œtcpâ€ä»£è¡¨ä¼ è¾“åè®®ï¼Œâ€œ127.0.0.1â€ä»£è¡¨æœåŠ¡å™¨åœ°å€ã€‚â€12001â€ä»£è¡¨æœåŠ¡å™¨ç«¯å£å·ã€‚
+	///@remark RegisterFrontä¼˜å…ˆäºRegisterNameServer
 	virtual void RegisterNameServer(char *pszNsAddress) = 0;
 	
-	///×¢²á»Øµ÷½Ó¿Ú
-	///@param pSpi ÅÉÉú×Ô»Øµ÷½Ó¿ÚÀàµÄÊµÀı
+	///æ³¨å†Œå›è°ƒæ¥å£
+	///@param pSpi æ´¾ç”Ÿè‡ªå›è°ƒæ¥å£ç±»çš„å®ä¾‹
 	virtual void RegisterSpi(CFocusFtdcTraderSpi *pSpi) = 0;
 	
-	///¶©ÔÄË½ÓĞÁ÷¡£
-	///@param nResumeType Ë½ÓĞÁ÷ÖØ´«·½Ê½  
-	///        FOCUS_TERT_RESTART:´Ó±¾½»Ò×ÈÕ¿ªÊ¼ÖØ´«
-	///        FOCUS_TERT_RESUME:´ÓÉÏ´ÎÊÕµ½µÄĞø´«
-	///        FOCUS_TERT_QUICK:Ö»´«ËÍµÇÂ¼ºóË½ÓĞÁ÷µÄÄÚÈİ
-	///@remark ¸Ã·½·¨ÒªÔÚInit·½·¨Ç°µ÷ÓÃ¡£Èô²»µ÷ÓÃÔò²»»áÊÕµ½Ë½ÓĞÁ÷µÄÊı¾İ¡£
+	///è®¢é˜…ç§æœ‰æµã€‚
+	///@param nResumeType ç§æœ‰æµé‡ä¼ æ–¹å¼  
+	///        FOCUS_TERT_RESTART:ä»æœ¬äº¤æ˜“æ—¥å¼€å§‹é‡ä¼ 
+	///        FOCUS_TERT_RESUME:ä»ä¸Šæ¬¡æ”¶åˆ°çš„ç»­ä¼ 
+	///        FOCUS_TERT_QUICK:åªä¼ é€ç™»å½•åç§æœ‰æµçš„å†…å®¹
+	///@remark è¯¥æ–¹æ³•è¦åœ¨Initæ–¹æ³•å‰è°ƒç”¨ã€‚è‹¥ä¸è°ƒç”¨åˆ™ä¸ä¼šæ”¶åˆ°ç§æœ‰æµçš„æ•°æ®ã€‚
 	virtual void SubscribePrivateTopic(FOCUS_TE_RESUME_TYPE nResumeType) = 0;
 	
-	///¶©ÔÄ¹«¹²Á÷¡£
-	///@param nResumeType ¹«¹²Á÷ÖØ´«·½Ê½  
-	///        FOCUS_TERT_RESTART:´Ó±¾½»Ò×ÈÕ¿ªÊ¼ÖØ´«
-	///        FOCUS_TERT_RESUME:´ÓÉÏ´ÎÊÕµ½µÄĞø´«
-	///        FOCUS_TERT_QUICK:Ö»´«ËÍµÇÂ¼ºó¹«¹²Á÷µÄÄÚÈİ
-	///@remark ¸Ã·½·¨ÒªÔÚInit·½·¨Ç°µ÷ÓÃ¡£Èô²»µ÷ÓÃÔò²»»áÊÕµ½¹«¹²Á÷µÄÊı¾İ¡£
+	///è®¢é˜…å…¬å…±æµã€‚
+	///@param nResumeType å…¬å…±æµé‡ä¼ æ–¹å¼  
+	///        FOCUS_TERT_RESTART:ä»æœ¬äº¤æ˜“æ—¥å¼€å§‹é‡ä¼ 
+	///        FOCUS_TERT_RESUME:ä»ä¸Šæ¬¡æ”¶åˆ°çš„ç»­ä¼ 
+	///        FOCUS_TERT_QUICK:åªä¼ é€ç™»å½•åå…¬å…±æµçš„å†…å®¹
+	///@remark è¯¥æ–¹æ³•è¦åœ¨Initæ–¹æ³•å‰è°ƒç”¨ã€‚è‹¥ä¸è°ƒç”¨åˆ™ä¸ä¼šæ”¶åˆ°å…¬å…±æµçš„æ•°æ®ã€‚
 	virtual void SubscribePublicTopic(FOCUS_TE_RESUME_TYPE nResumeType) = 0;
 
-	///¶©ÔÄ½»Ò×Ô±Á÷¡£
-	///@param nResumeType ½»Ò×Ô±Á÷ÖØ´«·½Ê½  
-	///        FOCUS_TERT_RESTART:´Ó±¾½»Ò×ÈÕ¿ªÊ¼ÖØ´«
-	///        FOCUS_TERT_RESUME:´ÓÉÏ´ÎÊÕµ½µÄĞø´«
-	///        FOCUS_TERT_QUICK:Ö»´«ËÍµÇÂ¼ºó½»Ò×Ô±Á÷µÄÄÚÈİ
-	///@remark ¸Ã·½·¨ÒªÔÚInit·½·¨Ç°µ÷ÓÃ¡£Èô²»µ÷ÓÃÔò²»»áÊÕµ½½»Ò×Ô±Á÷µÄÊı¾İ¡£
+	///è®¢é˜…äº¤æ˜“å‘˜æµã€‚
+	///@param nResumeType äº¤æ˜“å‘˜æµé‡ä¼ æ–¹å¼  
+	///        FOCUS_TERT_RESTART:ä»æœ¬äº¤æ˜“æ—¥å¼€å§‹é‡ä¼ 
+	///        FOCUS_TERT_RESUME:ä»ä¸Šæ¬¡æ”¶åˆ°çš„ç»­ä¼ 
+	///        FOCUS_TERT_QUICK:åªä¼ é€ç™»å½•åäº¤æ˜“å‘˜æµçš„å†…å®¹
+	///@remark è¯¥æ–¹æ³•è¦åœ¨Initæ–¹æ³•å‰è°ƒç”¨ã€‚è‹¥ä¸è°ƒç”¨åˆ™ä¸ä¼šæ”¶åˆ°äº¤æ˜“å‘˜æµçš„æ•°æ®ã€‚
 	virtual void SubscribeUserTopic(FOCUS_TE_RESUME_TYPE nResumeType) = 0;
 	
-	///ÉèÖÃĞÄÌø³¬Ê±Ê±¼ä¡£
-	///@param timeout ĞÄÌø³¬Ê±Ê±¼ä(Ãë)  
+	///è®¾ç½®å¿ƒè·³è¶…æ—¶æ—¶é—´ã€‚
+	///@param timeout å¿ƒè·³è¶…æ—¶æ—¶é—´(ç§’)  
 	virtual void SetHeartbeatTimeout(unsigned int timeout) = 0;
 	
-	///´ò¿ªÇëÇóÈÕÖ¾ÎÄ¼ş
-	///@param pszReqLogFileName ÇëÇóÈÕÖ¾ÎÄ¼şÃû  
-	///@return 0 ²Ù×÷³É¹¦
-	///@return -1 ´ò¿ªÈÕÖ¾ÎÄ¼şÊ§°Ü
+	///æ‰“å¼€è¯·æ±‚æ—¥å¿—æ–‡ä»¶
+	///@param pszReqLogFileName è¯·æ±‚æ—¥å¿—æ–‡ä»¶å  
+	///@return 0 æ“ä½œæˆåŠŸ
+	///@return -1 æ‰“å¼€æ—¥å¿—æ–‡ä»¶å¤±è´¥
 	virtual int OpenRequestLog(const char *pszReqLogFileName) = 0;
 
-	///´ò¿ªÓ¦´ğÈÕÖ¾ÎÄ¼ş
-	///@param pszRspLogFileName Ó¦´ğÈÕÖ¾ÎÄ¼şÃû  
-	///@return 0 ²Ù×÷³É¹¦
-	///@return -1 ´ò¿ªÈÕÖ¾ÎÄ¼şÊ§°Ü
+	///æ‰“å¼€åº”ç­”æ—¥å¿—æ–‡ä»¶
+	///@param pszRspLogFileName åº”ç­”æ—¥å¿—æ–‡ä»¶å  
+	///@return 0 æ“ä½œæˆåŠŸ
+	///@return -1 æ‰“å¼€æ—¥å¿—æ–‡ä»¶å¤±è´¥
 	virtual int OpenResponseLog(const char *pszRspLogFileName) = 0;
 
-	///¶©ÔÄ½»Ò×ºÏÔ¼
-	///@param char *ppInstrumentID[] ¶©ÔÄºÏÔ¼ÁĞ±í
-	///@param nCount ¶©ÔÄÊıÁ¿
-	///@return 0 ²Ù×÷³É¹¦
+	///è®¢é˜…äº¤æ˜“åˆçº¦
+	///@param char *ppInstrumentID[] è®¢é˜…åˆçº¦åˆ—è¡¨
+	///@param nCount è®¢é˜…æ•°é‡
+	///@return 0 æ“ä½œæˆåŠŸ
 	virtual int SubInstrumentStatus(char *ppInstrumentID[], int nCount) = 0;
 	
-	///È¡Ïû¶©ÔÄ½»Ò×ºÏÔ¼
-	///@param char *ppInstrumentID[] ¶©ÔÄºÏÔ¼ÁĞ±í
-	///@param nCount ¶©ÔÄÊıÁ¿
-	///@return 0 ²Ù×÷³É¹¦
+	///å–æ¶ˆè®¢é˜…äº¤æ˜“åˆçº¦
+	///@param char *ppInstrumentID[] è®¢é˜…åˆçº¦åˆ—è¡¨
+	///@param nCount è®¢é˜…æ•°é‡
+	///@return 0 æ“ä½œæˆåŠŸ
 	virtual int UnSubInstrumentStatus(char *ppInstrumentID[], int nCount) = 0;
 	
 
-	///ÓÃ»§µÇÂ¼ÇëÇó
+	///ç”¨æˆ·ç™»å½•è¯·æ±‚
 	virtual int ReqUserLogin(CFocusFtdcReqUserLoginField *pReqUserLogin, int nRequestID) = 0;
 
-	///ÓÃ»§ÍË³öÇëÇó
+	///ç”¨æˆ·é€€å‡ºè¯·æ±‚
 	virtual int ReqUserLogout(CFocusFtdcReqUserLogoutField *pReqUserLogout, int nRequestID) = 0;
 
-	///±¨µ¥Â¼ÈëÇëÇó
+	///æŠ¥å•å½•å…¥è¯·æ±‚
 	virtual int ReqOrderInsert(CFocusFtdcInputOrderField *pInputOrder, int nRequestID) = 0;
 
-	///±¨µ¥²Ù×÷ÇëÇó
+	///æŠ¥å•æ“ä½œè¯·æ±‚
 	virtual int ReqOrderAction(CFocusFtdcOrderActionField *pOrderAction, int nRequestID) = 0;
 
-	///±¨µ¥²éÑ¯ÇëÇó
+	///æŠ¥å•æŸ¥è¯¢è¯·æ±‚
 	virtual int ReqQryOrder(CFocusFtdcQryOrderField *pQryOrder, int nRequestID) = 0;
 
-	///³É½»µ¥²éÑ¯ÇëÇó
+	///æˆäº¤å•æŸ¥è¯¢è¯·æ±‚
 	virtual int ReqQryTrade(CFocusFtdcQryTradeField *pQryTrade, int nRequestID) = 0;
 
-	///ºÏÔ¼²éÑ¯ÇëÇó
+	///åˆçº¦æŸ¥è¯¢è¯·æ±‚
 	virtual int ReqQryInstrument(CFocusFtdcQryInstrumentField *pQryInstrument, int nRequestID) = 0;
 
-	///½»Ò×Ëù²éÑ¯ÇëÇó
+	///äº¤æ˜“æ‰€æŸ¥è¯¢è¯·æ±‚
 	virtual int ReqQryExchange(CFocusFtdcQryExchangeField *pQryExchange, int nRequestID) = 0;
 
-	///Í¶×ÊÕß³Ö²Ö²éÑ¯ÇëÇó
+	///æŠ•èµ„è€…æŒä»“æŸ¥è¯¢è¯·æ±‚
 	virtual int ReqQryInvestorPosition(CFocusFtdcQryInvestorPositionField *pQryInvestorPosition, int nRequestID) = 0;
 
-	///¶©ÔÄÖ÷ÌâÇëÇó
+	///è®¢é˜…ä¸»é¢˜è¯·æ±‚
 	virtual int ReqSubscribeTopic(CFocusFtdcDisseminationField *pDissemination, int nRequestID) = 0;
 
-	///Ö÷Ìâ²éÑ¯ÇëÇó
+	///ä¸»é¢˜æŸ¥è¯¢è¯·æ±‚
 	virtual int ReqQryTopic(CFocusFtdcDisseminationField *pDissemination, int nRequestID) = 0;
 
-	///²úÆ·²éÑ¯
+	///äº§å“æŸ¥è¯¢
 	virtual int ReqQryProduct(CFocusFtdcQryProductField *pQryProduct, int nRequestID) = 0;
 
-	///·¢ËÍÄ¸µ¥½øÕ¹ÏêÏ¸ĞÅÏ¢
+	///å‘é€æ¯å•è¿›å±•è¯¦ç»†ä¿¡æ¯
 	virtual int ReqSetParentDetialUpdateMessage(CFocusFtdcParentDetialUpdateMessageField *pParentDetialUpdateMessage, int nRequestID) = 0;
 
-	///²éÑ¯ÊĞ³¡²úÆ·½»Ò×Ê±¼ä
+	///æŸ¥è¯¢å¸‚åœºäº§å“äº¤æ˜“æ—¶é—´
 	virtual int ReqQryMarketTradingTime(CFocusFtdcAPIQryMarketTradingTimeField *pAPIQryMarketTradingTime, int nRequestID) = 0;
 
-	///ÉèÖÃJava ALGO½»Ò××´Ì¬
+	///è®¾ç½®Java ALGOäº¤æ˜“çŠ¶æ€
 	virtual int ReqSetJavaAlgoStatus(CFocusFtdcFocusStatusField *pFocusStatus, int nRequestID) = 0;
 
-	///¹ÉÆ±ÅúÁ¿±¨µ¥Â¼ÈëÇëÇó
+	///è‚¡ç¥¨æ‰¹é‡æŠ¥å•å½•å…¥è¯·æ±‚
 	virtual int ReqBatchOrderInsert(CFocusFtdcBatchInputOrderField *pBatchInputOrder, int nRequestID) = 0;
 
-	///¹ÉÆ±ÅúÁ¿³·µ¥ÇëÇó
+	///è‚¡ç¥¨æ‰¹é‡æ’¤å•è¯·æ±‚
 	virtual int ReqBatchOrderAction(CFocusFtdcBatchOrderActionField *pBatchOrderAction, int nRequestID) = 0;
 protected:
 	~CFocusFtdcTraderApi(){};
