@@ -10,6 +10,7 @@ import config
 
 from generate_data_type import gen_data_type
 from generate_struct import gen_struct
+from generate_cppfiles import gen_cpp_file
 
 gen_data_type(config.md_api_datatype_header, config.md_datatype_py)
 gen_struct(config.md_api_struct_header, config.md_datatype_py, config.md_struct_py)
@@ -17,13 +18,12 @@ gen_struct(config.md_api_struct_header, config.md_datatype_py, config.md_struct_
 gen_data_type(config.td_api_datatype_header, config.td_datatype_py)
 gen_struct(config.td_api_struct_header, config.td_datatype_py, config.td_struct_py)
 
-from generate_cppfiles import genCppFiles
-genCppFiles(config.cpp_api_md, apiName='MdApi',
-            hTemplate='vnfemasmd.h.template', hDestFile=r'../vnfemasmd/vnfemasmd/vnfemasmd.h',
-            cppTempalte='vnfemasmd.cpp.template', cppDestFile=r'../vnfemasmd/vnfemasmd/vnfemasmd.cpp'
+gen_cpp_file(config.md_api_header, apiName='MdApi', structPy=config.md_struct_py,
+            hTemplate='mdbinding.h.template', hDestFile=r'../mdbinding/mdbinding.h',
+            cppTempalte='mdbinding.cpp.template', cppDestFile=r'../mdbinding/mdbinding.cpp'
             )
 
-genCppFiles(config.cpp_api_td, apiName='TdApi',
-            hTemplate='vnfemastd.h.template', hDestFile=r'../vnfemastd/vnfemastd/vnfemastd.h',
-            cppTempalte='vnfemastd.cpp.template', cppDestFile=r'../vnfemastd/vnfemastd/vnfemastd.cpp'
+gen_cpp_file(config.td_api_header, apiName='TdApi', structPy=config.td_struct_py,
+            hTemplate='tdbinding.h.template', hDestFile=r'../tdbinding/tdbinding.h',
+            cppTempalte='tdbinding.cpp.template', cppDestFile=r'../tdbinding/tdbinding.cpp'
             )

@@ -5,9 +5,10 @@ import io
 import traceback
 import chardet
 from string import Template
-from femasDataStruct import structDict
+import importlib
 
 _apiName = ''
+_structPy = None
 headerprocess = io.StringIO()
 headeron = io.StringIO()
 headerfunction = io.StringIO()
@@ -212,7 +213,7 @@ def createProcess(cbName, cbArgsTypeList, cbArgsValueList):
             bodyprocess.write("\t"+ type_ + ' task_error = any_cast<' + type_ + '>(task.task_error);\n')
             bodyprocess.write("\t"+ "dict error;\n")
 
-            struct = structDict[type_]
+            struct = _structPy.structDict[type_]
             for key in struct.keys():
                 if key == 'ErrorMsg': # 针对CTP返回的GBK格式的中文进行特殊处理
                     bodyprocess.write('\terror["ErrorMsg"] = GBK_TO_UTF8(task_error.ErrorMsg);')
@@ -223,11 +224,11 @@ def createProcess(cbName, cbArgsTypeList, cbArgsValueList):
 
             onArgsList.append('error')
 
-        elif type_ in structDict:
+        elif type_ in _structPy.structDict:
             bodyprocess.write("\t"+ type_ + ' task_data = any_cast<' + type_ + '>(task.task_data);\n')
             bodyprocess.write("\t"+ "dict data;\n")
 
-            struct = structDict[type_]
+            struct = _structPy.structDict[type_]
             for key in struct.keys():
                 if 'Name' in key or 'Msg' in key: # 针对CTP返回的GBK格式的中文进行特殊处理
                     bodyprocess.write("\t"+ 'data["' + key + '"] = GBK_TO_UTF8(task_data.' + key + ');\n')
@@ -275,7 +276,7 @@ def processFunction(line):
 
     # 生成.h文件中的主动函数部分
     if 'Req' in fcName:
-        if not(len(fcArgsTypeList)>0 and fcArgsTypeList[0] in structDict):
+        if not(len(fcArgsTypeList)>0 and fcArgsTypeList[0] in _structPy.structDict):
             return
         createFunction(fcName, fcArgsTypeList, fcArgsValueList)
         req_line = '\tint req' + fcName[3:] + '(dict req, int nRequestID);\n'
@@ -286,7 +287,7 @@ def processFunction(line):
 
 def createFunction(fcName, fcArgsTypeList, fcArgsValueList):
     type_ = fcArgsTypeList[0]
-    struct = structDict[type_]
+    struct = _structPy.structDict[type_]
 
     bodyreq.write('int '+ _apiName + '::req' + fcName[3:] + '(dict req, int nRequestID)\n')
     bodyreq.write('{\n')
@@ -312,12 +313,14 @@ def createFunction(fcName, fcArgsTypeList, fcArgsValueList):
 
 
 #########################################################
-def genCppFiles(mdapiHeader, apiName,hTemplate, hDestFile,
+def gen_cpp_file(mdapiHeader, apiName, structPy, hTemplate, hDestFile,
                   cppTempalte, cppDestFile):
     global _apiName, define_count
+    global _structPy
     global headerprocess, headeron, headerfunction, headerdefine
     global bodyspi, bodyprocess, bodyreq, bodyswitch, bodywrap, bodyexport
     _apiName = apiName
+    _structPy = importlib.import_module(structPy.replace(".py", ""))
     define_count = 1
 
     headerprocess = io.StringIO()
