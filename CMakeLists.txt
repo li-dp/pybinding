@@ -55,7 +55,7 @@ if (BUILD_MD_BINDING)
 	target_link_libraries(qdmbinding  ${Boost_LIBRARIES} ${PYTHON_LIBRARY} ${MD_API_LIBRARY})
 endif()
 
-option(BUILD_TD_BINDING "build femas td" ON)
+option(BUILD_TD_BINDING "build td binding" ON)
 if (BUILD_TD_BINDING)
 	add_definitions(-DBUILD_TD_BINDING)
 	set(TD_BINDING_PATH tdbinding)

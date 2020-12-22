@@ -1848,7 +1848,7 @@ struct MdApiWrap : MdApi, wrapper < MdApi >
 };
 
 
-BOOST_PYTHON_MODULE(vnfemasmd)
+BOOST_PYTHON_MODULE(qdmbinding)
 {
 	PyEval_InitThreads();	//导入时运行，保证先创建GIL
 

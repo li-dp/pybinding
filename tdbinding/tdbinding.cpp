@@ -2649,7 +2649,7 @@ struct TdApiWrap : TdApi, wrapper < TdApi >
 
 };
 
-BOOST_PYTHON_MODULE(vnfemastd)
+BOOST_PYTHON_MODULE(focusbinding)
 {
 	PyEval_InitThreads();	//导入时运行，保证先创建GIL
 
