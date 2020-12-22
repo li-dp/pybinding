@@ -160,7 +160,7 @@ def createTask(cbName, cbArgsTypeList, cbArgsValueList, orignalLine):
     # switch段代码
     bodyswitch.write("\t\tcase " + cbName.upper() + ':\n')
     bodyswitch.write("\t\t{\n")
-    bodyswitch.write("\t\t\tthis->" + cbName.replace('On', 'process') + '(task);\n')
+    bodyswitch.write("\t\t\tthis->" + cbName.replace('On', 'process', 1) + '(task);\n')
     bodyswitch.write("\t\t\tbreak;\n")
     bodyswitch.write("\t\t}\n")
     bodyswitch.write("\n")
@@ -178,7 +178,7 @@ def createTask(cbName, cbArgsTypeList, cbArgsValueList, orignalLine):
             bodyspi.write("\t}\n")
             bodyspi.write("\telse\n")
             bodyspi.write("\t{\n")
-            bodyspi.write("\t\tCUstpFtdcRspInfoField empty_error = CUstpFtdcRspInfoField();\n")
+            bodyspi.write(f"\t\t{type_} empty_error = {type_}();\n")
             bodyspi.write("\t\tmemset(&empty_error, 0, sizeof(empty_error));\n")
             bodyspi.write("\t\ttask.task_error = empty_error;\n")
             bodyspi.write("\t}\n")
@@ -202,7 +202,7 @@ def createTask(cbName, cbArgsTypeList, cbArgsValueList, orignalLine):
 
 def createProcess(cbName, cbArgsTypeList, cbArgsValueList):
     # 从队列中提取任务，并转化为python字典
-    bodyprocess.write("void " + _apiName + '::' + cbName.replace('On', 'process') + '(Task task)' + "\n")
+    bodyprocess.write("void " + _apiName + '::' + cbName.replace('On', 'process', 1) + '(Task task)' + "\n")
     bodyprocess.write("{\n")
     bodyprocess.write("\tPyLock lock;\n")
 
@@ -246,7 +246,7 @@ def createProcess(cbName, cbArgsTypeList, cbArgsValueList):
             onArgsList.append('task.task_id')
 
     onArgs = ', '.join(onArgsList)
-    bodyprocess.write('\tthis->' + cbName.replace('On', 'on') + '(' + onArgs +');\n')
+    bodyprocess.write('\tthis->' + cbName.replace('On', 'on', 1) + '(' + onArgs +');\n')
 
     bodyprocess.write("};\n")
     bodyprocess.write("\n")

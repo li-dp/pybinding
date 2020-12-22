@@ -1,7 +1,7 @@
-// vnfemastd.cpp : 定义 DLL 应用程序的导出函数。
+// tdbinding.cpp : 定义 DLL 应用程序的导出函数。
 //
 
-#include "vnfemastd.h"
+#include "tdbinding.h"
 
 
 ///-------------------------------------------------------------------------------------
@@ -103,7 +103,7 @@ $process_body
 
 void TdApi::createFtdcTraderApi(string pszFlowPath)
 {
-	this->api = CUstpFtdcTraderApi::CreateFtdcTraderApi(pszFlowPath.c_str());
+	this->api = CFocusFtdcTraderApi::CreateFtdcTraderApi(pszFlowPath.c_str());
 	this->api->RegisterSpi(this);
 };
 
@@ -146,25 +146,25 @@ void TdApi::registerFront(string pszFrontAddress)
 void TdApi::subscribePrivateTopic(int nType)
 {
 	//该函数为手动编写
-	USTP_TE_RESUME_TYPE type;
+	FOCUS_TE_RESUME_TYPE type;
 
 	switch (nType)
 	{
 	case 0:
 	{
-		type = USTP_TERT_RESTART;
+		type = FOCUS_TERT_RESTART;
 		break;
 	};
 
 	case 1:
 	{
-		type = USTP_TERT_RESUME;
+		type = FOCUS_TERT_RESUME;
 		break;
 	};
 
 	case 2:
 	{
-		type = USTP_TERT_QUICK;
+		type = FOCUS_TERT_QUICK;
 		break;
 	};
 	}
@@ -175,60 +175,30 @@ void TdApi::subscribePrivateTopic(int nType)
 void TdApi::subscribePublicTopic(int nType)
 {
 	//该函数为手动编写
-	USTP_TE_RESUME_TYPE type;
+	FOCUS_TE_RESUME_TYPE type;
 
 	switch (nType)
 	{
 	case 0:
 	{
-		type = USTP_TERT_RESTART;
+		type = FOCUS_TERT_RESTART;
 		break;
 	};
 
 	case 1:
 	{
-		type = USTP_TERT_RESUME;
+		type = FOCUS_TERT_RESUME;
 		break;
 	};
 
 	case 2:
 	{
-		type = USTP_TERT_QUICK;
+		type = FOCUS_TERT_QUICK;
 		break;
 	};
 	}
 
 	this->api->SubscribePublicTopic(type);
-};
-
-
-void TdApi::subscribeForQuote(int nType)
-{
-	//该函数为手动编写
-	USTP_TE_RESUME_TYPE type;
-
-	switch (nType)
-	{
-	case 0:
-	{
-		type = USTP_TERT_RESTART;
-		break;
-	};
-
-	case 1:
-	{
-		type = USTP_TERT_RESUME;
-		break;
-	};
-
-	case 2:
-	{
-		type = USTP_TERT_QUICK;
-		break;
-	};
-	}
-
-	this->api->SubscribeForQuote(type);
 };
 
 $body_req
@@ -256,7 +226,6 @@ BOOST_PYTHON_MODULE(vnfemastd)
 		.def("registerFront", &TdApiWrap::registerFront)
 		.def("subscribePrivateTopic", &TdApiWrap::subscribePrivateTopic)
 		.def("subscribePublicTopic", &TdApiWrap::subscribePublicTopic)
-		.def("subscribeForQuote", &TdApiWrap::subscribeForQuote)
 $body_export
 		;
 }

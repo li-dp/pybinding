@@ -27,3 +27,4 @@ gen_cpp_file(config.td_api_header, apiName='TdApi', structPy=config.td_struct_py
             hTemplate='tdbinding.h.template', hDestFile=r'../tdbinding/tdbinding.h',
             cppTempalte='tdbinding.cpp.template', cppDestFile=r'../tdbinding/tdbinding.cpp'
             )
+            

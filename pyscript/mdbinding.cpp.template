@@ -1,7 +1,7 @@
-// vnfemasmd.cpp : 定义 DLL 应用程序的导出函数。
+// mdbinding.cpp : 定义 DLL 应用程序的导出函数。
 //
 
-#include "vnfemasmd.h"
+#include "mdbinding.h"
 
 ///-------------------------------------------------------------------------------------
 ///从Python对象到C++类型转换用的函数
@@ -101,7 +101,7 @@ $process_body
 
 void MdApi::createFtdcMdApi(string pszFlowPath)
 {
-	this->api = CUstpFtdcMduserApi::CreateFtdcMduserApi(pszFlowPath.c_str());
+	this->api = CQdFtdcMduserApi::CreateFtdcMduserApi(pszFlowPath.c_str());
 	this->api->RegisterSpi(this);
 };
 
@@ -157,18 +157,9 @@ int MdApi::unSubscribeMarketData(string instrumentID)
 	return i;
 };
 
-#ifndef FEMAS_CLASSIC
-int MdApi::getMarketTopic(string exchangeID)
-{
-	char* buffer = (char*)exchangeID.c_str();
-	int i = this->api->GetMarketTopic(buffer);
-	return i;
-};
-#endif
-
 void MdApi::subscribeMarketDataTopic(int nTopicID, int nResumeType)
 {
-	this->api->SubscribeMarketDataTopic(nTopicID, USTP_TE_RESUME_TYPE(nResumeType));
+	this->api->SubscribeMarketDataTopic(nTopicID, QD_TE_RESUME_TYPE(nResumeType));
 };
 
 
@@ -195,9 +186,6 @@ BOOST_PYTHON_MODULE(vnfemasmd)
 		.def("join", &MdApiWrap::join)
 		.def("exit", &MdApiWrap::exit)
 		.def("getTradingDay", &MdApiWrap::getTradingDay)
-		#ifndef FEMAS_CLASSIC
-		.def("getMarketTopic", &MdApiWrap::getMarketTopic)
-		#endif
 		.def("registerFront", &MdApiWrap::registerFront)
 		.def("subscribeMarketDataTopic", &MdApiWrap::subscribeMarketDataTopic)
 		.def("subscribeMarketData", &MdApiWrap::subscribeMarketData)

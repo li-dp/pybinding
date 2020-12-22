@@ -19,7 +19,7 @@
 #include <boost/any.hpp>			//任务队列的任务实现
 #include <boost/locale.hpp>
 //API
-#include "USTPFtdcMduserApi.h"
+#include "QdFtdcMduserApi.h"
 
 //命名空间
 using namespace std;
@@ -137,10 +137,10 @@ void getStr(dict d, string key, char* value);
 ///-------------------------------------------------------------------------------------
 
 //API的继承实现
-class MdApi : public CUstpFtdcMduserSpi
+class MdApi : public CQdFtdcMduserSpi
 {
 private:
-	CUstpFtdcMduserApi* api;				//API对象
+	CQdFtdcMduserApi* api;				//API对象
 	thread *task_thread;				//工作线程指针（向python中推送数据）
 	ConcurrentQueue<Task> task_queue;	//任务队列
 
@@ -199,8 +199,6 @@ $md_header_on
 	int subscribeMarketData(string instrumentID);
 
 	int unSubscribeMarketData(string instrumentID);
-#ifndef FEMAS_CLASSIC
-	int getMarketTopic(string exchangeID);
-#endif
+
 $header_function
 };

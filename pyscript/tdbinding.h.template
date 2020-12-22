@@ -25,7 +25,7 @@
 #include <boost/any.hpp>			//任务队列的任务实现
 #include <boost/locale.hpp>
 //API
-#include "USTPFtdcTraderApi.h"
+#include "FocusFtdcTraderApi.h"
 
 //命名空间
 using namespace std;
@@ -143,10 +143,10 @@ void getStr(dict d, string key, char* value);
 ///-------------------------------------------------------------------------------------
 
 //API的继承实现
-class TdApi : public CUstpFtdcTraderSpi
+class TdApi : public CFocusFtdcTraderSpi
 {
 private:
-	CUstpFtdcTraderApi* api;			//API对象
+	CFocusFtdcTraderApi* api;			//API对象
 	thread *task_thread;				//工作线程指针（向python中推送数据）
 	ConcurrentQueue<Task> task_queue;	//任务队列
 
@@ -201,8 +201,6 @@ $md_header_on
 	void subscribePrivateTopic(int nType);
 
 	void subscribePublicTopic(int nType);
-
-	void subscribeForQuote(int nType);
 
 $header_function
 };
