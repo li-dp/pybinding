@@ -1038,14 +1038,14 @@ void TdApi::processRspUserLogin(Task task)
 	dict data;
 	data["TradingDay"] = task_data.TradingDay;
 	data["BrokerID"] = task_data.BrokerID;
-	data["UserID"] = task_data.UserID;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
 	data["LoginTime"] = task_data.LoginTime;
-	data["MaxOrderLocalID"] = task_data.MaxOrderLocalID;
+	data["MaxOrderLocalID"] = GBK_TO_UTF8(task_data.MaxOrderLocalID);
 	data["TradingSystemName"] = GBK_TO_UTF8(task_data.TradingSystemName);
 	data["DataCenterID"] = task_data.DataCenterID;
 	data["PrivateFlowSize"] = task_data.PrivateFlowSize;
 	data["UserFlowSize"] = task_data.UserFlowSize;
-	data["LoginInfo"] = task_data.LoginInfo;
+	data["LoginInfo"] = GBK_TO_UTF8(task_data.LoginInfo);
 	data["SessionID"] = task_data.SessionID;
 	data["FrontID"] = task_data.FrontID;
 
@@ -1062,7 +1062,7 @@ void TdApi::processRspUserLogout(Task task)
 	CFocusFtdcRspUserLogoutField task_data = any_cast<CFocusFtdcRspUserLogoutField>(task.task_data);
 	dict data;
 	data["BrokerID"] = task_data.BrokerID;
-	data["UserID"] = task_data.UserID;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
 
 	CFocusFtdcRspInfoField task_error = any_cast<CFocusFtdcRspInfoField>(task.task_error);
 	dict error;
@@ -1078,13 +1078,13 @@ void TdApi::processRspOrderInsert(Task task)
 	dict data;
 	data["BrokerID"] = task_data.BrokerID;
 	data["InvestorID"] = task_data.InvestorID;
-	data["UserID"] = task_data.UserID;
-	data["UserOrderLocalID"] = task_data.UserOrderLocalID;
-	data["UserCustom"] = task_data.UserCustom;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
+	data["UserOrderLocalID"] = GBK_TO_UTF8(task_data.UserOrderLocalID);
+	data["UserCustom"] = GBK_TO_UTF8(task_data.UserCustom);
 	data["ExchangeID"] = task_data.ExchangeID;
 	data["OrderSysID"] = task_data.OrderSysID;
 	data["BatchNum"] = task_data.BatchNum;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["InstrumentName"] = GBK_TO_UTF8(task_data.InstrumentName);
 	data["OrderPriceType"] = task_data.OrderPriceType;
 	data["Direction"] = task_data.Direction;
@@ -1099,7 +1099,7 @@ void TdApi::processRspOrderInsert(Task task)
 	data["StopPrice"] = task_data.StopPrice;
 	data["ForceCloseReason"] = task_data.ForceCloseReason;
 	data["IsAutoSuspend"] = task_data.IsAutoSuspend;
-	data["BusinessUnit"] = task_data.BusinessUnit;
+	data["BusinessUnit"] = GBK_TO_UTF8(task_data.BusinessUnit);
 	data["BusinessType"] = task_data.BusinessType;
 
 	CFocusFtdcRspInfoField task_error = any_cast<CFocusFtdcRspInfoField>(task.task_error);
@@ -1116,14 +1116,14 @@ void TdApi::processRspOrderAction(Task task)
 	dict data;
 	data["BrokerID"] = task_data.BrokerID;
 	data["InvestorID"] = task_data.InvestorID;
-	data["UserID"] = task_data.UserID;
-	data["UserOrderLocalID"] = task_data.UserOrderLocalID;
-	data["UserCustom"] = task_data.UserCustom;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
+	data["UserOrderLocalID"] = GBK_TO_UTF8(task_data.UserOrderLocalID);
+	data["UserCustom"] = GBK_TO_UTF8(task_data.UserCustom);
 	data["ExchangeID"] = task_data.ExchangeID;
 	data["OrderSysID"] = task_data.OrderSysID;
 	data["BatchNum"] = task_data.BatchNum;
-	data["InstrumentID"] = task_data.InstrumentID;
-	data["UserOrderActionLocalID"] = task_data.UserOrderActionLocalID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
+	data["UserOrderActionLocalID"] = GBK_TO_UTF8(task_data.UserOrderActionLocalID);
 	data["ActionFlag"] = task_data.ActionFlag;
 	data["LimitPrice"] = task_data.LimitPrice;
 	data["VolumeChange"] = task_data.VolumeChange;
@@ -1145,13 +1145,13 @@ void TdApi::processRtnTrade(Task task)
 	data["TradingDay"] = task_data.TradingDay;
 	data["BrokerID"] = task_data.BrokerID;
 	data["InvestorID"] = task_data.InvestorID;
-	data["UserID"] = task_data.UserID;
-	data["UserOrderLocalID"] = task_data.UserOrderLocalID;
-	data["UserCustom"] = task_data.UserCustom;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
+	data["UserOrderLocalID"] = GBK_TO_UTF8(task_data.UserOrderLocalID);
+	data["UserCustom"] = GBK_TO_UTF8(task_data.UserCustom);
 	data["ExchangeID"] = task_data.ExchangeID;
 	data["TradeID"] = task_data.TradeID;
 	data["OrderSysID"] = task_data.OrderSysID;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["InstrumentName"] = GBK_TO_UTF8(task_data.InstrumentName);
 	data["Direction"] = task_data.Direction;
 	data["OffsetFlag"] = task_data.OffsetFlag;
@@ -1174,13 +1174,13 @@ void TdApi::processRtnOrder(Task task)
 	dict data;
 	data["BrokerID"] = task_data.BrokerID;
 	data["InvestorID"] = task_data.InvestorID;
-	data["UserID"] = task_data.UserID;
-	data["UserOrderLocalID"] = task_data.UserOrderLocalID;
-	data["UserCustom"] = task_data.UserCustom;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
+	data["UserOrderLocalID"] = GBK_TO_UTF8(task_data.UserOrderLocalID);
+	data["UserCustom"] = GBK_TO_UTF8(task_data.UserCustom);
 	data["ExchangeID"] = task_data.ExchangeID;
 	data["OrderSysID"] = task_data.OrderSysID;
 	data["BatchNum"] = task_data.BatchNum;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["InstrumentName"] = GBK_TO_UTF8(task_data.InstrumentName);
 	data["OrderPriceType"] = task_data.OrderPriceType;
 	data["Direction"] = task_data.Direction;
@@ -1195,14 +1195,14 @@ void TdApi::processRtnOrder(Task task)
 	data["StopPrice"] = task_data.StopPrice;
 	data["ForceCloseReason"] = task_data.ForceCloseReason;
 	data["IsAutoSuspend"] = task_data.IsAutoSuspend;
-	data["BusinessUnit"] = task_data.BusinessUnit;
+	data["BusinessUnit"] = GBK_TO_UTF8(task_data.BusinessUnit);
 	data["BusinessType"] = task_data.BusinessType;
 	data["TradingDay"] = task_data.TradingDay;
 	data["InsertTime"] = task_data.InsertTime;
 	data["OrderSource"] = task_data.OrderSource;
 	data["OrderStatus"] = task_data.OrderStatus;
 	data["CancelTime"] = task_data.CancelTime;
-	data["CancelUserID"] = task_data.CancelUserID;
+	data["CancelUserID"] = GBK_TO_UTF8(task_data.CancelUserID);
 	data["VolumeTraded"] = task_data.VolumeTraded;
 	data["VolumeRemain"] = task_data.VolumeRemain;
 	data["VolumeCancled"] = task_data.VolumeCancled;
@@ -1219,7 +1219,7 @@ void TdApi::processRtnOrder(Task task)
 	data["EachPremium"] = task_data.EachPremium;
 	data["IPAddress"] = task_data.IPAddress;
 	data["MacAddress"] = task_data.MacAddress;
-	data["BranchID"] = task_data.BranchID;
+	data["BranchID"] = GBK_TO_UTF8(task_data.BranchID);
 	data["RecNum"] = task_data.RecNum;
 
 	this->onRtnOrder(data);
@@ -1231,9 +1231,9 @@ void TdApi::processRtnInstrumentStatus(Task task)
 	CFocusFtdcInstrumentStatusField task_data = any_cast<CFocusFtdcInstrumentStatusField>(task.task_data);
 	dict data;
 	data["ExchangeID"] = task_data.ExchangeID;
-	data["ProductID"] = task_data.ProductID;
+	data["ProductID"] = GBK_TO_UTF8(task_data.ProductID);
 	data["ProductName"] = GBK_TO_UTF8(task_data.ProductName);
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["InstrumentName"] = GBK_TO_UTF8(task_data.InstrumentName);
 	data["DeliveryYear"] = task_data.DeliveryYear;
 	data["DeliveryMonth"] = task_data.DeliveryMonth;
@@ -1279,7 +1279,7 @@ void TdApi::processRtnMessageNotify(Task task)
 	CFocusFtdcMessageNotifyField task_data = any_cast<CFocusFtdcMessageNotifyField>(task.task_data);
 	dict data;
 	data["BrokerID"] = task_data.BrokerID;
-	data["UserID"] = task_data.UserID;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
 	data["InvestorID"] = task_data.InvestorID;
 	data["Nums"] = task_data.Nums;
 	data["WarnLevel"] = task_data.WarnLevel;
@@ -1297,13 +1297,13 @@ void TdApi::processRspQryOrder(Task task)
 	dict data;
 	data["BrokerID"] = task_data.BrokerID;
 	data["InvestorID"] = task_data.InvestorID;
-	data["UserID"] = task_data.UserID;
-	data["UserOrderLocalID"] = task_data.UserOrderLocalID;
-	data["UserCustom"] = task_data.UserCustom;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
+	data["UserOrderLocalID"] = GBK_TO_UTF8(task_data.UserOrderLocalID);
+	data["UserCustom"] = GBK_TO_UTF8(task_data.UserCustom);
 	data["ExchangeID"] = task_data.ExchangeID;
 	data["OrderSysID"] = task_data.OrderSysID;
 	data["BatchNum"] = task_data.BatchNum;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["InstrumentName"] = GBK_TO_UTF8(task_data.InstrumentName);
 	data["OrderPriceType"] = task_data.OrderPriceType;
 	data["Direction"] = task_data.Direction;
@@ -1318,14 +1318,14 @@ void TdApi::processRspQryOrder(Task task)
 	data["StopPrice"] = task_data.StopPrice;
 	data["ForceCloseReason"] = task_data.ForceCloseReason;
 	data["IsAutoSuspend"] = task_data.IsAutoSuspend;
-	data["BusinessUnit"] = task_data.BusinessUnit;
+	data["BusinessUnit"] = GBK_TO_UTF8(task_data.BusinessUnit);
 	data["BusinessType"] = task_data.BusinessType;
 	data["TradingDay"] = task_data.TradingDay;
 	data["InsertTime"] = task_data.InsertTime;
 	data["OrderSource"] = task_data.OrderSource;
 	data["OrderStatus"] = task_data.OrderStatus;
 	data["CancelTime"] = task_data.CancelTime;
-	data["CancelUserID"] = task_data.CancelUserID;
+	data["CancelUserID"] = GBK_TO_UTF8(task_data.CancelUserID);
 	data["VolumeTraded"] = task_data.VolumeTraded;
 	data["VolumeRemain"] = task_data.VolumeRemain;
 	data["VolumeCancled"] = task_data.VolumeCancled;
@@ -1342,7 +1342,7 @@ void TdApi::processRspQryOrder(Task task)
 	data["EachPremium"] = task_data.EachPremium;
 	data["IPAddress"] = task_data.IPAddress;
 	data["MacAddress"] = task_data.MacAddress;
-	data["BranchID"] = task_data.BranchID;
+	data["BranchID"] = GBK_TO_UTF8(task_data.BranchID);
 	data["RecNum"] = task_data.RecNum;
 
 	CFocusFtdcRspInfoField task_error = any_cast<CFocusFtdcRspInfoField>(task.task_error);
@@ -1360,13 +1360,13 @@ void TdApi::processRspQryTrade(Task task)
 	data["TradingDay"] = task_data.TradingDay;
 	data["BrokerID"] = task_data.BrokerID;
 	data["InvestorID"] = task_data.InvestorID;
-	data["UserID"] = task_data.UserID;
-	data["UserOrderLocalID"] = task_data.UserOrderLocalID;
-	data["UserCustom"] = task_data.UserCustom;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
+	data["UserOrderLocalID"] = GBK_TO_UTF8(task_data.UserOrderLocalID);
+	data["UserCustom"] = GBK_TO_UTF8(task_data.UserCustom);
 	data["ExchangeID"] = task_data.ExchangeID;
 	data["TradeID"] = task_data.TradeID;
 	data["OrderSysID"] = task_data.OrderSysID;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["InstrumentName"] = GBK_TO_UTF8(task_data.InstrumentName);
 	data["Direction"] = task_data.Direction;
 	data["OffsetFlag"] = task_data.OffsetFlag;
@@ -1392,9 +1392,9 @@ void TdApi::processRspQryInstrument(Task task)
 	CFocusFtdcRspInstrumentField task_data = any_cast<CFocusFtdcRspInstrumentField>(task.task_data);
 	dict data;
 	data["ExchangeID"] = task_data.ExchangeID;
-	data["ProductID"] = task_data.ProductID;
+	data["ProductID"] = GBK_TO_UTF8(task_data.ProductID);
 	data["ProductName"] = GBK_TO_UTF8(task_data.ProductName);
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["InstrumentName"] = GBK_TO_UTF8(task_data.InstrumentName);
 	data["DeliveryYear"] = task_data.DeliveryYear;
 	data["DeliveryMonth"] = task_data.DeliveryMonth;
@@ -1462,7 +1462,7 @@ void TdApi::processRspQryInvestorPosition(Task task)
 	data["BrokerID"] = task_data.BrokerID;
 	data["ExchangeID"] = task_data.ExchangeID;
 	data["InvestorID"] = task_data.InvestorID;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["InstrumentName"] = GBK_TO_UTF8(task_data.InstrumentName);
 	data["Direction"] = task_data.Direction;
 	data["HedgeFlag"] = task_data.HedgeFlag;
@@ -1477,7 +1477,7 @@ void TdApi::processRspQryInvestorPosition(Task task)
 	data["PositionProfit"] = task_data.PositionProfit;
 	data["FrozenPremium"] = task_data.FrozenPremium;
 	data["LastTradeID"] = task_data.LastTradeID;
-	data["LastOrderLocalID"] = task_data.LastOrderLocalID;
+	data["LastOrderLocalID"] = GBK_TO_UTF8(task_data.LastOrderLocalID);
 	data["PositionClose"] = task_data.PositionClose;
 	data["YdPositionClose"] = task_data.YdPositionClose;
 	data["YdFrozenClosing"] = task_data.YdFrozenClosing;
@@ -1533,7 +1533,7 @@ void TdApi::processRspQryProduct(Task task)
 	CFocusFtdcRspProductField task_data = any_cast<CFocusFtdcRspProductField>(task.task_data);
 	dict data;
 	data["ExchangeID"] = task_data.ExchangeID;
-	data["ProductID"] = task_data.ProductID;
+	data["ProductID"] = GBK_TO_UTF8(task_data.ProductID);
 	data["ProductName"] = GBK_TO_UTF8(task_data.ProductName);
 	data["Currency"] = task_data.Currency;
 	data["ExchangeRate"] = task_data.ExchangeRate;
@@ -1555,9 +1555,9 @@ void TdApi::processRtnStrategyLog(Task task)
 	data["TradingDay"] = task_data.TradingDay;
 	data["EventType"] = task_data.EventType;
 	data["EventCode"] = task_data.EventCode;
-	data["UserID"] = task_data.UserID;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
 	data["InvestorID"] = task_data.InvestorID;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["Log_Content"] = task_data.Log_Content;
 	data["OperDate"] = task_data.OperDate;
 	data["OperTime"] = task_data.OperTime;
@@ -1573,7 +1573,7 @@ void TdApi::processRtnInvestorPosition(Task task)
 	data["BrokerID"] = task_data.BrokerID;
 	data["ExchangeID"] = task_data.ExchangeID;
 	data["InvestorID"] = task_data.InvestorID;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["InstrumentName"] = GBK_TO_UTF8(task_data.InstrumentName);
 	data["Direction"] = task_data.Direction;
 	data["HedgeFlag"] = task_data.HedgeFlag;
@@ -1588,7 +1588,7 @@ void TdApi::processRtnInvestorPosition(Task task)
 	data["PositionProfit"] = task_data.PositionProfit;
 	data["FrozenPremium"] = task_data.FrozenPremium;
 	data["LastTradeID"] = task_data.LastTradeID;
-	data["LastOrderLocalID"] = task_data.LastOrderLocalID;
+	data["LastOrderLocalID"] = GBK_TO_UTF8(task_data.LastOrderLocalID);
 	data["PositionClose"] = task_data.PositionClose;
 	data["YdPositionClose"] = task_data.YdPositionClose;
 	data["YdFrozenClosing"] = task_data.YdFrozenClosing;
@@ -1609,7 +1609,7 @@ void TdApi::processRtnParentOrder(Task task)
 	PyLock lock;
 	CFocusFtdcParentOrderField task_data = any_cast<CFocusFtdcParentOrderField>(task.task_data);
 	dict data;
-	data["UserID"] = task_data.UserID;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
 	data["InvestorID"] = task_data.InvestorID;
 	data["AlgoParentOrderSysID"] = task_data.AlgoParentOrderSysID;
 	data["AlgoStrategyType"] = task_data.AlgoStrategyType;
@@ -1630,14 +1630,14 @@ void TdApi::processRtnParentOrder(Task task)
 	data["stepSpread"] = task_data.stepSpread;
 	data["optOnExtreme"] = task_data.optOnExtreme;
 	data["ExchangeID"] = task_data.ExchangeID;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["Direction"] = task_data.Direction;
 	data["orderQty"] = task_data.orderQty;
 	data["orderAmt"] = task_data.orderAmt;
 	data["TradingDay"] = task_data.TradingDay;
 	data["LastOperTime"] = task_data.LastOperTime;
-	data["UserCustom"] = task_data.UserCustom;
-	data["Note"] = task_data.Note;
+	data["UserCustom"] = GBK_TO_UTF8(task_data.UserCustom);
+	data["Note"] = GBK_TO_UTF8(task_data.Note);
 	data["StrategyID"] = task_data.StrategyID;
 
 	this->onRtnParentOrder(data);
@@ -1648,10 +1648,10 @@ void TdApi::processRtnParentOrderAction(Task task)
 	PyLock lock;
 	CFocusFtdcParentOrderActionField task_data = any_cast<CFocusFtdcParentOrderActionField>(task.task_data);
 	dict data;
-	data["UserID"] = task_data.UserID;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
 	data["InvestorID"] = task_data.InvestorID;
 	data["ExchangeID"] = task_data.ExchangeID;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["StrategyID"] = task_data.StrategyID;
 	data["AlgoParentOrderSysID"] = task_data.AlgoParentOrderSysID;
 	data["ActionOption"] = task_data.ActionOption;
@@ -1664,7 +1664,7 @@ void TdApi::processRtnAmendParentOrder(Task task)
 	PyLock lock;
 	CFocusFtdcAmendParentOrderField task_data = any_cast<CFocusFtdcAmendParentOrderField>(task.task_data);
 	dict data;
-	data["UserID"] = task_data.UserID;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
 	data["InvestorID"] = task_data.InvestorID;
 	data["AlgoParentOrderSysID"] = task_data.AlgoParentOrderSysID;
 	data["AlgoStrategyType"] = task_data.AlgoStrategyType;
@@ -1685,14 +1685,14 @@ void TdApi::processRtnAmendParentOrder(Task task)
 	data["stepSpread"] = task_data.stepSpread;
 	data["optOnExtreme"] = task_data.optOnExtreme;
 	data["ExchangeID"] = task_data.ExchangeID;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["Direction"] = task_data.Direction;
 	data["orderQty"] = task_data.orderQty;
 	data["orderAmt"] = task_data.orderAmt;
 	data["TradingDay"] = task_data.TradingDay;
 	data["LastOperTime"] = task_data.LastOperTime;
-	data["UserCustom"] = task_data.UserCustom;
-	data["Note"] = task_data.Note;
+	data["UserCustom"] = GBK_TO_UTF8(task_data.UserCustom);
+	data["Note"] = GBK_TO_UTF8(task_data.Note);
 	data["StrategyID"] = task_data.StrategyID;
 
 	this->onRtnAmendParentOrder(data);
@@ -1703,13 +1703,13 @@ void TdApi::processRtnExtraManualParentOrder(Task task)
 	PyLock lock;
 	CFocusFtdcExtraManualParentOrderField task_data = any_cast<CFocusFtdcExtraManualParentOrderField>(task.task_data);
 	dict data;
-	data["UserID"] = task_data.UserID;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
 	data["InvestorID"] = task_data.InvestorID;
 	data["StrategyID"] = task_data.StrategyID;
 	data["AlgoParentOrderSysID"] = task_data.AlgoParentOrderSysID;
 	data["sliceQty"] = task_data.sliceQty;
 	data["slicePrice"] = task_data.slicePrice;
-	data["UserCustom"] = task_data.UserCustom;
+	data["UserCustom"] = GBK_TO_UTF8(task_data.UserCustom);
 
 	this->onRtnExtraManualParentOrder(data);
 };
@@ -1721,7 +1721,7 @@ void TdApi::processRspQryMarketTradingTime(Task task)
 	dict data;
 	data["ExchangeID"] = task_data.ExchangeID;
 	data["ExchangeName"] = GBK_TO_UTF8(task_data.ExchangeName);
-	data["ProductID"] = task_data.ProductID;
+	data["ProductID"] = GBK_TO_UTF8(task_data.ProductID);
 	data["TpStart"] = task_data.TpStart;
 	data["TpEnd"] = task_data.TpEnd;
 	data["Flags"] = task_data.Flags;
@@ -1740,11 +1740,11 @@ void TdApi::processRspBatchOrderInsert(Task task)
 	dict data;
 	data["BrokerID"] = task_data.BrokerID;
 	data["InvestorID"] = task_data.InvestorID;
-	data["UserID"] = task_data.UserID;
-	data["UserOrderLocalID"] = task_data.UserOrderLocalID;
-	data["UserCustom"] = task_data.UserCustom;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
+	data["UserOrderLocalID"] = GBK_TO_UTF8(task_data.UserOrderLocalID);
+	data["UserCustom"] = GBK_TO_UTF8(task_data.UserCustom);
 	data["ExchangeID"] = task_data.ExchangeID;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["Direction"] = task_data.Direction;
 	data["OffsetFlag"] = task_data.OffsetFlag;
 	data["LimitPrice"] = task_data.LimitPrice;
@@ -1764,13 +1764,13 @@ void TdApi::processRspBatchOrderAction(Task task)
 	dict data;
 	data["BrokerID"] = task_data.BrokerID;
 	data["InvestorID"] = task_data.InvestorID;
-	data["UserID"] = task_data.UserID;
-	data["UserOrderLocalID"] = task_data.UserOrderLocalID;
-	data["UserCustom"] = task_data.UserCustom;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
+	data["UserOrderLocalID"] = GBK_TO_UTF8(task_data.UserOrderLocalID);
+	data["UserCustom"] = GBK_TO_UTF8(task_data.UserCustom);
 	data["ExchangeID"] = task_data.ExchangeID;
 	data["OrderSysID"] = task_data.OrderSysID;
-	data["InstrumentID"] = task_data.InstrumentID;
-	data["UserOrderActionLocalID"] = task_data.UserOrderActionLocalID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
+	data["UserOrderActionLocalID"] = GBK_TO_UTF8(task_data.UserOrderActionLocalID);
 	data["FrontID"] = task_data.FrontID;
 	data["SessionID"] = task_data.SessionID;
 
@@ -1786,7 +1786,7 @@ void TdApi::processRtnSpreadInstrStrategy(Task task)
 	PyLock lock;
 	CFocusFtdcSpreadInstrStrategyField task_data = any_cast<CFocusFtdcSpreadInstrStrategyField>(task.task_data);
 	dict data;
-	data["UserID"] = task_data.UserID;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
 	data["InvestorID"] = task_data.InvestorID;
 	data["StrategyID"] = task_data.StrategyID;
 	data["ExchangeIDLeg1"] = task_data.ExchangeIDLeg1;
@@ -1807,7 +1807,7 @@ void TdApi::processRtnSpreadInstrStrategy(Task task)
 	data["StrategyIsTrading"] = task_data.StrategyIsTrading;
 	data["LiquidLack"] = task_data.LiquidLack;
 	data["AlgoParentOrderSysID"] = task_data.AlgoParentOrderSysID;
-	data["Note"] = task_data.Note;
+	data["Note"] = GBK_TO_UTF8(task_data.Note);
 
 	this->onRtnSpreadInstrStrategy(data);
 };
@@ -1817,7 +1817,7 @@ void TdApi::processRtnAmendPSpreadInstrStrategy(Task task)
 	PyLock lock;
 	CFocusFtdcSpreadInstrStrategyField task_data = any_cast<CFocusFtdcSpreadInstrStrategyField>(task.task_data);
 	dict data;
-	data["UserID"] = task_data.UserID;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
 	data["InvestorID"] = task_data.InvestorID;
 	data["StrategyID"] = task_data.StrategyID;
 	data["ExchangeIDLeg1"] = task_data.ExchangeIDLeg1;
@@ -1838,7 +1838,7 @@ void TdApi::processRtnAmendPSpreadInstrStrategy(Task task)
 	data["StrategyIsTrading"] = task_data.StrategyIsTrading;
 	data["LiquidLack"] = task_data.LiquidLack;
 	data["AlgoParentOrderSysID"] = task_data.AlgoParentOrderSysID;
-	data["Note"] = task_data.Note;
+	data["Note"] = GBK_TO_UTF8(task_data.Note);
 
 	this->onRtnAmendPSpreadInstrStrategy(data);
 };

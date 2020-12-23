@@ -229,8 +229,13 @@ def createProcess(cbName, cbArgsTypeList, cbArgsValueList):
             bodyprocess.write("\t"+ "dict data;\n")
 
             struct = _structPy.structDict[type_]
-            for key in struct.keys():
-                if 'Name' in key or 'Msg' in key: # 针对CTP返回的GBK格式的中文进行特殊处理
+            for key, cpp_type in struct.items():
+                need_convet_2_utf8 = False
+                for s in ['Name', 'Msg', 'Note', 'User', 'Info', 'Instrument', 'Business', 'Product', 'Branch', 'Local']:
+                    if s in key and cpp_type in ['string', ]:
+                        need_convet_2_utf8 = True
+                        break
+                if need_convet_2_utf8:
                     bodyprocess.write("\t"+ 'data["' + key + '"] = GBK_TO_UTF8(task_data.' + key + ');\n')
                 else:
                     bodyprocess.write("\t"+ 'data["' + key + '"] = task_data.' + key + ';\n')

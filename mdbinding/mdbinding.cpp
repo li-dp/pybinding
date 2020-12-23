@@ -804,14 +804,14 @@ void MdApi::processRspUserLogin(Task task)
 	dict data;
 	data["TradingDay"] = task_data.TradingDay;
 	data["BrokerID"] = task_data.BrokerID;
-	data["UserID"] = task_data.UserID;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
 	data["LoginTime"] = task_data.LoginTime;
-	data["MaxOrderLocalID"] = task_data.MaxOrderLocalID;
+	data["MaxOrderLocalID"] = GBK_TO_UTF8(task_data.MaxOrderLocalID);
 	data["TradingSystemName"] = GBK_TO_UTF8(task_data.TradingSystemName);
 	data["DataCenterID"] = task_data.DataCenterID;
 	data["PrivateFlowSize"] = task_data.PrivateFlowSize;
 	data["UserFlowSize"] = task_data.UserFlowSize;
-	data["LoginInfo"] = task_data.LoginInfo;
+	data["LoginInfo"] = GBK_TO_UTF8(task_data.LoginInfo);
 	data["SessionID"] = task_data.SessionID;
 	data["FrontID"] = task_data.FrontID;
 
@@ -828,7 +828,7 @@ void MdApi::processRspUserLogout(Task task)
 	CQdFtdcRspUserLogoutField task_data = any_cast<CQdFtdcRspUserLogoutField>(task.task_data);
 	dict data;
 	data["BrokerID"] = task_data.BrokerID;
-	data["UserID"] = task_data.UserID;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
 
 	CQdFtdcRspInfoField task_error = any_cast<CQdFtdcRspInfoField>(task.task_error);
 	dict error;
@@ -900,7 +900,7 @@ void MdApi::processRtnDepthMarketData(Task task)
 	data["BidVolume10"] = task_data.BidVolume10;
 	data["AskPrice10"] = task_data.AskPrice10;
 	data["AskVolume10"] = task_data.AskVolume10;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["UpdateTime"] = task_data.UpdateTime;
 	data["UpdateMillisec"] = task_data.UpdateMillisec;
 	data["ExchangeID"] = task_data.ExchangeID;
@@ -977,7 +977,7 @@ void MdApi::processRtnMultiDepthMarketData(Task task)
 	data["BidVolume10"] = task_data.BidVolume10;
 	data["AskPrice10"] = task_data.AskPrice10;
 	data["AskVolume10"] = task_data.AskVolume10;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["UpdateTime"] = task_data.UpdateTime;
 	data["UpdateMillisec"] = task_data.UpdateMillisec;
 	data["ExchangeID"] = task_data.ExchangeID;
@@ -996,7 +996,7 @@ void MdApi::processRspSubMarketData(Task task)
 	PyLock lock;
 	CQdFtdcSpecificInstrumentField task_data = any_cast<CQdFtdcSpecificInstrumentField>(task.task_data);
 	dict data;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 
 	CQdFtdcRspInfoField task_error = any_cast<CQdFtdcRspInfoField>(task.task_error);
 	dict error;
@@ -1010,7 +1010,7 @@ void MdApi::processRspUnSubMarketData(Task task)
 	PyLock lock;
 	CQdFtdcSpecificInstrumentField task_data = any_cast<CQdFtdcSpecificInstrumentField>(task.task_data);
 	dict data;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 
 	CQdFtdcRspInfoField task_error = any_cast<CQdFtdcRspInfoField>(task.task_error);
 	dict error;
@@ -1024,7 +1024,7 @@ void MdApi::processRtnMBLMarketData(Task task)
 	PyLock lock;
 	CQdFtdcMBLMarketDataField task_data = any_cast<CQdFtdcMBLMarketDataField>(task.task_data);
 	dict data;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["Direction"] = task_data.Direction;
 	data["Price"] = task_data.Price;
 	data["Volume"] = task_data.Volume;
@@ -1040,7 +1040,7 @@ void MdApi::processRtnQmdInstrumentStatu(Task task)
 	CQdFtdcQmdInstrumentStateField task_data = any_cast<CQdFtdcQmdInstrumentStateField>(task.task_data);
 	dict data;
 	data["ExchangeID"] = task_data.ExchangeID;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["InstrumentStatus"] = task_data.InstrumentStatus;
 
 	this->onRtnQmdInstrumentStatu(data);
@@ -1104,7 +1104,7 @@ void MdApi::processRspQryMarketData(Task task)
 	data["BidVolume1"] = task_data.BidVolume1;
 	data["AskPrice1"] = task_data.AskPrice1;
 	data["AskVolume1"] = task_data.AskVolume1;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["UpdateTime"] = task_data.UpdateTime;
 	data["UpdateMillisec"] = task_data.UpdateMillisec;
 	data["InstrumentStatus"] = task_data.InstrumentStatus;
@@ -1121,7 +1121,7 @@ void MdApi::processRspQryInstrumentList(Task task)
 	PyLock lock;
 	CQdFtdcSpecificInstrumentField task_data = any_cast<CQdFtdcSpecificInstrumentField>(task.task_data);
 	dict data;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 
 	CQdFtdcRspInfoField task_error = any_cast<CQdFtdcRspInfoField>(task.task_error);
 	dict error;
@@ -1135,7 +1135,7 @@ void MdApi::processRtnTenEntrust(Task task)
 	PyLock lock;
 	CQdFtdcMDTenDepthMarketDataField task_data = any_cast<CQdFtdcMDTenDepthMarketDataField>(task.task_data);
 	dict data;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["UpdateTime"] = task_data.UpdateTime;
 	data["UpdateMillisec"] = task_data.UpdateMillisec;
 	data["BestBuyOrderPrice"] = task_data.BestBuyOrderPrice;
@@ -1170,12 +1170,12 @@ void MdApi::processRtnOptionIndexData(Task task)
 	PyLock lock;
 	CQdFtdcOptionIndexDataField task_data = any_cast<CQdFtdcOptionIndexDataField>(task.task_data);
 	dict data;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["UpdateTime"] = task_data.UpdateTime;
 	data["UpdateMillisec"] = task_data.UpdateMillisec;
 	data["ExchangeID"] = task_data.ExchangeID;
 	data["TradingDay"] = task_data.TradingDay;
-	data["UserID"] = task_data.UserID;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
 	data["IsManalSetVol"] = task_data.IsManalSetVol;
 	data["UnderlyingLastPrice"] = task_data.UnderlyingLastPrice;
 	data["LastPrice"] = task_data.LastPrice;
@@ -1205,7 +1205,7 @@ void MdApi::processRtnDepthMinMarketData(Task task)
 	dict data;
 	data["TradingDay"] = task_data.TradingDay;
 	data["ExchangeID"] = task_data.ExchangeID;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["PreClosePrice"] = task_data.PreClosePrice;
 	data["PreOpenInterest"] = task_data.PreOpenInterest;
 	data["OpenPrice"] = task_data.OpenPrice;
@@ -1234,7 +1234,7 @@ void MdApi::processRspQryMinMarketData(Task task)
 	dict data;
 	data["TradingDay"] = task_data.TradingDay;
 	data["ExchangeID"] = task_data.ExchangeID;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["PreClosePrice"] = task_data.PreClosePrice;
 	data["PreOpenInterest"] = task_data.PreOpenInterest;
 	data["OpenPrice"] = task_data.OpenPrice;
@@ -1267,7 +1267,7 @@ void MdApi::processRtnDepthOneMinBarSlice(Task task)
 	dict data;
 	data["TradingDay"] = task_data.TradingDay;
 	data["ExchangeID"] = task_data.ExchangeID;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["PreClosePrice"] = task_data.PreClosePrice;
 	data["PreOpenInterest"] = task_data.PreOpenInterest;
 	data["OpenPrice"] = task_data.OpenPrice;
@@ -1295,7 +1295,7 @@ void MdApi::processRspQryStInstrument(Task task)
 	CQdFtdcQryMarketDataField task_data = any_cast<CQdFtdcQryMarketDataField>(task.task_data);
 	dict data;
 	data["ExchangeID"] = task_data.ExchangeID;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 
 	CQdFtdcRspInfoField task_error = any_cast<CQdFtdcRspInfoField>(task.task_error);
 	dict error;
@@ -1311,7 +1311,7 @@ void MdApi::processRtnTradeMaketData(Task task)
 	dict data;
 	data["TradingDay"] = task_data.TradingDay;
 	data["ExchangeID"] = task_data.ExchangeID;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["TradeIndex"] = task_data.TradeIndex;
 	data["TradePirce"] = task_data.TradePirce;
 	data["TradeVolume"] = task_data.TradeVolume;
@@ -1329,7 +1329,7 @@ void MdApi::processRtnOrderMaketData(Task task)
 	dict data;
 	data["TradingDay"] = task_data.TradingDay;
 	data["ExchangeID"] = task_data.ExchangeID;
-	data["InstrumentID"] = task_data.InstrumentID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["Direction"] = task_data.Direction;
 	data["OrderTypeStr"] = task_data.OrderTypeStr;
 	data["OrderPirce"] = task_data.OrderPirce;
