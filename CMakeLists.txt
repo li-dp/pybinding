@@ -24,6 +24,9 @@ find_library(MD_API_LIBRARY
 find_library(TD_API_LIBRARY
 	NAMES focustraderapi
 	PATHS ${CPP_LIB_PATH})
+find_library(USER_API_LIBRARY
+	NAMES focususerapi
+	PATHS ${CPP_LIB_PATH})
 
 	
 # 设置Python所在的目录
@@ -66,3 +69,16 @@ if (BUILD_TD_BINDING)
 	set_target_properties(focusbinding PROPERTIES PREFIX "")
 	target_link_libraries(focusbinding  ${Boost_LIBRARIES} ${PYTHON_LIBRARY} ${TD_API_LIBRARY})
 endif()
+
+option(BUILD_USER_BINDING "build user binding" ON)
+if (BUILD_USER_BINDING)
+	add_definitions(-DBUILD_USER_BINDING)
+	set(USER_BINDING_PATH userbinding)
+	include_directories(USER_BINDING_PATH)
+	set(USER_BINDING_SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/userbinding/userbinding.cpp)
+	add_library(userbinding SHARED ${USER_BINDING_SOURCE})  
+	
+	set_target_properties(userbinding PROPERTIES PREFIX "")
+	target_link_libraries(userbinding  ${Boost_LIBRARIES} ${PYTHON_LIBRARY} ${USER_API_LIBRARY})
+endif()
+

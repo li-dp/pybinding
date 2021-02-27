@@ -1,0 +1,1694 @@
+# encoding: UTF-8
+
+defineDict = {}
+typedefDict = {}
+
+#//////////////////////////////////////////////////////////////////////
+#@system Trading Platform
+#@company 山西证券股份有限公司  金融衍生产品部
+#@author 顾浩
+#@file FocusFtdcUserApiDataType.h
+#@brief 定义了客户端接口使用的业务数据类型
+#@history 
+#
+#//////////////////////////////////////////////////////////////////////
+
+
+
+#//////////////////////////////////////////////////////////////////////
+#定义交易通道类型类别
+#//////////////////////////////////////////////////////////////////////
+defineDict["FOCUS_EI_CFFEX"] = "CFFEX"
+defineDict["FOCUS_EI_SHFE"] = "SHFE"
+defineDict["FOCUS_EI_DCE"] = "DCE"
+defineDict["FOCUS_EI_CZCE"] = "CZCE"
+defineDict["FOCUS_EI_SSE"] = "SSE"
+defineDict["FOCUS_EI_SZSE"] = "SZSE"
+defineDict["FOCUS_EI_SGE"] = "SGE"
+defineDict["FOCUS_EI_CME"] = "CME"
+defineDict["FOCUS_EI_LME"] = "LME"
+defineDict["FOCUS_EI_GTJA"] = "GTJA"
+defineDict["FOCUS_EI_INE"] = "INE"
+defineDict["FOCUS_EI_BXG"] = "BXG"
+
+defineDict["FOCUS_EI_SGX"] = "SGX"
+
+defineDict["FOCUS_EI_NYMEX"] = "NYMEX"
+defineDict["FOCUS_EI_HKEX"] = "HKEX"
+defineDict["FOCUS_EI_BMD"] = "BMD"
+defineDict["FOCUS_EI_CBOT"] = "CBOT"
+defineDict["FOCUS_EI_NYBOT"] = "NYBOT"
+defineDict["FOCUS_EI_TOCOM"] = "TOCOM"
+defineDict["FOCUS_EI_KRX"] = "KRX"
+defineDict["FOCUS_EI_LIFFE"] = "LIFFE"
+
+
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcPriceTickType是一个最小变动价位类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcPriceTickType"] = "float"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcPriceType是一个价格类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcPriceType"] = "float"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcRatioType是一个比率类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcRatioType"] = "float"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcMoneyType是一个资金类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcMoneyType"] = "float"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcLargeVolumeType是一个大额数量类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcLargeVolumeType"] = "float"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcToleranceType是一个精度类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcToleranceType"] = "float"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcVolatilityType是一个波动率类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcVolatilityType"] = "float"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcTimeValueType是一个时间值类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcTimeValueType"] = "float"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcGreekValueType是一个希腊字母值类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcGreekValueType"] = "float"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcNumberType是一个编号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcNumberType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcSequenceNoType是一个序列号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcSequenceNoType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcMillisecType是一个最后修改毫秒类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcMillisecType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcVolumeType是一个数量类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcVolumeType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcUnderlyingMultipleType是一个合约乘数类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcUnderlyingMultipleType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcVolumeMultipleType是一个数量乘数类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcVolumeMultipleType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcSequenceSeriesType是一个序列系列号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcSequenceSeriesType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcSessionIDType是一个会话编号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcSessionIDType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcErrorIDType是一个错误代码类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcErrorIDType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcDataCenterIDType是一个数据中心代码类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcDataCenterIDType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcFrontIDType是一个前置编号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcFrontIDType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcRequestIDType是一个请求编号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcRequestIDType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcTopicIDType是一个主题代码类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcTopicIDType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcCommandNoType是一个DB命令序号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcCommandNoType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcTotalNumsType是一个累加次数类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcTotalNumsType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcLocalTimeType是一个本地时间类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcLocalTimeType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcMonthType是一个月份类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcMonthType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcBoolType是一个布尔型类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcBoolType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcYearType是一个年类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcYearType"] = "int"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcAutoTradeType是一个是否自动报价0否1自动类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcAutoTradeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcOrderTypeType是一个报单类型类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcOrderTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcCodeType是一个编号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcCodeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcAliasType是一个别名类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcAliasType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcMemTableNameType是一个内存表名类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcMemTableNameType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcOrderSysIDType是一个报单编号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcOrderSysIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcTradeIDType是一个成交编号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcTradeIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcUserIDType是一个用户代码类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcUserIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcParticipantIDType是一个会员编号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcParticipantIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcMarketIDType是一个市场代码类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcMarketIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcIPAddressType是一个IP地址类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcIPAddressType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcMacAddressType是一个Mac地址类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcMacAddressType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcInstrumentNameType是一个合约名称类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcInstrumentNameType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcBranchIDType是一个营业部代码类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcBranchIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcInstrumentIDType是一个合约编号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcInstrumentIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcExchangeIDType是一个交易(所)通道类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcExchangeIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcExchangeNameType是一个交易(所)名称类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcExchangeNameType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcDateType是一个日期类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcDateType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcTimeType是一个时间类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcTimeType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcClientIDType是一个客户编码类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcClientIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcAccountIDType是一个资金帐号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcAccountIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcSeatIDType是一个席位号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcSeatIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcProductNameType是一个品种名称类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcProductNameType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcUserOrderLocalIDType是一个用户本地报单号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcUserOrderLocalIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcOrderLocalIDType是一个本地报单编号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcOrderLocalIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcInvestorIDType是一个投资者编号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcInvestorIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcInvestorNameType是一个投资者名称类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcInvestorNameType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcUserNameType是一个用户编码类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcUserNameType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcPasswordType是一个密码类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcPasswordType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcProductInfoType是一个产品信息类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcProductInfoType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcLoginInfoType是一个登录信息类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcLoginInfoType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcProtocolInfoType是一个协议信息类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcProtocolInfoType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcBusinessUnitType是一个业务单元类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcBusinessUnitType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcTradingSystemNameType是一个交易系统名称类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcTradingSystemNameType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcCommandTypeType是一个DB命令类型类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcCommandTypeType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcBrokerIDType是一个经纪公司编号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcBrokerIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcCustomType是一个用户自定义域类型类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcCustomType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcTradingDayType是一个交易日类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcTradingDayType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcDepartmentType是一个营业部类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcDepartmentType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcGrantFuncSetType是一个授权功能号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcGrantFuncSetType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcProductIDType是一个品种编号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcProductIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcAccountSeqNoType是一个资金流水号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcAccountSeqNoType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcCurrencyType是一个币种代码类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcCurrencyType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcSubInstrumentIDType是一个订阅信息类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcSubInstrumentIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcAdviceUserInfoType是一个用户代码类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcAdviceUserInfoType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcDepositNoteType是一个出让金备注类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcDepositNoteType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcRemarkType是一个备注类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcRemarkType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcQuoteStepType是一个报价价宽模板类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcQuoteStepType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcStepNameType是一个报价价宽名称类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcStepNameType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcStrategyIDType是一个策略ID类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcStrategyIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcStrategyNameType是一个策略名类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcStrategyNameType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcStrategyMessageNoteType是一个策略消息内容类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcStrategyMessageNoteType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcQuoteSysIDType是一个系统报价编号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcQuoteSysIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcQuoteRefType是一个本地报价参考编号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcQuoteRefType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcErrorMsgType是一个错误信息类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcErrorMsgType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcAuthCodeType是一个授权编码类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcAuthCodeType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcLargeErrorMsgType是一个超长错误信息类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcLargeErrorMsgType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcFieldNameType是一个字段名类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcFieldNameType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcFieldContentType是一个字段内容类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcFieldContentType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcContentType是一个字段内容类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcContentType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcBatchUserOrderLocalIDType是一个批量用户本地报单号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcBatchUserOrderLocalIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcBatchCustomType是一个批量用户自定义域类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcBatchCustomType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcBatchExchangeIDType是一个批量交易所代码类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcBatchExchangeIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcBatchInstrumentIDType是一个批量合约编号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcBatchInstrumentIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcBatchDirectionType是一个批量买卖方向类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcBatchDirectionType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcBatchOffsetFlagType是一个批量开平标志类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcBatchOffsetFlagType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcBatchPriceType是一个批量价格类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcBatchPriceType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcBatchVolumeType是一个批量数量类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcBatchVolumeType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcBatchOrderSysIDType是一个批量报单编号类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcBatchOrderSysIDType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcEnterReasonType是一个进入本状态原因类型
+#//////////////////////////////////////////////////////////////////////
+#自动切换
+defineDict["FOCUS_FTDC_ER_Automatic"] = '1'
+#手动切换
+defineDict["FOCUS_FTDC_ER_Manual"] = '2'
+#熔断
+defineDict["FOCUS_FTDC_ER_Fuse"] = '3'
+
+typedefDict["TFocusFtdcEnterReasonType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcForceCloseReasonType是一个强平原因类型
+#//////////////////////////////////////////////////////////////////////
+#非强平
+defineDict["FOCUS_FTDC_FCR_NotForceClose"] = '0'
+#资金不足
+defineDict["FOCUS_FTDC_FCR_LackDeposit"] = '1'
+#客户超仓
+defineDict["FOCUS_FTDC_FCR_ClientOverPositionLimit"] = '2'
+#会员超仓
+defineDict["FOCUS_FTDC_FCR_MemberOverPositionLimit"] = '3'
+#持仓非整数倍
+defineDict["FOCUS_FTDC_FCR_NotMultiple"] = '4'
+
+typedefDict["TFocusFtdcForceCloseReasonType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcInstrumentStatusType是一个合约交易状态类型
+#//////////////////////////////////////////////////////////////////////
+#开盘前
+defineDict["FOCUS_FTDC_IS_BeforeTrading"] = '0'
+#非交易
+defineDict["FOCUS_FTDC_IS_NoTrading"] = '1'
+#连续交易
+defineDict["FOCUS_FTDC_IS_Continous"] = '2'
+#集合竞价报单
+defineDict["FOCUS_FTDC_IS_AuctionOrdering"] = '3'
+#集合竞价价格平衡
+defineDict["FOCUS_FTDC_IS_AuctionBalance"] = '4'
+#集合竞价撮合
+defineDict["FOCUS_FTDC_IS_AuctionMatch"] = '5'
+#收盘
+defineDict["FOCUS_FTDC_IS_Closed"] = '6'
+#金交所交割申报
+defineDict["FOCUS_FTDC_IS_SGE_Dery_App"] = '7'
+#金交所交割申报结束
+defineDict["FOCUS_FTDC_IS_SGE_Dery_Match"] = '8'
+#金交所中立仓申报
+defineDict["FOCUS_FTDC_IS_SGE_Mid_App"] = '9'
+#金交所交割申报撮合
+defineDict["FOCUS_FTDC_IS_SGE_Mid_Match"] = 'a'
+
+typedefDict["TFocusFtdcInstrumentStatusType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcOffsetFlagType是一个开平标志类型
+#//////////////////////////////////////////////////////////////////////
+#开仓
+defineDict["FOCUS_FTDC_OF_Open"] = '0'
+#平仓
+defineDict["FOCUS_FTDC_OF_Close"] = '1'
+#强平
+defineDict["FOCUS_FTDC_OF_ForceClose"] = '2'
+#平今
+defineDict["FOCUS_FTDC_OF_CloseToday"] = '3'
+#平昨
+defineDict["FOCUS_FTDC_OF_CloseYesterday"] = '4'
+#自动
+defineDict["FOCUS_FTDC_OF_Auto"] = '5'
+
+typedefDict["TFocusFtdcOffsetFlagType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcVolumeConditionType是一个成交量类型类型
+#//////////////////////////////////////////////////////////////////////
+#任何数量
+defineDict["FOCUS_FTDC_VC_AV"] = '1'
+#最小数量
+defineDict["FOCUS_FTDC_VC_MV"] = '2'
+#全部数量
+defineDict["FOCUS_FTDC_VC_CV"] = '3'
+
+typedefDict["TFocusFtdcVolumeConditionType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcOrderPriceTypeType是一个报单价格条件类型
+#//////////////////////////////////////////////////////////////////////
+#任意价（暂对期货有效）
+defineDict["FOCUS_FTDC_OPT_AnyPrice"] = '1'
+#限价(上海，深圳都有效)
+defineDict["FOCUS_FTDC_OPT_LimitPrice"] = '2'
+#最优价（暂对期货有效）
+defineDict["FOCUS_FTDC_OPT_BestPrice"] = '3'
+#五档价（深圳指令）
+defineDict["FOCUS_FTDC_OPT_FiveLevelPrice"] = '4'
+#对方最优价格（深圳指令）
+defineDict["FOCUS_FTDC_OPT_CpGFD"] = '5'
+#本方最优价格（深圳指令）
+defineDict["FOCUS_FTDC_OPT_SelfGFD"] = '6'
+#最优五档即时成交剩余撤销(上海指令)
+defineDict["FOCUS_FTDC_OPT_FiveLevelIOC"] = '7'
+#即时成交剩余撤销（深圳指令）
+defineDict["FOCUS_FTDC_OPT_BestPriceIOC"] = '8'
+#全额成交或撤销（深圳指令）
+defineDict["FOCUS_FTDC_OPT_FOK"] = '9'
+#最优五档即时成交剩余转限价(上海指令)
+defineDict["FOCUS_FTDC_OPT_FiveLevelGFD"] = 'a'
+
+typedefDict["TFocusFtdcOrderPriceTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcTimeConditionType是一个有效期类型类型
+#//////////////////////////////////////////////////////////////////////
+#立即完成，否则撤销
+defineDict["FOCUS_FTDC_TC_IOC"] = '1'
+#本节有效
+defineDict["FOCUS_FTDC_TC_GFS"] = '2'
+#当日有效
+defineDict["FOCUS_FTDC_TC_GFD"] = '3'
+#指定日期前有效
+defineDict["FOCUS_FTDC_TC_GTD"] = '4'
+#撤销前有效
+defineDict["FOCUS_FTDC_TC_GTC"] = '5'
+#集合竞价有效
+defineDict["FOCUS_FTDC_TC_GFA"] = '6'
+
+typedefDict["TFocusFtdcTimeConditionType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcOrderStatusType是一个报单状态类型
+#//////////////////////////////////////////////////////////////////////
+#未知类型
+defineDict["FOCUS_FTDC_OS_Unknow"] = 'a'
+#全部成交
+defineDict["FOCUS_FTDC_OS_AllTraded"] = '0'
+#部分成交还在队列中
+defineDict["FOCUS_FTDC_OS_PartTradedQueueing"] = '1'
+#部分成交不在队列中
+defineDict["FOCUS_FTDC_OS_PartTradedNotQueueing"] = '2'
+#未成交还在队列中
+defineDict["FOCUS_FTDC_OS_NoTradeQueueing"] = '3'
+#未成交不在队列中
+defineDict["FOCUS_FTDC_OS_NoTradeNotQueueing"] = '4'
+#撤单(不在队列中)
+defineDict["FOCUS_FTDC_OS_Canceled"] = '5'
+#订单已报入交易所未应答
+defineDict["FOCUS_FTDC_OS_AcceptedNoReply"] = '6'
+#部分撤单还在队列中
+defineDict["FOCUS_FTDC_OS_PartCanceledQueueing"] = '7'
+#部分成交部分撤单还在队列中
+defineDict["FOCUS_FTDC_OS_PTPCQueueing"] = '8'
+#待报入
+defineDict["FOCUS_FTDC_OS_OnReport"] = '9'
+#投顾报单
+defineDict["FOCUS_FTDC_OS_ADReciveD"] = 'B'
+#投资经理驳回
+defineDict["FOCUS_FTDC_OS_ADRefused"] = 'C'
+#投资经理通过
+defineDict["FOCUS_FTDC_OS_ADAllowed"] = 'D'
+#交易员已报入
+defineDict["FOCUS_FTDC_OS_ADAccepted"] = 'E'
+#交易员驳回
+defineDict["FOCUS_FTDC_OS_ADTraderRefused"] = 'F'
+#投顾经理保单
+defineDict["FOCUS_FTDC_OS_ADManager"] = 'G'
+
+typedefDict["TFocusFtdcOrderStatusType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcAdviceRunModeType是一个投顾下单类型类型
+#//////////////////////////////////////////////////////////////////////
+#手动模式
+defineDict["FOCUS_FTDC_ARM_HANDMODE"] = '0'
+#自动模式
+defineDict["FOCUS_FTDC_ARM_AUTOMODE"] = '1'
+
+typedefDict["TFocusFtdcAdviceRunModeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcAdviceUserOrderModeType是一个下单标示符类型
+#//////////////////////////////////////////////////////////////////////
+#可下单
+defineDict["FOCUS_FTDC_AUOM_ORDERON"] = '0'
+#不可下单
+defineDict["FOCUS_FTDC_AUOM_ORDEROFFE"] = '1'
+
+typedefDict["TFocusFtdcAdviceUserOrderModeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcAdviceSwitchFlagType是一个工作流断线处理标示符类型
+#//////////////////////////////////////////////////////////////////////
+#自动转发
+defineDict["FOCUS_FTDC_ASF_AUYOTRANSITION"] = '0'
+#手动转发
+defineDict["FOCUS_FTDC_ASF_HANDTRANSITION"] = '1'
+#驳回
+defineDict["FOCUS_FTDC_ASF_Refused"] = '2'
+#全部自动
+defineDict["FOCUS_FTDC_ASF_ALLAUTO"] = '3'
+
+typedefDict["TFocusFtdcAdviceSwitchFlagType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcUserTypeType是一个用户类型类型
+#//////////////////////////////////////////////////////////////////////
+#交易员
+defineDict["FOCUS_FTDC_UT_Trader"] = '1'
+#投资经理
+defineDict["FOCUS_FTDC_UT_InvestManager"] = '2'
+#风控管理员
+defineDict["FOCUS_FTDC_UT_Manager"] = '3'
+#投资顾问
+defineDict["FOCUS_FTDC_UT_InvestAdvisor"] = '4'
+#投资交易员
+defineDict["FOCUS_FTDC_UT_InvestTrader"] = '5'
+
+typedefDict["TFocusFtdcUserTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcTradingRightType是一个交易权限类型
+#//////////////////////////////////////////////////////////////////////
+#可以交易
+defineDict["FOCUS_FTDC_TR_Allow"] = '0'
+#只能平仓
+defineDict["FOCUS_FTDC_TR_CloseOnly"] = '1'
+#不能交易
+defineDict["FOCUS_FTDC_TR_Forbidden"] = '2'
+
+typedefDict["TFocusFtdcTradingRightType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcOrderSourceType是一个报单来源类型
+#//////////////////////////////////////////////////////////////////////
+#来自参与者
+defineDict["FOCUS_FTDC_OS_Participant"] = '0'
+#来自管理员
+defineDict["FOCUS_FTDC_OS_Administrator"] = '1'
+
+typedefDict["TFocusFtdcOrderSourceType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcDirectionType是一个买卖方向类型
+#//////////////////////////////////////////////////////////////////////
+#买
+defineDict["FOCUS_FTDC_D_Buy"] = '0'
+#卖
+defineDict["FOCUS_FTDC_D_Sell"] = '1'
+
+typedefDict["TFocusFtdcDirectionType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcDealFlagType是一个处理标志类型
+#//////////////////////////////////////////////////////////////////////
+#已处理
+defineDict["FOCUS_FTDC_DF_Done"] = '1'
+#等待处理
+defineDict["FOCUS_FTDC_DF_Wait"] = '2'
+
+typedefDict["TFocusFtdcDealFlagType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcAccountDirectionType是一个资金操作方式类型
+#//////////////////////////////////////////////////////////////////////
+#入金
+defineDict["FOCUS_FTDC_AD_In"] = '1'
+#出金
+defineDict["FOCUS_FTDC_AD_Out"] = '2'
+#冻结
+defineDict["FOCUS_FTDC_AD_Freeze"] = '3'
+#解冻
+defineDict["FOCUS_FTDC_AD_UpFreeze"] = '4'
+
+typedefDict["TFocusFtdcAccountDirectionType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcClientTypeType是一个客户类型类型
+#//////////////////////////////////////////////////////////////////////
+#期货投机
+defineDict["FOCUS_FTDC_CT_Speculation"] = '1'
+#期货套利
+defineDict["FOCUS_FTDC_CT_Arbitrage"] = '2'
+#期货套保
+defineDict["FOCUS_FTDC_CT_Hedge"] = '3'
+#期货做市商
+defineDict["FOCUS_FTDC_CT_MarketMaker"] = '4'
+#证券普通账户
+defineDict["FOCUS_FTDC_CT_Normal"] = '5'
+#证券信用账户
+defineDict["FOCUS_FTDC_CT_Credit"] = '6'
+#证券衍生品账户
+defineDict["FOCUS_FTDC_CT_Derive"] = '7'
+#其他类型
+defineDict["FOCUS_FTDC_CT_Other"] = '8'
+
+typedefDict["TFocusFtdcClientTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcHedgeFlagType是一个投机套保标志类型
+#//////////////////////////////////////////////////////////////////////
+#投机
+defineDict["FOCUS_FTDC_HF_Speculation"] = '1'
+#套利
+defineDict["FOCUS_FTDC_HF_Arbitrage"] = '2'
+#套保
+defineDict["FOCUS_FTDC_HF_Hedge"] = '3'
+#做市商
+defineDict["FOCUS_FTDC_HF_MarketMaker"] = '4'
+#备兑
+defineDict["FOCUS_FTDC_HF_CoveredOption"] = '5'
+
+typedefDict["TFocusFtdcHedgeFlagType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcActionFlagType是一个操作标志类型
+#//////////////////////////////////////////////////////////////////////
+#删除
+defineDict["FOCUS_FTDC_AF_Delete"] = '0'
+#挂起
+defineDict["FOCUS_FTDC_AF_Suspend"] = '1'
+#激活
+defineDict["FOCUS_FTDC_AF_Active"] = '2'
+#修改
+defineDict["FOCUS_FTDC_AF_Modify"] = '3'
+#驳回
+defineDict["FOCUS_FTDC_AF_Refused"] = '4'
+#分发
+defineDict["FOCUS_FTDC_AF_Allowed"] = '5'
+
+typedefDict["TFocusFtdcActionFlagType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcPositionTypeType是一个持仓类型类型
+#//////////////////////////////////////////////////////////////////////
+#净持仓
+defineDict["FOCUS_FTDC_PT_Net"] = '1'
+#综合持仓
+defineDict["FOCUS_FTDC_PT_Gross"] = '2'
+
+typedefDict["TFocusFtdcPositionTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcOptionsTypeType是一个期权类型类型
+#//////////////////////////////////////////////////////////////////////
+#非期权
+defineDict["FOCUS_FTDC_OT_NotOptions"] = '0'
+#看涨
+defineDict["FOCUS_FTDC_OT_CallOptions"] = '1'
+#看跌
+defineDict["FOCUS_FTDC_OT_PutOptions"] = '2'
+
+typedefDict["TFocusFtdcOptionsTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcIsActiveType是一个是否活跃类型
+#//////////////////////////////////////////////////////////////////////
+#不活跃
+defineDict["FOCUS_FTDC_UIA_NoActive"] = '0'
+#活跃
+defineDict["FOCUS_FTDC_UIA_Active"] = '1'
+
+typedefDict["TFocusFtdcIsActiveType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcAccountStatusType是一个账户状态类型
+#//////////////////////////////////////////////////////////////////////
+#正常
+defineDict["FOCUS_FTDC_AS_Normal"] = '0'
+#追保
+defineDict["FOCUS_FTDC_AS_NotOpen"] = '1'
+#强平
+defineDict["FOCUS_FTDC_AS_ForceClose"] = '2'
+
+typedefDict["TFocusFtdcAccountStatusType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcProductClassType是一个产品类型类型
+#//////////////////////////////////////////////////////////////////////
+#期货
+defineDict["FOCUS_FTDC_PC_Futures"] = '1'
+#期权
+defineDict["FOCUS_FTDC_PC_Options"] = '2'
+#组合
+defineDict["FOCUS_FTDC_PC_Combination"] = '3'
+#即期
+defineDict["FOCUS_FTDC_PC_Spot"] = '4'
+#期转现
+defineDict["FOCUS_FTDC_PC_EFP"] = '5'
+#未知类型
+defineDict["FOCUS_FTDC_PC_Unknown"] = '6'
+#证券
+defineDict["FOCUS_FTDC_PC_Stocks"] = '7'
+#股票期权
+defineDict["FOCUS_FTDC_PC_StockOptions"] = '8'
+#金交所现货
+defineDict["FOCUS_FTDC_PC_SGE_SPOT"] = '9'
+#金交所递延
+defineDict["FOCUS_FTDC_PC_SGE_DEFER"] = 'a'
+#金交所远期
+defineDict["FOCUS_FTDC_PC_SGE_FOWARD"] = 'b'
+#商品期货
+defineDict["FOCUS_FTDC_PC_ComdFutures"] = 'c'
+
+typedefDict["TFocusFtdcProductClassType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcMarginCombTypeType是一个组合保证金类型类型
+#//////////////////////////////////////////////////////////////////////
+#多空保证金都收取，正常保证金算法
+defineDict["FOCUS_FTDC_MCT_AllMargin"] = '0'
+#合约组大边保证金组合
+defineDict["FOCUS_FTDC_MCT_MaxMargin"] = '1'
+#组合合约保证金
+defineDict["FOCUS_FTDC_MCT_CombMargin"] = '2'
+#Span保证金
+defineDict["FOCUS_FTDC_MCT_SpanMargin"] = '3'
+#组合剩余合约单向大边
+defineDict["FOCUS_FTDC_MCT_CombLeftMaxMargin"] = '4'
+#组合剩余合约双边
+defineDict["FOCUS_FTDC_MCT_CombLeftAllMargin"] = '5'
+
+typedefDict["TFocusFtdcMarginCombTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcBusinessTypeType是一个业务类别类型
+#//////////////////////////////////////////////////////////////////////
+#普通
+defineDict["FOCUS_FTDC_BT_Normal"] = '1'
+#申赎
+defineDict["FOCUS_FTDC_BT_AppliedForRedeemed"] = '3'
+#套利组合单
+defineDict["FOCUS_FTDC_BT_Combination"] = 'a'
+#网上投票
+defineDict["FOCUS_FTDC_BT_NetVote"] = 'b'
+#行权
+defineDict["FOCUS_FTDC_BT_ExerciseOption"] = 'c'
+#金交所中立仓申报
+defineDict["FOCUS_FTDC_BT_SGEMidApp"] = 'd'
+#金交所递延交割申报
+defineDict["FOCUS_FTDC_BT_SGEDeferDeliApp"] = 'e'
+#互换定单
+defineDict["FOCUS_FTDC_BT_SWAP"] = 'f'
+#质押
+defineDict["FOCUS_FTDC_BT_MORTGAGE"] = 'g'
+#合并分拆
+defineDict["FOCUS_FTDC_BT_MERGESPLIT"] = 'h'
+#转股
+defineDict["FOCUS_FTDC_BT_SWAPEQUITY"] = 'i'
+#回售
+defineDict["FOCUS_FTDC_BT_SALEBACK"] = 'j'
+#债券出入库
+defineDict["FOCUS_FTDC_BT_BondsInOut"] = 'k'
+
+typedefDict["TFocusFtdcBusinessTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcInvestorTypeType是一个投资者类型类型
+#//////////////////////////////////////////////////////////////////////
+#一级投资者
+defineDict["FOCUS_FTDC_CT_FirtstClass"] = '1'
+#二级投资者
+defineDict["FOCUS_FTDC_CT_SecondClass"] = '2'
+
+typedefDict["TFocusFtdcInvestorTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcLinkTypeType是一个交易编码连接类型类型
+#//////////////////////////////////////////////////////////////////////
+#不连接上一层
+defineDict["FOCUS_FTDC_LT_NONE"] = '0'
+#交易所
+defineDict["FOCUS_FTDC_LT_Exchange"] = '1'
+#经纪商
+defineDict["FOCUS_FTDC_LT_Broker"] = '2'
+
+typedefDict["TFocusFtdcLinkTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcSelfTradeAvoidTypeType是一个投资者连接类型类型
+#//////////////////////////////////////////////////////////////////////
+#不检查自成交
+defineDict["FOCUS_FTDC_STAT_NONE"] = '0'
+#将之后的订单打回
+defineDict["FOCUS_FTDC_STAT_RejectAfter"] = '1'
+#将之前的订单撤单
+defineDict["FOCUS_FTDC_STAT_CancelBefore"] = '2'
+#将之前的订单撤单,成交之后补报
+defineDict["FOCUS_FTDC_STAT_CancelAndReInsert"] = '3'
+
+typedefDict["TFocusFtdcSelfTradeAvoidTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcErrorLevelType是一个级别类型
+#//////////////////////////////////////////////////////////////////////
+#无
+defineDict["FOCUS_FTDC_EL_NONE"] = '0'
+#紧急
+defineDict["FOCUS_FTDC_EL_EMERGENCY"] = '1'
+#危险
+defineDict["FOCUS_FTDC_EL_CRITICAL"] = '2'
+#错误
+defineDict["FOCUS_FTDC_EL_ERROR"] = '3'
+#警告
+defineDict["FOCUS_FTDC_EL_WARNING"] = '4'
+#通知
+defineDict["FOCUS_FTDC_EL_INFO"] = '5'
+#调试
+defineDict["FOCUS_FTDC_EL_DEBUG"] = '6'
+
+typedefDict["TFocusFtdcErrorLevelType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcTradeTypeType是一个成交类型类型
+#//////////////////////////////////////////////////////////////////////
+#普通成交
+defineDict["FOCUS_FTDC_TT_Normal"] = '1'
+#组合成交
+defineDict["FOCUS_FTDC_TT_Combination"] = '2'
+#指令单成交
+defineDict["FOCUS_FTDC_TT_Advice"] = '3'
+#场外成交
+defineDict["FOCUS_FTDC_TT_OTC"] = '4'
+#指令单组合成交
+defineDict["FOCUS_FTDC_TT_AdviceCombination"] = '5'
+
+typedefDict["TFocusFtdcTradeTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcOptionsModeType是一个期权行权方式类型
+#//////////////////////////////////////////////////////////////////////
+#不行权
+defineDict["FOCUS_FTDC_OM_NullOptions"] = '0'
+#欧式行权
+defineDict["FOCUS_FTDC_OM_EuOptions"] = 'E'
+#美式行权
+defineDict["FOCUS_FTDC_OM_AmOptions"] = 'A'
+
+typedefDict["TFocusFtdcOptionsModeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcDistributeTypeType是一个投顾选择资金账户类型类型
+#//////////////////////////////////////////////////////////////////////
+#分配给单一资金账户,直接指定的父账户
+defineDict["FOCUS_FTDC_DT_Single"] = '0'
+#分配给单一资金账户,找资金最多的父账户
+defineDict["FOCUS_FTDC_DT_SingleMoneyHigh"] = '1'
+#分配给所有资金账户，按资金多少分配，资金越多分的越多
+defineDict["FOCUS_FTDC_DT_MultiMoneyHigh"] = 'a'
+
+typedefDict["TFocusFtdcDistributeTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcPriceTypeType是一个价格类型类型
+#//////////////////////////////////////////////////////////////////////
+#最新价
+defineDict["FOCUS_FTDC_PTY_LastPrice"] = '0'
+#中间价
+defineDict["FOCUS_FTDC_PTY_MidPrice"] = '1'
+#买1价
+defineDict["FOCUS_FTDC_PTY_Bid1Price"] = '2'
+#卖1价
+defineDict["FOCUS_FTDC_PTY_Ask1Price"] = '3'
+
+typedefDict["TFocusFtdcPriceTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcDateTypeType是一个日期类型类型
+#//////////////////////////////////////////////////////////////////////
+#交易日期
+defineDict["FOCUS_FTDC_DT_TradingDate"] = '0'
+#公历日期
+defineDict["FOCUS_FTDC_DT_CalendarDate"] = '1'
+
+typedefDict["TFocusFtdcDateTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcTimingPatternType是一个计时方式类型
+#//////////////////////////////////////////////////////////////////////
+#分钟计时
+defineDict["FOCUS_FTDC_TP_MinTiming"] = '0'
+#天数计时
+defineDict["FOCUS_FTDC_TP_MixTiming"] = '1'
+
+typedefDict["TFocusFtdcTimingPatternType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcPricingMethodType是一个定价方法类型
+#//////////////////////////////////////////////////////////////////////
+#Black76
+defineDict["FOCUS_FTDC_PM_Black76"] = '0'
+#BS
+defineDict["FOCUS_FTDC_PM_BS"] = '1'
+#二叉树
+defineDict["FOCUS_FTDC_PM_BinomialTree"] = '2'
+#蒙特卡罗模拟
+defineDict["FOCUS_FTDC_PM_MC"] = '3'
+#GarmanKohlagen 外汇期权
+defineDict["FOCUS_FTDC_PM_GK"] = '4'
+#有限差分法
+defineDict["FOCUS_FTDC_PM_FD"] = '5'
+#利率上下限
+defineDict["FOCUS_FTDC_PM_CapFloor"] = '6'
+#BAW
+defineDict["FOCUS_FTDC_PM_BAW"] = '7'
+#障碍期权
+defineDict["FOCUS_FTDC_PM_Barrier"] = '10'
+
+typedefDict["TFocusFtdcPricingMethodType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcExerciseTypeType是一个行权方式类型
+#//////////////////////////////////////////////////////////////////////
+#美式
+defineDict["FOCUS_FTDC_ET_American"] = '0'
+#欧式
+defineDict["FOCUS_FTDC_ET_European"] = '1'
+
+typedefDict["TFocusFtdcExerciseTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcBarrierTypeType是一个障碍方式类型
+#//////////////////////////////////////////////////////////////////////
+#KnockIn
+defineDict["FOCUS_FTDC_BT_KnockIn"] = '0'
+#KnockOut
+defineDict["FOCUS_FTDC_BT_KnockOut"] = '1'
+#KIKO
+defineDict["FOCUS_FTDC_BT_KIKO"] = '2'
+#KOKI
+defineDict["FOCUS_FTDC_BT_KOKI"] = '3'
+
+typedefDict["TFocusFtdcBarrierTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcCalculateTypeType是一个计算目标类型类型
+#//////////////////////////////////////////////////////////////////////
+#求隐含波动率
+defineDict["FOCUS_FTDC_CT_ImpVol"] = '0'
+#求期权价格
+defineDict["FOCUS_FTDC_CT_Price"] = '1'
+#求对应期权执行价
+defineDict["FOCUS_FTDC_CT_Strike"] = '2'
+#求期权价格与Greeks
+defineDict["FOCUS_FTDC_CT_PriceAndGreeks"] = '3'
+#通过波动率曲面求波动率
+defineDict["FOCUS_FTDC_CT_Volatility"] = '4'
+#通过期权费与波动率曲面求执行价
+defineDict["FOCUS_FTDC_CT_CalcStrikeByPriceAndVolSurface"] = '5'
+
+typedefDict["TFocusFtdcCalculateTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcSpreadTypeType是一个价差类型类型
+#//////////////////////////////////////////////////////////////////////
+#合约价差
+defineDict["FOCUS_FTDC_ST_SpreadInstrument"] = '0'
+#隐含波动率比例
+defineDict["FOCUS_FTDC_ST_SpreadVolatility"] = '1'
+#标的价差
+defineDict["FOCUS_FTDC_ST_SpreadUnderlying"] = '2'
+
+typedefDict["TFocusFtdcSpreadTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcHdegeTypeType是一个对冲算法类型
+#//////////////////////////////////////////////////////////////////////
+#Delta对冲算法
+defineDict["FOCUS_FTDC_HT_Delta"] = '0'
+#DeltaGamma对冲算法
+defineDict["FOCUS_FTDC_HT_DeltaGamma"] = '1'
+
+typedefDict["TFocusFtdcHdegeTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcSwitchFlagType是一个开关标志类型
+#//////////////////////////////////////////////////////////////////////
+#关
+defineDict["FOCUS_FTDC_SF_colse"] = '0'
+#开
+defineDict["FOCUS_FTDC_SF_open"] = '1'
+
+typedefDict["TFocusFtdcSwitchFlagType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcFitModelTypeType是一个拟合模型类型类型
+#//////////////////////////////////////////////////////////////////////
+#Wing模型
+defineDict["FOCUS_FTDC_FM_Wing"] = '0'
+#time weighted wing
+defineDict["FOCUS_FTDC_FM_TW_Wing"] = '1'
+#wing eurofuture
+defineDict["FOCUS_FTDC_FM_Wing_Eurofuture"] = '2'
+#CubicSpline(static)模型
+defineDict["FOCUS_FTDC_FM_Cubic_Spline_S"] = '3'
+#cubic spline (dynamic)
+defineDict["FOCUS_FTDC_FM_Cubic_Spline_D"] = '4'
+#cubic spline (stddev)
+defineDict["FOCUS_FTDC_FM_Cubic_Spline_STD"] = '5'
+
+typedefDict["TFocusFtdcFitModelTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcValidIntervalTypeType是一个有效区间类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TFocusFtdcValidIntervalTypeType"] = "float"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcQuoteStatusType是一个报单状态类型
+#//////////////////////////////////////////////////////////////////////
+#未知类型
+defineDict["FOCUS_FTDC_QS_Unknow"] = 'a'
+#全部成交
+defineDict["FOCUS_FTDC_QS_AllTraded"] = '0'
+#部分成交还在队列中
+defineDict["FOCUS_FTDC_QS_PartTradedQueueing"] = '1'
+#部分成交不在队列中
+defineDict["FOCUS_FTDC_QS_PartTradedNotQueueing"] = '2'
+#未成交还在队列中
+defineDict["FOCUS_FTDC_QS_NoTradeQueueing"] = '3'
+#未成交不在队列中
+defineDict["FOCUS_FTDC_QS_NoTradeNotQueueing"] = '4'
+#撤单(不在队列中)
+defineDict["FOCUS_FTDC_QS_Canceled"] = '5'
+#订单已报入交易所未应答
+defineDict["FOCUS_FTDC_QS_AcceptedNoReply"] = '6'
+#部分撤单还在队列中
+defineDict["FOCUS_FTDC_QS_PartCanceledQueueing"] = '7'
+#部分成交部分撤单还在队列中
+defineDict["FOCUS_FTDC_QS_PTPCQueueing"] = '8'
+#待报入
+defineDict["FOCUS_FTDC_QS_OnReport"] = '9'
+#投顾报单
+defineDict["FOCUS_FTDC_QS_ADReciveD"] = 'B'
+#投资经理驳回
+defineDict["FOCUS_FTDC_QS_ADRefused"] = 'C'
+#投资经理通过
+defineDict["FOCUS_FTDC_QS_ADAllowed"] = 'D'
+#交易员已报入
+defineDict["FOCUS_FTDC_QS_ADAccepted"] = 'E'
+#交易员驳回
+defineDict["FOCUS_FTDC_QS_ADTraderRefused"] = 'F'
+#投顾经理保单
+defineDict["FOCUS_FTDC_QS_ADManager"] = 'G'
+
+typedefDict["TFocusFtdcQuoteStatusType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcQuoteRightPriceTypeType是一个权限价格条件类型
+#//////////////////////////////////////////////////////////////////////
+#市价
+defineDict["FOCUS_FTDC_QRT_MarketPrice"] = 'M'
+#理论价
+defineDict["FOCUS_FTDC_QRT_TheoryPrice"] = 'T'
+
+typedefDict["TFocusFtdcQuoteRightPriceTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcTpFlagType是一个交易时间段标志类型
+#//////////////////////////////////////////////////////////////////////
+#日盘连续交易
+defineDict["FOCUS_FTDC_TP_day"] = '0'
+#夜盘连续交易
+defineDict["FOCUS_FTDC_TP_night"] = '1'
+#集合竞价
+defineDict["FOCUS_FTDC_TP_bid"] = '2'
+
+typedefDict["TFocusFtdcTpFlagType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcPriceSpreadTypeType是一个价差设置方式类型
+#//////////////////////////////////////////////////////////////////////
+#手动设置
+defineDict["FOCUS_FTDC_PST_SpreadManal"] = '0'
+#价差合约跟随
+defineDict["FOCUS_FTDC_PST_SpreadInstrument"] = '1'
+#拟合ATM
+defineDict["FOCUS_FTDC_PST_SpreadATM"] = '2'
+
+typedefDict["TFocusFtdcPriceSpreadTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcWingParamTypeType是一个wing模型参数类型类型
+#//////////////////////////////////////////////////////////////////////
+#CallBid
+defineDict["FOCUS_FTDC_WPT_CallBid"] = '0'
+#CallAsk
+defineDict["FOCUS_FTDC_WPT_CallAsk"] = '1'
+#PutBid
+defineDict["FOCUS_FTDC_WPT_PutBid"] = '2'
+#PutAsk
+defineDict["FOCUS_FTDC_WPT_PutAsk"] = '3'
+#CallMid
+defineDict["FOCUS_FTDC_WPT_CallMid"] = '4'
+#PutMid
+defineDict["FOCUS_FTDC_WPT_PutMid"] = '5'
+#OTM
+defineDict["FOCUS_FTDC_WPT_OTM"] = '6'
+
+typedefDict["TFocusFtdcWingParamTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcVolTypeType是一个波动率类型类型
+#//////////////////////////////////////////////////////////////////////
+#用otm进行定价
+defineDict["FOCUS_FTDC_VT_OTMVol"] = '0'
+#用对应的call或put进行定价
+defineDict["FOCUS_FTDC_VT_CPVol"] = '1'
+
+typedefDict["TFocusFtdcVolTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcEventTypeType是一个做市事件类型类型
+#//////////////////////////////////////////////////////////////////////
+#做市报价
+defineDict["FOCUS_FTDC_ET_MarketMaker"] = '0'
+#策略交易
+defineDict["FOCUS_FTDC_ET_Strategy"] = '1'
+#风控指标
+defineDict["FOCUS_FTDC_ET_RiskIndex"] = '3'
+#普通订单
+defineDict["FOCUS_FTDC_ET_OrginalOrder"] = '4'
+#对冲
+defineDict["FOCUS_FTDC_ET_Hedge"] = '5'
+
+typedefDict["TFocusFtdcEventTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcAlertIndexTypeType是一个预警指标值类型
+#//////////////////////////////////////////////////////////////////////
+#持仓累计Delta
+defineDict["FOCUS_FTDC_AIC_Total_Delta"] = '0'
+#持仓累计Vega
+defineDict["FOCUS_FTDC_AIC_Total_Vega"] = '1'
+#持仓累计Gamma
+defineDict["FOCUS_FTDC_AIC_Total_Gamma"] = '2'
+#买持仓
+defineDict["FOCUS_FTDC_AIC_Total_BuyPostion"] = '3'
+#卖持仓
+defineDict["FOCUS_FTDC_AIC_Total_SellPostion"] = '4'
+#净持仓
+defineDict["FOCUS_FTDC_AIC_Total_NetPostion"] = '5'
+#当日净成交Delta
+defineDict["FOCUS_FTDC_AIC_Today_Delta"] = '6'
+#当日净成交Vega
+defineDict["FOCUS_FTDC_AIC_Today_Vega"] = '7'
+#当日净成交Gamma
+defineDict["FOCUS_FTDC_AIC_Today_Gamma"] = '8'
+#当日买成交
+defineDict["FOCUS_FTDC_AIC_Today_BuyTrade"] = '9'
+#当日卖成交
+defineDict["FOCUS_FTDC_AIC_Today_SellTrade"] = 'a'
+#当日净成交
+defineDict["FOCUS_FTDC_AIC_Today_NetTrade"] = 'b'
+#当日成交
+defineDict["FOCUS_FTDC_AIC_Today_Trade"] = 'c'
+#当日交易盈亏
+defineDict["FOCUS_FTDC_AIC_Today_PL"] = 'd'
+#当日报单笔数
+defineDict["FOCUS_FTDC_AIC_Today_OrderInsert"] = 'e'
+#当日撤单笔数
+defineDict["FOCUS_FTDC_AIC_Today_OrderAction"] = 'f'
+#理论价偏度
+defineDict["FOCUS_FTDC_AIC_Today_Hedge"] = 'g'
+#瞬时Delta交易
+defineDict["FOCUS_FTDC_AIC_Time_Delta"] = 'h'
+#瞬时Vega交易
+defineDict["FOCUS_FTDC_AIC_Time_Vega"] = 'i'
+#瞬时Gamma交易
+defineDict["FOCUS_FTDC_AIC_Time_Gamma"] = 'j'
+#瞬时买成交
+defineDict["FOCUS_FTDC_AIC_Time_BuyTrade"] = 'k'
+#瞬时卖成交
+defineDict["FOCUS_FTDC_AIC_Time_SellTrade"] = 'l'
+#瞬时净成交
+defineDict["FOCUS_FTDC_AIC_Time_NetTrade"] = 'm'
+#瞬时成交量
+defineDict["FOCUS_FTDC_AIC_Time_Trade"] = 'n'
+#瞬时涨速
+defineDict["FOCUS_FTDC_AIC_Time_Speed"] = 'o'
+
+typedefDict["TFocusFtdcAlertIndexTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcAlertActionTypeType是一个预警操作类型
+#//////////////////////////////////////////////////////////////////////
+#停止主动做市报价
+defineDict["FOCUS_FTDC_AAT_StopMaker"] = 'M'
+#停止策略交易
+defineDict["FOCUS_FTDC_AAT_StopStrategy"] = 'S'
+#停止自动对冲
+defineDict["FOCUS_FTDC_AAT_StopHedge"] = 'H'
+#禁止开仓
+defineDict["FOCUS_FTDC_AAT_StopOpen"] = 'O'
+#停止自动回应询价
+defineDict["FOCUS_FTDC_AAT_StopRepQuote"] = 'R'
+#不做任何操作
+defineDict["FOCUS_FTDC_AAT_OperNull"] = 'N'
+
+typedefDict["TFocusFtdcAlertActionTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcQuoteWidthTypeType是一个报价宽度单位类型
+#//////////////////////////////////////////////////////////////////////
+#期权费
+defineDict["FOCUS_FTDC_QWT_MoneyWidth"] = '0'
+#Tick
+defineDict["FOCUS_FTDC_QWT_TickWidth"] = '1'
+#百分比
+defineDict["FOCUS_FTDC_QWT_PercentWidth"] = '2'
+
+typedefDict["TFocusFtdcQuoteWidthTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcYesOrNoType是一个是否类型
+#//////////////////////////////////////////////////////////////////////
+#否
+defineDict["FOCUS_FTDC_YESORNO_No"] = '0'
+#是
+defineDict["FOCUS_FTDC_YESORNO_Yes"] = '1'
+
+typedefDict["TFocusFtdcYesOrNoType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcStepTypeType是一个梯度类型类型
+#//////////////////////////////////////////////////////////////////////
+#交易所梯度
+defineDict["FOCUS_FTDC_SPT_EXCH"] = '0'
+#用户梯度
+defineDict["FOCUS_FTDC_SPT_CUSTOM"] = '1'
+#Detla动态调整梯
+defineDict["FOCUS_FTDC_SPT_DELTA"] = '2'
+#Vega动态调整梯
+defineDict["FOCUS_FTDC_SPT_VEGA"] = '3'
+
+typedefDict["TFocusFtdcStepTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcTakeOutType是一个立即成交报价策略类型
+#//////////////////////////////////////////////////////////////////////
+#单边
+defineDict["FOCUS_FTDC_TO_SignalSide"] = '0'
+#双边
+defineDict["FOCUS_FTDC_TO_QuoteSide"] = '1'
+
+typedefDict["TFocusFtdcTakeOutType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcFowardDirectionType是一个移动报价方向类型
+#//////////////////////////////////////////////////////////////////////
+#买方向
+defineDict["FOCUS_FTDC_FD_BuySide"] = '0'
+#卖方向
+defineDict["FOCUS_FTDC_FD_SellSide"] = '1'
+#无方向
+defineDict["FOCUS_FTDC_FD_NoSide"] = '2'
+
+typedefDict["TFocusFtdcFowardDirectionType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcHedgePriceTypeType是一个对冲报单价格条件类型
+#//////////////////////////////////////////////////////////////////////
+#本方最优价
+defineDict["FOCUS_FTDC_HPT_BestPrice"] = '1'
+#对手价
+defineDict["FOCUS_FTDC_HPT_CpPrice"] = '2'
+#最新价
+defineDict["FOCUS_FTDC_HPT_LastPrice"] = '3'
+
+typedefDict["TFocusFtdcHedgePriceTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcFutureMakerFlagType是一个期货报价方式类型
+#//////////////////////////////////////////////////////////////////////
+#宽度
+defineDict["FOCUS_FTDC_FMF_width"] = '1'
+#盘口价
+defineDict["FOCUS_FTDC_FMF_BestPrice"] = '2'
+
+typedefDict["TFocusFtdcFutureMakerFlagType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcHedgeFutureMakerFlagType是一个期货对冲报价方式类型
+#//////////////////////////////////////////////////////////////////////
+#成交价(加上价差)
+defineDict["FOCUS_FTDC_HFMF_TradePrice"] = '1'
+#最新价
+defineDict["FOCUS_FTDC_HFMF_LastPrice"] = '2'
+#对手价
+defineDict["FOCUS_FTDC_HFMF_CpPrice"] = '3'
+
+typedefDict["TFocusFtdcHedgeFutureMakerFlagType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcOrderUnitType是一个证券委托单位类型
+#//////////////////////////////////////////////////////////////////////
+#股
+defineDict["FOCUS_FTDC_OU_stock"] = '0'
+#手
+defineDict["FOCUS_FTDC_OU_hand"] = '1'
+
+typedefDict["TFocusFtdcOrderUnitType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcStkOrderStatusType是一个证券交易状态类型
+#//////////////////////////////////////////////////////////////////////
+#开盘前 
+defineDict["FOCUS_FTDC_SOS_B_TRD"] = '0'
+#非交易 
+defineDict["FOCUS_FTDC_SOS_NOTRD"] = '1'
+#连续交易
+defineDict["FOCUS_FTDC_SOS_TRD"] = '2'
+#集合竞价报单 
+defineDict["FOCUS_FTDC_SOS_AUCTORD"] = '3'
+#集合竞价价格平衡  
+defineDict["FOCUS_FTDC_SOS_AUCTBLN"] = '4'
+#集合竞价撮合 
+defineDict["FOCUS_FTDC_SOS_AUCTMTH"] = '5'
+#收盘
+defineDict["FOCUS_FTDC_SOS_CLOSED"] = '6'
+#开盘集合竞价 
+defineDict["FOCUS_FTDC_SOS_OpenAuction"] = '7'
+#收盘集合竞价 
+defineDict["FOCUS_FTDC_SOS_CloseAuction"] = '8'
+#临时停牌
+defineDict["FOCUS_FTDC_SOS_PAUSE"] = '9'
+#停牌
+defineDict["FOCUS_FTDC_SOS_STOP"] = 'a'
+#盘后交易
+defineDict["FOCUS_FTDC_SOS_AfterTradingDeal"] = 'b'
+#波动性中断
+defineDict["FOCUS_FTDC_SOS_WaveInterrupt"] = 'c'
+#休市
+defineDict["FOCUS_FTDC_SOS_BreakTime"] = 'd'
+#未上市
+defineDict["FOCUS_FTDC_SOS_NoTraded"] = 'e'
+#可恢复熔断
+defineDict["FOCUS_FTDC_SOS_VOLIP_M"] = 'f'
+#不可恢复熔断
+defineDict["FOCUS_FTDC_SOS_VOLIP_N"] = 'g'
+#涨停
+defineDict["FOCUS_FTDC_SOS_RISELIMIT"] = 'h'
+#跌停
+defineDict["FOCUS_FTDC_SOS_DECLINELIMIT"] = 'i'
+
+typedefDict["TFocusFtdcStkOrderStatusType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcStockStrategyPriceType是一个股票策略报单价格条件类型
+#//////////////////////////////////////////////////////////////////////
+#本方最优价
+defineDict["FOCUS_FTDC_SSP_BestPrice"] = 'A'
+#对手价
+defineDict["FOCUS_FTDC_SSP_CpPrice"] = 'B'
+#最新价
+defineDict["FOCUS_FTDC_SSP_LastPrice"] = 'C'
+#开盘价
+defineDict["FOCUS_FTDC_SSP_OpenPrice"] = 'D'
+#开盘价主动让价1tick
+defineDict["FOCUS_FTDC_SSP_OpenAddOneTick"] = 'E'
+#开盘价主动涨价1tick
+defineDict["FOCUS_FTDC_SSP_OpenDelOneTick"] = 'F'
+#昨收盘
+defineDict["FOCUS_FTDC_SSP_PreClosePrice"] = 'G'
+#昨收盘主动让价1tick
+defineDict["FOCUS_FTDC_SSP_PreCloseAddOneTick"] = 'H'
+#昨收盘主动涨价1tick
+defineDict["FOCUS_FTDC_SSP_PreCloseDelOneTick"] = 'I'
+#本方最优价主动让价1tick
+defineDict["FOCUS_FTDC_SSP_BestAddOneTick"] = 'J'
+#本方最优价主动让价2tick
+defineDict["FOCUS_FTDC_SSP_BestAddTwoTick"] = 'K'
+#本方最优价主动涨价1tick
+defineDict["FOCUS_FTDC_SSP_BestDelOneTick"] = 'L'
+#本方最优价主动涨价2tick
+defineDict["FOCUS_FTDC_SSP_BestDelTwoTick"] = 'M'
+#对手价主动让价1tick
+defineDict["FOCUS_FTDC_SSP_CpAddOneTick"] = 'N'
+#对手价主动涨价1tick
+defineDict["FOCUS_FTDC_SSP_CpDelOneTick"] = 'O'
+#最新价主动让价1tick
+defineDict["FOCUS_FTDC_SSP_LastPriceAddOneTick"] = 'P'
+#最新价主动让价2tick
+defineDict["FOCUS_FTDC_SSP_LastPriceAddTwoTick"] = 'Q'
+#最新价主动涨价1tick
+defineDict["FOCUS_FTDC_SSP_LastPriceDelOneTick"] = 'R'
+#最新价主动涨价2tick
+defineDict["FOCUS_FTDC_SSP_LastPriceDelTwoTick"] = 'S'
+#对手价主动让价2tick
+defineDict["FOCUS_FTDC_SSP_CpAddTwoTick"] = 'T'
+#对手价主动涨价2tick
+defineDict["FOCUS_FTDC_SSP_CpDelTwoTick"] = 'U'
+#本方最优价主动让价3tick
+defineDict["FOCUS_FTDC_SSP_BestAddThreeTick"] = 'V'
+#本方最优价主动让价4tick
+defineDict["FOCUS_FTDC_SSP_BestAddFourTick"] = 'W'
+#本方最优价主动涨价3tick
+defineDict["FOCUS_FTDC_SSP_BestDelThreeTick"] = 'Y'
+#本方最优价主动涨价4tick
+defineDict["FOCUS_FTDC_SSP_BestDelFourTick"] = 'Z'
+#依照归属总策略，或者为空
+defineDict["FOCUS_FTDC_SSP_BelongALL"] = 'X'
+
+typedefDict["TFocusFtdcStockStrategyPriceType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcStrategyMessageTypeType是一个转发消息事件类型类型
+#//////////////////////////////////////////////////////////////////////
+#择时信号
+defineDict["FOCUS_FTDC_MT_IndDirSig"] = '0'
+#股票转发信号
+defineDict["FOCUS_FTDC_MT_StockNtfMessage"] = '1'
+#期货转发信号
+defineDict["FOCUS_FTDC_MT_FutureNtfMessage"] = '2'
+#对冲转发信号
+defineDict["FOCUS_FTDC_MT_HedgeNtfMessage"] = '3'
+#其他转发信号
+defineDict["FOCUS_FTDC_MT_Others"] = '4'
+
+typedefDict["TFocusFtdcStrategyMessageTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcListPriceTypeType是一个Price的价格类型类型
+#//////////////////////////////////////////////////////////////////////
+#昨收盘
+defineDict["FOCUS_FTDC_LPT_PreClosePrice"] = '0'
+#跟盘最新价
+defineDict["FOCUS_FTDC_LPT_LastPrice"] = '1'
+#List中给定
+defineDict["FOCUS_FTDC_LPT_ListPrice"] = '2'
+
+typedefDict["TFocusFtdcListPriceTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcAddPositionTypeType是一个下单仓位类型类型
+#//////////////////////////////////////////////////////////////////////
+#目标净持仓
+defineDict["FOCUS_FTDC_APT_Net"] = '1'
+#加减仓数量
+defineDict["FOCUS_FTDC_APT_AddOrDelete"] = '2'
+
+typedefDict["TFocusFtdcAddPositionTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcPositionRatioTypeType是一个仓位权重类型类型
+#//////////////////////////////////////////////////////////////////////
+#权重
+defineDict["FOCUS_FTDC_PRT_Ratio"] = '1'
+#股数
+defineDict["FOCUS_FTDC_PRT_Stocks"] = '2'
+
+typedefDict["TFocusFtdcPositionRatioTypeType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcPriceDirectionType是一个价格触发条件类型
+#//////////////////////////////////////////////////////////////////////
+#价格低于触发
+defineDict["FOCUS_FTDC_PD_UpPrice"] = '1'
+#价格高于触发
+defineDict["FOCUS_FTDC_PD_LowPrice"] = '2'
+
+typedefDict["TFocusFtdcPriceDirectionType"] = "char"
+

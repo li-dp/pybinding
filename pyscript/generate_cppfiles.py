@@ -1,4 +1,4 @@
-# encoding: UTF-8
+# encoding: utf-8
 
 import os
 import io
@@ -22,6 +22,9 @@ bodywrap = io.StringIO()
 bodyexport = io.StringIO()
 define_count = 1
 
+
+skip_functions = ['OnPackage', 'OnMultiHeartbeat', 'OnStopMultiTopic', 'TradePage', 'OrderPage', 'PositionPage']
+
 def processCallBack(line):
     orignalLine = line
     line = line.replace('\tvirtual void ', '')      # 删除行首的无效内容
@@ -29,7 +32,7 @@ def processCallBack(line):
 
     content = line.split('(')
     cbName = content[0]                             # 回调函数名称
-
+    
     cbArgs = content[1]                             # 回调函数参数
     if cbArgs[-1] == ' ':
         cbArgs = cbArgs.replace(') ', '')
@@ -57,7 +60,7 @@ def processCallBack(line):
 
     # 生成.h文件中的on部分
     On_line = orignalLine.replace('{};', ';')
-    if "OnPackage" not in On_line:
+    if all(f_name not in line for f_name in skip_functions):
         headeron.write(On_line)   # CPP实现的SPI callback
 
     if 'OnRspError' in cbName:
@@ -81,7 +84,7 @@ def processCallBack(line):
         on_line = '\tvirtual void on' + cbName[2:] + '(int i) {};\n'
     elif 'OnHeartBeatWarning' in cbName:
         on_line = '\tvirtual void on' + cbName[2:] + '(int i) {};\n'
-    elif 'OnPackage' in cbName:
+    elif any(f_name in line for f_name in skip_functions):
         #on_line = '\tvirtual void on' + cbName[2:] + '(int topicID, int sequencdNo) {};\n'
         on_line = '' # no need too process this function
     else:
@@ -326,8 +329,11 @@ def gen_cpp_file(mdapiHeader, apiName, structPy, hTemplate, hDestFile,
     global bodyspi, bodyprocess, bodyreq, bodyswitch, bodywrap, bodyexport
     _apiName = apiName
     _structPy = importlib.import_module(structPy.replace(".py", ""))
+   
     define_count = 1
 
+   
+    
     headerprocess = io.StringIO()
     headeron = io.StringIO()
     headerfunction = io.StringIO()
@@ -345,7 +351,7 @@ def gen_cpp_file(mdapiHeader, apiName, structPy, hTemplate, hDestFile,
 
     for line in fheader:
         if "\tvirtual void On" in line:
-            if "OnPackage" not in line:
+            if all(f_name not in line for f_name in skip_functions):
                 processCallBack(line)
         elif "\tvirtual int" in line:
             processFunction(line)

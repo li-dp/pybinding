@@ -1,0 +1,231 @@
+// userbinding.cpp : 定义 DLL 应用程序的导出函数。
+//
+
+#include "userbinding.h"
+
+
+///-------------------------------------------------------------------------------------
+///从Python对象到C++类型转换用的函数
+///-------------------------------------------------------------------------------------
+
+void getInt(dict d, string key, int *value)
+{
+	if (d.has_key(key))		//检查字典中是否存在该键值
+	{
+		object o = d[key];	//获取该键值
+		extract<int> x(o);	//创建提取器
+		if (x.check())		//如果可以提取
+		{
+			*value = x();	//对目标整数指针赋值
+		}
+	}
+}
+
+void getDouble(dict d, string key, double *value)
+{
+	if (d.has_key(key))
+	{
+		object o = d[key];
+		extract<double> x(o);
+		if (x.check())
+		{
+			*value = x();
+		}
+	}
+}
+
+void getStr(dict d, string key, char *value)
+{
+	if (d.has_key(key))
+	{
+		object o = d[key];
+		extract<string> x(o);
+		if (x.check())
+		{
+			string s = x();
+			const char *buffer = s.c_str();
+			//对字符串指针赋值必须使用strcpy_s, vs2013使用strcpy编译通不过
+			//+1应该是因为C++字符串的结尾符号？不是特别确定，不加这个1会出错
+#ifdef _MSC_VER //WIN32
+			strcpy_s(value, strlen(buffer) + 1, buffer);
+#elif __GNUC__
+			strncpy(value, buffer, strlen(buffer) + 1);
+#endif
+		}
+	}
+}
+
+void getChar(dict d, string key, char *value)
+{
+	if (d.has_key(key))
+	{
+		object o = d[key];
+		extract<string> x(o);
+		if (x.check())
+		{
+			string s = x();
+			const char *buffer = s.c_str();
+			*value = *buffer;
+		}
+	}
+}
+
+
+///-------------------------------------------------------------------------------------
+///C++的回调函数将数据保存到队列中
+///-------------------------------------------------------------------------------------
+$body_SPI
+
+///-------------------------------------------------------------------------------------
+///工作线程从队列中取出数据，转化为python对象后，进行推送
+///-------------------------------------------------------------------------------------
+
+void UserApi::processTask()
+{
+	while (1)
+	{
+		Task task = this->task_queue.wait_and_pop();
+
+		switch (task.task_name)
+		{
+$body_switch
+		}
+	}
+}
+
+$process_body
+
+
+
+///-------------------------------------------------------------------------------------
+///主动函数
+///-------------------------------------------------------------------------------------
+
+void UserApi::createFtdcUserApi(string pszFlowPath)
+{
+	this->api = CFocusFtdcUserApi::CreateFtdcUserApi(pszFlowPath.c_str());
+	this->api->RegisterSpi(this);
+};
+
+void UserApi::release()
+{
+	this->api->Release();
+};
+
+void UserApi::init(int nPrivatePort)
+{
+	this->api->Init(nPrivatePort);
+};
+
+int UserApi::join()
+{
+	int i = this->api->Join();
+	return i;
+};
+
+int UserApi::exit()
+{
+	//该函数在原生API里没有，用于安全退出API用，原生的join似乎不太稳定
+	this->api->RegisterSpi(NULL);
+	this->api->Release();
+	this->api = NULL;
+	return 1;
+};
+
+string UserApi::getTradingDay()
+{
+	string day = this->api->GetTradingDay();
+	return day;
+};
+
+void UserApi::registerFront(string pszFrontAddress)
+{
+	this->api->RegisterFront((char*)pszFrontAddress.c_str());
+};
+
+void UserApi::subscribePrivateTopic(int nType)
+{
+	//该函数为手动编写
+	FOCUS_TE_RESUME_TYPE type;
+
+	switch (nType)
+	{
+	case 0:
+	{
+		type = FOCUS_TERT_RESTART;
+		break;
+	};
+
+	case 1:
+	{
+		type = FOCUS_TERT_RESUME;
+		break;
+	};
+
+	case 2:
+	{
+		type = FOCUS_TERT_QUICK;
+		break;
+	};
+	}
+
+	this->api->SubscribePrivateTopic(type);
+};
+
+void UserApi::subscribePublicTopic(int nType)
+{
+	//该函数为手动编写
+	FOCUS_TE_RESUME_TYPE type;
+
+	switch (nType)
+	{
+	case 0:
+	{
+		type = FOCUS_TERT_RESTART;
+		break;
+	};
+
+	case 1:
+	{
+		type = FOCUS_TERT_RESUME;
+		break;
+	};
+
+	case 2:
+	{
+		type = FOCUS_TERT_QUICK;
+		break;
+	};
+	}
+
+	this->api->SubscribePublicTopic(type);
+};
+
+$body_req
+
+///-------------------------------------------------------------------------------------
+///Boost.Python封装
+///-------------------------------------------------------------------------------------
+
+struct UserApiWrap : UserApi, wrapper < UserApi >
+{
+$body_wrap
+};
+
+BOOST_PYTHON_MODULE(userbinding)
+{
+	PyEval_InitThreads();	//导入时运行，保证先创建GIL
+
+	class_<UserApiWrap, boost::noncopyable>("UserApi")
+		.def("createFtdcTraderApi", &UserApiWrap::createFtdcUserApi)
+		.def("release", &UserApiWrap::release)
+		.def("init", &UserApiWrap::init)
+		.def("join", &UserApiWrap::join)
+		.def("exit", &UserApiWrap::exit)
+		.def("getTradingDay", &UserApiWrap::getTradingDay)
+		.def("registerFront", &UserApiWrap::registerFront)
+		.def("subscribePrivateTopic", &UserApiWrap::subscribePrivateTopic)
+		.def("subscribePublicTopic", &UserApiWrap::subscribePublicTopic)
+$body_export
+		;
+}
