@@ -900,6 +900,18 @@ void MdApi::processRtnDepthMarketData(Task task)
 	data["BidVolume10"] = task_data.BidVolume10;
 	data["AskPrice10"] = task_data.AskPrice10;
 	data["AskVolume10"] = task_data.AskVolume10;
+	data["WithdrawBuyNumber"] = task_data.WithdrawBuyNumber;
+	data["WithdrawSellNumber"] = task_data.WithdrawSellNumber;
+	data["WithdrawBuyAmount"] = task_data.WithdrawBuyAmount;
+	data["WithdrawBuyMoney"] = task_data.WithdrawBuyMoney;
+	data["WithdrawSellAmount"] = task_data.WithdrawSellAmount;
+	data["WithdrawSellMoney"] = task_data.WithdrawSellMoney;
+	data["TotalBidNumber"] = task_data.TotalBidNumber;
+	data["TotalOfferNumber"] = task_data.TotalOfferNumber;
+	data["BidTradeMaxDuration"] = task_data.BidTradeMaxDuration;
+	data["OfferTradeMaxDuration"] = task_data.OfferTradeMaxDuration;
+	data["NumBidOrders"] = task_data.NumBidOrders;
+	data["NumOfferOrders"] = task_data.NumOfferOrders;
 	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["UpdateTime"] = task_data.UpdateTime;
 	data["UpdateMillisec"] = task_data.UpdateMillisec;
@@ -977,6 +989,18 @@ void MdApi::processRtnMultiDepthMarketData(Task task)
 	data["BidVolume10"] = task_data.BidVolume10;
 	data["AskPrice10"] = task_data.AskPrice10;
 	data["AskVolume10"] = task_data.AskVolume10;
+	data["WithdrawBuyNumber"] = task_data.WithdrawBuyNumber;
+	data["WithdrawSellNumber"] = task_data.WithdrawSellNumber;
+	data["WithdrawBuyAmount"] = task_data.WithdrawBuyAmount;
+	data["WithdrawBuyMoney"] = task_data.WithdrawBuyMoney;
+	data["WithdrawSellAmount"] = task_data.WithdrawSellAmount;
+	data["WithdrawSellMoney"] = task_data.WithdrawSellMoney;
+	data["TotalBidNumber"] = task_data.TotalBidNumber;
+	data["TotalOfferNumber"] = task_data.TotalOfferNumber;
+	data["BidTradeMaxDuration"] = task_data.BidTradeMaxDuration;
+	data["OfferTradeMaxDuration"] = task_data.OfferTradeMaxDuration;
+	data["NumBidOrders"] = task_data.NumBidOrders;
+	data["NumOfferOrders"] = task_data.NumOfferOrders;
 	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
 	data["UpdateTime"] = task_data.UpdateTime;
 	data["UpdateMillisec"] = task_data.UpdateMillisec;
@@ -1318,6 +1342,12 @@ void MdApi::processRtnTradeMaketData(Task task)
 	data["TradeTurnover"] = task_data.TradeTurnover;
 	data["TradeTime"] = task_data.TradeTime;
 	data["TradeMillisec"] = task_data.TradeMillisec;
+	data["TradeChannel"] = task_data.TradeChannel;
+	data["TradeBuyNo"] = task_data.TradeBuyNo;
+	data["TradeSellNo"] = task_data.TradeSellNo;
+	data["ExecType"] = task_data.ExecType;
+	data["TradeBSFlag"] = task_data.TradeBSFlag;
+	data["BizIndex"] = task_data.BizIndex;
 
 	this->onRtnTradeMaketData(data);
 };
@@ -1333,9 +1363,12 @@ void MdApi::processRtnOrderMaketData(Task task)
 	data["Direction"] = task_data.Direction;
 	data["OrderTypeStr"] = task_data.OrderTypeStr;
 	data["OrderPirce"] = task_data.OrderPirce;
-	data["TradeVolume"] = task_data.TradeVolume;
+	data["OrderVolume"] = task_data.OrderVolume;
 	data["OrderTime"] = task_data.OrderTime;
 	data["OrderMillisec"] = task_data.OrderMillisec;
+	data["comfirmID"] = task_data.comfirmID;
+	data["TradeIndex"] = task_data.TradeIndex;
+	data["TradeChannel"] = task_data.TradeChannel;
 
 	this->onRtnOrderMaketData(data);
 };

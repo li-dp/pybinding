@@ -206,6 +206,11 @@ typedefDict["TQdFtdcInstrumentIDType"] = "string"
 typedefDict["TQdFtdcExchangeIDType"] = "string"
 
 #//////////////////////////////////////////////////////////////////////
+#TFtdcCustomType是一个用户自定义域类型类型
+#//////////////////////////////////////////////////////////////////////
+typedefDict["TQdFtdcCustomType"] = "string"
+
+#//////////////////////////////////////////////////////////////////////
 #TFtdcSettlementGroupIDType是一个结算组代码类型
 #//////////////////////////////////////////////////////////////////////
 typedefDict["TQdFtdcSettlementGroupIDType"] = "string"
@@ -292,4 +297,30 @@ defineDict["QD_FTDC_OT_LimitPrice"] = '1'
 defineDict["QD_FTDC_OT_BestPrice"] = '2'
 
 typedefDict["TQdFtdcOrderTypeStrType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcTradeBSFlagType是一个内外盘标志类型
+#//////////////////////////////////////////////////////////////////////
+#外盘,主动买
+defineDict["QD_FTDC_TSF_BFlag"] = '0'
+#内盘,主动买
+defineDict["QD_FTDC_TSF_SFlag"] = '1'
+#未知
+defineDict["QD_FTDC_TSF_NFlag"] = '2'
+
+typedefDict["TQdFtdcTradeBSFlagType"] = "char"
+
+#//////////////////////////////////////////////////////////////////////
+#TFtdcOrderDirSideType是一个逐笔委托买卖方向类型
+#//////////////////////////////////////////////////////////////////////
+#买
+defineDict["QD_FTDC_ODS_Buy"] = '0'
+#卖
+defineDict["QD_FTDC_ODS_Sell"] = '1'
+#借入
+defineDict["QD_FTDC_ODS_G"] = '2'
+#出借
+defineDict["QD_FTDC_ODS_F"] = '3'
+
+typedefDict["TQdFtdcOrderDirSideType"] = "char"
 

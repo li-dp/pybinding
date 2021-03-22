@@ -435,6 +435,30 @@ CQdFtdcDepthMarketDataField["BidVolume10"] = "int"
 CQdFtdcDepthMarketDataField["AskPrice10"] = "float"
 #申卖量十
 CQdFtdcDepthMarketDataField["AskVolume10"] = "int"
+#买入撤单笔数
+CQdFtdcDepthMarketDataField["WithdrawBuyNumber"] = "int"
+#卖出撤单笔数
+CQdFtdcDepthMarketDataField["WithdrawSellNumber"] = "int"
+#买入撤单数量
+CQdFtdcDepthMarketDataField["WithdrawBuyAmount"] = "int"
+#买入撤单金额
+CQdFtdcDepthMarketDataField["WithdrawBuyMoney"] = "float"
+#卖出撤单数量
+CQdFtdcDepthMarketDataField["WithdrawSellAmount"] = "int"
+#卖出撤单金额
+CQdFtdcDepthMarketDataField["WithdrawSellMoney"] = "float"
+#买入总笔数
+CQdFtdcDepthMarketDataField["TotalBidNumber"] = "int"
+#卖出总笔数
+CQdFtdcDepthMarketDataField["TotalOfferNumber"] = "int"
+#买入委托成交最大等待时间ms
+CQdFtdcDepthMarketDataField["BidTradeMaxDuration"] = "int"
+#卖出委托成交最大等待时间ms
+CQdFtdcDepthMarketDataField["OfferTradeMaxDuration"] = "int"
+#委买笔数
+CQdFtdcDepthMarketDataField["NumBidOrders"] = "int"
+#委卖笔数
+CQdFtdcDepthMarketDataField["NumOfferOrders"] = "int"
 #合约代码
 CQdFtdcDepthMarketDataField["InstrumentID"] = "string"
 #最后修改时间
@@ -1140,6 +1164,30 @@ CQdFtdcDepthMinMarketDataTickField["BidVolume10"] = "int"
 CQdFtdcDepthMinMarketDataTickField["AskPrice10"] = "float"
 #申卖量十
 CQdFtdcDepthMinMarketDataTickField["AskVolume10"] = "int"
+#买入撤单笔数
+CQdFtdcDepthMinMarketDataTickField["WithdrawBuyNumber"] = "int"
+#卖出撤单笔数
+CQdFtdcDepthMinMarketDataTickField["WithdrawSellNumber"] = "int"
+#买入撤单数量
+CQdFtdcDepthMinMarketDataTickField["WithdrawBuyAmount"] = "int"
+#买入撤单金额
+CQdFtdcDepthMinMarketDataTickField["WithdrawBuyMoney"] = "float"
+#卖出撤单数量
+CQdFtdcDepthMinMarketDataTickField["WithdrawSellAmount"] = "int"
+#卖出撤单金额
+CQdFtdcDepthMinMarketDataTickField["WithdrawSellMoney"] = "float"
+#买入总笔数
+CQdFtdcDepthMinMarketDataTickField["TotalBidNumber"] = "int"
+#卖出总笔数
+CQdFtdcDepthMinMarketDataTickField["TotalOfferNumber"] = "int"
+#买入委托成交最大等待时间ms
+CQdFtdcDepthMinMarketDataTickField["BidTradeMaxDuration"] = "int"
+#卖出委托成交最大等待时间ms
+CQdFtdcDepthMinMarketDataTickField["OfferTradeMaxDuration"] = "int"
+#委买笔数
+CQdFtdcDepthMinMarketDataTickField["NumBidOrders"] = "int"
+#委卖笔数
+CQdFtdcDepthMinMarketDataTickField["NumOfferOrders"] = "int"
 #合约代码
 CQdFtdcDepthMinMarketDataTickField["InstrumentID"] = "string"
 #最后修改时间
@@ -1189,6 +1237,18 @@ CQdFtdcDeptTradeMaketDataField["TradeTurnover"] = "float"
 CQdFtdcDeptTradeMaketDataField["TradeTime"] = "string"
 #成交时间（毫秒）
 CQdFtdcDeptTradeMaketDataField["TradeMillisec"] = "int"
+#成交通道
+CQdFtdcDeptTradeMaketDataField["TradeChannel"] = "int"
+#买方订单号
+CQdFtdcDeptTradeMaketDataField["TradeBuyNo"] = "int"
+#卖方订单号
+CQdFtdcDeptTradeMaketDataField["TradeSellNo"] = "int"
+#成交类别(深交所)
+CQdFtdcDeptTradeMaketDataField["ExecType"] = "string"
+#内外盘标志
+CQdFtdcDeptTradeMaketDataField["TradeBSFlag"] = "char"
+#业务序列号
+CQdFtdcDeptTradeMaketDataField["BizIndex"] = "int"
 structDict['CQdFtdcDeptTradeMaketDataField'] = CQdFtdcDeptTradeMaketDataField
 
 
@@ -1200,18 +1260,24 @@ CQdFtdcDeptOrderMaketDataField["TradingDay"] = "string"
 CQdFtdcDeptOrderMaketDataField["ExchangeID"] = "string"
 #合约代码
 CQdFtdcDeptOrderMaketDataField["InstrumentID"] = "string"
-#买卖方向
+#逐笔委托买卖方向
 CQdFtdcDeptOrderMaketDataField["Direction"] = "char"
 #订单类型
 CQdFtdcDeptOrderMaketDataField["OrderTypeStr"] = "char"
 #委托价格
 CQdFtdcDeptOrderMaketDataField["OrderPirce"] = "float"
 #成交量
-CQdFtdcDeptOrderMaketDataField["TradeVolume"] = "int"
+CQdFtdcDeptOrderMaketDataField["OrderVolume"] = "int"
 #委托时间（s）
 CQdFtdcDeptOrderMaketDataField["OrderTime"] = "string"
 #委托时间（毫秒）
 CQdFtdcDeptOrderMaketDataField["OrderMillisec"] = "int"
+#定价行情约定号
+CQdFtdcDeptOrderMaketDataField["comfirmID"] = "string"
+#成交编号
+CQdFtdcDeptOrderMaketDataField["TradeIndex"] = "int"
+#成交通道
+CQdFtdcDeptOrderMaketDataField["TradeChannel"] = "int"
 structDict['CQdFtdcDeptOrderMaketDataField'] = CQdFtdcDeptOrderMaketDataField
 
 
@@ -1302,6 +1368,10 @@ CQdFtdcSellBuyChangeField["TotalOfferNumber"] = "int"
 CQdFtdcSellBuyChangeField["BidTradeMaxDuration"] = "int"
 #卖出委托成交最大等待时间ms
 CQdFtdcSellBuyChangeField["OfferTradeMaxDuration"] = "int"
+#委买笔数
+CQdFtdcSellBuyChangeField["NumBidOrders"] = "int"
+#委卖笔数
+CQdFtdcSellBuyChangeField["NumOfferOrders"] = "int"
 structDict['CQdFtdcSellBuyChangeField'] = CQdFtdcSellBuyChangeField
 
 
