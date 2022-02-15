@@ -375,6 +375,37 @@ void TdApi::OnRspQryTrade(CFocusFtdcTradeField *pTrade, CFocusFtdcRspInfoField *
 	this->task_queue.push(task);
 };
 
+void TdApi::OnRspQryInvestorAccount(CFocusFtdcRspInvestorAccountField *pRspInvestorAccount, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) 
+{
+	Task task = Task();
+	task.task_name = ONRSPQRYINVESTORACCOUNT;
+
+	if (pRspInvestorAccount)
+	{
+		task.task_data = *pRspInvestorAccount;
+	}
+	else
+	{
+		CFocusFtdcRspInvestorAccountField empty_data = CFocusFtdcRspInvestorAccountField();
+		memset(&empty_data, 0, sizeof(empty_data));
+		task.task_data = empty_data;
+	}
+
+	if (pRspInfo)
+	{
+		task.task_error = *pRspInfo;
+	}
+	else
+	{
+		CFocusFtdcRspInfoField empty_error = CFocusFtdcRspInfoField();
+		memset(&empty_error, 0, sizeof(empty_error));
+		task.task_error = empty_error;
+	}
+	task.task_id = nRequestID;
+	task.task_last = bIsLast;
+	this->task_queue.push(task);
+};
+
 void TdApi::OnRspQryInstrument(CFocusFtdcRspInstrumentField *pRspInstrument, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) 
 {
 	Task task = Task();
@@ -896,6 +927,12 @@ void TdApi::processTask()
 			break;
 		}
 
+		case ONRSPQRYINVESTORACCOUNT:
+		{
+			this->processRspQryInvestorAccount(task);
+			break;
+		}
+
 		case ONRSPQRYINSTRUMENT:
 		{
 			this->processRspQryInstrument(task);
@@ -1384,6 +1421,51 @@ void TdApi::processRspQryTrade(Task task)
 	error["ErrorID"] = task_error.ErrorID;
 	error["ErrorMsg"] = GBK_TO_UTF8(task_error.ErrorMsg);
 	this->onRspQryTrade(data, error, task.task_id, task.task_last);
+};
+
+void TdApi::processRspQryInvestorAccount(Task task)
+{
+	PyLock lock;
+	CFocusFtdcRspInvestorAccountField task_data = any_cast<CFocusFtdcRspInvestorAccountField>(task.task_data);
+	dict data;
+	data["BrokerID"] = task_data.BrokerID;
+	data["InvestorID"] = task_data.InvestorID;
+	data["AccountID"] = task_data.AccountID;
+	data["InvestorPasswd"] = task_data.InvestorPasswd;
+	data["PreBalance"] = task_data.PreBalance;
+	data["PreAvailable"] = task_data.PreAvailable;
+	data["Deposit"] = task_data.Deposit;
+	data["Withdraw"] = task_data.Withdraw;
+	data["Margin"] = task_data.Margin;
+	data["Premium"] = task_data.Premium;
+	data["Fee"] = task_data.Fee;
+	data["FrozenMargin"] = task_data.FrozenMargin;
+	data["FrozenPremium"] = task_data.FrozenPremium;
+	data["FrozenFee"] = task_data.FrozenFee;
+	data["CloseProfit"] = task_data.CloseProfit;
+	data["PositionProfit"] = task_data.PositionProfit;
+	data["Available"] = task_data.Available;
+	data["Balance"] = task_data.Balance;
+	data["LongMargin"] = task_data.LongMargin;
+	data["ShortMargin"] = task_data.ShortMargin;
+	data["LongFrozenMargin"] = task_data.LongFrozenMargin;
+	data["ShortFrozenMargin"] = task_data.ShortFrozenMargin;
+	data["DynamicRights"] = task_data.DynamicRights;
+	data["Risk"] = task_data.Risk;
+	data["OtherFee"] = task_data.OtherFee;
+	data["Mortgage"] = task_data.Mortgage;
+	data["Currency"] = task_data.Currency;
+	data["WithdrawQuota"] = task_data.WithdrawQuota;
+	data["TransferFee"] = task_data.TransferFee;
+	data["FrozenTransferFee"] = task_data.FrozenTransferFee;
+	data["StampTax"] = task_data.StampTax;
+	data["FrozenStampTax"] = task_data.FrozenStampTax;
+
+	CFocusFtdcRspInfoField task_error = any_cast<CFocusFtdcRspInfoField>(task.task_error);
+	dict error;
+	error["ErrorID"] = task_error.ErrorID;
+	error["ErrorMsg"] = GBK_TO_UTF8(task_error.ErrorMsg);
+	this->onRspQryInvestorAccount(data, error, task.task_id, task.task_last);
 };
 
 void TdApi::processRspQryInstrument(Task task)
@@ -2066,6 +2148,17 @@ int TdApi::reqQryTrade(dict req, int nRequestID)
 	return i;
 };
 
+int TdApi::reqQryInvestorAccount(dict req, int nRequestID)
+{
+	CFocusFtdcQryInvestorAccountField myreq = CFocusFtdcQryInvestorAccountField();
+	memset(&myreq, 0, sizeof(myreq));
+	getStr(req, "BrokerID", myreq.BrokerID);
+	getStr(req, "UserID", myreq.UserID);
+	getStr(req, "InvestorID", myreq.InvestorID);
+	int i = this->api->ReqQryInvestorAccount(&myreq, nRequestID);
+	return i;
+};
+
 int TdApi::reqQryInstrument(dict req, int nRequestID)
 {
 	CFocusFtdcQryInstrumentField myreq = CFocusFtdcQryInstrumentField();
@@ -2425,6 +2518,19 @@ struct TdApiWrap : TdApi, wrapper < TdApi >
 		}
 	};
 
+	virtual void onRspQryInvestorAccount(dict data, dict error, int id, bool last)
+	{
+		try
+		{
+			this->get_override("onRspQryInvestorAccount")(data, error, id, last);
+		}
+		catch (error_already_set const &)
+		{
+			std::cerr << __FILE__ << __LINE__ << std::endl;;
+			PyErr_Print();
+		}
+	};
+
 	virtual void onRspQryInstrument(dict data, dict error, int id, bool last)
 	{
 		try
@@ -2677,6 +2783,7 @@ BOOST_PYTHON_MODULE(focusbinding)
 		.def("onRtnMessageNotify", pure_virtual(&TdApiWrap::onRtnMessageNotify))
 		.def("onRspQryOrder", pure_virtual(&TdApiWrap::onRspQryOrder))
 		.def("onRspQryTrade", pure_virtual(&TdApiWrap::onRspQryTrade))
+		.def("onRspQryInvestorAccount", pure_virtual(&TdApiWrap::onRspQryInvestorAccount))
 		.def("onRspQryInstrument", pure_virtual(&TdApiWrap::onRspQryInstrument))
 		.def("onRspQryExchange", pure_virtual(&TdApiWrap::onRspQryExchange))
 		.def("onRspQryInvestorPosition", pure_virtual(&TdApiWrap::onRspQryInvestorPosition))
@@ -2700,6 +2807,7 @@ BOOST_PYTHON_MODULE(focusbinding)
 		.def("reqOrderAction", &TdApiWrap::reqOrderAction)
 		.def("reqQryOrder", &TdApiWrap::reqQryOrder)
 		.def("reqQryTrade", &TdApiWrap::reqQryTrade)
+		.def("reqQryInvestorAccount", &TdApiWrap::reqQryInvestorAccount)
 		.def("reqQryInstrument", &TdApiWrap::reqQryInstrument)
 		.def("reqQryExchange", &TdApiWrap::reqQryExchange)
 		.def("reqQryInvestorPosition", &TdApiWrap::reqQryInvestorPosition)

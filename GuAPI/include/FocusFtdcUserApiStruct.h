@@ -1,9 +1,9 @@
-ï»¿/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
 ///@system QuantDo Platform
-///@company å±±è¥¿è¯åˆ¸è‚¡ä»½æœ‰é™å…¬å¸  é‡‘èè¡ç”Ÿäº§å“éƒ¨
-///@author é¡¾æµ©
+///@company É½Î÷Ö¤È¯¹É·İÓĞÏŞ¹«Ë¾  ½ğÈÚÑÜÉú²úÆ·²¿
+///@author ¹ËºÆ
 ///@file FocusFtdcUserApiStruct.h
-///@brief å®šä¹‰äº†å®¢æˆ·ç«¯æ¥å£ä½¿ç”¨çš„ä¸šåŠ¡æ•°æ®ç»“æ„
+///@brief ¶¨ÒåÁË¿Í»§¶Ë½Ó¿ÚÊ¹ÓÃµÄÒµÎñÊı¾İ½á¹¹
 ///@history 
 /////////////////////////////////////////////////////////////////////////
 
@@ -16,2019 +16,2019 @@
 
 #include "FocusFtdcUserApiDataType.h"
 
-///å“åº”ä¿¡æ¯
+///ÏìÓ¦ĞÅÏ¢
 struct CFocusFtdcRspInfoField
 {
-	///é”™è¯¯ä»£ç 
+	///´íÎó´úÂë
 	TFocusFtdcErrorIDType	ErrorID;
-	///é”™è¯¯ä¿¡æ¯
+	///´íÎóĞÅÏ¢
 	TFocusFtdcErrorMsgType	ErrorMsg;
 };
 
-///ç³»ç»Ÿç”¨æˆ·ç™»å½•è¯·æ±‚
+///ÏµÍ³ÓÃ»§µÇÂ¼ÇëÇó
 struct CFocusFtdcReqUserLoginField
 {
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcDateType	TradingDay;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///å¯†ç 
+	///ÃÜÂë
 	TFocusFtdcPasswordType	Password;
-	///ç”¨æˆ·ç«¯äº§å“ä¿¡æ¯
+	///ÓÃ»§¶Ë²úÆ·ĞÅÏ¢
 	TFocusFtdcProductInfoType	UserProductInfo;
-	///æ¥å£ç«¯äº§å“ä¿¡æ¯
+	///½Ó¿Ú¶Ë²úÆ·ĞÅÏ¢
 	TFocusFtdcProductInfoType	InterfaceProductInfo;
-	///åè®®ä¿¡æ¯
+	///Ğ­ÒéĞÅÏ¢
 	TFocusFtdcProtocolInfoType	ProtocolInfo;
-	///IPåœ°å€
+	///IPµØÖ·
 	TFocusFtdcIPAddressType	IPAddress;
-	///Macåœ°å€
+	///MacµØÖ·
 	TFocusFtdcMacAddressType	MacAddress;
-	///æ•°æ®ä¸­å¿ƒä»£ç 
+	///Êı¾İÖĞĞÄ´úÂë
 	TFocusFtdcDataCenterIDType	DataCenterID;
-	///åŠ¨æ€å¯†ç 
+	///¶¯Ì¬ÃÜÂë
 	TFocusFtdcPasswordType	OneTimePassword;
-	///ç»ˆç«¯IPåœ°å€
+	///ÖÕ¶ËIPµØÖ·
 	TFocusFtdcIPAddressType	ClientIPAddress;
-	///æˆæƒç¼–ç 
+	///ÊÚÈ¨±àÂë
 	TFocusFtdcAuthCodeType	AuthCode;
 };
 
-///ç³»ç»Ÿç”¨æˆ·ç™»å½•åº”ç­”
+///ÏµÍ³ÓÃ»§µÇÂ¼Ó¦´ğ
 struct CFocusFtdcRspUserLoginField
 {
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcDateType	TradingDay;
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///ç™»å½•æˆåŠŸæ—¶é—´
+	///µÇÂ¼³É¹¦Ê±¼ä
 	TFocusFtdcTimeType	LoginTime;
-	///ç”¨æˆ·æœ€å¤§æœ¬åœ°æŠ¥å•å·
+	///ÓÃ»§×î´ó±¾µØ±¨µ¥ºÅ
 	TFocusFtdcUserOrderLocalIDType	MaxOrderLocalID;
-	///äº¤æ˜“ç³»ç»Ÿåç§°
+	///½»Ò×ÏµÍ³Ãû³Æ
 	TFocusFtdcTradingSystemNameType	TradingSystemName;
-	///æ•°æ®ä¸­å¿ƒä»£ç 
+	///Êı¾İÖĞĞÄ´úÂë
 	TFocusFtdcDataCenterIDType	DataCenterID;
-	///ä¼šå‘˜ç§æœ‰æµå½“å‰é•¿åº¦
+	///»áÔ±Ë½ÓĞÁ÷µ±Ç°³¤¶È
 	TFocusFtdcSequenceNoType	PrivateFlowSize;
-	///äº¤æ˜“å‘˜ç§æœ‰æµå½“å‰é•¿åº¦
+	///½»Ò×Ô±Ë½ÓĞÁ÷µ±Ç°³¤¶È
 	TFocusFtdcSequenceNoType	UserFlowSize;
-	///ç™»å½•é™„åŠ ä¿¡æ¯
+	///µÇÂ¼¸½¼ÓĞÅÏ¢
 	TFocusFtdcLoginInfoType	LoginInfo;
-	///ä¼šè¯ç¼–å·
+	///»á»°±àºÅ
 	TFocusFtdcSessionIDType	SessionID;
-	///å‰ç½®ç¼–å·
+	///Ç°ÖÃ±àºÅ
 	TFocusFtdcFrontIDType	FrontID;
 };
 
-///ç”¨æˆ·ç™»å‡ºè¯·æ±‚
+///ÓÃ»§µÇ³öÇëÇó
 struct CFocusFtdcReqUserLogoutField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
 };
 
-///ç”¨æˆ·ç™»å‡ºè¯·æ±‚
+///ÓÃ»§µÇ³öÇëÇó
 struct CFocusFtdcRspUserLogoutField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
 };
 
-///å¼ºåˆ¶ç”¨æˆ·é€€å‡º
+///Ç¿ÖÆÓÃ»§ÍË³ö
 struct CFocusFtdcForceUserExitField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
 };
 
-///ç”¨æˆ·å£ä»¤ä¿®æ”¹
+///ÓÃ»§¿ÚÁîĞŞ¸Ä
 struct CFocusFtdcUserPasswordUpdateField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æ—§å¯†ç 
+	///¾ÉÃÜÂë
 	TFocusFtdcPasswordType	OldPassword;
-	///æ–°å¯†ç 
+	///ĞÂÃÜÂë
 	TFocusFtdcPasswordType	NewPassword;
 };
 
-///è¾“å…¥æŠ¥å•
+///ÊäÈë±¨µ¥
 struct CFocusFtdcInputOrderField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///ç”¨æˆ·æœ¬åœ°æŠ¥å•å·
+	///ÓÃ»§±¾µØ±¨µ¥ºÅ
 	TFocusFtdcUserOrderLocalIDType	UserOrderLocalID;
-	///ç”¨æˆ·è‡ªå®šä¹‰åŸŸ
+	///ÓÃ»§×Ô¶¨ÒåÓò
 	TFocusFtdcCustomType	UserCustom;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///ç³»ç»ŸæŠ¥å•ç¼–å·
+	///ÏµÍ³±¨µ¥±àºÅ
 	TFocusFtdcOrderSysIDType	OrderSysID;
-	///è‚¡ç¥¨å§”æ‰˜æ‰¹å·(ä»…æ‰¹é‡å§”æ‰˜æœ‰æ•ˆ)
+	///¹ÉÆ±Î¯ÍĞÅúºÅ(½öÅúÁ¿Î¯ÍĞÓĞĞ§)
 	TFocusFtdcOrderSysIDType	BatchNum;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///åˆçº¦åç§°
+	///ºÏÔ¼Ãû³Æ
 	TFocusFtdcInstrumentNameType	InstrumentName;
-	///æŠ¥å•ç±»å‹
+	///±¨µ¥ÀàĞÍ
 	TFocusFtdcOrderPriceTypeType	OrderPriceType;
-	///ä¹°å–æ–¹å‘
+	///ÂòÂô·½Ïò
 	TFocusFtdcDirectionType	Direction;
-	///å¼€å¹³æ ‡å¿—
+	///¿ªÆ½±êÖ¾
 	TFocusFtdcOffsetFlagType	OffsetFlag;
-	///æŠ•æœºå¥—ä¿æ ‡å¿—
+	///Í¶»úÌ×±£±êÖ¾
 	TFocusFtdcHedgeFlagType	HedgeFlag;
-	///ä»·æ ¼
+	///¼Û¸ñ
 	TFocusFtdcPriceType	LimitPrice;
-	///æ•°é‡
+	///ÊıÁ¿
 	TFocusFtdcVolumeType	Volume;
-	///æœ‰æ•ˆæœŸç±»å‹
+	///ÓĞĞ§ÆÚÀàĞÍ
 	TFocusFtdcTimeConditionType	TimeCondition;
-	///GTDæ—¥æœŸ
+	///GTDÈÕÆÚ
 	TFocusFtdcDateType	GTDDate;
-	///æˆäº¤é‡ç±»å‹
+	///³É½»Á¿ÀàĞÍ
 	TFocusFtdcVolumeConditionType	VolumeCondition;
-	///æœ€å°æˆäº¤é‡
+	///×îĞ¡³É½»Á¿
 	TFocusFtdcVolumeType	MinVolume;
-	///æ­¢æŸä»·
+	///Ö¹Ëğ¼Û
 	TFocusFtdcPriceType	StopPrice;
-	///å¼ºå¹³åŸå› 
+	///Ç¿Æ½Ô­Òò
 	TFocusFtdcForceCloseReasonType	ForceCloseReason;
-	///è‡ªåŠ¨æŒ‚èµ·æ ‡å¿—
+	///×Ô¶¯¹ÒÆğ±êÖ¾
 	TFocusFtdcBoolType	IsAutoSuspend;
-	///ä¸šåŠ¡å•å…ƒ
+	///ÒµÎñµ¥Ôª
 	TFocusFtdcBusinessUnitType	BusinessUnit;
-	///ä¸šåŠ¡ç±»åˆ«
+	///ÒµÎñÀà±ğ
 	TFocusFtdcBusinessTypeType	BusinessType;
 };
 
-///æŠ¥å•æ“ä½œ
+///±¨µ¥²Ù×÷
 struct CFocusFtdcOrderActionField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///ç”¨æˆ·æœ¬åœ°æŠ¥å•å·
+	///ÓÃ»§±¾µØ±¨µ¥ºÅ
 	TFocusFtdcUserOrderLocalIDType	UserOrderLocalID;
-	///ç”¨æˆ·è‡ªå®šä¹‰åŸŸ
+	///ÓÃ»§×Ô¶¨ÒåÓò
 	TFocusFtdcCustomType	UserCustom;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///æŠ¥å•ç¼–å·
+	///±¨µ¥±àºÅ
 	TFocusFtdcOrderSysIDType	OrderSysID;
-	///è‚¡ç¥¨å§”æ‰˜æ‰¹å·(ä»…æ‰¹é‡å§”æ‰˜æœ‰æ•ˆ)
+	///¹ÉÆ±Î¯ÍĞÅúºÅ(½öÅúÁ¿Î¯ÍĞÓĞĞ§)
 	TFocusFtdcOrderSysIDType	BatchNum;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///æœ¬æ¬¡æ’¤å•æ“ä½œçš„æœ¬åœ°ç¼–å·
+	///±¾´Î³·µ¥²Ù×÷µÄ±¾µØ±àºÅ
 	TFocusFtdcUserOrderLocalIDType	UserOrderActionLocalID;
-	///æŠ¥å•æ“ä½œæ ‡å¿—
+	///±¨µ¥²Ù×÷±êÖ¾
 	TFocusFtdcActionFlagType	ActionFlag;
-	///ä»·æ ¼
+	///¼Û¸ñ
 	TFocusFtdcPriceType	LimitPrice;
-	///æ•°é‡å˜åŒ–
+	///ÊıÁ¿±ä»¯
 	TFocusFtdcVolumeType	VolumeChange;
-	///å‰ç½®ç¼–å·
+	///Ç°ÖÃ±àºÅ
 	TFocusFtdcFrontIDType	FrontID;
-	///ä¼šè¯ç¼–å·
+	///»á»°±àºÅ
 	TFocusFtdcSessionIDType	SessionID;
 };
 
-///å†…å­˜è¡¨å¯¼å‡º
+///ÄÚ´æ±íµ¼³ö
 struct CFocusFtdcMemDBField
 {
-	///å†…å­˜è¡¨å
+	///ÄÚ´æ±íÃû
 	TFocusFtdcMemTableNameType	MemTableName;
 };
 
-///æŠ•èµ„è€…èµ„é‡‘å¸æˆ·å‡ºå…¥é‡‘è¯·æ±‚
+///Í¶×ÊÕß×Ê½ğÕÊ»§³öÈë½ğÇëÇó
 struct CFocusFtdcReqAccountDepositField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///èµ„é‡‘æµæ°´å·
+	///×Ê½ğÁ÷Ë®ºÅ
 	TFocusFtdcAccountSeqNoType	AccountSeqNo;
-	///èµ„é‡‘å¸å·
+	///×Ê½ğÕÊºÅ
 	TFocusFtdcAccountIDType	AccountID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///é‡‘é¢
+	///½ğ¶î
 	TFocusFtdcMoneyType	Amount;
-	///å‡ºå…¥é‡‘æ–¹å‘
+	///³öÈë½ğ·½Ïò
 	TFocusFtdcAccountDirectionType	AmountDirection;
-	///å‡ºå…¥é‡‘æ—¥æœŸ
+	///³öÈë½ğÈÕÆÚ
 	TFocusFtdcDateType	Date;
-	///å‡ºå…¥é‡‘æ—¶é—´
+	///³öÈë½ğÊ±¼ä
 	TFocusFtdcTimeType	Time;
-	///å‡ºå…¥é‡‘å¤‡æ³¨
+	///³öÈë½ğ±¸×¢
 	TFocusFtdcDepositNoteType	Note;
-	///æ˜¯å¦æˆåŠŸ
+	///ÊÇ·ñ³É¹¦
 	TFocusFtdcBoolType	isSuccess;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
 };
 
-///æŠ•èµ„è€…èµ„é‡‘å¸æˆ·å‡ºå…¥é‡‘åº”ç­”
+///Í¶×ÊÕß×Ê½ğÕÊ»§³öÈë½ğÓ¦´ğ
 struct CFocusFtdcRspAccountDepositField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///èµ„é‡‘å¸å·
+	///×Ê½ğÕÊºÅ
 	TFocusFtdcAccountIDType	AccountID;
-	///èµ„é‡‘æµæ°´å·
+	///×Ê½ğÁ÷Ë®ºÅ
 	TFocusFtdcAccountSeqNoType	AccountSeqNo;
-	///é‡‘é¢
+	///½ğ¶î
 	TFocusFtdcMoneyType	Amount;
-	///å‡ºå…¥é‡‘æ–¹å‘
+	///³öÈë½ğ·½Ïò
 	TFocusFtdcAccountDirectionType	AmountDirection;
-	///å¯ç”¨èµ„é‡‘
+	///¿ÉÓÃ×Ê½ğ
 	TFocusFtdcMoneyType	Available;
-	///ç»“ç®—å‡†å¤‡é‡‘
+	///½áËã×¼±¸½ğ
 	TFocusFtdcMoneyType	Balance;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
 };
 
-///å®æ—¶ä¸Šåœº
+///ÊµÊ±ÉÏ³¡
 struct CFocusFtdcTBCommandField
 {
-	///DBå‘½ä»¤åºå·
+	///DBÃüÁîĞòºÅ
 	TFocusFtdcCommandNoType	CommandNo;
-	///æ“ä½œæ—¥æœŸ
+	///²Ù×÷ÈÕÆÚ
 	TFocusFtdcDateType	CommandDate;
-	///æ“ä½œæ—¶é—´
+	///²Ù×÷Ê±¼ä
 	TFocusFtdcTimeType	CommandTime;
-	///DBå‘½ä»¤ç±»å‹
+	///DBÃüÁîÀàĞÍ
 	TFocusFtdcCommandTypeType	CommandType;
-	///å­—æ®µå
+	///×Ö¶ÎÃû
 	TFocusFtdcFieldNameType	FieldName;
-	///å­—æ®µå†…å®¹
+	///×Ö¶ÎÄÚÈİ
 	TFocusFtdcFieldContentType	FieldContent;
 };
 
-///å‡ºå…¥é‡‘ç»“æœ
+///³öÈë½ğ½á¹û
 struct CFocusFtdcInvestorAccountDepositResField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///èµ„é‡‘å¸å·
+	///×Ê½ğÕÊºÅ
 	TFocusFtdcAccountIDType	AccountID;
-	///èµ„é‡‘æµæ°´å·
+	///×Ê½ğÁ÷Ë®ºÅ
 	TFocusFtdcAccountSeqNoType	AccountSeqNo;
-	///é‡‘é¢
+	///½ğ¶î
 	TFocusFtdcMoneyType	Amount;
-	///å‡ºå…¥é‡‘æ–¹å‘
+	///³öÈë½ğ·½Ïò
 	TFocusFtdcAccountDirectionType	AmountDirection;
-	///å¯ç”¨èµ„é‡‘
+	///¿ÉÓÃ×Ê½ğ
 	TFocusFtdcMoneyType	Available;
-	///ç»“ç®—å‡†å¤‡é‡‘
+	///½áËã×¼±¸½ğ
 	TFocusFtdcMoneyType	Balance;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
 };
 
-///åˆçº¦çŠ¶æ€
+///ºÏÔ¼×´Ì¬
 struct CFocusFtdcInstrumentStatusField
 {
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///å“ç§ä»£ç 
+	///Æ·ÖÖ´úÂë
 	TFocusFtdcProductIDType	ProductID;
-	///å“ç§åç§°
+	///Æ·ÖÖÃû³Æ
 	TFocusFtdcProductNameType	ProductName;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///åˆçº¦åç§°
+	///ºÏÔ¼Ãû³Æ
 	TFocusFtdcInstrumentNameType	InstrumentName;
-	///äº¤å‰²å¹´ä»½
+	///½»¸îÄê·İ
 	TFocusFtdcYearType	DeliveryYear;
-	///äº¤å‰²æœˆ
+	///½»¸îÔÂ
 	TFocusFtdcMonthType	DeliveryMonth;
-	///é™ä»·å•æœ€å¤§ä¸‹å•é‡
+	///ÏŞ¼Ûµ¥×î´óÏÂµ¥Á¿
 	TFocusFtdcLargeVolumeType	MaxLimitOrderVolume;
-	///é™ä»·å•æœ€å°ä¸‹å•é‡
+	///ÏŞ¼Ûµ¥×îĞ¡ÏÂµ¥Á¿
 	TFocusFtdcLargeVolumeType	MinLimitOrderVolume;
-	///å¸‚ä»·å•æœ€å¤§ä¸‹å•é‡
+	///ÊĞ¼Ûµ¥×î´óÏÂµ¥Á¿
 	TFocusFtdcLargeVolumeType	MaxMarketOrderVolume;
-	///å¸‚ä»·å•æœ€å°ä¸‹å•é‡
+	///ÊĞ¼Ûµ¥×îĞ¡ÏÂµ¥Á¿
 	TFocusFtdcLargeVolumeType	MinMarketOrderVolume;
-	///è‚¡ç¥¨æ¯æ¬¡æœ€å°‘ä¹°å…¥é‡
+	///¹ÉÆ±Ã¿´Î×îÉÙÂòÈëÁ¿
 	TFocusFtdcLargeVolumeType	MinStkBuyQty;
-	///è‚¡ç¥¨æ¯æ¬¡æœ€å°‘å–å‡ºé‡
+	///¹ÉÆ±Ã¿´Î×îÉÙÂô³öÁ¿
 	TFocusFtdcLargeVolumeType	MinStkSellQty;
-	///æ•°é‡ä¹˜æ•°
+	///ÊıÁ¿³ËÊı
 	TFocusFtdcVolumeMultipleType	VolumeMultiple;
-	///æŠ¥ä»·å•ä½
+	///±¨¼Ûµ¥Î»
 	TFocusFtdcPriceTickType	PriceTick;
-	///å¸ç§
+	///±ÒÖÖ
 	TFocusFtdcCurrencyType	Currency;
-	///å¤šå¤´é™ä»“
+	///¶àÍ·ÏŞ²Ö
 	TFocusFtdcLargeVolumeType	LongPosLimit;
-	///ç©ºå¤´é™ä»“
+	///¿ÕÍ·ÏŞ²Ö
 	TFocusFtdcLargeVolumeType	ShortPosLimit;
-	///è·Œåœæ¿ä»·
+	///µøÍ£°å¼Û
 	TFocusFtdcPriceType	LowerLimitPrice;
-	///æ¶¨åœæ¿ä»·
+	///ÕÇÍ£°å¼Û
 	TFocusFtdcPriceType	UpperLimitPrice;
-	///æ˜¨ç»“ç®—
+	///×ò½áËã
 	TFocusFtdcPriceType	PreSettlementPrice;
-	///åˆçº¦äº¤æ˜“çŠ¶æ€
+	///ºÏÔ¼½»Ò××´Ì¬
 	TFocusFtdcInstrumentStatusType	InstrumentStatus;
-	///åˆ›å»ºæ—¥
+	///´´½¨ÈÕ
 	TFocusFtdcDateType	CreateDate;
-	///ä¸Šå¸‚æ—¥
+	///ÉÏÊĞÈÕ
 	TFocusFtdcDateType	OpenDate;
-	///åˆ°æœŸæ—¥
+	///µ½ÆÚÈÕ
 	TFocusFtdcDateType	ExpireDate;
-	///å¼€å§‹äº¤å‰²æ—¥
+	///¿ªÊ¼½»¸îÈÕ
 	TFocusFtdcDateType	StartDelivDate;
-	///æœ€åäº¤å‰²æ—¥
+	///×îºó½»¸îÈÕ
 	TFocusFtdcDateType	EndDelivDate;
-	///æŒ‚ç‰ŒåŸºå‡†ä»·
+	///¹ÒÅÆ»ù×¼¼Û
 	TFocusFtdcPriceType	BasisPrice;
-	///å½“å‰æ˜¯å¦äº¤æ˜“
+	///µ±Ç°ÊÇ·ñ½»Ò×
 	TFocusFtdcBoolType	IsTrading;
-	///åŸºç¡€å•†å“ä»£ç 
+	///»ù´¡ÉÌÆ·´úÂë
 	TFocusFtdcInstrumentIDType	UnderlyingInstrID;
-	///åŸºç¡€å•†å“ä¹˜æ•°
+	///»ù´¡ÉÌÆ·³ËÊı
 	TFocusFtdcUnderlyingMultipleType	UnderlyingMultiple;
-	///æŒä»“ç±»å‹
+	///³Ö²ÖÀàĞÍ
 	TFocusFtdcPositionTypeType	PositionType;
-	///æ‰§è¡Œä»·
+	///Ö´ĞĞ¼Û
 	TFocusFtdcPriceType	StrikePrice;
-	///æœŸæƒç±»å‹
+	///ÆÚÈ¨ÀàĞÍ
 	TFocusFtdcOptionsTypeType	OptionsType;
-	///æ±‡ç‡
+	///»ãÂÊ
 	TFocusFtdcRatioType	ExchangeRate;
-	///æœŸæƒç³»åˆ—
+	///ÆÚÈ¨ÏµÁĞ
 	TFocusFtdcInstrumentIDType	OptionSeriesId;
-	///äº§å“ç±»å‹
+	///²úÆ·ÀàĞÍ
 	TFocusFtdcProductClassType	ProductClass;
-	///æœŸæƒè¡Œæƒæ–¹å¼
+	///ÆÚÈ¨ĞĞÈ¨·½Ê½
 	TFocusFtdcOptionsModeType	OptionsMode;
-	///ä¿è¯é‡‘ç®—æ³•ç±»å‹
+	///±£Ö¤½ğËã·¨ÀàĞÍ
 	TFocusFtdcMarginCombTypeType	MarginCombType;
 };
 
-///å®¡æ‰¹æ¨¡å¼è®¾ç½®è¯·æ±‚
+///ÉóÅúÄ£Ê½ÉèÖÃÇëÇó
 struct CFocusFtdcAdviceRunModeField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///è‡ªåŠ¨æˆ–è€…æ‰‹åŠ¨
+	///×Ô¶¯»òÕßÊÖ¶¯
 	TFocusFtdcAdviceRunModeType	RunMode;
 };
 
-///è®¢é˜…åˆçº¦çŠ¶æ€
+///¶©ÔÄºÏÔ¼×´Ì¬
 struct CFocusFtdcSubInstrumentStatusField
 {
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///åˆçº¦äº¤æ˜“çŠ¶æ€
+	///ºÏÔ¼½»Ò××´Ì¬
 	TFocusFtdcInstrumentStatusType	InstrumentStatus;
-	///è¿›å…¥æœ¬çŠ¶æ€æ—¶é—´
+	///½øÈë±¾×´Ì¬Ê±¼ä
 	TFocusFtdcTimeType	EnterTime;
-	///è¿›å…¥æœ¬çŠ¶æ€åŸå› 
+	///½øÈë±¾×´Ì¬Ô­Òò
 	TFocusFtdcEnterReasonType	EnterReason;
 };
 
-///è¡Œæƒ…åŸºç¡€å±æ€§
+///ĞĞÇé»ù´¡ÊôĞÔ
 struct CFocusFtdcMarketDataBaseField
 {
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcTradingDayType	TradingDay;
-	///æ˜¨ç»“ç®—
+	///×ò½áËã
 	TFocusFtdcPriceType	PreSettlementPrice;
-	///æ˜¨æ”¶ç›˜
+	///×òÊÕÅÌ
 	TFocusFtdcPriceType	PreClosePrice;
-	///æ˜¨æŒä»“é‡
+	///×ò³Ö²ÖÁ¿
 	TFocusFtdcLargeVolumeType	PreOpenInterest;
-	///æ˜¨è™šå®åº¦
+	///×òĞéÊµ¶È
 	TFocusFtdcRatioType	PreDelta;
-	///è¯åˆ¸äº¤æ˜“çŠ¶æ€
+	///Ö¤È¯½»Ò××´Ì¬
 	TFocusFtdcStkOrderStatusType	StkOrderStatus;
 };
 
-///è¡Œæƒ…é™æ€å±æ€§
+///ĞĞÇé¾²Ì¬ÊôĞÔ
 struct CFocusFtdcMarketDataStaticField
 {
-	///ä»Šå¼€ç›˜
+	///½ñ¿ªÅÌ
 	TFocusFtdcPriceType	OpenPrice;
-	///æœ€é«˜ä»·
+	///×î¸ß¼Û
 	TFocusFtdcPriceType	HighestPrice;
-	///æœ€ä½ä»·
+	///×îµÍ¼Û
 	TFocusFtdcPriceType	LowestPrice;
-	///ä»Šæ”¶ç›˜
+	///½ñÊÕÅÌ
 	TFocusFtdcPriceType	ClosePrice;
-	///æ¶¨åœæ¿ä»·
+	///ÕÇÍ£°å¼Û
 	TFocusFtdcPriceType	UpperLimitPrice;
-	///è·Œåœæ¿ä»·
+	///µøÍ£°å¼Û
 	TFocusFtdcPriceType	LowerLimitPrice;
-	///ä»Šç»“ç®—
+	///½ñ½áËã
 	TFocusFtdcPriceType	SettlementPrice;
-	///ä»Šè™šå®åº¦
+	///½ñĞéÊµ¶È
 	TFocusFtdcRatioType	CurrDelta;
 };
 
-///è¡Œæƒ…æœ€æ–°æˆäº¤å±æ€§
+///ĞĞÇé×îĞÂ³É½»ÊôĞÔ
 struct CFocusFtdcMarketDataLastMatchField
 {
-	///æœ€æ–°ä»·
+	///×îĞÂ¼Û
 	TFocusFtdcPriceType	LastPrice;
-	///æ•°é‡
+	///ÊıÁ¿
 	TFocusFtdcVolumeType	Volume;
-	///æˆäº¤é‡‘é¢
+	///³É½»½ğ¶î
 	TFocusFtdcMoneyType	Turnover;
-	///æŒä»“é‡
+	///³Ö²ÖÁ¿
 	TFocusFtdcLargeVolumeType	OpenInterest;
 };
 
-///è¡Œæƒ…æœ€ä¼˜ä»·å±æ€§
+///ĞĞÇé×îÓÅ¼ÛÊôĞÔ
 struct CFocusFtdcMarketDataBestPriceField
 {
-	///ç”³ä¹°ä»·ä¸€
+	///ÉêÂò¼ÛÒ»
 	TFocusFtdcPriceType	BidPrice1;
-	///ç”³ä¹°é‡ä¸€
+	///ÉêÂòÁ¿Ò»
 	TFocusFtdcVolumeType	BidVolume1;
-	///ç”³å–ä»·ä¸€
+	///ÉêÂô¼ÛÒ»
 	TFocusFtdcPriceType	AskPrice1;
-	///ç”³å–é‡ä¸€
+	///ÉêÂôÁ¿Ò»
 	TFocusFtdcVolumeType	AskVolume1;
 };
 
-///è¡Œæƒ…ç”³ä¹°äºŒã€ä¸‰å±æ€§
+///ĞĞÇéÉêÂò¶ş¡¢ÈıÊôĞÔ
 struct CFocusFtdcMarketDataBid23Field
 {
-	///ç”³ä¹°ä»·äºŒ
+	///ÉêÂò¼Û¶ş
 	TFocusFtdcPriceType	BidPrice2;
-	///ç”³ä¹°é‡äºŒ
+	///ÉêÂòÁ¿¶ş
 	TFocusFtdcVolumeType	BidVolume2;
-	///ç”³ä¹°ä»·ä¸‰
+	///ÉêÂò¼ÛÈı
 	TFocusFtdcPriceType	BidPrice3;
-	///ç”³ä¹°é‡ä¸‰
+	///ÉêÂòÁ¿Èı
 	TFocusFtdcVolumeType	BidVolume3;
 };
 
-///è¡Œæƒ…ç”³å–äºŒã€ä¸‰å±æ€§
+///ĞĞÇéÉêÂô¶ş¡¢ÈıÊôĞÔ
 struct CFocusFtdcMarketDataAsk23Field
 {
-	///ç”³å–ä»·äºŒ
+	///ÉêÂô¼Û¶ş
 	TFocusFtdcPriceType	AskPrice2;
-	///ç”³å–é‡äºŒ
+	///ÉêÂôÁ¿¶ş
 	TFocusFtdcVolumeType	AskVolume2;
-	///ç”³å–ä»·ä¸‰
+	///ÉêÂô¼ÛÈı
 	TFocusFtdcPriceType	AskPrice3;
-	///ç”³å–é‡ä¸‰
+	///ÉêÂôÁ¿Èı
 	TFocusFtdcVolumeType	AskVolume3;
 };
 
-///è¡Œæƒ…ç”³ä¹°å››ã€äº”å±æ€§
+///ĞĞÇéÉêÂòËÄ¡¢ÎåÊôĞÔ
 struct CFocusFtdcMarketDataBid45Field
 {
-	///ç”³ä¹°ä»·å››
+	///ÉêÂò¼ÛËÄ
 	TFocusFtdcPriceType	BidPrice4;
-	///ç”³ä¹°é‡å››
+	///ÉêÂòÁ¿ËÄ
 	TFocusFtdcVolumeType	BidVolume4;
-	///ç”³ä¹°ä»·äº”
+	///ÉêÂò¼ÛÎå
 	TFocusFtdcPriceType	BidPrice5;
-	///ç”³ä¹°é‡äº”
+	///ÉêÂòÁ¿Îå
 	TFocusFtdcVolumeType	BidVolume5;
 };
 
-///è¡Œæƒ…ç”³å–å››ã€äº”å±æ€§
+///ĞĞÇéÉêÂôËÄ¡¢ÎåÊôĞÔ
 struct CFocusFtdcMarketDataAsk45Field
 {
-	///ç”³å–ä»·å››
+	///ÉêÂô¼ÛËÄ
 	TFocusFtdcPriceType	AskPrice4;
-	///ç”³å–é‡å››
+	///ÉêÂôÁ¿ËÄ
 	TFocusFtdcVolumeType	AskVolume4;
-	///ç”³å–ä»·äº”
+	///ÉêÂô¼ÛÎå
 	TFocusFtdcPriceType	AskPrice5;
-	///ç”³å–é‡äº”
+	///ÉêÂôÁ¿Îå
 	TFocusFtdcVolumeType	AskVolume5;
 };
 
-///è¡Œæƒ…æ›´æ–°æ—¶é—´å±æ€§
+///ĞĞÇé¸üĞÂÊ±¼äÊôĞÔ
 struct CFocusFtdcMarketDataUpdateTimeField
 {
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///æœ€åä¿®æ”¹æ—¶é—´
+	///×îºóĞŞ¸ÄÊ±¼ä
 	TFocusFtdcTimeType	UpdateTime;
-	///æœ€åä¿®æ”¹æ¯«ç§’
+	///×îºóĞŞ¸ÄºÁÃë
 	TFocusFtdcMillisecType	UpdateMillisec;
 };
 
-///æ·±åº¦è¡Œæƒ…
+///Éî¶ÈĞĞÇé
 struct CFocusFtdcDepthMarketDataField
 {
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcTradingDayType	TradingDay;
-	///æ˜¨ç»“ç®—
+	///×ò½áËã
 	TFocusFtdcPriceType	PreSettlementPrice;
-	///æ˜¨æ”¶ç›˜
+	///×òÊÕÅÌ
 	TFocusFtdcPriceType	PreClosePrice;
-	///æ˜¨æŒä»“é‡
+	///×ò³Ö²ÖÁ¿
 	TFocusFtdcLargeVolumeType	PreOpenInterest;
-	///æ˜¨è™šå®åº¦
+	///×òĞéÊµ¶È
 	TFocusFtdcRatioType	PreDelta;
-	///è¯åˆ¸äº¤æ˜“çŠ¶æ€
+	///Ö¤È¯½»Ò××´Ì¬
 	TFocusFtdcStkOrderStatusType	StkOrderStatus;
-	///ä»Šå¼€ç›˜
+	///½ñ¿ªÅÌ
 	TFocusFtdcPriceType	OpenPrice;
-	///æœ€é«˜ä»·
+	///×î¸ß¼Û
 	TFocusFtdcPriceType	HighestPrice;
-	///æœ€ä½ä»·
+	///×îµÍ¼Û
 	TFocusFtdcPriceType	LowestPrice;
-	///ä»Šæ”¶ç›˜
+	///½ñÊÕÅÌ
 	TFocusFtdcPriceType	ClosePrice;
-	///æ¶¨åœæ¿ä»·
+	///ÕÇÍ£°å¼Û
 	TFocusFtdcPriceType	UpperLimitPrice;
-	///è·Œåœæ¿ä»·
+	///µøÍ£°å¼Û
 	TFocusFtdcPriceType	LowerLimitPrice;
-	///ä»Šç»“ç®—
+	///½ñ½áËã
 	TFocusFtdcPriceType	SettlementPrice;
-	///ä»Šè™šå®åº¦
+	///½ñĞéÊµ¶È
 	TFocusFtdcRatioType	CurrDelta;
-	///æœ€æ–°ä»·
+	///×îĞÂ¼Û
 	TFocusFtdcPriceType	LastPrice;
-	///æ•°é‡
+	///ÊıÁ¿
 	TFocusFtdcVolumeType	Volume;
-	///æˆäº¤é‡‘é¢
+	///³É½»½ğ¶î
 	TFocusFtdcMoneyType	Turnover;
-	///æŒä»“é‡
+	///³Ö²ÖÁ¿
 	TFocusFtdcLargeVolumeType	OpenInterest;
-	///ç”³ä¹°ä»·ä¸€
+	///ÉêÂò¼ÛÒ»
 	TFocusFtdcPriceType	BidPrice1;
-	///ç”³ä¹°é‡ä¸€
+	///ÉêÂòÁ¿Ò»
 	TFocusFtdcVolumeType	BidVolume1;
-	///ç”³å–ä»·ä¸€
+	///ÉêÂô¼ÛÒ»
 	TFocusFtdcPriceType	AskPrice1;
-	///ç”³å–é‡ä¸€
+	///ÉêÂôÁ¿Ò»
 	TFocusFtdcVolumeType	AskVolume1;
-	///ç”³ä¹°ä»·äºŒ
+	///ÉêÂò¼Û¶ş
 	TFocusFtdcPriceType	BidPrice2;
-	///ç”³ä¹°é‡äºŒ
+	///ÉêÂòÁ¿¶ş
 	TFocusFtdcVolumeType	BidVolume2;
-	///ç”³ä¹°ä»·ä¸‰
+	///ÉêÂò¼ÛÈı
 	TFocusFtdcPriceType	BidPrice3;
-	///ç”³ä¹°é‡ä¸‰
+	///ÉêÂòÁ¿Èı
 	TFocusFtdcVolumeType	BidVolume3;
-	///ç”³å–ä»·äºŒ
+	///ÉêÂô¼Û¶ş
 	TFocusFtdcPriceType	AskPrice2;
-	///ç”³å–é‡äºŒ
+	///ÉêÂôÁ¿¶ş
 	TFocusFtdcVolumeType	AskVolume2;
-	///ç”³å–ä»·ä¸‰
+	///ÉêÂô¼ÛÈı
 	TFocusFtdcPriceType	AskPrice3;
-	///ç”³å–é‡ä¸‰
+	///ÉêÂôÁ¿Èı
 	TFocusFtdcVolumeType	AskVolume3;
-	///ç”³ä¹°ä»·å››
+	///ÉêÂò¼ÛËÄ
 	TFocusFtdcPriceType	BidPrice4;
-	///ç”³ä¹°é‡å››
+	///ÉêÂòÁ¿ËÄ
 	TFocusFtdcVolumeType	BidVolume4;
-	///ç”³ä¹°ä»·äº”
+	///ÉêÂò¼ÛÎå
 	TFocusFtdcPriceType	BidPrice5;
-	///ç”³ä¹°é‡äº”
+	///ÉêÂòÁ¿Îå
 	TFocusFtdcVolumeType	BidVolume5;
-	///ç”³å–ä»·å››
+	///ÉêÂô¼ÛËÄ
 	TFocusFtdcPriceType	AskPrice4;
-	///ç”³å–é‡å››
+	///ÉêÂôÁ¿ËÄ
 	TFocusFtdcVolumeType	AskVolume4;
-	///ç”³å–ä»·äº”
+	///ÉêÂô¼ÛÎå
 	TFocusFtdcPriceType	AskPrice5;
-	///ç”³å–é‡äº”
+	///ÉêÂôÁ¿Îå
 	TFocusFtdcVolumeType	AskVolume5;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///æœ€åä¿®æ”¹æ—¶é—´
+	///×îºóĞŞ¸ÄÊ±¼ä
 	TFocusFtdcTimeType	UpdateTime;
-	///æœ€åä¿®æ”¹æ¯«ç§’
+	///×îºóĞŞ¸ÄºÁÃë
 	TFocusFtdcMillisecType	UpdateMillisec;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///æ€»å–å‡ºæ•°é‡
+	///×ÜÂô³öÊıÁ¿
 	TFocusFtdcVolumeType	VolumeAskLot;
-	///æ€»ä¹°å…¥æ•°é‡
+	///×ÜÂòÈëÊıÁ¿
 	TFocusFtdcVolumeType	VolumeBidLot;
 };
 
-///è®¢é˜…åˆçº¦çš„ç›¸å…³ä¿¡æ¯
+///¶©ÔÄºÏÔ¼µÄÏà¹ØĞÅÏ¢
 struct CFocusFtdcSpecificInstrumentField
 {
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
 };
 
-///æŠ•èµ„è€…æƒé™
+///Í¶×ÊÕßÈ¨ÏŞ
 struct CFocusFtdcInvestorRightField
 {
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///æ˜¯å¦ä½¿ç”¨å‡€æŒä»“æŠ¥å•,æŠ•é¡¾è´¦æˆ·æœ‰æ•ˆ
+	///ÊÇ·ñÊ¹ÓÃ¾»³Ö²Ö±¨µ¥,Í¶¹ËÕË»§ÓĞĞ§
 	TFocusFtdcPositionTypeType	PositionType;
-	///è‡ªæˆäº¤å¤„ç†æ–¹å¼,èµ„é‡‘è´¦æˆ·æœ‰æ•ˆ
+	///×Ô³É½»´¦Àí·½Ê½,×Ê½ğÕË»§ÓĞĞ§
 	TFocusFtdcSelfTradeAvoidTypeType	SelfTradeAvoidType;
-	///äº¤æ˜“æƒé™
+	///½»Ò×È¨ÏŞ
 	TFocusFtdcTradingRightType	TradingRight;
-	///æ˜¯å¦æ£€æŸ¥èµ„é‡‘
+	///ÊÇ·ñ¼ì²é×Ê½ğ
 	TFocusFtdcBoolType	CheckAccount;
-	///æ˜¯å¦æ£€æŸ¥æŒä»“
+	///ÊÇ·ñ¼ì²é³Ö²Ö
 	TFocusFtdcBoolType	CheckPosition;
-	///æŠ¥å•æ˜¯å¦æŠ¥è­¦
+	///±¨µ¥ÊÇ·ñ±¨¾¯
 	TFocusFtdcBoolType	OrderWarning;
-	///èµ„é‡‘æŒä»“æ˜¯å¦ä¸ŠæŸ¥
+	///×Ê½ğ³Ö²ÖÊÇ·ñÉÏ²é
 	TFocusFtdcBoolType	QryUpAccPosi;
-	///æŠ•é¡¾é€‰æ‹©èµ„é‡‘è´¦æˆ·ç±»å‹
+	///Í¶¹ËÑ¡Ôñ×Ê½ğÕË»§ÀàĞÍ
 	TFocusFtdcDistributeTypeType	DistributeType;
 };
 
-///äº¤æ˜“æ‰€ä»£ç 
+///½»Ò×Ëù´úÂë
 struct CFocusFtdcMarketDataExchangeIDField
 {
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
 };
 
-///å…±äº«å†…å­˜è¡Œæƒ…æŸ¥è¯¢
+///¹²ÏíÄÚ´æĞĞÇé²éÑ¯
 struct CFocusFtdcShmDepthMarketDataField
 {
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///IPåœ°å€
+	///IPµØÖ·
 	TFocusFtdcIPAddressType	IPAddress;
-	///è®¢é˜…å·
+	///¶©ÔÄºÅ
 	TFocusFtdcTopicIDType	TopicID;
 };
 
-///TOPICæŸ¥è¯¢
+///TOPIC²éÑ¯
 struct CFocusFtdcTopicSearchField
 {
-	///è®¢é˜…å·
+	///¶©ÔÄºÅ
 	TFocusFtdcTopicIDType	TopicID;
 };
 
-///åˆ†ä»·è¡Œæƒ…
+///·Ö¼ÛĞĞÇé
 struct CFocusFtdcMBLMarketDataField
 {
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ä¹°å–æ–¹å‘
+	///ÂòÂô·½Ïò
 	TFocusFtdcDirectionType	Direction;
-	///ä»·æ ¼
+	///¼Û¸ñ
 	TFocusFtdcPriceType	Price;
-	///æ•°é‡
+	///ÊıÁ¿
 	TFocusFtdcVolumeType	Volume;
-	///æœ€åä¿®æ”¹æ—¶é—´
+	///×îºóĞŞ¸ÄÊ±¼ä
 	TFocusFtdcTimeType	UpdateTime;
-	///æœ€åä¿®æ”¹æ¯«ç§’
+	///×îºóĞŞ¸ÄºÁÃë
 	TFocusFtdcMillisecType	UpdateMillisec;
 };
 
-///å¥—åˆ©åˆçº¦ä¹°å–æ€»é‡
+///Ì×ÀûºÏÔ¼ÂòÂô×ÜÁ¿
 struct CFocusFtdcMarketDataCMBVolumeField
 {
-	///æ€»å–å‡ºæ•°é‡
+	///×ÜÂô³öÊıÁ¿
 	TFocusFtdcVolumeType	VolumeAskLot;
-	///æ€»ä¹°å…¥æ•°é‡
+	///×ÜÂòÈëÊıÁ¿
 	TFocusFtdcVolumeType	VolumeBidLot;
 };
 
-///åˆçº¦çŠ¶æ€
+///ºÏÔ¼×´Ì¬
 struct CFocusFtdcQmdInstrumentStateField
 {
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///åˆçº¦äº¤æ˜“çŠ¶æ€
+	///ºÏÔ¼½»Ò××´Ì¬
 	TFocusFtdcInstrumentStatusType	InstrumentStatus;
 };
 
-///è®¢é˜…åˆçº¦çš„ç›¸å…³ä¿¡æ¯
+///¶©ÔÄºÏÔ¼µÄÏà¹ØĞÅÏ¢
 struct CFocusFtdcSubSpecificInstrumentField
 {
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcSubInstrumentIDType	InstrumentID;
 };
 
-///æˆäº¤
+///³É½»
 struct CFocusFtdcTradeField
 {
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcTradingDayType	TradingDay;
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///ç”¨æˆ·æœ¬åœ°æŠ¥å•å·
+	///ÓÃ»§±¾µØ±¨µ¥ºÅ
 	TFocusFtdcUserOrderLocalIDType	UserOrderLocalID;
-	///ç”¨æˆ·è‡ªå®šä¹‰åŸŸ
+	///ÓÃ»§×Ô¶¨ÒåÓò
 	TFocusFtdcCustomType	UserCustom;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///æˆäº¤ç¼–å·
+	///³É½»±àºÅ
 	TFocusFtdcTradeIDType	TradeID;
-	///æŠ¥å•ç¼–å·
+	///±¨µ¥±àºÅ
 	TFocusFtdcOrderSysIDType	OrderSysID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///åˆçº¦åç§°
+	///ºÏÔ¼Ãû³Æ
 	TFocusFtdcInstrumentNameType	InstrumentName;
-	///ä¹°å–æ–¹å‘
+	///ÂòÂô·½Ïò
 	TFocusFtdcDirectionType	Direction;
-	///å¼€å¹³æ ‡å¿—
+	///¿ªÆ½±êÖ¾
 	TFocusFtdcOffsetFlagType	OffsetFlag;
-	///æŠ•æœºå¥—ä¿æ ‡å¿—
+	///Í¶»úÌ×±£±êÖ¾
 	TFocusFtdcHedgeFlagType	HedgeFlag;
-	///æˆäº¤ä»·æ ¼
+	///³É½»¼Û¸ñ
 	TFocusFtdcPriceType	TradePrice;
-	///æˆäº¤æ•°é‡
+	///³É½»ÊıÁ¿
 	TFocusFtdcVolumeType	TradeVolume;
-	///æˆäº¤æ—¶é—´
+	///³É½»Ê±¼ä
 	TFocusFtdcTimeType	TradeTime;
-	///å¸‚åœºä»£ç 
+	///ÊĞ³¡´úÂë
 	TFocusFtdcMarketIDType	MarketID;
-	///æˆäº¤é‡‘é¢
+	///³É½»½ğ¶î
 	TFocusFtdcMoneyType	TradeAmnt;
-	///äº¤æ˜“ç±»å‹
+	///½»Ò×ÀàĞÍ
 	TFocusFtdcTradeTypeType	TradeType;
-	///èµ„é‡‘å¸å·
+	///×Ê½ğÕÊºÅ
 	TFocusFtdcAccountIDType	AccountID;
 };
 
-///æŠ¥å•
+///±¨µ¥
 struct CFocusFtdcOrderField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///ç”¨æˆ·æœ¬åœ°æŠ¥å•å·
+	///ÓÃ»§±¾µØ±¨µ¥ºÅ
 	TFocusFtdcUserOrderLocalIDType	UserOrderLocalID;
-	///ç”¨æˆ·è‡ªå®šä¹‰åŸŸ
+	///ÓÃ»§×Ô¶¨ÒåÓò
 	TFocusFtdcCustomType	UserCustom;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///ç³»ç»ŸæŠ¥å•ç¼–å·
+	///ÏµÍ³±¨µ¥±àºÅ
 	TFocusFtdcOrderSysIDType	OrderSysID;
-	///è‚¡ç¥¨å§”æ‰˜æ‰¹å·(ä»…æ‰¹é‡å§”æ‰˜æœ‰æ•ˆ)
+	///¹ÉÆ±Î¯ÍĞÅúºÅ(½öÅúÁ¿Î¯ÍĞÓĞĞ§)
 	TFocusFtdcOrderSysIDType	BatchNum;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///åˆçº¦åç§°
+	///ºÏÔ¼Ãû³Æ
 	TFocusFtdcInstrumentNameType	InstrumentName;
-	///æŠ¥å•ç±»å‹
+	///±¨µ¥ÀàĞÍ
 	TFocusFtdcOrderPriceTypeType	OrderPriceType;
-	///ä¹°å–æ–¹å‘
+	///ÂòÂô·½Ïò
 	TFocusFtdcDirectionType	Direction;
-	///å¼€å¹³æ ‡å¿—
+	///¿ªÆ½±êÖ¾
 	TFocusFtdcOffsetFlagType	OffsetFlag;
-	///æŠ•æœºå¥—ä¿æ ‡å¿—
+	///Í¶»úÌ×±£±êÖ¾
 	TFocusFtdcHedgeFlagType	HedgeFlag;
-	///ä»·æ ¼
+	///¼Û¸ñ
 	TFocusFtdcPriceType	LimitPrice;
-	///æ•°é‡
+	///ÊıÁ¿
 	TFocusFtdcVolumeType	Volume;
-	///æœ‰æ•ˆæœŸç±»å‹
+	///ÓĞĞ§ÆÚÀàĞÍ
 	TFocusFtdcTimeConditionType	TimeCondition;
-	///GTDæ—¥æœŸ
+	///GTDÈÕÆÚ
 	TFocusFtdcDateType	GTDDate;
-	///æˆäº¤é‡ç±»å‹
+	///³É½»Á¿ÀàĞÍ
 	TFocusFtdcVolumeConditionType	VolumeCondition;
-	///æœ€å°æˆäº¤é‡
+	///×îĞ¡³É½»Á¿
 	TFocusFtdcVolumeType	MinVolume;
-	///æ­¢æŸä»·
+	///Ö¹Ëğ¼Û
 	TFocusFtdcPriceType	StopPrice;
-	///å¼ºå¹³åŸå› 
+	///Ç¿Æ½Ô­Òò
 	TFocusFtdcForceCloseReasonType	ForceCloseReason;
-	///è‡ªåŠ¨æŒ‚èµ·æ ‡å¿—
+	///×Ô¶¯¹ÒÆğ±êÖ¾
 	TFocusFtdcBoolType	IsAutoSuspend;
-	///ä¸šåŠ¡å•å…ƒ
+	///ÒµÎñµ¥Ôª
 	TFocusFtdcBusinessUnitType	BusinessUnit;
-	///ä¸šåŠ¡ç±»åˆ«
+	///ÒµÎñÀà±ğ
 	TFocusFtdcBusinessTypeType	BusinessType;
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcTradingDayType	TradingDay;
-	///æ’å…¥æ—¶é—´
+	///²åÈëÊ±¼ä
 	TFocusFtdcTimeType	InsertTime;
-	///æŠ¥å•æ¥æº
+	///±¨µ¥À´Ô´
 	TFocusFtdcOrderSourceType	OrderSource;
-	///æŠ¥å•çŠ¶æ€
+	///±¨µ¥×´Ì¬
 	TFocusFtdcOrderStatusType	OrderStatus;
-	///æ’¤é”€æ—¶é—´
+	///³·ÏúÊ±¼ä
 	TFocusFtdcTimeType	CancelTime;
-	///æ’¤å•ç”¨æˆ·ç¼–å·
+	///³·µ¥ÓÃ»§±àºÅ
 	TFocusFtdcUserIDType	CancelUserID;
-	///å·²ç»æˆäº¤æ•°é‡
+	///ÒÑ¾­³É½»ÊıÁ¿
 	TFocusFtdcVolumeType	VolumeTraded;
-	///é˜Ÿåˆ—å‰©ä½™æ•°é‡
+	///¶ÓÁĞÊ£ÓàÊıÁ¿
 	TFocusFtdcVolumeType	VolumeRemain;
-	///å·²ç»æ’¤å•æ•°é‡
+	///ÒÑ¾­³·µ¥ÊıÁ¿
 	TFocusFtdcVolumeType	VolumeCancled;
-	///é”™è¯¯ä»£ç 
+	///´íÎó´úÂë
 	TFocusFtdcErrorIDType	ErrorID;
-	///é”™è¯¯ä¿¡æ¯
+	///´íÎóĞÅÏ¢
 	TFocusFtdcErrorMsgType	ErrorMsg;
-	///æ¯”ä¸Šæ¬¡å¢åŠ çš„æ’¤å•æ•°é‡
+	///±ÈÉÏ´ÎÔö¼ÓµÄ³·µ¥ÊıÁ¿
 	TFocusFtdcVolumeType	VolumeIncCancled;
-	///æ¯”ä¸Šæ¬¡å¢åŠ çš„æˆäº¤æ•°é‡
+	///±ÈÉÏ´ÎÔö¼ÓµÄ³É½»ÊıÁ¿
 	TFocusFtdcVolumeType	VolumeIncTraded;
-	///èµ„é‡‘å¸å·
+	///×Ê½ğÕÊºÅ
 	TFocusFtdcAccountIDType	AccountID;
-	///å‰ç½®ç¼–å·
+	///Ç°ÖÃ±àºÅ
 	TFocusFtdcFrontIDType	FrontID;
-	///ä¼šè¯ç¼–å·
+	///»á»°±àºÅ
 	TFocusFtdcSessionIDType	SessionID;
-	///è¯·æ±‚ç¼–å·
+	///ÇëÇó±àºÅ
 	TFocusFtdcRequestIDType	RequestID;
-	///æ¯æ‰‹æ‰‹ç»­è´¹
+	///Ã¿ÊÖÊÖĞø·Ñ
 	TFocusFtdcMoneyType	EachFee;
-	///æ¯æ‰‹ä¿è¯é‡‘
+	///Ã¿ÊÖ±£Ö¤½ğ
 	TFocusFtdcMoneyType	EachMargin;
-	///æ¯æ‰‹æœŸæƒæƒåˆ©é‡‘æ”¶æ”¯
+	///Ã¿ÊÖÆÚÈ¨È¨Àû½ğÊÕÖ§
 	TFocusFtdcMoneyType	EachPremium;
-	///ä¸‹å•IPåœ°å€
+	///ÏÂµ¥IPµØÖ·
 	TFocusFtdcIPAddressType	IPAddress;
-	///ä¸‹å•MACåœ°å€
+	///ÏÂµ¥MACµØÖ·
 	TFocusFtdcMacAddressType	MacAddress;
-	///è¥ä¸šéƒ¨ä»£ç 
+	///ÓªÒµ²¿´úÂë
 	TFocusFtdcBranchIDType	BranchID;
-	///è®°å½•ç¼–å·
+	///¼ÇÂ¼±àºÅ
 	TFocusFtdcSequenceNoType	RecNum;
 };
 
-///æ•°æ®æµå›é€€
+///Êı¾İÁ÷»ØÍË
 struct CFocusFtdcFlowMessageCancelField
 {
-	///åºåˆ—ç³»åˆ—å·
+	///ĞòÁĞÏµÁĞºÅ
 	TFocusFtdcSequenceSeriesType	SequenceSeries;
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcDateType	TradingDay;
-	///æ•°æ®ä¸­å¿ƒä»£ç 
+	///Êı¾İÖĞĞÄ´úÂë
 	TFocusFtdcDataCenterIDType	DataCenterID;
-	///å›é€€èµ·å§‹åºåˆ—å·
+	///»ØÍËÆğÊ¼ĞòÁĞºÅ
 	TFocusFtdcSequenceNoType	StartSequenceNo;
-	///å›é€€ç»“æŸåºåˆ—å·
+	///»ØÍË½áÊøĞòÁĞºÅ
 	TFocusFtdcSequenceNoType	EndSequenceNo;
 };
 
-///ä¿¡æ¯åˆ†å‘
+///ĞÅÏ¢·Ö·¢
 struct CFocusFtdcDisseminationField
 {
-	///åºåˆ—ç³»åˆ—å·
+	///ĞòÁĞÏµÁĞºÅ
 	TFocusFtdcSequenceSeriesType	SequenceSeries;
-	///åºåˆ—å·
+	///ĞòÁĞºÅ
 	TFocusFtdcSequenceNoType	SequenceNo;
 };
 
-///è­¦å‘Šæ¶ˆæ¯é€šçŸ¥
+///¾¯¸æÏûÏ¢Í¨Öª
 struct CFocusFtdcMessageNotifyField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ä¿®æ”¹ç”¨æˆ·ç¼–å·
+	///ĞŞ¸ÄÓÃ»§±àºÅ
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç´¯åŠ æ¬¡æ•°
+	///ÀÛ¼Ó´ÎÊı
 	TFocusFtdcTotalNumsType	Nums;
-	///è­¦å‘Šçº§åˆ«
+	///¾¯¸æ¼¶±ğ
 	TFocusFtdcErrorLevelType	WarnLevel;
-	///è­¦å‘Šç¼–å·
+	///¾¯¸æ±àºÅ
 	TFocusFtdcErrorIDType	WarnID;
-	///è­¦å‘Šä¿¡æ¯
+	///¾¯¸æĞÅÏ¢
 	TFocusFtdcLargeErrorMsgType	WarnMsg;
-	///è­¦å‘Šæ—¶é—´
+	///¾¯¸æÊ±¼ä
 	TFocusFtdcTimeType	WarnTime;
 };
 
-///å·¥ä½œæµæŒ‡ä»¤é€šçŸ¥
+///¹¤×÷Á÷Ö¸ÁîÍ¨Öª
 struct CFocusFtdcAdviceOrderField
 {
-	///æŠ•é¡¾ç”¨æˆ·ä»£ç 
+	///Í¶¹ËÓÃ»§´úÂë
 	TFocusFtdcUserIDType	InvestorAdvicer;
-	///æŠ•èµ„ç»ç†
+	///Í¶×Ê¾­Àí
 	TFocusFtdcUserIDType	InvestorManager;
-	///äº¤æ˜“å‘˜
+	///½»Ò×Ô±
 	TFocusFtdcUserIDType	UserTrader;
-	///å†»ç»“æ•°é‡
+	///¶³½áÊıÁ¿
 	TFocusFtdcVolumeType	VolumeFrozen;
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///ç”¨æˆ·æœ¬åœ°æŠ¥å•å·
+	///ÓÃ»§±¾µØ±¨µ¥ºÅ
 	TFocusFtdcUserOrderLocalIDType	UserOrderLocalID;
-	///ç”¨æˆ·è‡ªå®šä¹‰åŸŸ
+	///ÓÃ»§×Ô¶¨ÒåÓò
 	TFocusFtdcCustomType	UserCustom;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///ç³»ç»ŸæŠ¥å•ç¼–å·
+	///ÏµÍ³±¨µ¥±àºÅ
 	TFocusFtdcOrderSysIDType	OrderSysID;
-	///è‚¡ç¥¨å§”æ‰˜æ‰¹å·(ä»…æ‰¹é‡å§”æ‰˜æœ‰æ•ˆ)
+	///¹ÉÆ±Î¯ÍĞÅúºÅ(½öÅúÁ¿Î¯ÍĞÓĞĞ§)
 	TFocusFtdcOrderSysIDType	BatchNum;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///åˆçº¦åç§°
+	///ºÏÔ¼Ãû³Æ
 	TFocusFtdcInstrumentNameType	InstrumentName;
-	///æŠ¥å•ç±»å‹
+	///±¨µ¥ÀàĞÍ
 	TFocusFtdcOrderPriceTypeType	OrderPriceType;
-	///ä¹°å–æ–¹å‘
+	///ÂòÂô·½Ïò
 	TFocusFtdcDirectionType	Direction;
-	///å¼€å¹³æ ‡å¿—
+	///¿ªÆ½±êÖ¾
 	TFocusFtdcOffsetFlagType	OffsetFlag;
-	///æŠ•æœºå¥—ä¿æ ‡å¿—
+	///Í¶»úÌ×±£±êÖ¾
 	TFocusFtdcHedgeFlagType	HedgeFlag;
-	///ä»·æ ¼
+	///¼Û¸ñ
 	TFocusFtdcPriceType	LimitPrice;
-	///æ•°é‡
+	///ÊıÁ¿
 	TFocusFtdcVolumeType	Volume;
-	///æœ‰æ•ˆæœŸç±»å‹
+	///ÓĞĞ§ÆÚÀàĞÍ
 	TFocusFtdcTimeConditionType	TimeCondition;
-	///GTDæ—¥æœŸ
+	///GTDÈÕÆÚ
 	TFocusFtdcDateType	GTDDate;
-	///æˆäº¤é‡ç±»å‹
+	///³É½»Á¿ÀàĞÍ
 	TFocusFtdcVolumeConditionType	VolumeCondition;
-	///æœ€å°æˆäº¤é‡
+	///×îĞ¡³É½»Á¿
 	TFocusFtdcVolumeType	MinVolume;
-	///æ­¢æŸä»·
+	///Ö¹Ëğ¼Û
 	TFocusFtdcPriceType	StopPrice;
-	///å¼ºå¹³åŸå› 
+	///Ç¿Æ½Ô­Òò
 	TFocusFtdcForceCloseReasonType	ForceCloseReason;
-	///è‡ªåŠ¨æŒ‚èµ·æ ‡å¿—
+	///×Ô¶¯¹ÒÆğ±êÖ¾
 	TFocusFtdcBoolType	IsAutoSuspend;
-	///ä¸šåŠ¡å•å…ƒ
+	///ÒµÎñµ¥Ôª
 	TFocusFtdcBusinessUnitType	BusinessUnit;
-	///ä¸šåŠ¡ç±»åˆ«
+	///ÒµÎñÀà±ğ
 	TFocusFtdcBusinessTypeType	BusinessType;
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcTradingDayType	TradingDay;
-	///æ’å…¥æ—¶é—´
+	///²åÈëÊ±¼ä
 	TFocusFtdcTimeType	InsertTime;
-	///æŠ¥å•æ¥æº
+	///±¨µ¥À´Ô´
 	TFocusFtdcOrderSourceType	OrderSource;
-	///æŠ¥å•çŠ¶æ€
+	///±¨µ¥×´Ì¬
 	TFocusFtdcOrderStatusType	OrderStatus;
-	///æ’¤é”€æ—¶é—´
+	///³·ÏúÊ±¼ä
 	TFocusFtdcTimeType	CancelTime;
-	///æ’¤å•ç”¨æˆ·ç¼–å·
+	///³·µ¥ÓÃ»§±àºÅ
 	TFocusFtdcUserIDType	CancelUserID;
-	///å·²ç»æˆäº¤æ•°é‡
+	///ÒÑ¾­³É½»ÊıÁ¿
 	TFocusFtdcVolumeType	VolumeTraded;
-	///é˜Ÿåˆ—å‰©ä½™æ•°é‡
+	///¶ÓÁĞÊ£ÓàÊıÁ¿
 	TFocusFtdcVolumeType	VolumeRemain;
-	///å·²ç»æ’¤å•æ•°é‡
+	///ÒÑ¾­³·µ¥ÊıÁ¿
 	TFocusFtdcVolumeType	VolumeCancled;
-	///é”™è¯¯ä»£ç 
+	///´íÎó´úÂë
 	TFocusFtdcErrorIDType	ErrorID;
-	///é”™è¯¯ä¿¡æ¯
+	///´íÎóĞÅÏ¢
 	TFocusFtdcErrorMsgType	ErrorMsg;
-	///æ¯”ä¸Šæ¬¡å¢åŠ çš„æ’¤å•æ•°é‡
+	///±ÈÉÏ´ÎÔö¼ÓµÄ³·µ¥ÊıÁ¿
 	TFocusFtdcVolumeType	VolumeIncCancled;
-	///æ¯”ä¸Šæ¬¡å¢åŠ çš„æˆäº¤æ•°é‡
+	///±ÈÉÏ´ÎÔö¼ÓµÄ³É½»ÊıÁ¿
 	TFocusFtdcVolumeType	VolumeIncTraded;
-	///èµ„é‡‘å¸å·
+	///×Ê½ğÕÊºÅ
 	TFocusFtdcAccountIDType	AccountID;
-	///å‰ç½®ç¼–å·
+	///Ç°ÖÃ±àºÅ
 	TFocusFtdcFrontIDType	FrontID;
-	///ä¼šè¯ç¼–å·
+	///»á»°±àºÅ
 	TFocusFtdcSessionIDType	SessionID;
-	///è¯·æ±‚ç¼–å·
+	///ÇëÇó±àºÅ
 	TFocusFtdcRequestIDType	RequestID;
-	///æ¯æ‰‹æ‰‹ç»­è´¹
+	///Ã¿ÊÖÊÖĞø·Ñ
 	TFocusFtdcMoneyType	EachFee;
-	///æ¯æ‰‹ä¿è¯é‡‘
+	///Ã¿ÊÖ±£Ö¤½ğ
 	TFocusFtdcMoneyType	EachMargin;
-	///æ¯æ‰‹æœŸæƒæƒåˆ©é‡‘æ”¶æ”¯
+	///Ã¿ÊÖÆÚÈ¨È¨Àû½ğÊÕÖ§
 	TFocusFtdcMoneyType	EachPremium;
-	///ä¸‹å•IPåœ°å€
+	///ÏÂµ¥IPµØÖ·
 	TFocusFtdcIPAddressType	IPAddress;
-	///ä¸‹å•MACåœ°å€
+	///ÏÂµ¥MACµØÖ·
 	TFocusFtdcMacAddressType	MacAddress;
-	///è¥ä¸šéƒ¨ä»£ç 
+	///ÓªÒµ²¿´úÂë
 	TFocusFtdcBranchIDType	BranchID;
-	///è®°å½•ç¼–å·
+	///¼ÇÂ¼±àºÅ
 	TFocusFtdcSequenceNoType	RecNum;
-	///æŒ‡ä»¤å•ç”¨æˆ·ä¿¡æ¯
+	///Ö¸Áîµ¥ÓÃ»§ĞÅÏ¢
 	TFocusFtdcAdviceUserInfoType	AdviceUserInfo;
 };
 
-///æŠ¥å•æŸ¥è¯¢
+///±¨µ¥²éÑ¯
 struct CFocusFtdcQryOrderField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///æŠ¥å•ç¼–å·
+	///±¨µ¥±àºÅ
 	TFocusFtdcOrderSysIDType	OrderSysID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
 };
 
-///æˆäº¤æŸ¥è¯¢
+///³É½»²éÑ¯
 struct CFocusFtdcQryTradeField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///æˆäº¤ç¼–å·
+	///³É½»±àºÅ
 	TFocusFtdcTradeIDType	TradeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
 };
 
-///åˆçº¦æŸ¥è¯¢
+///ºÏÔ¼²éÑ¯
 struct CFocusFtdcQryInstrumentField
 {
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///äº§å“ä»£ç 
+	///²úÆ·´úÂë
 	TFocusFtdcProductIDType	ProductID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
 };
 
-///åˆçº¦æŸ¥è¯¢åº”ç­”
+///ºÏÔ¼²éÑ¯Ó¦´ğ
 struct CFocusFtdcRspInstrumentField
 {
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///å“ç§ä»£ç 
+	///Æ·ÖÖ´úÂë
 	TFocusFtdcProductIDType	ProductID;
-	///å“ç§åç§°
+	///Æ·ÖÖÃû³Æ
 	TFocusFtdcProductNameType	ProductName;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///åˆçº¦åç§°
+	///ºÏÔ¼Ãû³Æ
 	TFocusFtdcInstrumentNameType	InstrumentName;
-	///äº¤å‰²å¹´ä»½
+	///½»¸îÄê·İ
 	TFocusFtdcYearType	DeliveryYear;
-	///äº¤å‰²æœˆ
+	///½»¸îÔÂ
 	TFocusFtdcMonthType	DeliveryMonth;
-	///é™ä»·å•æœ€å¤§ä¸‹å•é‡
+	///ÏŞ¼Ûµ¥×î´óÏÂµ¥Á¿
 	TFocusFtdcLargeVolumeType	MaxLimitOrderVolume;
-	///é™ä»·å•æœ€å°ä¸‹å•é‡
+	///ÏŞ¼Ûµ¥×îĞ¡ÏÂµ¥Á¿
 	TFocusFtdcLargeVolumeType	MinLimitOrderVolume;
-	///å¸‚ä»·å•æœ€å¤§ä¸‹å•é‡
+	///ÊĞ¼Ûµ¥×î´óÏÂµ¥Á¿
 	TFocusFtdcLargeVolumeType	MaxMarketOrderVolume;
-	///å¸‚ä»·å•æœ€å°ä¸‹å•é‡
+	///ÊĞ¼Ûµ¥×îĞ¡ÏÂµ¥Á¿
 	TFocusFtdcLargeVolumeType	MinMarketOrderVolume;
-	///è‚¡ç¥¨æ¯æ¬¡æœ€å°‘ä¹°å…¥é‡
+	///¹ÉÆ±Ã¿´Î×îÉÙÂòÈëÁ¿
 	TFocusFtdcLargeVolumeType	MinStkBuyQty;
-	///è‚¡ç¥¨æ¯æ¬¡æœ€å°‘å–å‡ºé‡
+	///¹ÉÆ±Ã¿´Î×îÉÙÂô³öÁ¿
 	TFocusFtdcLargeVolumeType	MinStkSellQty;
-	///æ•°é‡ä¹˜æ•°
+	///ÊıÁ¿³ËÊı
 	TFocusFtdcVolumeMultipleType	VolumeMultiple;
-	///æŠ¥ä»·å•ä½
+	///±¨¼Ûµ¥Î»
 	TFocusFtdcPriceTickType	PriceTick;
-	///å¸ç§
+	///±ÒÖÖ
 	TFocusFtdcCurrencyType	Currency;
-	///å¤šå¤´é™ä»“
+	///¶àÍ·ÏŞ²Ö
 	TFocusFtdcLargeVolumeType	LongPosLimit;
-	///ç©ºå¤´é™ä»“
+	///¿ÕÍ·ÏŞ²Ö
 	TFocusFtdcLargeVolumeType	ShortPosLimit;
-	///è·Œåœæ¿ä»·
+	///µøÍ£°å¼Û
 	TFocusFtdcPriceType	LowerLimitPrice;
-	///æ¶¨åœæ¿ä»·
+	///ÕÇÍ£°å¼Û
 	TFocusFtdcPriceType	UpperLimitPrice;
-	///æ˜¨ç»“ç®—
+	///×ò½áËã
 	TFocusFtdcPriceType	PreSettlementPrice;
-	///åˆçº¦äº¤æ˜“çŠ¶æ€
+	///ºÏÔ¼½»Ò××´Ì¬
 	TFocusFtdcInstrumentStatusType	InstrumentStatus;
-	///åˆ›å»ºæ—¥
+	///´´½¨ÈÕ
 	TFocusFtdcDateType	CreateDate;
-	///ä¸Šå¸‚æ—¥
+	///ÉÏÊĞÈÕ
 	TFocusFtdcDateType	OpenDate;
-	///åˆ°æœŸæ—¥
+	///µ½ÆÚÈÕ
 	TFocusFtdcDateType	ExpireDate;
-	///å¼€å§‹äº¤å‰²æ—¥
+	///¿ªÊ¼½»¸îÈÕ
 	TFocusFtdcDateType	StartDelivDate;
-	///æœ€åäº¤å‰²æ—¥
+	///×îºó½»¸îÈÕ
 	TFocusFtdcDateType	EndDelivDate;
-	///æŒ‚ç‰ŒåŸºå‡†ä»·
+	///¹ÒÅÆ»ù×¼¼Û
 	TFocusFtdcPriceType	BasisPrice;
-	///å½“å‰æ˜¯å¦äº¤æ˜“
+	///µ±Ç°ÊÇ·ñ½»Ò×
 	TFocusFtdcBoolType	IsTrading;
-	///åŸºç¡€å•†å“ä»£ç 
+	///»ù´¡ÉÌÆ·´úÂë
 	TFocusFtdcInstrumentIDType	UnderlyingInstrID;
-	///åŸºç¡€å•†å“ä¹˜æ•°
+	///»ù´¡ÉÌÆ·³ËÊı
 	TFocusFtdcUnderlyingMultipleType	UnderlyingMultiple;
-	///æŒä»“ç±»å‹
+	///³Ö²ÖÀàĞÍ
 	TFocusFtdcPositionTypeType	PositionType;
-	///æ‰§è¡Œä»·
+	///Ö´ĞĞ¼Û
 	TFocusFtdcPriceType	StrikePrice;
-	///æœŸæƒç±»å‹
+	///ÆÚÈ¨ÀàĞÍ
 	TFocusFtdcOptionsTypeType	OptionsType;
-	///æ±‡ç‡
+	///»ãÂÊ
 	TFocusFtdcRatioType	ExchangeRate;
-	///æœŸæƒç³»åˆ—
+	///ÆÚÈ¨ÏµÁĞ
 	TFocusFtdcInstrumentIDType	OptionSeriesId;
-	///äº§å“ç±»å‹
+	///²úÆ·ÀàĞÍ
 	TFocusFtdcProductClassType	ProductClass;
-	///æœŸæƒè¡Œæƒæ–¹å¼
+	///ÆÚÈ¨ĞĞÈ¨·½Ê½
 	TFocusFtdcOptionsModeType	OptionsMode;
-	///ä¿è¯é‡‘ç®—æ³•ç±»å‹
+	///±£Ö¤½ğËã·¨ÀàĞÍ
 	TFocusFtdcMarginCombTypeType	MarginCombType;
 };
 
-///æŠ•èµ„è€…èµ„é‡‘æŸ¥è¯¢
+///Í¶×ÊÕß×Ê½ğ²éÑ¯
 struct CFocusFtdcQryInvestorAccountField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
 };
 
-///æŠ•èµ„è€…èµ„é‡‘åº”ç­”
+///Í¶×ÊÕß×Ê½ğÓ¦´ğ
 struct CFocusFtdcRspInvestorAccountField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///èµ„é‡‘å¸å·
+	///×Ê½ğÕÊºÅ
 	TFocusFtdcAccountIDType	AccountID;
-	///èµ„é‡‘å¯†ç 
+	///×Ê½ğÃÜÂë
 	TFocusFtdcPasswordType	InvestorPasswd;
-	///ä¸Šæ¬¡ç»“ç®—å‡†å¤‡é‡‘
+	///ÉÏ´Î½áËã×¼±¸½ğ
 	TFocusFtdcMoneyType	PreBalance;
-	///ä¸Šæ—¥å¯ç”¨èµ„é‡‘
+	///ÉÏÈÕ¿ÉÓÃ×Ê½ğ
 	TFocusFtdcMoneyType	PreAvailable;
-	///å…¥é‡‘é‡‘é¢
+	///Èë½ğ½ğ¶î
 	TFocusFtdcMoneyType	Deposit;
-	///å‡ºé‡‘é‡‘é¢
+	///³ö½ğ½ğ¶î
 	TFocusFtdcMoneyType	Withdraw;
-	///å ç”¨ä¿è¯é‡‘
+	///Õ¼ÓÃ±£Ö¤½ğ
 	TFocusFtdcMoneyType	Margin;
-	///æœŸæƒæƒåˆ©é‡‘æ”¶æ”¯
+	///ÆÚÈ¨È¨Àû½ğÊÕÖ§
 	TFocusFtdcMoneyType	Premium;
-	///æ‰‹ç»­è´¹
+	///ÊÖĞø·Ñ
 	TFocusFtdcMoneyType	Fee;
-	///å†»ç»“çš„ä¿è¯é‡‘
+	///¶³½áµÄ±£Ö¤½ğ
 	TFocusFtdcMoneyType	FrozenMargin;
-	///å†»ç»“æƒåˆ©é‡‘
+	///¶³½áÈ¨Àû½ğ
 	TFocusFtdcMoneyType	FrozenPremium;
-	///å†»ç»“æ‰‹ç»­è´¹
+	///¶³½áÊÖĞø·Ñ
 	TFocusFtdcMoneyType	FrozenFee;
-	///å¹³ä»“ç›ˆäº
+	///Æ½²ÖÓ¯¿÷
 	TFocusFtdcMoneyType	CloseProfit;
-	///æŒä»“ç›ˆäº
+	///³Ö²ÖÓ¯¿÷
 	TFocusFtdcMoneyType	PositionProfit;
-	///å¯ç”¨èµ„é‡‘
+	///¿ÉÓÃ×Ê½ğ
 	TFocusFtdcMoneyType	Available;
-	///ç»“ç®—å‡†å¤‡é‡‘
+	///½áËã×¼±¸½ğ
 	TFocusFtdcMoneyType	Balance;
-	///å¤šå¤´å ç”¨ä¿è¯é‡‘
+	///¶àÍ·Õ¼ÓÃ±£Ö¤½ğ
 	TFocusFtdcMoneyType	LongMargin;
-	///ç©ºå¤´å ç”¨ä¿è¯é‡‘
+	///¿ÕÍ·Õ¼ÓÃ±£Ö¤½ğ
 	TFocusFtdcMoneyType	ShortMargin;
-	///å¤šå¤´å†»ç»“çš„ä¿è¯é‡‘
+	///¶àÍ·¶³½áµÄ±£Ö¤½ğ
 	TFocusFtdcMoneyType	LongFrozenMargin;
-	///ç©ºå¤´å†»ç»“çš„ä¿è¯é‡‘
+	///¿ÕÍ·¶³½áµÄ±£Ö¤½ğ
 	TFocusFtdcMoneyType	ShortFrozenMargin;
-	///åŠ¨æ€æƒç›Š
+	///¶¯Ì¬È¨Òæ
 	TFocusFtdcMoneyType	DynamicRights;
-	///é£é™©åº¦
+	///·çÏÕ¶È
 	TFocusFtdcRatioType	Risk;
-	///å…¶ä»–è´¹ç”¨
+	///ÆäËû·ÑÓÃ
 	TFocusFtdcMoneyType	OtherFee;
-	///è´¨æŠ¼é‡‘é¢
+	///ÖÊÑº½ğ¶î
 	TFocusFtdcMoneyType	Mortgage;
-	///å¸ç§
+	///±ÒÖÖ
 	TFocusFtdcCurrencyType	Currency;
-	///å¯å–èµ„é‡‘
+	///¿ÉÈ¡×Ê½ğ
 	TFocusFtdcMoneyType	WithdrawQuota;
-	///è¿‡æˆ·è´¹
+	///¹ı»§·Ñ
 	TFocusFtdcMoneyType	TransferFee;
-	///å†»ç»“çš„è¿‡æˆ·è´¹
+	///¶³½áµÄ¹ı»§·Ñ
 	TFocusFtdcMoneyType	FrozenTransferFee;
-	///å°èŠ±ç¨
+	///Ó¡»¨Ë°
 	TFocusFtdcMoneyType	StampTax;
-	///å†»ç»“çš„å°èŠ±ç¨
+	///¶³½áµÄÓ¡»¨Ë°
 	TFocusFtdcMoneyType	FrozenStampTax;
 };
 
-///å¯ç”¨æŠ•èµ„è€…æŸ¥è¯¢
+///¿ÉÓÃÍ¶×ÊÕß²éÑ¯
 struct CFocusFtdcQryUserInvestorField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
 };
 
-///å¯ç”¨æŠ•èµ„è€…åº”ç­”
+///¿ÉÓÃÍ¶×ÊÕßÓ¦´ğ
 struct CFocusFtdcRspUserInvestorField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///é»˜è®¤ç”¨æˆ·ä»£ç 
+	///Ä¬ÈÏÓÃ»§´úÂë
 	TFocusFtdcUserIDType	NextUserID;
-	///æ˜¯å¦å¯ä¸‹å•
+	///ÊÇ·ñ¿ÉÏÂµ¥
 	TFocusFtdcAdviceUserOrderModeType	OrderMode;
-	///è‡ªåŠ¨æˆ–è€…æ‰‹åŠ¨
+	///×Ô¶¯»òÕßÊÖ¶¯
 	TFocusFtdcAdviceRunModeType	RunMode;
-	///å·¥ä½œæµæ–­çº¿å¤„ç†æ ‡ç¤ºç¬¦
+	///¹¤×÷Á÷¶ÏÏß´¦Àí±êÊ¾·û
 	TFocusFtdcAdviceSwitchFlagType	AdviceSwitchFlag;
 };
 
-///æŠ•èµ„è€…å…³ç³»æŸ¥è¯¢
+///Í¶×ÊÕß¹ØÏµ²éÑ¯
 struct CFocusFtdcQryInvestorRelationField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
 };
 
-///æŠ•èµ„è€…å…³ç³»åº”ç­”
+///Í¶×ÊÕß¹ØÏµÓ¦´ğ
 struct CFocusFtdcRspInvestorRelationField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///çˆ¶æŠ•èµ„è€…ç¼–å·
+	///¸¸Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	ParentInvestorID;
 };
 
-///äº¤æ˜“æ‰€æŸ¥è¯¢è¯·æ±‚
+///½»Ò×Ëù²éÑ¯ÇëÇó
 struct CFocusFtdcQryExchangeField
 {
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
 };
 
-///äº¤æ˜“æ‰€æŸ¥è¯¢åº”ç­”
+///½»Ò×Ëù²éÑ¯Ó¦´ğ
 struct CFocusFtdcRspExchangeField
 {
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcTradingDayType	TradingDay;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///äº¤æ˜“æ‰€åç§°
+	///½»Ò×ËùÃû³Æ
 	TFocusFtdcExchangeNameType	ExchangeName;
 };
 
-///æŠ•èµ„è€…æŒä»“æŸ¥è¯¢è¯·æ±‚
+///Í¶×ÊÕß³Ö²Ö²éÑ¯ÇëÇó
 struct CFocusFtdcQryInvestorPositionField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
 };
 
-///æŠ•èµ„è€…æŒä»“æŸ¥è¯¢åº”ç­”
+///Í¶×ÊÕß³Ö²Ö²éÑ¯Ó¦´ğ
 struct CFocusFtdcRspInvestorPositionField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///åˆçº¦åç§°
+	///ºÏÔ¼Ãû³Æ
 	TFocusFtdcInstrumentNameType	InstrumentName;
-	///ä¹°å–æ–¹å‘
+	///ÂòÂô·½Ïò
 	TFocusFtdcDirectionType	Direction;
-	///æŠ•æœºå¥—ä¿æ ‡å¿—
+	///Í¶»úÌ×±£±êÖ¾
 	TFocusFtdcHedgeFlagType	HedgeFlag;
-	///å ç”¨ä¿è¯é‡‘
+	///Õ¼ÓÃ±£Ö¤½ğ
 	TFocusFtdcMoneyType	UsedMargin;
-	///æ€»æŒä»“é‡
+	///×Ü³Ö²ÖÁ¿
 	TFocusFtdcVolumeType	Position;
-	///æ€»æŒä»“æˆæœ¬
+	///×Ü³Ö²Ö³É±¾
 	TFocusFtdcPriceType	PositionCost;
-	///åˆå§‹æ˜¨æŒä»“é‡(å½“æ—¥ä¸å˜)
+	///³õÊ¼×ò³Ö²ÖÁ¿(µ±ÈÕ²»±ä)
 	TFocusFtdcVolumeType	YdPosition;
-	///åˆå§‹æ˜¨æ—¥æŒä»“æˆæœ¬(å½“æ—¥ä¸å˜)
+	///³õÊ¼×òÈÕ³Ö²Ö³É±¾(µ±ÈÕ²»±ä)
 	TFocusFtdcMoneyType	YdPositionCost;
-	///å†»ç»“çš„ä¿è¯é‡‘
+	///¶³½áµÄ±£Ö¤½ğ
 	TFocusFtdcMoneyType	FrozenMargin;
-	///å¼€ä»“å†»ç»“æŒä»“
+	///¿ª²Ö¶³½á³Ö²Ö
 	TFocusFtdcVolumeType	FrozenPosition;
-	///å¹³ä»“å†»ç»“æŒä»“
+	///Æ½²Ö¶³½á³Ö²Ö
 	TFocusFtdcVolumeType	FrozenClosing;
-	///æŒä»“ç›ˆäº
+	///³Ö²ÖÓ¯¿÷
 	TFocusFtdcMoneyType	PositionProfit;
-	///å†»ç»“çš„æƒåˆ©é‡‘
+	///¶³½áµÄÈ¨Àû½ğ
 	TFocusFtdcMoneyType	FrozenPremium;
-	///æœ€åä¸€ç¬”æˆäº¤ç¼–å·
+	///×îºóÒ»±Ê³É½»±àºÅ
 	TFocusFtdcTradeIDType	LastTradeID;
-	///æœ€åä¸€ç¬”æœ¬åœ°æŠ¥å•ç¼–å·
+	///×îºóÒ»±Ê±¾µØ±¨µ¥±àºÅ
 	TFocusFtdcOrderLocalIDType	LastOrderLocalID;
-	///æ€»æŒä»“å¯å¹³ä»“æ•°é‡(åŒ…æ‹¬å¹³ä»“å†»ç»“æŒä»“)
+	///×Ü³Ö²Ö¿ÉÆ½²ÖÊıÁ¿(°üÀ¨Æ½²Ö¶³½á³Ö²Ö)
 	TFocusFtdcVolumeType	PositionClose;
-	///æ˜¨æŒä»“å¯å¹³ä»“æ•°é‡(åŒ…æ‹¬å¹³ä»“å†»ç»“æŒä»“)
+	///×ò³Ö²Ö¿ÉÆ½²ÖÊıÁ¿(°üÀ¨Æ½²Ö¶³½á³Ö²Ö)
 	TFocusFtdcVolumeType	YdPositionClose;
-	///æ˜¨æŒä»“å¹³ä»“å†»ç»“æŒä»“
+	///×ò³Ö²ÖÆ½²Ö¶³½á³Ö²Ö
 	TFocusFtdcVolumeType	YdFrozenClosing;
-	///ä»Šæ—¥å¼€ä»“æ•°é‡(ä¸åŒ…æ‹¬å†»ç»“)
+	///½ñÈÕ¿ª²ÖÊıÁ¿(²»°üÀ¨¶³½á)
 	TFocusFtdcVolumeType	OpenVolume;
-	///ä»Šæ—¥å¹³ä»“æ•°é‡(åŒ…æ‹¬æ˜¨æŒä»“çš„å¹³ä»“,ä¸åŒ…æ‹¬å†»ç»“)
+	///½ñÈÕÆ½²ÖÊıÁ¿(°üÀ¨×ò³Ö²ÖµÄÆ½²Ö,²»°üÀ¨¶³½á)
 	TFocusFtdcVolumeType	CloseVolume;
-	///å¹³ä»“ç›ˆäº
+	///Æ½²ÖÓ¯¿÷
 	TFocusFtdcMoneyType	CloseProfit;
-	///ç”³è´­èµå›æ•°é‡
+	///Éê¹ºÊê»ØÊıÁ¿
 	TFocusFtdcVolumeType	PurRedVolume;
-	///ç”³è´­èµå›å†»ç»“æ•°é‡
+	///Éê¹ºÊê»Ø¶³½áÊıÁ¿
 	TFocusFtdcVolumeType	FrozenPurRedVolume;
-	///ä»Šæ—¥å¼€ä»“å†»ç»“æ•°é‡
+	///½ñÈÕ¿ª²Ö¶³½áÊıÁ¿
 	TFocusFtdcVolumeType	FrozenOpenVolume;
-	///è¯åˆ¸æœ€æ–°å¸‚å€¼
+	///Ö¤È¯×îĞÂÊĞÖµ
 	TFocusFtdcMoneyType	CurrentStkValue;
-	///è¯åˆ¸å§”æ‰˜å•ä½ï¼Œ0-è‚¡ï¼Œ1-æ‰‹
+	///Ö¤È¯Î¯ÍĞµ¥Î»£¬0-¹É£¬1-ÊÖ
 	TFocusFtdcOrderUnitType	OrderUnit;
 };
 
-///ç”¨æˆ·æŸ¥è¯¢
+///ÓÃ»§²éÑ¯
 struct CFocusFtdcQryUserField
 {
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	StartUserID;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	EndUserID;
 };
 
-///ç”¨æˆ·
+///ÓÃ»§
 struct CFocusFtdcRspUserField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///ç”¨æˆ·ç™»å½•å¯†ç 
+	///ÓÃ»§µÇÂ¼ÃÜÂë
 	TFocusFtdcPasswordType	Password;
-	///æŠ•èµ„è€…ç»„ç¼–å·
+	///Í¶×ÊÕß×é±àºÅ
 	TFocusFtdcInvestorIDType	GroupID;
-	///æŠ•èµ„è€…ç»„å
+	///Í¶×ÊÕß×éÃû
 	TFocusFtdcInvestorNameType	GroupName;
-	///æ˜¯å¦æ´»è·ƒ
+	///ÊÇ·ñ»îÔ¾
 	TFocusFtdcIsActiveType	IsActive;
-	///ç”¨æˆ·åç§°
+	///ÓÃ»§Ãû³Æ
 	TFocusFtdcUserNameType	UserName;
-	///ç”¨æˆ·ç±»å‹
+	///ÓÃ»§ÀàĞÍ
 	TFocusFtdcUserTypeType	UserType;
-	///è¥ä¸šéƒ¨
+	///ÓªÒµ²¿
 	TFocusFtdcDepartmentType	Department;
-	///æˆæƒåŠŸèƒ½é›†
+	///ÊÚÈ¨¹¦ÄÜ¼¯
 	TFocusFtdcGrantFuncSetType	GrantFuncSet;
-	///æœ€å¤§åœ¨çº¿æ•°
+	///×î´óÔÚÏßÊı
 	TFocusFtdcNumberType	MaxOnline;
-	///IPåœ°å€
+	///IPµØÖ·
 	TFocusFtdcIPAddressType	IPAddress;
-	///æ˜¯å¦æ£€æŸ¥è¿æ¥äº§å“
+	///ÊÇ·ñ¼ì²éÁ¬½Ó²úÆ·
 	TFocusFtdcBoolType	CheckProductInfo;
-	///Macåœ°å€
+	///MacµØÖ·
 	TFocusFtdcMacAddressType	MacAddress;
-	///æ˜¯å¦æ£€æŸ¥IPå’ŒMAC
+	///ÊÇ·ñ¼ì²éIPºÍMAC
 	TFocusFtdcBoolType	CheckIPMacAddr;
-	///é”™è¯¯ç™»é™†æ¬¡æ•°é™åˆ¶
+	///´íÎóµÇÂ½´ÎÊıÏŞÖÆ
 	TFocusFtdcNumberType	LoginErrorLimit;
-	///ç›®å‰é”™è¯¯ç™»é™†æ¬¡æ•°
+	///Ä¿Ç°´íÎóµÇÂ½´ÎÊı
 	TFocusFtdcNumberType	LoginErrorCount;
 };
 
-///æŠ•èµ„è€…æ‰‹ç»­è´¹ç‡æŸ¥è¯¢
+///Í¶×ÊÕßÊÖĞø·ÑÂÊ²éÑ¯
 struct CFocusFtdcQryInvestorFeeField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
 };
 
-///æŠ•èµ„è€…æ‰‹ç»­è´¹ç‡
+///Í¶×ÊÕßÊÖĞø·ÑÂÊ
 struct CFocusFtdcRspInvestorFeeField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///æŠ•èµ„è€…ç¼–ç 
+	///Í¶×ÊÕß±àÂë
 	TFocusFtdcInvestorIDType	InvestorID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///å¼€ä»“æ‰‹ç»­è´¹æŒ‰æ¯”ä¾‹
+	///¿ª²ÖÊÖĞø·Ñ°´±ÈÀı
 	TFocusFtdcRatioType	OpenFeeRate;
-	///å¼€ä»“æ‰‹ç»­è´¹æŒ‰æ‰‹æ•°
+	///¿ª²ÖÊÖĞø·Ñ°´ÊÖÊı
 	TFocusFtdcRatioType	OpenFeeAmt;
-	///å¹³ä»“æ‰‹ç»­è´¹æŒ‰æ¯”ä¾‹
+	///Æ½²ÖÊÖĞø·Ñ°´±ÈÀı
 	TFocusFtdcRatioType	OffsetFeeRate;
-	///å¹³ä»“æ‰‹ç»­è´¹æŒ‰æ‰‹æ•°
+	///Æ½²ÖÊÖĞø·Ñ°´ÊÖÊı
 	TFocusFtdcRatioType	OffsetFeeAmt;
-	///å¹³ä»Šä»“æ‰‹ç»­è´¹æŒ‰æ¯”ä¾‹
+	///Æ½½ñ²ÖÊÖĞø·Ñ°´±ÈÀı
 	TFocusFtdcRatioType	OTFeeRate;
-	///å¹³ä»Šä»“æ‰‹ç»­è´¹æŒ‰æ‰‹æ•°
+	///Æ½½ñ²ÖÊÖĞø·Ñ°´ÊÖÊı
 	TFocusFtdcRatioType	OTFeeAmt;
 };
 
-///æŠ•èµ„è€…ä¿è¯é‡‘ç‡æŸ¥è¯¢
+///Í¶×ÊÕß±£Ö¤½ğÂÊ²éÑ¯
 struct CFocusFtdcQryInvestorMarginField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///æŠ•æœºå¥—ä¿æ ‡å¿—
+	///Í¶»úÌ×±£±êÖ¾
 	TFocusFtdcHedgeFlagType	HedgeFlag;
 };
 
-///æŠ•èµ„è€…ä¿è¯é‡‘ç‡
+///Í¶×ÊÕß±£Ö¤½ğÂÊ
 struct CFocusFtdcRspInvestorMarginField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///æŠ•èµ„è€…ç¼–ç 
+	///Í¶×ÊÕß±àÂë
 	TFocusFtdcInvestorIDType	InvestorID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///æŠ•æœºå¥—ä¿æ ‡å¿—
+	///Í¶»úÌ×±£±êÖ¾
 	TFocusFtdcHedgeFlagType	HedgeFlag;
-	///å¤šå¤´å ç”¨ä¿è¯é‡‘æŒ‰æ¯”ä¾‹
+	///¶àÍ·Õ¼ÓÃ±£Ö¤½ğ°´±ÈÀı
 	TFocusFtdcRatioType	LongMarginRate;
-	///å¤šå¤´ä¿è¯é‡‘æŒ‰æ‰‹æ•°
+	///¶àÍ·±£Ö¤½ğ°´ÊÖÊı
 	TFocusFtdcRatioType	LongMarginAmt;
-	///ç©ºå¤´å ç”¨ä¿è¯é‡‘æŒ‰æ¯”ä¾‹
+	///¿ÕÍ·Õ¼ÓÃ±£Ö¤½ğ°´±ÈÀı
 	TFocusFtdcRatioType	ShortMarginRate;
-	///ç©ºå¤´ä¿è¯é‡‘æŒ‰æ‰‹æ•°
+	///¿ÕÍ·±£Ö¤½ğ°´ÊÖÊı
 	TFocusFtdcRatioType	ShortMarginAmt;
 };
 
-///æŠ•èµ„è€…æŸ¥è¯¢
+///Í¶×ÊÕß²éÑ¯
 struct CFocusFtdcQryInvestorField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
 };
 
-///æŠ•èµ„è€…åº”ç­”
+///Í¶×ÊÕßÓ¦´ğ
 struct CFocusFtdcRspInvestorField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///èµ„é‡‘å¯†ç 
+	///×Ê½ğÃÜÂë
 	TFocusFtdcPasswordType	InvestorPasswd;
-	///æŠ•èµ„è€…åç§°
+	///Í¶×ÊÕßÃû³Æ
 	TFocusFtdcInvestorNameType	InvestorName;
-	///æŠ•èµ„è€…ç±»å‹
+	///Í¶×ÊÕßÀàĞÍ
 	TFocusFtdcInvestorTypeType	InvestorType;
-	///å®¢æˆ·ç±»å‹
+	///¿Í»§ÀàĞÍ
 	TFocusFtdcClientTypeType	ClientType;
-	///ä¸Šæµ·è‚¡ä¸œä»£ç (æ ¹ç½‘ç‰¹æ®Šç”¨)
+	///ÉÏº£¹É¶«´úÂë(¸ùÍøÌØÊâÓÃ)
 	TFocusFtdcInvestorIDType	SSERegId;
-	///æ·±åœ³è‚¡ä¸œä»£ç (æ ¹ç½‘ç‰¹æ®Šç”¨)
+	///ÉîÛÚ¹É¶«´úÂë(¸ùÍøÌØÊâÓÃ)
 	TFocusFtdcInvestorIDType	SZSERegId;
-	///ä¸ŠæœŸæ‰€äº¤æ˜“ç¼–ç (æ ¹ç½‘ç‰¹æ®Šç”¨)
+	///ÉÏÆÚËù½»Ò×±àÂë(¸ùÍøÌØÊâÓÃ)
 	TFocusFtdcInvestorIDType	SHFERegId;
-	///éƒ‘å•†æ‰€äº¤ç¼–ç (æ ¹ç½‘ç‰¹æ®Šç”¨)
+	///Ö£ÉÌËù½»±àÂë(¸ùÍøÌØÊâÓÃ)
 	TFocusFtdcInvestorIDType	ZCERegId;
-	///å¤§å•†æ‰€ç¼–ç (æ ¹ç½‘ç‰¹æ®Šç”¨)
+	///´óÉÌËù±àÂë(¸ùÍøÌØÊâÓÃ)
 	TFocusFtdcInvestorIDType	DCERegId;
-	///æŠ•èµ„è€…ç»„ç¼–å·
+	///Í¶×ÊÕß×é±àºÅ
 	TFocusFtdcInvestorIDType	GroupID;
-	///æŠ•èµ„è€…ç»„å
+	///Í¶×ÊÕß×éÃû
 	TFocusFtdcInvestorNameType	GroupName;
-	///åˆ«å
+	///±ğÃû
 	TFocusFtdcAliasType	Alias;
-	///è¿æ¥ç±»å‹
+	///Á¬½ÓÀàĞÍ
 	TFocusFtdcLinkTypeType	LinkType;
-	///ç»ˆç«¯ä¿¡æ¯IDï¼ˆç©¿é€å¼ç›‘ç®¡é‡Œéœ€è¦ç”¨åˆ°çš„ï¼‰
+	///ÖÕ¶ËĞÅÏ¢ID£¨´©Í¸Ê½¼à¹ÜÀïĞèÒªÓÃµ½µÄ£©
 	TFocusFtdcCustomType	F_TerminalId;
-	///èµ„é‡‘è´¦æˆ·ç¼–å·
+	///×Ê½ğÕË»§±àºÅ
 	TFocusFtdcInvestorIDType	ParentInvestorID;
-	///ç™»å½•æ¬¡æ•°
+	///µÇÂ¼´ÎÊı
 	TFocusFtdcNumberType	LoginStatus;
-	///æ˜¯å¦ä½¿ç”¨å‡€æŒä»“æŠ¥å•,æŠ•é¡¾è´¦æˆ·æœ‰æ•ˆ
+	///ÊÇ·ñÊ¹ÓÃ¾»³Ö²Ö±¨µ¥,Í¶¹ËÕË»§ÓĞĞ§
 	TFocusFtdcPositionTypeType	PositionType;
-	///è‡ªæˆäº¤å¤„ç†æ–¹å¼,èµ„é‡‘è´¦æˆ·æœ‰æ•ˆ
+	///×Ô³É½»´¦Àí·½Ê½,×Ê½ğÕË»§ÓĞĞ§
 	TFocusFtdcSelfTradeAvoidTypeType	SelfTradeAvoidType;
-	///äº¤æ˜“æƒé™
+	///½»Ò×È¨ÏŞ
 	TFocusFtdcTradingRightType	TradingRight;
-	///æ˜¯å¦æ£€æŸ¥èµ„é‡‘
+	///ÊÇ·ñ¼ì²é×Ê½ğ
 	TFocusFtdcBoolType	CheckAccount;
-	///æ˜¯å¦æ£€æŸ¥æŒä»“
+	///ÊÇ·ñ¼ì²é³Ö²Ö
 	TFocusFtdcBoolType	CheckPosition;
-	///æŠ¥å•æ˜¯å¦æŠ¥è­¦
+	///±¨µ¥ÊÇ·ñ±¨¾¯
 	TFocusFtdcBoolType	OrderWarning;
-	///èµ„é‡‘æŒä»“æ˜¯å¦ä¸ŠæŸ¥
+	///×Ê½ğ³Ö²ÖÊÇ·ñÉÏ²é
 	TFocusFtdcBoolType	QryUpAccPosi;
-	///æŠ•é¡¾é€‰æ‹©èµ„é‡‘è´¦æˆ·ç±»å‹
+	///Í¶¹ËÑ¡Ôñ×Ê½ğÕË»§ÀàĞÍ
 	TFocusFtdcDistributeTypeType	DistributeType;
 };
 
-///è´¦å·é£é™©çŠ¶å†µæŸ¥è¯¢
+///ÕËºÅ·çÏÕ×´¿ö²éÑ¯
 struct CFocusFtdcQryAccountRiskField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
 };
 
-///è´¦å·é£é™©çŠ¶å†µåº”ç­”
+///ÕËºÅ·çÏÕ×´¿öÓ¦´ğ
 struct CFocusFtdcRspAccountRiskField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///èµ„é‡‘å¸å·
+	///×Ê½ğÕÊºÅ
 	TFocusFtdcAccountIDType	AccountID;
-	///è®¾ç½®å‡†å¤‡é‡‘
+	///ÉèÖÃ×¼±¸½ğ
 	TFocusFtdcMoneyType	SetBalance;
-	///å¼€ä»“çº¢çº¿
+	///¿ª²ÖºìÏß
 	TFocusFtdcMoneyType	OpenAvailable;
-	///å¹³ä»“çº¢çº¿
+	///Æ½²ÖºìÏß
 	TFocusFtdcMoneyType	OffsetAvailable;
-	///è´¦æˆ·çŠ¶æ€
+	///ÕË»§×´Ì¬
 	TFocusFtdcAccountStatusType	AccountStatus;
-	///åŠ¨æ€æƒç›Š
+	///¶¯Ì¬È¨Òæ
 	TFocusFtdcMoneyType	DynamicRights;
-	///è´¦æˆ·æƒé™
+	///ÕË»§È¨ÏŞ
 	TFocusFtdcTradingRightType	TradingRight;
 };
 
-///äº¤æ˜“ç”¨æˆ·ä¼šè¯æŸ¥è¯¢
+///½»Ò×ÓÃ»§»á»°²éÑ¯
 struct CFocusFtdcQryUserSessionField
 {
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	StartUserID;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	EndUserID;
 };
 
-///äº¤æ˜“ç”¨æˆ·ä¼šè¯åº”ç­”
+///½»Ò×ÓÃ»§»á»°Ó¦´ğ
 struct CFocusFtdcRspUserSessionField
 {
-	///ç»çºªå…¬å¸ä»£ç 
+	///¾­¼Í¹«Ë¾´úÂë
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///äº¤æ˜“ç”¨æˆ·ç±»å‹
+	///½»Ò×ÓÃ»§ÀàĞÍ
 	TFocusFtdcUserTypeType	UserType;
-	///ä¼šè¯ç¼–å·
+	///»á»°±àºÅ
 	TFocusFtdcSessionIDType	SessionID;
-	///å‰ç½®ç¼–å·
+	///Ç°ÖÃ±àºÅ
 	TFocusFtdcFrontIDType	FrontID;
-	///ç™»å½•æ—¶é—´
+	///µÇÂ¼Ê±¼ä
 	TFocusFtdcTimeType	LoginTime;
-	///IPåœ°å€
+	///IPµØÖ·
 	TFocusFtdcIPAddressType	IPAddress;
-	///Macåœ°å€
+	///MacµØÖ·
 	TFocusFtdcMacAddressType	MacAddress;
-	///ç”¨æˆ·ç«¯äº§å“ä¿¡æ¯
+	///ÓÃ»§¶Ë²úÆ·ĞÅÏ¢
 	TFocusFtdcProductInfoType	UserProductInfo;
-	///æ¥å£ç«¯äº§å“ä¿¡æ¯
+	///½Ó¿Ú¶Ë²úÆ·ĞÅÏ¢
 	TFocusFtdcProductInfoType	InterfaceProductInfo;
-	///åè®®ä¿¡æ¯
+	///Ğ­ÒéĞÅÏ¢
 	TFocusFtdcProtocolInfoType	ProtocolInfo;
 };
 
-///è¡Œæƒ…æŸ¥è¯¢
+///ĞĞÇé²éÑ¯
 struct CFocusFtdcQryMarketDataField
 {
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
 };
 
-///è¡Œæƒ…åº”ç­”
+///ĞĞÇéÓ¦´ğ
 struct CFocusFtdcRspMarketDataField
 {
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcTradingDayType	TradingDay;
-	///æ˜¨ç»“ç®—
+	///×ò½áËã
 	TFocusFtdcPriceType	PreSettlementPrice;
-	///æ˜¨æ”¶ç›˜
+	///×òÊÕÅÌ
 	TFocusFtdcPriceType	PreClosePrice;
-	///æ˜¨æŒä»“é‡
+	///×ò³Ö²ÖÁ¿
 	TFocusFtdcLargeVolumeType	PreOpenInterest;
-	///æ˜¨è™šå®åº¦
+	///×òĞéÊµ¶È
 	TFocusFtdcRatioType	PreDelta;
-	///è¯åˆ¸äº¤æ˜“çŠ¶æ€
+	///Ö¤È¯½»Ò××´Ì¬
 	TFocusFtdcStkOrderStatusType	StkOrderStatus;
-	///ä»Šå¼€ç›˜
+	///½ñ¿ªÅÌ
 	TFocusFtdcPriceType	OpenPrice;
-	///æœ€é«˜ä»·
+	///×î¸ß¼Û
 	TFocusFtdcPriceType	HighestPrice;
-	///æœ€ä½ä»·
+	///×îµÍ¼Û
 	TFocusFtdcPriceType	LowestPrice;
-	///ä»Šæ”¶ç›˜
+	///½ñÊÕÅÌ
 	TFocusFtdcPriceType	ClosePrice;
-	///æ¶¨åœæ¿ä»·
+	///ÕÇÍ£°å¼Û
 	TFocusFtdcPriceType	UpperLimitPrice;
-	///è·Œåœæ¿ä»·
+	///µøÍ£°å¼Û
 	TFocusFtdcPriceType	LowerLimitPrice;
-	///ä»Šç»“ç®—
+	///½ñ½áËã
 	TFocusFtdcPriceType	SettlementPrice;
-	///ä»Šè™šå®åº¦
+	///½ñĞéÊµ¶È
 	TFocusFtdcRatioType	CurrDelta;
-	///æœ€æ–°ä»·
+	///×îĞÂ¼Û
 	TFocusFtdcPriceType	LastPrice;
-	///æ•°é‡
+	///ÊıÁ¿
 	TFocusFtdcVolumeType	Volume;
-	///æˆäº¤é‡‘é¢
+	///³É½»½ğ¶î
 	TFocusFtdcMoneyType	Turnover;
-	///æŒä»“é‡
+	///³Ö²ÖÁ¿
 	TFocusFtdcLargeVolumeType	OpenInterest;
-	///ç”³ä¹°ä»·ä¸€
+	///ÉêÂò¼ÛÒ»
 	TFocusFtdcPriceType	BidPrice1;
-	///ç”³ä¹°é‡ä¸€
+	///ÉêÂòÁ¿Ò»
 	TFocusFtdcVolumeType	BidVolume1;
-	///ç”³å–ä»·ä¸€
+	///ÉêÂô¼ÛÒ»
 	TFocusFtdcPriceType	AskPrice1;
-	///ç”³å–é‡ä¸€
+	///ÉêÂôÁ¿Ò»
 	TFocusFtdcVolumeType	AskVolume1;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///æœ€åä¿®æ”¹æ—¶é—´
+	///×îºóĞŞ¸ÄÊ±¼ä
 	TFocusFtdcTimeType	UpdateTime;
-	///æœ€åä¿®æ”¹æ¯«ç§’
+	///×îºóĞŞ¸ÄºÁÃë
 	TFocusFtdcMillisecType	UpdateMillisec;
 };
 
-///äº§å“æŸ¥è¯¢
+///²úÆ·²éÑ¯
 struct CFocusFtdcQryProductField
 {
-	///äº§å“ä»£ç 
+	///²úÆ·´úÂë
 	TFocusFtdcProductIDType	ProductID;
 };
 
-///äº§å“åº”ç­”
+///²úÆ·Ó¦´ğ
 struct CFocusFtdcRspProductField
 {
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///äº§å“ä»£ç 
+	///²úÆ·´úÂë
 	TFocusFtdcProductIDType	ProductID;
-	///æŠ•èµ„è€…å‘è¡Œçš„äº§å“åç§°
+	///Í¶×ÊÕß·¢ĞĞµÄ²úÆ·Ãû³Æ
 	TFocusFtdcProductNameType	ProductName;
-	///å¸ç§
+	///±ÒÖÖ
 	TFocusFtdcCurrencyType	Currency;
-	///æ±‡ç‡
+	///»ãÂÊ
 	TFocusFtdcRatioType	ExchangeRate;
-	///äº§å“ç±»å‹
+	///²úÆ·ÀàĞÍ
 	TFocusFtdcProductClassType	ProductClass;
 };
 
-///å†…éƒ¨æ¥å›æ¶ˆæ¯
+///ÄÚ²¿À´»ØÏûÏ¢
 struct CFocusFtdcPingPongField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ä¿®æ”¹ç”¨æˆ·ç¼–å·
+	///ĞŞ¸ÄÓÃ»§±àºÅ
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç¼–å·
+	///±àºÅ
 	TFocusFtdcSequenceNoType	SequenceNo;
-	///ç”¨æˆ·è‡ªå®šä¹‰åŸŸ
+	///ÓÃ»§×Ô¶¨ÒåÓò
 	TFocusFtdcCustomType	UserCustom;
 };
 
-///æœ€å¤§å¯äº¤æ˜“æ•°é‡æŸ¥è¯¢è¯·æ±‚
+///×î´ó¿É½»Ò×ÊıÁ¿²éÑ¯ÇëÇó
 struct CFocusFtdcQryMaxVolumeField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ä¹°å–æ–¹å‘
+	///ÂòÂô·½Ïò
 	TFocusFtdcDirectionType	Direction;
-	///å¼€å¹³æ ‡å¿—
+	///¿ªÆ½±êÖ¾
 	TFocusFtdcOffsetFlagType	OffsetFlag;
-	///æŠ•æœºå¥—ä¿æ ‡å¿—
+	///Í¶»úÌ×±£±êÖ¾
 	TFocusFtdcHedgeFlagType	HedgeFlag;
-	///ä»·æ ¼
+	///¼Û¸ñ
 	TFocusFtdcPriceType	LimitPrice;
 };
 
-///æœ€å¤§å¯äº¤æ˜“æ•°é‡æŸ¥è¯¢åº”ç­”
+///×î´ó¿É½»Ò×ÊıÁ¿²éÑ¯Ó¦´ğ
 struct CFocusFtdcRspMaxVolumeField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ä¹°å–æ–¹å‘
+	///ÂòÂô·½Ïò
 	TFocusFtdcDirectionType	Direction;
-	///å¼€å¹³æ ‡å¿—
+	///¿ªÆ½±êÖ¾
 	TFocusFtdcOffsetFlagType	OffsetFlag;
-	///æŠ•æœºå¥—ä¿æ ‡å¿—
+	///Í¶»úÌ×±£±êÖ¾
 	TFocusFtdcHedgeFlagType	HedgeFlag;
-	///ä»·æ ¼
+	///¼Û¸ñ
 	TFocusFtdcPriceType	LimitPrice;
-	///æ•°é‡
+	///ÊıÁ¿
 	TFocusFtdcVolumeType	Volume;
 };
 
-///å·¥ä½œæµäº¤æ˜“å‘˜æŸ¥è¯¢è¯·æ±‚
+///¹¤×÷Á÷½»Ò×Ô±²éÑ¯ÇëÇó
 struct CFocusFtdcQryAdviceTraderField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç™»å½•ç»çºªå…¬å¸ç¼–å·
+	///µÇÂ¼¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	LogBrokerID;
-	///ç™»å½•ç”¨æˆ·ä»£ç 
+	///µÇÂ¼ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	LogUserID;
 };
 
-///å·¥ä½œæµäº¤æ˜“å‘˜æŸ¥è¯¢åº”ç­”
+///¹¤×÷Á÷½»Ò×Ô±²éÑ¯Ó¦´ğ
 struct CFocusFtdcRspAdviceTraderField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///å…³è”ç”¨æˆ·ä»£ç 
+	///¹ØÁªÓÃ»§´úÂë
 	TFocusFtdcUserIDType	RelationUserID;
-	///å…³è”ç”¨æˆ·åç§°
+	///¹ØÁªÓÃ»§Ãû³Æ
 	TFocusFtdcUserNameType	RelationUserName;
 };
 
-///ç»„åˆæŒä»“æ˜ç»†æŸ¥è¯¢è¯·æ±‚
+///×éºÏ³Ö²ÖÃ÷Ï¸²éÑ¯ÇëÇó
 struct CFocusFtdcQryCmbPositionDetailField
 {
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
 };
 
-///ç»„åˆæŒä»“æ˜ç»†æŸ¥è¯¢åº”ç­”
+///×éºÏ³Ö²ÖÃ÷Ï¸²éÑ¯Ó¦´ğ
 struct CFocusFtdcRspCmbPositionDetailField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///å•è…¿åˆçº¦ä»£ç 
+	///µ¥ÍÈºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///å•è…¿åˆçº¦ä»£ç 
+	///µ¥ÍÈºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	CmbInstrumentID;
-	///æˆäº¤ç¼–å·
+	///³É½»±àºÅ
 	TFocusFtdcTradeIDType	TradeID;
-	///æŠ¥å•ç¼–å·
+	///±¨µ¥±àºÅ
 	TFocusFtdcOrderSysIDType	OrderSysID;
-	///ä¹°å–æ–¹å‘
+	///ÂòÂô·½Ïò
 	TFocusFtdcDirectionType	Direction;
-	///æŠ•æœºå¥—ä¿æ ‡å¿—
+	///Í¶»úÌ×±£±êÖ¾
 	TFocusFtdcHedgeFlagType	HedgeFlag;
-	///æŒä»“é‡
+	///³Ö²ÖÁ¿
 	TFocusFtdcVolumeType	Position;
-	///å•è…¿ç¼–å·
+	///µ¥ÍÈ±àºÅ
 	TFocusFtdcNumberType	LegQty;
-	///äº¤æ˜“æ—¥æœŸ
+	///½»Ò×ÈÕÆÚ
 	TFocusFtdcTradingDayType	TradingDay;
 };
 
-///æŠ•èµ„è€…ç»“ç®—ç»“æœæŸ¥è¯¢è¯·æ±‚
+///Í¶×ÊÕß½áËã½á¹û²éÑ¯ÇëÇó
 struct CFocusFtdcQrySettlementInfoField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ—¥æœŸ
+	///½»Ò×ÈÕÆÚ
 	TFocusFtdcTradingDayType	TradingDay;
 };
 
-///æŠ•èµ„è€…ç»“ç®—ç»“æœæŸ¥è¯¢åº”ç­”
+///Í¶×ÊÕß½áËã½á¹û²éÑ¯Ó¦´ğ
 struct CFocusFtdcRspSettlementInfoField
 {
-	///äº¤æ˜“æ—¥æœŸ
+	///½»Ò×ÈÕÆÚ
 	TFocusFtdcTradingDayType	TradingDay;
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///åºå·
+	///ĞòºÅ
 	TFocusFtdcSequenceNoType	SequenceNo;
-	///æ¶ˆæ¯æ­£æ–‡
+	///ÏûÏ¢ÕıÎÄ
 	TFocusFtdcContentType	Content;
 };
 
-///æŸ¥è¯¢ç»“æœé›†åˆ†é¡µ
+///²éÑ¯½á¹û¼¯·ÖÒ³
 struct CFocusFtdcQryResultPageField
 {
-	///ç»“æœé›†ç¼–å·
+	///½á¹û¼¯±àºÅ
 	TFocusFtdcSessionIDType	ResultID;
-	///æ€»è®°å½•æ•°
+	///×Ü¼ÇÂ¼Êı
 	TFocusFtdcNumberType	Count;
-	///æ€»é¡µæ•°
+	///×ÜÒ³Êı
 	TFocusFtdcNumberType	Pages;
-	///å‰©ä½™é¡µæ•°
+	///Ê£ÓàÒ³Êı
 	TFocusFtdcNumberType	Remain;
 };
 
-///æŸ¥è¯¢æŒä»“æ˜ç»†è¯·æ±‚
+///²éÑ¯³Ö²ÖÃ÷Ï¸ÇëÇó
 struct CFocusFtdcQryPositionDetailField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///å•è…¿åˆçº¦ä»£ç 
+	///µ¥ÍÈºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
 };
 
-///æŸ¥è¯¢æŒä»“æ˜ç»†åº”ç­”
+///²éÑ¯³Ö²ÖÃ÷Ï¸Ó¦´ğ
 struct CFocusFtdcRspPositionDetailField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///æŠ•æœºå¥—ä¿æ ‡å¿—
+	///Í¶»úÌ×±£±êÖ¾
 	TFocusFtdcHedgeFlagType	HedgeFlag;
-	///ä¹°å–æ–¹å‘
+	///ÂòÂô·½Ïò
 	TFocusFtdcDirectionType	Direction;
-	///å¼€ä»“æ—¥æœŸ
+	///¿ª²ÖÈÕÆÚ
 	TFocusFtdcDateType	OpenDate;
-	///æˆäº¤ç¼–å·
+	///³É½»±àºÅ
 	TFocusFtdcTradeIDType	TradeID;
-	///æ•°é‡
+	///ÊıÁ¿
 	TFocusFtdcVolumeType	Volume;
-	///å¼€ä»“ä»·
+	///¿ª²Ö¼Û
 	TFocusFtdcMoneyType	OpenPrice;
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcDateType	TradingDay;
-	///äº¤æ˜“ç±»å‹
+	///½»Ò×ÀàĞÍ
 	TFocusFtdcTradeTypeType	TradeType;
-	///ç»„åˆåˆçº¦ä»£ç 
+	///×éºÏºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	CombInstrumentID;
-	///é€æ—¥ç›¯å¸‚å¹³ä»“ç›ˆäº
+	///ÖğÈÕ¶¢ÊĞÆ½²ÖÓ¯¿÷
 	TFocusFtdcMoneyType	CloseProfitByDate;
-	///é€ç¬”å¯¹å†²å¹³ä»“ç›ˆäº
+	///Öğ±Ê¶Ô³åÆ½²ÖÓ¯¿÷
 	TFocusFtdcMoneyType	CloseProfitByTrade;
-	///é€æ—¥ç›¯å¸‚æŒä»“ç›ˆäº
+	///ÖğÈÕ¶¢ÊĞ³Ö²ÖÓ¯¿÷
 	TFocusFtdcMoneyType	PositionProfitByDate;
-	///é€ç¬”å¯¹å†²æŒä»“ç›ˆäº
+	///Öğ±Ê¶Ô³å³Ö²ÖÓ¯¿÷
 	TFocusFtdcMoneyType	PositionProfitByTrade;
-	///æŠ•èµ„è€…ä¿è¯é‡‘
+	///Í¶×ÊÕß±£Ö¤½ğ
 	TFocusFtdcMoneyType	Margin;
-	///äº¤æ˜“æ‰€ä¿è¯é‡‘
+	///½»Ò×Ëù±£Ö¤½ğ
 	TFocusFtdcMoneyType	ExchMargin;
-	///ä¿è¯é‡‘ç‡
+	///±£Ö¤½ğÂÊ
 	TFocusFtdcMoneyType	MarginRateByMoney;
-	///ä¿è¯é‡‘ç‡(æŒ‰æ‰‹æ•°)
+	///±£Ö¤½ğÂÊ(°´ÊÖÊı)
 	TFocusFtdcMoneyType	MarginRateByVolume;
-	///æ˜¨ç»“ç®—ä»·
+	///×ò½áËã¼Û
 	TFocusFtdcPriceType	LastSettlementPrice;
-	///ç»“ç®—ä»·
+	///½áËã¼Û
 	TFocusFtdcPriceType	SettlementPrice;
-	///å¹³ä»“é‡
+	///Æ½²ÖÁ¿
 	TFocusFtdcVolumeType	CloseVolume;
-	///å¹³ä»“é‡‘é¢
+	///Æ½²Ö½ğ¶î
 	TFocusFtdcMoneyType	CloseAmount;
 };
 
-///ç†è®ºä»·è¡Œæƒ…
+///ÀíÂÛ¼ÛĞĞÇé
 struct CFocusFtdcTheoryPriceDataField
 {
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcTradingDayType	TradingDay;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ç†è®ºä»·
+	///ÀíÂÛ¼Û
 	TFocusFtdcPriceType	TheoryPrice;
-	///ç†è®ºæ³¢åŠ¨ç‡
+	///ÀíÂÛ²¨¶¯ÂÊ
 	TFocusFtdcVolatilityType	TheoryVol;
-	///æ ‡çš„æœ€æ–°ä»·
+	///±êµÄ×îĞÂ¼Û
 	TFocusFtdcPriceType	UnderlyingLastPrice;
-	///æ ‡çš„ä¹°1ä»·
+	///±êµÄÂò1¼Û
 	TFocusFtdcPriceType	UnderlyingBidPrice1;
-	///æ ‡çš„å–1ä»·
+	///±êµÄÂô1¼Û
 	TFocusFtdcPriceType	UnderlyingAskPrice1;
-	///å‰©ä½™æ—¶é—´
+	///Ê£ÓàÊ±¼ä
 	TFocusFtdcTimeValueType	RemainDay;
 };
 
-///æœŸæƒæŒ‡æ ‡è¡Œæƒ…
+///ÆÚÈ¨Ö¸±êĞĞÇé
 struct CFocusFtdcOptionIndexDataField
 {
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcTradingDayType	TradingDay;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
 	///Delta
 	TFocusFtdcGreekValueType	Delta;
@@ -2040,114 +2040,114 @@ struct CFocusFtdcOptionIndexDataField
 	TFocusFtdcGreekValueType	Theta;
 	///Rho
 	TFocusFtdcGreekValueType	Rho;
-	///ä¹°1ä»·æ³¢åŠ¨ç‡
+	///Âò1¼Û²¨¶¯ÂÊ
 	TFocusFtdcVolatilityType	BidVol;
-	///å–1ä»·æ³¢åŠ¨ç‡
+	///Âô1¼Û²¨¶¯ÂÊ
 	TFocusFtdcVolatilityType	AskVol;
-	///ä¸­é—´ä»·æ³¢åŠ¨ç‡
+	///ÖĞ¼ä¼Û²¨¶¯ÂÊ
 	TFocusFtdcVolatilityType	MidVol;
-	///æœ€æ–°ä»·æ³¢åŠ¨ç‡
+	///×îĞÂ¼Û²¨¶¯ÂÊ
 	TFocusFtdcVolatilityType	LastVol;
-	///æœ€æ–°ä»·
+	///×îĞÂ¼Û
 	TFocusFtdcPriceType	LastPrice;
-	///ä¹°1ä»·
+	///Âò1¼Û
 	TFocusFtdcPriceType	BidPrice1;
-	///å–1ä»·
+	///Âô1¼Û
 	TFocusFtdcPriceType	AskPrice1;
-	///ç†è®ºæ³¢åŠ¨ç‡
+	///ÀíÂÛ²¨¶¯ÂÊ
 	TFocusFtdcVolatilityType	TheoryVol;
-	///æ ‡çš„æœ€æ–°ä»·
+	///±êµÄ×îĞÂ¼Û
 	TFocusFtdcPriceType	UnderlyingLastPrice;
-	///æ ‡çš„ä¹°1ä»·
+	///±êµÄÂò1¼Û
 	TFocusFtdcPriceType	UnderlyingBidPrice1;
-	///æ ‡çš„å–1ä»·
+	///±êµÄÂô1¼Û
 	TFocusFtdcPriceType	UnderlyingAskPrice1;
-	///å‰©ä½™å¤©æ•°
+	///Ê£ÓàÌìÊı
 	TFocusFtdcTimeValueType	RemainDay;
-	///æ˜¯å¦æ˜¯å®¢æˆ·ç«¯è®¾ç½®çš„æ³¢åŠ¨ç‡
+	///ÊÇ·ñÊÇ¿Í»§¶ËÉèÖÃµÄ²¨¶¯ÂÊ
 	TFocusFtdcYesOrNoType	IsManalSetVol;
-	///AtmVolæ³¢åŠ¨ç‡
+	///AtmVol²¨¶¯ÂÊ
 	TFocusFtdcVolatilityType	AtmVol;
 };
 
-///å®šä»·å‚æ•°
+///¶¨¼Û²ÎÊı
 struct CFocusFtdcPricingParamField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æ ‡çš„ä»£ç 
+	///±êµÄ´úÂë
 	TFocusFtdcInstrumentIDType	UnderlyingId;
-	///æœŸæƒç³»åˆ—
+	///ÆÚÈ¨ÏµÁĞ
 	TFocusFtdcInstrumentIDType	OptionSeriesId;
-	///ä¸€çº§ä»·æ ¼
+	///Ò»¼¶¼Û¸ñ
 	TFocusFtdcPriceTypeType	PriceLevel1;
-	///äºŒçº§ä»·æ ¼
+	///¶ş¼¶¼Û¸ñ
 	TFocusFtdcPriceTypeType	PriceLevel2;
-	///ä¸‰çº§ä»·æ ¼
+	///Èı¼¶¼Û¸ñ
 	TFocusFtdcPriceTypeType	PriceLevel3;
-	///è®¡ç®—æ—¥å†
+	///¼ÆËãÈÕÀú
 	TFocusFtdcDateTypeType	CalcDayType;
-	///å¹´æ€»å¤©æ•°
+	///Äê×ÜÌìÊı
 	TFocusFtdcVolumeType	YearTotalDay;
-	///è®¡æ—¶æ–¹å¼
+	///¼ÆÊ±·½Ê½
 	TFocusFtdcTimingPatternType	CalcTimeType;
-	///æ— é£é™©åˆ©ç‡
+	///ÎŞ·çÏÕÀûÂÊ
 	TFocusFtdcRatioType	RiskFreeRate;
-	///è‚¡æ¯ç‡
+	///¹ÉÏ¢ÂÊ
 	TFocusFtdcRatioType	Dividend;
-	///å®šä»·æ¨¡å‹
+	///¶¨¼ÛÄ£ĞÍ
 	TFocusFtdcPricingMethodType	PricingEngine;
-	///è¡Œæƒæ–¹å¼
+	///ĞĞÈ¨·½Ê½
 	TFocusFtdcExerciseTypeType	ExerciseType;
-	///æ³¢åŠ¨ç‡ç²¾åº¦
+	///²¨¶¯ÂÊ¾«¶È
 	TFocusFtdcToleranceType	VolTolerance;
-	///æ³¢åŠ¨ç‡ç±»å‹
+	///²¨¶¯ÂÊÀàĞÍ
 	TFocusFtdcVolTypeType	VolType;
 };
 
-///æœŸæƒç†è®ºæ³¢åŠ¨ç‡
+///ÆÚÈ¨ÀíÂÛ²¨¶¯ÂÊ
 struct CFocusFtdcOptionTheoryVolField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ç†è®ºæ³¢åŠ¨ç‡
+	///ÀíÂÛ²¨¶¯ÂÊ
 	TFocusFtdcVolatilityType	TheoryVol;
 };
 
-///å®šä»·åŸºæœ¬å‚æ•°
+///¶¨¼Û»ù±¾²ÎÊı
 struct CFocusFtdcBasePricingParamField
 {
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///è®¡ç®—ç›®æ ‡
+	///¼ÆËãÄ¿±ê
 	TFocusFtdcCalculateTypeType	CalculateTarget;
-	///è¡Œæƒæ–¹å¼
+	///ĞĞÈ¨·½Ê½
 	TFocusFtdcExerciseTypeType	ExerciseType;
-	///æœŸæƒç±»å‹
+	///ÆÚÈ¨ÀàĞÍ
 	TFocusFtdcOptionsTypeType	OptionsType;
-	///æ ‡çš„ä»·æ ¼
+	///±êµÄ¼Û¸ñ
 	TFocusFtdcPriceType	UnderlyingPrice;
-	///æ‰§è¡Œä»·
+	///Ö´ĞĞ¼Û
 	TFocusFtdcPriceType	StrikePrice;
-	///æ— é£é™©åˆ©ç‡
+	///ÎŞ·çÏÕÀûÂÊ
 	TFocusFtdcRatioType	RiskFreeRate;
-	///è‚¡æ¯ç‡
+	///¹ÉÏ¢ÂÊ
 	TFocusFtdcRatioType	Dividend;
-	///å‰©ä½™å¤©æ•°
+	///Ê£ÓàÌìÊı
 	TFocusFtdcTimeValueType	RemainDay;
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcDateType	TradingDate;
-	///åˆ°æœŸæ—¥
+	///µ½ÆÚÈÕ
 	TFocusFtdcDateType	ExpireDate;
-	///æ³¢åŠ¨ç‡
+	///²¨¶¯ÂÊ
 	TFocusFtdcVolatilityType	Vol;
-	///å®šä»·æ¨¡å‹
+	///¶¨¼ÛÄ£ĞÍ
 	TFocusFtdcPricingMethodType	PricingModel;
-	///æœŸæƒä»·å€¼
+	///ÆÚÈ¨¼ÛÖµ
 	TFocusFtdcPriceType	OptionPrice;
-	///é‡ç½®é¢‘ç‡
+	///ÖØÖÃÆµÂÊ
 	TFocusFtdcVolumeType	ResetFrequency;
 	///Delta
 	TFocusFtdcGreekValueType	Delta;
@@ -2165,38 +2165,38 @@ struct CFocusFtdcBasePricingParamField
 	TFocusFtdcGreekValueType	Volga;
 };
 
-///åŒéšœç¢æœŸæƒå®šä»·å‚æ•°
+///Ë«ÕÏ°­ÆÚÈ¨¶¨¼Û²ÎÊı
 struct CFocusFtdcDoubleBarrierPricingParamField
 {
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///è®¡ç®—ç›®æ ‡
+	///¼ÆËãÄ¿±ê
 	TFocusFtdcCalculateTypeType	CalculateTarget;
-	///è¡Œæƒæ–¹å¼
+	///ĞĞÈ¨·½Ê½
 	TFocusFtdcExerciseTypeType	ExerciseType;
-	///æœŸæƒç±»å‹
+	///ÆÚÈ¨ÀàĞÍ
 	TFocusFtdcOptionsTypeType	OptionsType;
-	///æ ‡çš„ä»·æ ¼
+	///±êµÄ¼Û¸ñ
 	TFocusFtdcPriceType	UnderlyingPrice;
-	///æ‰§è¡Œä»·
+	///Ö´ĞĞ¼Û
 	TFocusFtdcPriceType	StrikePrice;
-	///æ— é£é™©åˆ©ç‡
+	///ÎŞ·çÏÕÀûÂÊ
 	TFocusFtdcRatioType	RiskFreeRate;
-	///è‚¡æ¯ç‡
+	///¹ÉÏ¢ÂÊ
 	TFocusFtdcRatioType	Dividend;
-	///å‰©ä½™å¤©æ•°
+	///Ê£ÓàÌìÊı
 	TFocusFtdcTimeValueType	RemainDay;
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcDateType	TradingDate;
-	///åˆ°æœŸæ—¥
+	///µ½ÆÚÈÕ
 	TFocusFtdcDateType	ExpireDate;
-	///æ³¢åŠ¨ç‡
+	///²¨¶¯ÂÊ
 	TFocusFtdcVolatilityType	Vol;
-	///å®šä»·æ¨¡å‹
+	///¶¨¼ÛÄ£ĞÍ
 	TFocusFtdcPricingMethodType	PricingModel;
-	///æœŸæƒä»·å€¼
+	///ÆÚÈ¨¼ÛÖµ
 	TFocusFtdcPriceType	OptionPrice;
-	///é‡ç½®é¢‘ç‡
+	///ÖØÖÃÆµÂÊ
 	TFocusFtdcVolumeType	ResetFrequency;
 	///Delta
 	TFocusFtdcGreekValueType	Delta;
@@ -2212,49 +2212,49 @@ struct CFocusFtdcDoubleBarrierPricingParamField
 	TFocusFtdcGreekValueType	Vanna;
 	///Volga
 	TFocusFtdcGreekValueType	Volga;
-	///éšœç¢ç±»å‹
+	///ÕÏ°­ÀàĞÍ
 	TFocusFtdcBarrierTypeType	BarrierType;
-	///éšœç¢ä¸‹æ²¿å€¼
+	///ÕÏ°­ÏÂÑØÖµ
 	TFocusFtdcRatioType	LowerBarrierRate;
-	///éšœç¢ä¸Šæ²¿å€¼
+	///ÕÏ°­ÉÏÑØÖµ
 	TFocusFtdcRatioType	UpperBarrierRate;
 };
 
-///æ³¢åŠ¨ç‡æ‹Ÿåˆå‚æ•°
+///²¨¶¯ÂÊÄâºÏ²ÎÊı
 struct CFocusFtdcVolatilityFittingField
 {
-	///äº§å“ä»£ç 
+	///²úÆ·´úÂë
 	TFocusFtdcProductIDType	ProductID;
-	///å‰©ä½™å¤©æ•°
+	///Ê£ÓàÌìÊı
 	TFocusFtdcTimeValueType	RemainDay;
-	///æ‰§è¡Œä»·
+	///Ö´ĞĞ¼Û
 	TFocusFtdcPriceType	StrikePrice;
-	///æ³¢åŠ¨ç‡
+	///²¨¶¯ÂÊ
 	TFocusFtdcVolatilityType	Vol;
 };
 
-///Wingæ¨¡å‹å‚æ•°
+///WingÄ£ĞÍ²ÎÊı
 struct CFocusFtdcWingModelParamField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///å“ç§ç¼–å·
+	///Æ·ÖÖ±àºÅ
 	TFocusFtdcProductIDType	ProductID;
-	///æœŸæƒç³»åˆ—
+	///ÆÚÈ¨ÏµÁĞ
 	TFocusFtdcInstrumentIDType	OptionSeriesId;
-	///æ‹Ÿåˆæ—¶é€‰ç”¨çš„æ¨¡å‹
+	///ÄâºÏÊ±Ñ¡ÓÃµÄÄ£ĞÍ
 	TFocusFtdcFitModelTypeType	FitModel;
-	///wingæ¨¡å‹å‚æ•°ç±»å‹
+	///wingÄ£ĞÍ²ÎÊıÀàĞÍ
 	TFocusFtdcWingParamTypeType	WingParamType;
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcDateType	TradingDay;
-	///æ’å…¥æ—¶é—´
+	///²åÈëÊ±¼ä
 	TFocusFtdcTimeType	InsertTime;
 	///ATM
 	TFocusFtdcPriceType	Atm;
 	///Days
 	TFocusFtdcPriceType	Days;
-	///å‚è€ƒä»·æ ¼
+	///²Î¿¼¼Û¸ñ
 	TFocusFtdcPriceType	ref;
 	///ssr
 	TFocusFtdcPriceType	ssr;
@@ -2284,800 +2284,800 @@ struct CFocusFtdcWingModelParamField
 	TFocusFtdcPriceType	sc;
 };
 
-///Wingæ¨¡å‹å‚æ•°æŸ¥è¯¢è¯·æ±‚
+///WingÄ£ĞÍ²ÎÊı²éÑ¯ÇëÇó
 struct CFocusFtdcQryWingModelParamField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///äº§å“ä»£ç 
+	///²úÆ·´úÂë
 	TFocusFtdcProductIDType	ProductID;
-	///æœŸæƒç³»åˆ—
+	///ÆÚÈ¨ÏµÁĞ
 	TFocusFtdcInstrumentIDType	OptionSeriesId;
-	///wingæ¨¡å‹å‚æ•°ç±»å‹
+	///wingÄ£ĞÍ²ÎÊıÀàĞÍ
 	TFocusFtdcWingParamTypeType	WingParamType;
-	///æ‹Ÿåˆæ—¶é€‰ç”¨çš„æ¨¡å‹
+	///ÄâºÏÊ±Ñ¡ÓÃµÄÄ£ĞÍ
 	TFocusFtdcFitModelTypeType	FitModel;
 };
 
-///åšå¸‚æŠ¥ä»·ç´¯è®¡ä»·æ ¼
+///×öÊĞ±¨¼ÛÀÛ¼Æ¼Û¸ñ
 struct CFocusFtdcQuoteTotalTradePriceField
 {
-	///ç”¨æˆ·ä»£ç (äº¤æ˜“å‘˜)
+	///ÓÃ»§´úÂë(½»Ò×Ô±)
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///å½“å‰å–æˆäº¤é‡ï¼Œäº¤æ˜“å‘˜è®¾ç½®ï¼Œä¸ç®¡å¼€å¹³
+	///µ±Ç°Âô³É½»Á¿£¬½»Ò×Ô±ÉèÖÃ£¬²»¹Ü¿ªÆ½
 	TFocusFtdcVolumeType	AskTradeVolume;
-	///å½“å‰ä¹°æˆäº¤é‡ï¼Œäº¤æ˜“å‘˜è®¾ç½®ï¼Œä¸ç®¡å¼€å¹³
+	///µ±Ç°Âò³É½»Á¿£¬½»Ò×Ô±ÉèÖÃ£¬²»¹Ü¿ªÆ½
 	TFocusFtdcVolumeType	BidTradeVolume;
-	///å½“å‰æŠ¥ä»·å®é™…æŠ¥ä¹°ä»·
+	///µ±Ç°±¨¼ÛÊµ¼Ê±¨Âò¼Û
 	TFocusFtdcPriceType	BidQuotePrice;
-	///å½“å‰æŠ¥ä»·å®é™…æŠ¥ä¹°é‡
+	///µ±Ç°±¨¼ÛÊµ¼Ê±¨ÂòÁ¿
 	TFocusFtdcVolumeType	BidQuoteAmount;
-	///å½“å‰æŠ¥ä»·å®é™…æŠ¥å–ä»·
+	///µ±Ç°±¨¼ÛÊµ¼Ê±¨Âô¼Û
 	TFocusFtdcPriceType	AskQuotePrice;
-	///å½“å‰æŠ¥ä»·å®é™…æŠ¥å–é‡
+	///µ±Ç°±¨¼ÛÊµ¼Ê±¨ÂôÁ¿
 	TFocusFtdcVolumeType	AskQuoteAmount;
-	///ä»Šæ—¥å®é™…å›åº”è¯¢ä»·æ•°é‡
+	///½ñÈÕÊµ¼Ê»ØÓ¦Ñ¯¼ÛÊıÁ¿
 	TFocusFtdcVolumeType	ForQuoteSendAmount;
-	///ä»Šæ—¥æ”¶åˆ°è¯¢ä»·è¯·æ±‚æ•°é‡
+	///½ñÈÕÊÕµ½Ñ¯¼ÛÇëÇóÊıÁ¿
 	TFocusFtdcVolumeType	ForQuoteTotalAmount;
-	///å½“å‰è¯¢ä»·å›åº”å®é™…æŠ¥ä¹°ä»·
+	///µ±Ç°Ñ¯¼Û»ØÓ¦Êµ¼Ê±¨Âò¼Û
 	TFocusFtdcPriceType	BidForQuotePrice;
-	///å½“å‰è¯¢ä»·å›åº”å®é™…æŠ¥ä¹°é‡
+	///µ±Ç°Ñ¯¼Û»ØÓ¦Êµ¼Ê±¨ÂòÁ¿
 	TFocusFtdcVolumeType	BidForQuoteAmount;
-	///å½“å‰è¯¢ä»·å›åº”å®é™…æŠ¥å–ä»·
+	///µ±Ç°Ñ¯¼Û»ØÓ¦Êµ¼Ê±¨Âô¼Û
 	TFocusFtdcPriceType	AskForQuotePrice;
-	///å½“å‰è¯¢ä»·å›åº”å®é™…æŠ¥å–é‡
+	///µ±Ç°Ñ¯¼Û»ØÓ¦Êµ¼Ê±¨ÂôÁ¿
 	TFocusFtdcVolumeType	AskForQuoteAmount;
-	///ç§»åŠ¨æŠ¥ä»·æ–¹å‘
+	///ÒÆ¶¯±¨¼Û·½Ïò
 	TFocusFtdcFowardDirectionType	FowardDirection;
 };
 
-///åšå¸‚ç­–ç•¥
+///×öÊĞ²ßÂÔ
 struct CFocusFtdcMarkerStrategyField
 {
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///è‡ªåŠ¨æŠ¥ä»·
+	///×Ô¶¯±¨¼Û
 	TFocusFtdcIsActiveType	AutoOffer;
-	///è‡ªåŠ¨å›åº”è¯¢ä»·
+	///×Ô¶¯»ØÓ¦Ñ¯¼Û
 	TFocusFtdcIsActiveType	AutoRespAsking;
-	///æŠ¥ä»·æŠ¥ä¹°é‡
+	///±¨¼Û±¨ÂòÁ¿
 	TFocusFtdcVolumeType	BidAmount;
-	///æŠ¥ä»·æŠ¥å–é‡
+	///±¨¼Û±¨ÂôÁ¿
 	TFocusFtdcVolumeType	AskAmount;
-	///è¯¢ä»·æŠ¥ä¹°é‡
+	///Ñ¯¼Û±¨ÂòÁ¿
 	TFocusFtdcVolumeType	ForQuoteBidAmount;
-	///è¯¢ä»·æŠ¥å–é‡
+	///Ñ¯¼Û±¨ÂôÁ¿
 	TFocusFtdcVolumeType	ForQuoteAskAmount;
-	///ä¹°é‡ä¸Šé™
+	///ÂòÁ¿ÉÏÏŞ
 	TFocusFtdcVolumeType	BidMax;
-	///å–é‡ä¸Šé™
+	///ÂôÁ¿ÉÏÏŞ
 	TFocusFtdcVolumeType	AskMax;
-	///ä»·å·®ç±»å‹
+	///¼Û²îÀàĞÍ
 	TFocusFtdcSpreadTypeType	SpreadType;
-	///æŠ¥ä»·ä»·å·®å®½åº¦
+	///±¨¼Û¼Û²î¿í¶È
 	TFocusFtdcMoneyType	QuotePriceWidth;
-	///æŠ¥ä»·ä»·å·®æ¯”
+	///±¨¼Û¼Û²î±È
 	TFocusFtdcLargeVolumeType	QuoteWidthRatio;
-	///è¯¢ä»·ä»·å·®å®½åº¦
+	///Ñ¯¼Û¼Û²î¿í¶È
 	TFocusFtdcMoneyType	ForQuotePriceWidth;
-	///è¯¢ä»·ä»·å·®æ¯”
+	///Ñ¯¼Û¼Û²î±È
 	TFocusFtdcLargeVolumeType	ForQuoteWidthRatio;
-	///æ˜¯å¦æœ‰æ•ˆ
+	///ÊÇ·ñÓĞĞ§
 	TFocusFtdcIsActiveType	IsActive;
-	///å¤‡æ³¨
+	///±¸×¢
 	TFocusFtdcRemarkType	Remark;
-	///æŠ¥ä»·æ–¹å¼
+	///±¨¼Û·½Ê½
 	TFocusFtdcQuoteRightPriceTypeType	OfferType;
-	///ä¸­å¿ƒä»·å®¹å¿åº¦
+	///ÖĞĞÄ¼ÛÈİÈÌ¶È
 	TFocusFtdcVolumeType	TOL_TICK;
-	///è¯¢ä»·å›åº”æŠ¥ä»·æ–¹å¼
+	///Ñ¯¼Û»ØÓ¦±¨¼Û·½Ê½
 	TFocusFtdcQuoteRightPriceTypeType	ForQuoteOfferType;
-	///æŠ¥ä»·å®½åº¦å•ä½
+	///±¨¼Û¿í¶Èµ¥Î»
 	TFocusFtdcQuoteWidthTypeType	QuoteWidthType;
-	///è¯¢ä»·å›åº”å®½åº¦å•ä½
+	///Ñ¯¼Û»ØÓ¦¿í¶Èµ¥Î»
 	TFocusFtdcQuoteWidthTypeType	ForQuoteWidthType;
-	///åˆçº¦å•è¾¹å¸‚åœæ­¢æŠ¥ä»·
+	///ºÏÔ¼µ¥±ßÊĞÍ£Ö¹±¨¼Û
 	TFocusFtdcYesOrNoType	InstrumentOneSide;
-	///æ ‡çš„å•è¾¹å¸‚åœæ­¢æŠ¥ä»·
+	///±êµÄµ¥±ßÊĞÍ£Ö¹±¨¼Û
 	TFocusFtdcYesOrNoType	UnderlyingOneSide;
-	///åˆçº¦ä½äºåå®šä»·åœæ­¢æŠ¥ä»·
+	///ºÏÔ¼µÍÓÚĞ­¶¨¼ÛÍ£Ö¹±¨¼Û
 	TFocusFtdcMoneyType	MinPrice;
-	///æŠ¥ä»·ä»·å®½æ¨¡æ¿
+	///±¨¼Û¼Û¿íÄ£°å
 	TFocusFtdcQuoteStepType	QuoteStepID;
-	///æŠ¥ä»·Deltaä»·å®½æ¨¡æ¿
+	///±¨¼ÛDelta¼Û¿íÄ£°å
 	TFocusFtdcQuoteStepType	QuoteDeltaStepID;
-	///æŠ¥ä»·Vegaä»·å®½æ¨¡æ¿
+	///±¨¼ÛVega¼Û¿íÄ£°å
 	TFocusFtdcQuoteStepType	QuoteVegaStepID;
-	///è¯¢ä»·å›åº”ä»·å®½æ¨¡æ¿
+	///Ñ¯¼Û»ØÓ¦¼Û¿íÄ£°å
 	TFocusFtdcQuoteStepType	ForQuoteStepID;
-	///è¯¢ä»·å›åº”Deltaä»·å®½æ¨¡æ¿
+	///Ñ¯¼Û»ØÓ¦Delta¼Û¿íÄ£°å
 	TFocusFtdcQuoteStepType	ForQuoteDeltaStepID;
-	///è¯¢ä»·å›åº”Vegaä»·å®½æ¨¡æ¿
+	///Ñ¯¼Û»ØÓ¦Vega¼Û¿íÄ£°å
 	TFocusFtdcQuoteStepType	ForQuoteVegaStepID;
 };
 
-///ç”¨æˆ·å¼€å…³
+///ÓÃ»§¿ª¹Ø
 struct CFocusFtdcUserSwitchField
 {
-	///ç”¨æˆ·ä»£ç (äº¤æ˜“å‘˜)
+	///ÓÃ»§´úÂë(½»Ò×Ô±)
 	TFocusFtdcUserIDType	UserID;
-	///äº¤æ˜“å‘˜æ€»å¼€å…³
+	///½»Ò×Ô±×Ü¿ª¹Ø
 	TFocusFtdcSwitchFlagType	WholeSwitch;
-	///è‡ªåŠ¨æŠ¥ä»·
+	///×Ô¶¯±¨¼Û
 	TFocusFtdcSwitchFlagType	WholeOffer;
-	///è‡ªåŠ¨å›åº”è¯¢ä»·
+	///×Ô¶¯»ØÓ¦Ñ¯¼Û
 	TFocusFtdcSwitchFlagType	WholeRespAsking;
-	///è‡ªåŠ¨å¯¹å†²
+	///×Ô¶¯¶Ô³å
 	TFocusFtdcSwitchFlagType	WholeHedge;
 };
 
-///åšå¸‚å¯¹å†²
+///×öÊĞ¶Ô³å
 struct CFocusFtdcMarkerHedgeField
 {
-	///å¯¹å†²æ ‡çš„
+	///¶Ô³å±êµÄ
 	TFocusFtdcInstrumentIDType	UnderlyingId;
-	///äº§å“ä»£ç 
+	///²úÆ·´úÂë
 	TFocusFtdcProductIDType	ProductID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///æœŸæƒç³»åˆ—
+	///ÆÚÈ¨ÏµÁĞ
 	TFocusFtdcContentType	OptionSeriesId;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///è‡ªåŠ¨å¯¹å†²
+	///×Ô¶¯¶Ô³å
 	TFocusFtdcIsActiveType	AutoHedge;
-	///å¯¹å†²æŠ¥ä»·ç±»å‹
+	///¶Ô³å±¨¼ÛÀàĞÍ
 	TFocusFtdcHedgePriceTypeType	HedgePriceType;
-	///å¯¹å†²ç®—æ³•
+	///¶Ô³åËã·¨
 	TFocusFtdcHdegeTypeType	HdegeType;
-	///å¯¹å†²å‘¨æœŸ
+	///¶Ô³åÖÜÆÚ
 	TFocusFtdcVolumeType	HedgePeriod;
-	///Deltaä¸Šé™
+	///DeltaÉÏÏŞ
 	TFocusFtdcPriceType	DeltaMax;
-	///Deltaä¸‹é™
+	///DeltaÏÂÏŞ
 	TFocusFtdcPriceType	DelatMin;
-	///æœ€åå¯¹å†²æ—¶é—´
+	///×îºó¶Ô³åÊ±¼ä
 	TFocusFtdcTimeType	LastHedgeTime;
-	///é»˜è®¤ä¸‹å•æ—¶çš„å†²å‡»æˆæœ¬
+	///Ä¬ÈÏÏÂµ¥Ê±µÄ³å»÷³É±¾
 	TFocusFtdcVolumeType	OrderPriceSlip;
 };
 
-///æ‹Ÿåˆå‚æ•°
+///ÄâºÏ²ÎÊı
 struct CFocusFtdcFittingParamField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///äº§å“ä»£ç 
+	///²úÆ·´úÂë
 	TFocusFtdcProductIDType	ProductID;
-	///æœŸæƒç³»åˆ—
+	///ÆÚÈ¨ÏµÁĞ
 	TFocusFtdcInstrumentIDType	OptionSeriesId;
-	///æ‹Ÿåˆæ¨¡å‹
+	///ÄâºÏÄ£ĞÍ
 	TFocusFtdcFitModelTypeType	FitModel;
-	///CallBidå¼€å…³
+	///CallBid¿ª¹Ø
 	TFocusFtdcSwitchFlagType	CallBidFlag;
-	///CallAskå¼€å…³
+	///CallAsk¿ª¹Ø
 	TFocusFtdcSwitchFlagType	CallAskFlag;
-	///PutBidå¼€å…³
+	///PutBid¿ª¹Ø
 	TFocusFtdcSwitchFlagType	PutBidFlag;
-	///PutAskå¼€å…³
+	///PutAsk¿ª¹Ø
 	TFocusFtdcSwitchFlagType	PutAskFlag;
-	///CallMidå¼€å…³
+	///CallMid¿ª¹Ø
 	TFocusFtdcSwitchFlagType	CallMidFlag;
-	///PutMidå¼€å…³
+	///PutMid¿ª¹Ø
 	TFocusFtdcSwitchFlagType	PutMidFlag;
-	///OTMå¼€å…³
+	///OTM¿ª¹Ø
 	TFocusFtdcSwitchFlagType	OTMFlag;
-	///è‡ªåŠ¨å‰”é™¤å¼‚å¸¸å€¼
+	///×Ô¶¯ÌŞ³ıÒì³£Öµ
 	TFocusFtdcSwitchFlagType	AutoRemoveOutlier;
-	///æœ‰æ•ˆåŒºé—´ä¸Šé™
+	///ÓĞĞ§Çø¼äÉÏÏŞ
 	TFocusFtdcValidIntervalTypeType	ValidIntervalMax;
-	///æœ‰æ•ˆåŒºé—´ä¸‹é™
+	///ÓĞĞ§Çø¼äÏÂÏŞ
 	TFocusFtdcValidIntervalTypeType	ValidIntervalMin;
-	///è‡ªåŠ¨æ‹Ÿåˆ
+	///×Ô¶¯ÄâºÏ
 	TFocusFtdcSwitchFlagType	AutoFit;
-	///è‡ªåŠ¨æ‹Ÿåˆé—´éš”æ—¶é—´
+	///×Ô¶¯ÄâºÏ¼ä¸ôÊ±¼ä
 	TFocusFtdcNumberType	AUTO_FIT_TIME;
 };
 
-///æ‹Ÿåˆå‚æ•°æŸ¥è¯¢è¯·æ±‚
+///ÄâºÏ²ÎÊı²éÑ¯ÇëÇó
 struct CFocusFtdcQryFittingParamField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///äº§å“ä»£ç 
+	///²úÆ·´úÂë
 	TFocusFtdcProductIDType	ProductID;
-	///æœŸæƒç³»åˆ—
+	///ÆÚÈ¨ÏµÁĞ
 	TFocusFtdcInstrumentIDType	OptionSeriesId;
 };
 
-///æŸ¥è¯¢ä»·æ ¼å‚æ•°è®¾ç½®
+///²éÑ¯¼Û¸ñ²ÎÊıÉèÖÃ
 struct CFocusFtdcQryPricingParamField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æœŸæƒç³»åˆ—
+	///ÆÚÈ¨ÏµÁĞ
 	TFocusFtdcInstrumentIDType	OptionSeriesId;
 };
 
-///æŸ¥è¯¢æœŸæƒç†è®ºæ³¢åŠ¨ç‡è®¾ç½®
+///²éÑ¯ÆÚÈ¨ÀíÂÛ²¨¶¯ÂÊÉèÖÃ
 struct CFocusFtdcQryOptionTheoryVolField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
 };
 
-///è¾“å…¥æŠ¥ä»·
+///ÊäÈë±¨¼Û
 struct CFocusFtdcInputQuoteField
 {
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcTradingDayType	TradingDay;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///èµ„é‡‘å¸å·
+	///×Ê½ğÕÊºÅ
 	TFocusFtdcAccountIDType	AccountID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///æœ¬åœ°å‚è€ƒç¼–å·
+	///±¾µØ²Î¿¼±àºÅ
 	TFocusFtdcQuoteRefType	QuoteRef;
-	///æœ¬åœ°æŠ¥ä»·ç¼–å·
+	///±¾µØ±¨¼Û±àºÅ
 	TFocusFtdcOrderLocalIDType	QuoteLocalID;
-	///ä¹°æœ¬åœ°å‚è€ƒæŠ¥ä»·ç¼–å·
+	///Âò±¾µØ²Î¿¼±¨¼Û±àºÅ
 	TFocusFtdcQuoteRefType	AskOrderRef;
-	///å–æœ¬åœ°å‚è€ƒæŠ¥ä»·ç¼–å·
+	///Âô±¾µØ²Î¿¼±¨¼Û±àºÅ
 	TFocusFtdcQuoteRefType	BidOrderRef;
-	///æŠ¥ä»·ç¼–å·
+	///±¨¼Û±àºÅ
 	TFocusFtdcQuoteSysIDType	QuoteSysID;
-	///åº”ä»·ç¼–å·
+	///Ó¦¼Û±àºÅ
 	TFocusFtdcQuoteSysIDType	ForQuoteSysID;
-	///ä¹°å…¥æ•°é‡
+	///ÂòÈëÊıÁ¿
 	TFocusFtdcVolumeType	BidVolume;
-	///å–å‡ºæ•°é‡
+	///Âô³öÊıÁ¿
 	TFocusFtdcVolumeType	AskVolume;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ä¸šåŠ¡å•å…ƒ
+	///ÒµÎñµ¥Ôª
 	TFocusFtdcBusinessUnitType	BusinessUnit;
-	///ä¹°æ–¹ç»„åˆå¼€å¹³æ ‡å¿—
+	///Âò·½×éºÏ¿ªÆ½±êÖ¾
 	TFocusFtdcOffsetFlagType	BidOffsetFlag;
-	///ä¹°æ–¹ç»„åˆå¥—ä¿æ ‡å¿—
+	///Âò·½×éºÏÌ×±£±êÖ¾
 	TFocusFtdcHedgeFlagType	BidHedgeFlag;
-	///ä¹°æ–¹ä»·æ ¼
+	///Âò·½¼Û¸ñ
 	TFocusFtdcPriceType	BidPrice;
-	///å–æ–¹ç»„åˆå¼€å¹³æ ‡å¿—
+	///Âô·½×éºÏ¿ªÆ½±êÖ¾
 	TFocusFtdcOffsetFlagType	AskOffsetFlag;
-	///å–æ–¹ç»„åˆå¥—ä¿æ ‡å¿—
+	///Âô·½×éºÏÌ×±£±êÖ¾
 	TFocusFtdcHedgeFlagType	AskHedgeFlag;
-	///å–æ–¹ä»·æ ¼
+	///Âô·½¼Û¸ñ
 	TFocusFtdcPriceType	AskPrice;
-	///ç”¨æˆ·è‡ªå®šä¹‰åŸŸ
+	///ÓÃ»§×Ô¶¨ÒåÓò
 	TFocusFtdcCustomType	UserCustom;
-	///æ˜¯å¦è‡ªåŠ¨äº¤æ˜“
+	///ÊÇ·ñ×Ô¶¯½»Ò×
 	TFocusFtdcAutoTradeType	IsAuto;
-	///äº¤æ˜“APIä¸­çš„åºå·
+	///½»Ò×APIÖĞµÄĞòºÅ
 	TFocusFtdcNumberType	APIID;
-	///å¤‡æ³¨
+	///±¸×¢
 	TFocusFtdcRemarkType	Remark;
 };
 
-///æŠ¥ä»·æ“ä½œ
+///±¨¼Û²Ù×÷
 struct CFocusFtdcQuoteActionField
 {
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcTradingDayType	TradingDay;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///èµ„é‡‘å¸å·
+	///×Ê½ğÕÊºÅ
 	TFocusFtdcAccountIDType	AccountID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///æŠ¥ä»·ç¼–å·
+	///±¨¼Û±àºÅ
 	TFocusFtdcQuoteSysIDType	QuoteSysID;
-	///æœ¬åœ°æŠ¥ä»·ç¼–å·
+	///±¾µØ±¨¼Û±àºÅ
 	TFocusFtdcOrderLocalIDType	QuoteLocalID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///æŠ¥å•æ“ä½œæ ‡å¿—
+	///±¨µ¥²Ù×÷±êÖ¾
 	TFocusFtdcActionFlagType	ActionFlag;
-	///ä¼šå‘˜ä»£ç 
+	///»áÔ±´úÂë
 	TFocusFtdcParticipantIDType	ParticipantID;
-	///å®¢æˆ·ä»£ç 
+	///¿Í»§´úÂë
 	TFocusFtdcClientIDType	ClientID;
-	///æ“ä½œæœ¬åœ°ç¼–å·
+	///²Ù×÷±¾µØ±àºÅ
 	TFocusFtdcOrderLocalIDType	ActionLocalID;
-	///ä¸šåŠ¡å•å…ƒ
+	///ÒµÎñµ¥Ôª
 	TFocusFtdcBusinessUnitType	BusinessUnit;
-	///ç”¨æˆ·è‡ªå®šä¹‰åŸŸ
+	///ÓÃ»§×Ô¶¨ÒåÓò
 	TFocusFtdcCustomType	UserCustom;
-	///äº¤æ˜“APIä¸­çš„åºå·
+	///½»Ò×APIÖĞµÄĞòºÅ
 	TFocusFtdcNumberType	APIID;
 };
 
-///æŠ¥ä»·æŸ¥è¯¢
+///±¨¼Û²éÑ¯
 struct CFocusFtdcQryQuoteField
 {
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç³»ç»ŸæŠ¥ä»·ç¼–å·
+	///ÏµÍ³±¨¼Û±àºÅ
 	TFocusFtdcQuoteSysIDType	QuoteSysID;
-	///å®¢æˆ·ä»£ç 
+	///¿Í»§´úÂë
 	TFocusFtdcClientIDType	ClientID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
 };
 
-///æŠ¥ä»·
+///±¨¼Û
 struct CFocusFtdcQuoteField
 {
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcTradingDayType	TradingDay;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///èµ„é‡‘å¸å·
+	///×Ê½ğÕÊºÅ
 	TFocusFtdcAccountIDType	AccountID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///æœ¬åœ°å‚è€ƒç¼–å·
+	///±¾µØ²Î¿¼±àºÅ
 	TFocusFtdcQuoteRefType	QuoteRef;
-	///æœ¬åœ°æŠ¥ä»·ç¼–å·
+	///±¾µØ±¨¼Û±àºÅ
 	TFocusFtdcOrderLocalIDType	QuoteLocalID;
-	///ä¹°æœ¬åœ°å‚è€ƒæŠ¥ä»·ç¼–å·
+	///Âò±¾µØ²Î¿¼±¨¼Û±àºÅ
 	TFocusFtdcQuoteRefType	AskOrderRef;
-	///å–æœ¬åœ°å‚è€ƒæŠ¥ä»·ç¼–å·
+	///Âô±¾µØ²Î¿¼±¨¼Û±àºÅ
 	TFocusFtdcQuoteRefType	BidOrderRef;
-	///æŠ¥ä»·ç¼–å·
+	///±¨¼Û±àºÅ
 	TFocusFtdcQuoteSysIDType	QuoteSysID;
-	///åº”ä»·ç¼–å·
+	///Ó¦¼Û±àºÅ
 	TFocusFtdcQuoteSysIDType	ForQuoteSysID;
-	///ä¹°å…¥æ•°é‡
+	///ÂòÈëÊıÁ¿
 	TFocusFtdcVolumeType	BidVolume;
-	///å–å‡ºæ•°é‡
+	///Âô³öÊıÁ¿
 	TFocusFtdcVolumeType	AskVolume;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ä¸šåŠ¡å•å…ƒ
+	///ÒµÎñµ¥Ôª
 	TFocusFtdcBusinessUnitType	BusinessUnit;
-	///ä¹°æ–¹ç»„åˆå¼€å¹³æ ‡å¿—
+	///Âò·½×éºÏ¿ªÆ½±êÖ¾
 	TFocusFtdcOffsetFlagType	BidOffsetFlag;
-	///ä¹°æ–¹ç»„åˆå¥—ä¿æ ‡å¿—
+	///Âò·½×éºÏÌ×±£±êÖ¾
 	TFocusFtdcHedgeFlagType	BidHedgeFlag;
-	///ä¹°æ–¹ä»·æ ¼
+	///Âò·½¼Û¸ñ
 	TFocusFtdcPriceType	BidPrice;
-	///å–æ–¹ç»„åˆå¼€å¹³æ ‡å¿—
+	///Âô·½×éºÏ¿ªÆ½±êÖ¾
 	TFocusFtdcOffsetFlagType	AskOffsetFlag;
-	///å–æ–¹ç»„åˆå¥—ä¿æ ‡å¿—
+	///Âô·½×éºÏÌ×±£±êÖ¾
 	TFocusFtdcHedgeFlagType	AskHedgeFlag;
-	///å–æ–¹ä»·æ ¼
+	///Âô·½¼Û¸ñ
 	TFocusFtdcPriceType	AskPrice;
-	///ç”¨æˆ·è‡ªå®šä¹‰åŸŸ
+	///ÓÃ»§×Ô¶¨ÒåÓò
 	TFocusFtdcCustomType	UserCustom;
-	///æ˜¯å¦è‡ªåŠ¨äº¤æ˜“
+	///ÊÇ·ñ×Ô¶¯½»Ò×
 	TFocusFtdcAutoTradeType	IsAuto;
-	///äº¤æ˜“APIä¸­çš„åºå·
+	///½»Ò×APIÖĞµÄĞòºÅ
 	TFocusFtdcNumberType	APIID;
-	///å¤‡æ³¨
+	///±¸×¢
 	TFocusFtdcRemarkType	Remark;
-	///æ’å…¥æ—¶é—´
+	///²åÈëÊ±¼ä
 	TFocusFtdcTimeType	InsertTime;
-	///æ’¤é”€æ—¶é—´
+	///³·ÏúÊ±¼ä
 	TFocusFtdcTimeType	CancelTime;
-	///æˆäº¤æ—¶é—´
+	///³É½»Ê±¼ä
 	TFocusFtdcTimeType	TradeTime;
-	///ä¹°æ–¹æŠ¥å•ç¼–å·
+	///Âò·½±¨µ¥±àºÅ
 	TFocusFtdcOrderSysIDType	BidOrderSysID;
-	///å–æ–¹æŠ¥å•ç¼–å·
+	///Âô·½±¨µ¥±àºÅ
 	TFocusFtdcOrderSysIDType	AskOrderSysID;
-	///æŠ¥å•çŠ¶æ€
+	///±¨µ¥×´Ì¬
 	TFocusFtdcQuoteStatusType	QuoteStatus;
-	///æŠ¥å•æäº¤çŠ¶æ€
+	///±¨µ¥Ìá½»×´Ì¬
 	TFocusFtdcQuoteStatusType	OrderSubmitStatus;
 };
 
-///è¯¢ä»·
+///Ñ¯¼Û
 struct CFocusFtdcInputReqForQuoteField
 {
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcTradingDayType	TradingDay;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///èµ„é‡‘å¸å·
+	///×Ê½ğÕÊºÅ
 	TFocusFtdcAccountIDType	AccountID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///è¯¢ä»·ç¼–å·
+	///Ñ¯¼Û±àºÅ
 	TFocusFtdcQuoteSysIDType	ReqForQuoteID;
-	///å®¢æˆ·ä»£ç 
+	///¿Í»§´úÂë
 	TFocusFtdcClientIDType	ClientID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///è¯¢ä»·æ—¶é—´
+	///Ñ¯¼ÛÊ±¼ä
 	TFocusFtdcTimeType	ReqForQuoteTime;
-	///ç”¨æˆ·æœ¬åœ°æŠ¥å•å·
+	///ÓÃ»§±¾µØ±¨µ¥ºÅ
 	TFocusFtdcOrderSysIDType	ForQuoteLocalID;
 };
 
-///é”™å•æŸ¥è¯¢
+///´íµ¥²éÑ¯
 struct CFocusFtdcQryOrderInsertFailedField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///æŠ¥å•ç¼–å·
+	///±¨µ¥±àºÅ
 	TFocusFtdcOrderSysIDType	OrderSysID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ç™»å½•ç»çºªå…¬å¸ç¼–å·
+	///µÇÂ¼¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	LogBrokerID;
-	///ç™»å½•ç”¨æˆ·ä»£ç 
+	///µÇÂ¼ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	LogUserID;
 };
 
-///é”™å•è¡¨
+///´íµ¥±í
 struct CFocusFtdcOrderInsertFailedField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///ç”¨æˆ·æœ¬åœ°æŠ¥å•å·
+	///ÓÃ»§±¾µØ±¨µ¥ºÅ
 	TFocusFtdcUserOrderLocalIDType	UserOrderLocalID;
-	///ç”¨æˆ·è‡ªå®šä¹‰åŸŸ
+	///ÓÃ»§×Ô¶¨ÒåÓò
 	TFocusFtdcCustomType	UserCustom;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///ç³»ç»ŸæŠ¥å•ç¼–å·
+	///ÏµÍ³±¨µ¥±àºÅ
 	TFocusFtdcOrderSysIDType	OrderSysID;
-	///è‚¡ç¥¨å§”æ‰˜æ‰¹å·(ä»…æ‰¹é‡å§”æ‰˜æœ‰æ•ˆ)
+	///¹ÉÆ±Î¯ÍĞÅúºÅ(½öÅúÁ¿Î¯ÍĞÓĞĞ§)
 	TFocusFtdcOrderSysIDType	BatchNum;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///åˆçº¦åç§°
+	///ºÏÔ¼Ãû³Æ
 	TFocusFtdcInstrumentNameType	InstrumentName;
-	///æŠ¥å•ç±»å‹
+	///±¨µ¥ÀàĞÍ
 	TFocusFtdcOrderPriceTypeType	OrderPriceType;
-	///ä¹°å–æ–¹å‘
+	///ÂòÂô·½Ïò
 	TFocusFtdcDirectionType	Direction;
-	///å¼€å¹³æ ‡å¿—
+	///¿ªÆ½±êÖ¾
 	TFocusFtdcOffsetFlagType	OffsetFlag;
-	///æŠ•æœºå¥—ä¿æ ‡å¿—
+	///Í¶»úÌ×±£±êÖ¾
 	TFocusFtdcHedgeFlagType	HedgeFlag;
-	///ä»·æ ¼
+	///¼Û¸ñ
 	TFocusFtdcPriceType	LimitPrice;
-	///æ•°é‡
+	///ÊıÁ¿
 	TFocusFtdcVolumeType	Volume;
-	///æœ‰æ•ˆæœŸç±»å‹
+	///ÓĞĞ§ÆÚÀàĞÍ
 	TFocusFtdcTimeConditionType	TimeCondition;
-	///GTDæ—¥æœŸ
+	///GTDÈÕÆÚ
 	TFocusFtdcDateType	GTDDate;
-	///æˆäº¤é‡ç±»å‹
+	///³É½»Á¿ÀàĞÍ
 	TFocusFtdcVolumeConditionType	VolumeCondition;
-	///æœ€å°æˆäº¤é‡
+	///×îĞ¡³É½»Á¿
 	TFocusFtdcVolumeType	MinVolume;
-	///æ­¢æŸä»·
+	///Ö¹Ëğ¼Û
 	TFocusFtdcPriceType	StopPrice;
-	///å¼ºå¹³åŸå› 
+	///Ç¿Æ½Ô­Òò
 	TFocusFtdcForceCloseReasonType	ForceCloseReason;
-	///è‡ªåŠ¨æŒ‚èµ·æ ‡å¿—
+	///×Ô¶¯¹ÒÆğ±êÖ¾
 	TFocusFtdcBoolType	IsAutoSuspend;
-	///ä¸šåŠ¡å•å…ƒ
+	///ÒµÎñµ¥Ôª
 	TFocusFtdcBusinessUnitType	BusinessUnit;
-	///ä¸šåŠ¡ç±»åˆ«
+	///ÒµÎñÀà±ğ
 	TFocusFtdcBusinessTypeType	BusinessType;
-	///äº¤æ˜“æ—¥
+	///½»Ò×ÈÕ
 	TFocusFtdcTradingDayType	TradingDay;
-	///æ’å…¥æ—¶é—´
+	///²åÈëÊ±¼ä
 	TFocusFtdcTimeType	InsertTime;
-	///æŠ¥å•æ¥æº
+	///±¨µ¥À´Ô´
 	TFocusFtdcOrderSourceType	OrderSource;
-	///æŠ¥å•çŠ¶æ€
+	///±¨µ¥×´Ì¬
 	TFocusFtdcOrderStatusType	OrderStatus;
-	///æ’¤é”€æ—¶é—´
+	///³·ÏúÊ±¼ä
 	TFocusFtdcTimeType	CancelTime;
-	///æ’¤å•ç”¨æˆ·ç¼–å·
+	///³·µ¥ÓÃ»§±àºÅ
 	TFocusFtdcUserIDType	CancelUserID;
-	///å·²ç»æˆäº¤æ•°é‡
+	///ÒÑ¾­³É½»ÊıÁ¿
 	TFocusFtdcVolumeType	VolumeTraded;
-	///é˜Ÿåˆ—å‰©ä½™æ•°é‡
+	///¶ÓÁĞÊ£ÓàÊıÁ¿
 	TFocusFtdcVolumeType	VolumeRemain;
-	///å·²ç»æ’¤å•æ•°é‡
+	///ÒÑ¾­³·µ¥ÊıÁ¿
 	TFocusFtdcVolumeType	VolumeCancled;
-	///é”™è¯¯ä»£ç 
+	///´íÎó´úÂë
 	TFocusFtdcErrorIDType	ErrorID;
-	///é”™è¯¯ä¿¡æ¯
+	///´íÎóĞÅÏ¢
 	TFocusFtdcErrorMsgType	ErrorMsg;
-	///æ¯”ä¸Šæ¬¡å¢åŠ çš„æ’¤å•æ•°é‡
+	///±ÈÉÏ´ÎÔö¼ÓµÄ³·µ¥ÊıÁ¿
 	TFocusFtdcVolumeType	VolumeIncCancled;
-	///æ¯”ä¸Šæ¬¡å¢åŠ çš„æˆäº¤æ•°é‡
+	///±ÈÉÏ´ÎÔö¼ÓµÄ³É½»ÊıÁ¿
 	TFocusFtdcVolumeType	VolumeIncTraded;
-	///èµ„é‡‘å¸å·
+	///×Ê½ğÕÊºÅ
 	TFocusFtdcAccountIDType	AccountID;
-	///å‰ç½®ç¼–å·
+	///Ç°ÖÃ±àºÅ
 	TFocusFtdcFrontIDType	FrontID;
-	///ä¼šè¯ç¼–å·
+	///»á»°±àºÅ
 	TFocusFtdcSessionIDType	SessionID;
-	///è¯·æ±‚ç¼–å·
+	///ÇëÇó±àºÅ
 	TFocusFtdcRequestIDType	RequestID;
-	///æ¯æ‰‹æ‰‹ç»­è´¹
+	///Ã¿ÊÖÊÖĞø·Ñ
 	TFocusFtdcMoneyType	EachFee;
-	///æ¯æ‰‹ä¿è¯é‡‘
+	///Ã¿ÊÖ±£Ö¤½ğ
 	TFocusFtdcMoneyType	EachMargin;
-	///æ¯æ‰‹æœŸæƒæƒåˆ©é‡‘æ”¶æ”¯
+	///Ã¿ÊÖÆÚÈ¨È¨Àû½ğÊÕÖ§
 	TFocusFtdcMoneyType	EachPremium;
-	///ä¸‹å•IPåœ°å€
+	///ÏÂµ¥IPµØÖ·
 	TFocusFtdcIPAddressType	IPAddress;
-	///ä¸‹å•MACåœ°å€
+	///ÏÂµ¥MACµØÖ·
 	TFocusFtdcMacAddressType	MacAddress;
-	///è¥ä¸šéƒ¨ä»£ç 
+	///ÓªÒµ²¿´úÂë
 	TFocusFtdcBranchIDType	BranchID;
-	///è®°å½•ç¼–å·
+	///¼ÇÂ¼±àºÅ
 	TFocusFtdcSequenceNoType	RecNum;
-	///ä¼šå‘˜ç¼–å·
+	///»áÔ±±àºÅ
 	TFocusFtdcParticipantIDType	ParticipantID;
-	///å®¢æˆ·å·
+	///¿Í»§ºÅ
 	TFocusFtdcClientIDType	ClientID;
-	///ä¸‹å•å¸­ä½å·
+	///ÏÂµ¥Ï¯Î»ºÅ
 	TFocusFtdcSeatIDType	SeatID;
-	///æœ¬åœ°æŠ¥å•ç¼–å·
+	///±¾µØ±¨µ¥±àºÅ
 	TFocusFtdcOrderLocalIDType	OrderLocalID;
-	///å­èµ„é‡‘å¸å·
+	///×Ó×Ê½ğÕÊºÅ
 	TFocusFtdcAccountIDType	SubAccountID;
-	///ä¸‹å•ç”¨æˆ·ç¼–å·
+	///ÏÂµ¥ÓÃ»§±àºÅ
 	TFocusFtdcUserIDType	OrderUserID;
-	///äº¤æ˜“ç±»å‹
+	///½»Ò×ÀàĞÍ
 	TFocusFtdcTradeTypeType	TradeType;
-	///å¤„ç†æ ‡å¿—
+	///´¦Àí±êÖ¾
 	TFocusFtdcDealFlagType	DealFlag;
-	///å·²æˆäº¤ä½£é‡‘
+	///ÒÑ³É½»Ó¶½ğ
 	TFocusFtdcMoneyType	TradeCommision;
-	///æˆäº¤é‡‘é¢
+	///³É½»½ğ¶î
 	TFocusFtdcMoneyType	TradeAmnt;
-	///é€šè¿‡æœ¬åœ°æŠ¥å•å·æ¨å‡ºçš„å­æŠ•èµ„è€…ç¼–å·
+	///Í¨¹ı±¾µØ±¨µ¥ºÅÍÆ³öµÄ×ÓÍ¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	SubInvestorID;
-	///æŠ•èµ„è€…ç±»å‹
+	///Í¶×ÊÕßÀàĞÍ
 	TFocusFtdcInvestorTypeType	InvestorType;
-	///å­æŠ¥å•ç¼–å·
+	///×Ó±¨µ¥±àºÅ
 	TFocusFtdcOrderSysIDType	SubOrderSysID;
-	///çˆ¶æŠ•èµ„è€…ç¼–å·
+	///¸¸Í¶×ÊÕß±àºÅ
 	TFocusFtdcCodeType	ParentInvestorCode;
-	///ä½¿ç”¨å“ªä¸ªé€šé“ä¸‹å•
+	///Ê¹ÓÃÄÄ¸öÍ¨µÀÏÂµ¥
 	TFocusFtdcNumberType	APIID;
-	///å¹³ä»“å†»ç»“æ•°é‡
+	///Æ½²Ö¶³½áÊıÁ¿
 	TFocusFtdcVolumeType	VolumeFrozenClosing;
-	///å†»ç»“æ•°é‡
+	///¶³½áÊıÁ¿
 	TFocusFtdcVolumeType	VolumeFrozen;
-	///æœ¬æŠ¥å•å†»ç»“äº†å¤šå°‘èµ„é‡‘
+	///±¾±¨µ¥¶³½áÁË¶àÉÙ×Ê½ğ
 	TFocusFtdcMoneyType	FrozenMoney;
-	///å·¥ä½œæµæŠ¥å•ç¼–å·
+	///¹¤×÷Á÷±¨µ¥±àºÅ
 	TFocusFtdcOrderSysIDType	AdviceOrderSysID;
-	///è¯åˆ¸å“ªä¸ªäº§å“
+	///Ö¤È¯ÄÄ¸ö²úÆ·
 	TFocusFtdcProductIDType	ProductID;
-	///æœ¬æŠ¥å•å†»ç»“äº†å¤šå°‘æ‰‹ç»­è´¹
+	///±¾±¨µ¥¶³½áÁË¶àÉÙÊÖĞø·Ñ
 	TFocusFtdcMoneyType	FrozenFee;
-	///æœ¬æŠ¥å•å†»ç»“äº†å¤šå°‘è¿‡æˆ·è´¹
+	///±¾±¨µ¥¶³½áÁË¶àÉÙ¹ı»§·Ñ
 	TFocusFtdcMoneyType	FrozenTransferFee;
-	///æœ¬æŠ¥å•å†»ç»“äº†å¤šå°‘å°èŠ±ç¨
+	///±¾±¨µ¥¶³½áÁË¶àÉÙÓ¡»¨Ë°
 	TFocusFtdcMoneyType	FrozenStampTax;
-	///ç”³èµä»“å†»ç»“æ•°é‡
+	///ÉêÊê²Ö¶³½áÊıÁ¿
 	TFocusFtdcVolumeType	PurRedVolumeFrozen;
-	///ä»Šä¹°å–ä»“å†»ç»“æ•°é‡
+	///½ñÂòÂô²Ö¶³½áÊıÁ¿
 	TFocusFtdcVolumeType	CloseVolumeFrozen;
-	///å¤‡æ³¨
+	///±¸×¢
 	TFocusFtdcRemarkType	Remark;
 };
 
-///å®šä»·åˆçº¦ä»·å·®
+///¶¨¼ÛºÏÔ¼¼Û²î
 struct CFocusFtdcPriceSpreadField
 {
-	///ç”¨æˆ·ä»£ç (äº¤æ˜“å‘˜)
+	///ÓÃ»§´úÂë(½»Ò×Ô±)
 	TFocusFtdcUserIDType	UserID;
-	///æœŸæƒç³»åˆ—
+	///ÆÚÈ¨ÏµÁĞ
 	TFocusFtdcInstrumentIDType	OptionSeriesId;
-	///ä»·å·®
+	///¼Û²î
 	TFocusFtdcPriceType	Spread;
-	///ä»·å·®åˆçº¦ä»£ç 
+	///¼Û²îºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	SpreadInstrumentId;
-	///ä»·å·®è®¾ç½®æ–¹å¼
+	///¼Û²îÉèÖÃ·½Ê½
 	TFocusFtdcPriceSpreadTypeType	PriceSpreadType;
 };
 
-///æŸ¥è¯¢åˆçº¦ä»·å·®
+///²éÑ¯ºÏÔ¼¼Û²î
 struct CFocusFtdcQryPriceSpreadField
 {
-	///ç”¨æˆ·ä»£ç (äº¤æ˜“å‘˜)
+	///ÓÃ»§´úÂë(½»Ò×Ô±)
 	TFocusFtdcUserIDType	UserID;
-	///æœŸæƒç³»åˆ—
+	///ÆÚÈ¨ÏµÁĞ
 	TFocusFtdcInstrumentIDType	OptionSeriesId;
 };
 
-///æŸ¥è¯¢åšå¸‚å¯¹å†²
+///²éÑ¯×öÊĞ¶Ô³å
 struct CFocusFtdcQryMarkerHedgeField
 {
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æœŸæƒç³»åˆ—
+	///ÆÚÈ¨ÏµÁĞ
 	TFocusFtdcInstrumentIDType	OptionSeriesId;
 };
 
-///åšå¸‚æ—¥å¿—ä¿¡æ¯
+///×öÊĞÈÕÖ¾ĞÅÏ¢
 struct CFocusFtdcStrategyLogField
 {
-	///æ—¥å¿—ç¼–å·
+	///ÈÕÖ¾±àºÅ
 	TFocusFtdcNumberType	EventID;
-	///äº¤æ˜“æ—¥æœŸ
+	///½»Ò×ÈÕÆÚ
 	TFocusFtdcTradingDayType	TradingDay;
-	///åšå¸‚äº‹ä»¶ç±»å‹
+	///×öÊĞÊÂ¼şÀàĞÍ
 	TFocusFtdcEventTypeType	EventType;
-	///åšå¸‚äº‹ä»¶ä»£ç 
+	///×öÊĞÊÂ¼ş´úÂë
 	TFocusFtdcSequenceNoType	EventCode;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///æ—¥å¿—å†…å®¹
+	///ÈÕÖ¾ÄÚÈİ
 	TFocusFtdcLargeErrorMsgType	Log_Content;
-	///æ“ä½œæ—¥æœŸ
+	///²Ù×÷ÈÕÆÚ
 	TFocusFtdcDateType	OperDate;
-	///æ“ä½œæ—¶é—´
+	///²Ù×÷Ê±¼ä
 	TFocusFtdcTimeType	OperTime;
 };
 
-///é¢„è­¦æŒ‡æ ‡è®¾ç½®
+///Ô¤¾¯Ö¸±êÉèÖÃ
 struct CFocusFtdcAlertIndexSetParamField
 {
-	///äº§å“åç§°
+	///²úÆ·Ãû³Æ
 	TFocusFtdcProductIDType	ProductID;
-	///æœŸæƒç³»åˆ—
+	///ÆÚÈ¨ÏµÁĞ
 	TFocusFtdcInstrumentIDType	OptionSeriesId;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///æŠ•èµ„è€…ç±»å‹
+	///Í¶×ÊÕßÀàĞÍ
 	TFocusFtdcInvestorTypeType	InvestorType;
-	///ç”¨æˆ·ä»£ç (äº¤æ˜“å‘˜)
+	///ÓÃ»§´úÂë(½»Ò×Ô±)
 	TFocusFtdcUserIDType	UserID;
-	///æŒ‡æ ‡æ˜ç»†ä»£ç 
+	///Ö¸±êÃ÷Ï¸´úÂë
 	TFocusFtdcAlertIndexTypeType	AlertIndexCode;
-	///é»„è‰²é¢„è­¦ä¸Šé™
+	///»ÆÉ«Ô¤¾¯ÉÏÏŞ
 	TFocusFtdcLargeVolumeType	MAX_L1;
-	///é»„è‰²é¢„è­¦ä¸‹é™
+	///»ÆÉ«Ô¤¾¯ÏÂÏŞ
 	TFocusFtdcLargeVolumeType	MIN_L1;
-	///çº¢è‰²é¢„è­¦ä¸Šé™
+	///ºìÉ«Ô¤¾¯ÉÏÏŞ
 	TFocusFtdcLargeVolumeType	MAX_L2;
-	///çº¢è‰²é¢„è­¦ä¸‹é™
+	///ºìÉ«Ô¤¾¯ÏÂÏŞ
 	TFocusFtdcLargeVolumeType	MIN_L2;
-	///é»˜è®¤æ—¶é—´é—´éš”
+	///Ä¬ÈÏÊ±¼ä¼ä¸ô
 	TFocusFtdcNumberType	TimeAvail;
-	///çº¢è‰²é¢„è­¦æ“ä½œ
+	///ºìÉ«Ô¤¾¯²Ù×÷
 	TFocusFtdcAlertActionTypeType	AlertAction;
 };
 
-///æŸ¥è¯¢é¢„è­¦æŒ‡æ ‡è®¾ç½®
+///²éÑ¯Ô¤¾¯Ö¸±êÉèÖÃ
 struct CFocusFtdcQryAlertIndexSetParamField
 {
-	///äº§å“åç§°
+	///²úÆ·Ãû³Æ
 	TFocusFtdcProductIDType	ProductID;
-	///æœŸæƒç³»åˆ—
+	///ÆÚÈ¨ÏµÁĞ
 	TFocusFtdcInstrumentIDType	OptionSeriesId;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç”¨æˆ·ä»£ç (äº¤æ˜“å‘˜)
+	///ÓÃ»§´úÂë(½»Ò×Ô±)
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç±»å‹
+	///Í¶×ÊÕßÀàĞÍ
 	TFocusFtdcInvestorTypeType	InvestorType;
-	///æŒ‡æ ‡æ˜ç»†ä»£ç 
+	///Ö¸±êÃ÷Ï¸´úÂë
 	TFocusFtdcAlertIndexTypeType	AlertIndexCode;
 };
 
-///é¢„è­¦æŒ‡æ ‡å€¼
+///Ô¤¾¯Ö¸±êÖµ
 struct CFocusFtdcAlertIndexSetDataField
 {
-	///äº§å“åç§°
+	///²úÆ·Ãû³Æ
 	TFocusFtdcProductIDType	ProductID;
-	///æœŸæƒç³»åˆ—
+	///ÆÚÈ¨ÏµÁĞ
 	TFocusFtdcInstrumentIDType	OptionSeriesId;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç”¨æˆ·ä»£ç (äº¤æ˜“å‘˜)
+	///ÓÃ»§´úÂë(½»Ò×Ô±)
 	TFocusFtdcUserIDType	UserID;
-	///æŒ‡æ ‡æ˜ç»†ä»£ç 
+	///Ö¸±êÃ÷Ï¸´úÂë
 	TFocusFtdcAlertIndexTypeType	AlertIndexCode;
-	///æŒ‡æ ‡æ˜ç»†å€¼
+	///Ö¸±êÃ÷Ï¸Öµ
 	TFocusFtdcLargeVolumeType	IndexVolume;
-	///é»„è‰²é¢„è­¦ä¸Šé™
+	///»ÆÉ«Ô¤¾¯ÉÏÏŞ
 	TFocusFtdcLargeVolumeType	MAX_L1;
-	///é»„è‰²é¢„è­¦ä¸‹é™
+	///»ÆÉ«Ô¤¾¯ÏÂÏŞ
 	TFocusFtdcLargeVolumeType	MIN_L1;
-	///çº¢è‰²é¢„è­¦ä¸Šé™
+	///ºìÉ«Ô¤¾¯ÉÏÏŞ
 	TFocusFtdcLargeVolumeType	MAX_L2;
-	///çº¢è‰²é¢„è­¦ä¸‹é™
+	///ºìÉ«Ô¤¾¯ÏÂÏŞ
 	TFocusFtdcLargeVolumeType	MIN_L2;
-	///é¢„è­¦æ“ä½œ
+	///Ô¤¾¯²Ù×÷
 	TFocusFtdcAlertActionTypeType	AlertAction;
-	///è¾“å‡ºå€¼æ—¥æœŸ
+	///Êä³öÖµÈÕÆÚ
 	TFocusFtdcDateType	OperDate;
-	///è¾“å‡ºå€¼æ—¶é—´
+	///Êä³öÖµÊ±¼ä
 	TFocusFtdcTimeType	OperTime;
 };
 
-///åšå¸‚æŠ¥ä»·ç´¯è®¡æŒä»“
+///×öÊĞ±¨¼ÛÀÛ¼Æ³Ö²Ö
 struct CFocusFtdcQuoteTotalTradePositionField
 {
-	///ç”¨æˆ·ä»£ç (äº¤æ˜“å‘˜)
+	///ÓÃ»§´úÂë(½»Ò×Ô±)
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///å½“æ—¥ç´¯è®¡ä¹°æˆäº¤ï¼Œä¸ç®¡å¼€å¹³
+	///µ±ÈÕÀÛ¼ÆÂò³É½»£¬²»¹Ü¿ªÆ½
 	TFocusFtdcVolumeType	BuyVolume;
-	///å½“æ—¥ç´¯è®¡å–æˆäº¤ï¼Œä¸ç®¡å¼€å¹³
+	///µ±ÈÕÀÛ¼ÆÂô³É½»£¬²»¹Ü¿ªÆ½
 	TFocusFtdcVolumeType	SellVolume;
-	///å½“æ—¥å‡€æˆäº¤ï¼Œä¸ç®¡å¼€å¹³
+	///µ±ÈÕ¾»³É½»£¬²»¹Ü¿ªÆ½
 	TFocusFtdcVolumeType	NetVolume;
-	///å½“æ—¥ä¹°æŒä»“ï¼Œå¤šå¤´æŒä»“
+	///µ±ÈÕÂò³Ö²Ö£¬¶àÍ·³Ö²Ö
 	TFocusFtdcVolumeType	BuyPosition;
-	///å½“æ—¥å–æŒä»“ï¼Œç©ºå¤´æŒä»“
+	///µ±ÈÕÂô³Ö²Ö£¬¿ÕÍ·³Ö²Ö
 	TFocusFtdcVolumeType	SellPosition;
-	///å½“æ—¥å‡€æŒä»“
+	///µ±ÈÕ¾»³Ö²Ö
 	TFocusFtdcVolumeType	NetPosition;
 };
 
-///äº¤æ˜“æ‰€æ¢¯åº¦ä»·å·®
+///½»Ò×ËùÌİ¶È¼Û²î
 struct CFocusFtdcMarkerStepField
 {
-	///æ¢¯åº¦æ¨¡æ¿
+	///Ìİ¶ÈÄ£°å
 	TFocusFtdcQuoteStepType	StepID;
-	///æ¢¯åº¦åç§°
+	///Ìİ¶ÈÃû³Æ
 	TFocusFtdcStepNameType	StepName;
-	///äº§å“åç§°
+	///²úÆ·Ãû³Æ
 	TFocusFtdcProductIDType	ProductID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æ¢¯åº¦ç±»å‹
+	///Ìİ¶ÈÀàĞÍ
 	TFocusFtdcStepTypeType	StepType;
-	///æ¢¯åº¦å•ä½
+	///Ìİ¶Èµ¥Î»
 	TFocusFtdcQuoteWidthTypeType	WidthType;
-	///ä»·æ ¼ä¸‹é™
+	///¼Û¸ñÏÂÏŞ
 	TFocusFtdcPriceType	LowPrice;
-	///ä»·æ ¼ä¸Šé™
+	///¼Û¸ñÉÏÏŞ
 	TFocusFtdcPriceType	UpPrice;
 	///StepValue1
 	TFocusFtdcPriceType	StepValue1;
@@ -3085,79 +3085,79 @@ struct CFocusFtdcMarkerStepField
 	TFocusFtdcPriceType	StepValue2;
 	///StepValue3
 	TFocusFtdcPriceType	StepValue3;
-	///valueé”®å€¼
+	///value¼üÖµ
 	TFocusFtdcNumberType	StepValueKey;
 };
 
-///åšå¸‚æŠ¥ä»·ç§»åŠ¨ç­–ç•¥
+///×öÊĞ±¨¼ÛÒÆ¶¯²ßÂÔ
 struct CFocusFtdcQuoteMoveField
 {
-	///äº§å“åç§°
+	///²úÆ·Ãû³Æ
 	TFocusFtdcProductIDType	ProductID;
-	///ç”¨æˆ·ä»£ç (äº¤æ˜“å‘˜)
+	///ÓÃ»§´úÂë(½»Ò×Ô±)
 	TFocusFtdcUserIDType	UserID;
-	///æœŸæƒç³»åˆ—
+	///ÆÚÈ¨ÏµÁĞ
 	TFocusFtdcInstrumentIDType	OptionSeriesId;
-	///æˆäº¤ç»Ÿè®¡æ—¶é—´ï¼ˆç§’ï¼‰
+	///³É½»Í³¼ÆÊ±¼ä£¨Ãë£©
 	TFocusFtdcNumberType	SumVolumeTime;
-	///æˆäº¤æ•°é‡ï¼ˆå‡€æˆäº¤ï¼Œä¸åŒºåˆ†æ­£è´Ÿï¼‰
+	///³É½»ÊıÁ¿£¨¾»³É½»£¬²»Çø·ÖÕı¸º£©
 	TFocusFtdcNumberType	SumVolume;
-	///æŠ¥ä»·åç§»ï¼ˆç™¾åˆ†æ¯”ï¼‰
+	///±¨¼ÛÆ«ÒÆ£¨°Ù·Ö±È£©
 	TFocusFtdcRatioType	Move;
-	///ç»´æŒæ—¶é—´ï¼ˆç§’ï¼‰
+	///Î¬³ÖÊ±¼ä£¨Ãë£©
 	TFocusFtdcNumberType	KeepTime;
-	///ç«‹å³æˆäº¤æŠ¥ä»·ç­–ç•¥:0ï¼šå•è¾¹ 1ï¼šåŒè¾¹
+	///Á¢¼´³É½»±¨¼Û²ßÂÔ:0£ºµ¥±ß 1£ºË«±ß
 	TFocusFtdcTakeOutType	TakeOut;
-	///å…³é—­ï¼š0ï¼Œå¼€å¯ï¼š1
+	///¹Ø±Õ£º0£¬¿ªÆô£º1
 	TFocusFtdcSwitchFlagType	IsActive;
-	///ä¸´è¿‘æ‰§è¡Œä»·åç§»ï¼šå…³é—­ï¼š0ï¼Œå¼€å¯ï¼š1
+	///ÁÙ½üÖ´ĞĞ¼ÛÆ«ÒÆ£º¹Ø±Õ£º0£¬¿ªÆô£º1
 	TFocusFtdcSwitchFlagType	NearStrikeMove;
-	///ä¸´è¿‘æ‰§è¡Œä»·æ³¢åŠ¨ç‡å·®å€¼
+	///ÁÙ½üÖ´ĞĞ¼Û²¨¶¯ÂÊ²îÖµ
 	TFocusFtdcPriceType	NearStrikeVolSpread;
-	///ä¸´è¿‘æ‰§è¡Œä»·ç§»åŠ¨ç±»å‹ï¼š0ï¼šç†è®ºä»·åæ‰‹ 1ï¼šå¯¹æ‰‹ä»·åæ‰‹
+	///ÁÙ½üÖ´ĞĞ¼ÛÒÆ¶¯ÀàĞÍ£º0£ºÀíÂÛ¼Û·´ÊÖ 1£º¶ÔÊÖ¼Û·´ÊÖ
 	TFocusFtdcOrderTypeType	NearMoveType;
-	///ä¸´è¿‘æ‰§è¡Œä»·ç»´æŒæ—¶é—´ï¼ˆç§’ï¼‰
+	///ÁÙ½üÖ´ĞĞ¼ÛÎ¬³ÖÊ±¼ä£¨Ãë£©
 	TFocusFtdcVolumeType	NearKeepTime;
 };
 
-///åŸºç¡€æ¢¯åº¦ä»·å·®ä¿¡æ¯
+///»ù´¡Ìİ¶È¼Û²îĞÅÏ¢
 struct CFocusFtdcBaseMarkerStepField
 {
-	///æ¢¯åº¦æ¨¡æ¿
+	///Ìİ¶ÈÄ£°å
 	TFocusFtdcQuoteStepType	StepID;
-	///æ¢¯åº¦åç§°
+	///Ìİ¶ÈÃû³Æ
 	TFocusFtdcStepNameType	StepName;
-	///äº§å“åç§°
+	///²úÆ·Ãû³Æ
 	TFocusFtdcProductIDType	ProductID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æ¢¯åº¦ç±»å‹
+	///Ìİ¶ÈÀàĞÍ
 	TFocusFtdcStepTypeType	StepType;
-	///æ¢¯åº¦å•ä½
+	///Ìİ¶Èµ¥Î»
 	TFocusFtdcQuoteWidthTypeType	WidthType;
 };
 
-///åå°è¿›ç¨‹äº¤æ˜“çŠ¶æ€
+///ºóÌ¨½ø³Ì½»Ò××´Ì¬
 struct CFocusFtdcFocusStatusField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///è¿›ç¨‹äº¤æ˜“çŠ¶æ€
+	///½ø³Ì½»Ò××´Ì¬
 	TFocusFtdcIsActiveType	TradeStatus;
 };
 
-///ATMä»·æ ¼
+///ATM¼Û¸ñ
 struct CFocusFtdcATMPriceDataField
 {
-	///ç”¨æˆ·ä»£ç (äº¤æ˜“å‘˜)
+	///ÓÃ»§´úÂë(½»Ò×Ô±)
 	TFocusFtdcUserIDType	UserID;
-	///æœŸæƒç³»åˆ—
+	///ÆÚÈ¨ÏµÁĞ
 	TFocusFtdcInstrumentIDType	OptionSeriesId;
-	///æ ‡çš„ä»·æ ¼ï¼Œè®¡ç®—ç†è®ºä»·ï¼ŒGreeksè¯·ä¼ è¿™ä¸ª
+	///±êµÄ¼Û¸ñ£¬¼ÆËãÀíÂÛ¼Û£¬GreeksÇë´«Õâ¸ö
 	TFocusFtdcPriceType	UnderlyingMid;
-	///æ ‡çš„è¿œæœŸä»·æ ¼
+	///±êµÄÔ¶ÆÚ¼Û¸ñ
 	TFocusFtdcPriceType	AtmForword;
-	///å‰©ä½™å¤©æ•°
+	///Ê£ÓàÌìÊı
 	TFocusFtdcTimeValueType	RemainDay;
 	///V10D
 	TFocusFtdcPriceType	V10D;
@@ -3165,7 +3165,7 @@ struct CFocusFtdcATMPriceDataField
 	TFocusFtdcPriceType	V25D;
 	///V10D
 	TFocusFtdcPriceType	V45D;
-	///ATM æ³¢åŠ¨ç‡
+	///ATM ²¨¶¯ÂÊ
 	TFocusFtdcPriceType	AtmVol;
 	///V10D
 	TFocusFtdcPriceType	V55D;
@@ -3173,1757 +3173,1776 @@ struct CFocusFtdcATMPriceDataField
 	TFocusFtdcPriceType	V75D;
 	///V10D
 	TFocusFtdcPriceType	V90D;
-	///è¾“å‡ºå€¼æ—¶é—´
+	///Êä³öÖµÊ±¼ä
 	TFocusFtdcTimeType	OperTime;
 };
 
-///æœŸè´§åšå¸‚æ€»å¼€å…³
+///ÆÚ»õ×öÊĞ×Ü¿ª¹Ø
 struct CFocusFtdcFutureMakerWholeSwitchField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///äº¤æ˜“å‘˜æ€»å¼€å…³
+	///½»Ò×Ô±×Ü¿ª¹Ø
 	TFocusFtdcSwitchFlagType	WholeSwitch;
 };
 
-///æœŸè´§åšå¸‚æŠ¥ä»·å‚æ•°
+///ÆÚ»õ×öÊĞ±¨¼Û²ÎÊı
 struct CFocusFtdcFutureMakerStrategyField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ä¸€æ¡£å¼€å…³
+	///Ò»µµ¿ª¹Ø
 	TFocusFtdcSwitchFlagType	FirstSwitch;
-	///ä¸€æ¡£æœŸè´§æŠ¥ä»·æ–¹å¼
+	///Ò»µµÆÚ»õ±¨¼Û·½Ê½
 	TFocusFtdcFutureMakerFlagType	FirstFutureMakerFlag;
-	///ä¸€æ¡£å®¹å¿åº¦
+	///Ò»µµÈİÈÌ¶È
 	TFocusFtdcVolumeType	FirstToler;
-	///ä¸€æ¡£ä¸‹å•é‡
+	///Ò»µµÏÂµ¥Á¿
 	TFocusFtdcVolumeType	FirstAmount;
-	///ä¸€æ¡£å®½åº¦ï¼ˆtickï¼‰
+	///Ò»µµ¿í¶È£¨tick£©
 	TFocusFtdcVolumeType	FirstWidth;
-	///äºŒæ¡£å¼€å…³
+	///¶şµµ¿ª¹Ø
 	TFocusFtdcSwitchFlagType	SecondSwitch;
-	///äºŒæ¡£æœŸè´§æŠ¥ä»·æ–¹å¼
+	///¶şµµÆÚ»õ±¨¼Û·½Ê½
 	TFocusFtdcFutureMakerFlagType	SecondFutureMakerFlag;
-	///äºŒæ¡£å®¹å¿åº¦
+	///¶şµµÈİÈÌ¶È
 	TFocusFtdcVolumeType	SecondToler;
-	///äºŒæ¡£ä¸‹å•é‡
+	///¶şµµÏÂµ¥Á¿
 	TFocusFtdcVolumeType	SecondAmount;
-	///äºŒæ¡£å®½åº¦ï¼ˆtickï¼‰
+	///¶şµµ¿í¶È£¨tick£©
 	TFocusFtdcVolumeType	SecondWidth;
-	///ä¸‰æ¡£å¼€å…³
+	///Èıµµ¿ª¹Ø
 	TFocusFtdcSwitchFlagType	ThirdSwitch;
-	///ä¸‰æ¡£æœŸè´§æŠ¥ä»·æ–¹å¼
+	///ÈıµµÆÚ»õ±¨¼Û·½Ê½
 	TFocusFtdcFutureMakerFlagType	ThirdFutureMakerFlag;
-	///ä¸‰æ¡£å®¹å¿åº¦
+	///ÈıµµÈİÈÌ¶È
 	TFocusFtdcVolumeType	ThirdToler;
-	///ä¸‰æ¡£ä¸‹å•é‡
+	///ÈıµµÏÂµ¥Á¿
 	TFocusFtdcVolumeType	ThirdAmount;
-	///ä¸‰æ¡£å®½åº¦ï¼ˆtickï¼‰
+	///Èıµµ¿í¶È£¨tick£©
 	TFocusFtdcVolumeType	ThirdWidth;
-	///æˆäº¤ç»Ÿè®¡æ—¶é—´ï¼ˆç§’ï¼‰
+	///³É½»Í³¼ÆÊ±¼ä£¨Ãë£©
 	TFocusFtdcNumberType	SumVolumeTime;
-	///æˆäº¤æ•°é‡ï¼ˆå‡€æˆäº¤ï¼Œä¸åŒºåˆ†æ­£è´Ÿï¼‰
+	///³É½»ÊıÁ¿£¨¾»³É½»£¬²»Çø·ÖÕı¸º£©
 	TFocusFtdcNumberType	SumVolume;
-	///ç»´æŒæ—¶é—´ï¼ˆç§’ï¼‰
+	///Î¬³ÖÊ±¼ä£¨Ãë£©
 	TFocusFtdcNumberType	KeepTime;
-	///æœŸè´§å¼€å¹³æ ‡å¿—
+	///ÆÚ»õ¿ªÆ½±êÖ¾
 	TFocusFtdcOffsetFlagType	FutureOffsetFlag;
 };
 
-///æœŸè´§åæ‰‹å¯¹å†²å‚æ•°
+///ÆÚ»õ·´ÊÖ¶Ô³å²ÎÊı
 struct CFocusFtdcSlefHedgeStrategyField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///åæ‰‹æŠ¥å•æŠ¥ä»·æ–¹å¼
+	///·´ÊÖ±¨µ¥±¨¼Û·½Ê½
 	TFocusFtdcHedgeFutureMakerFlagType	SlefHedgeFutureMakerFlag;
-	///åæ‰‹æŠ¥å•è°ƒæ•´tick
+	///·´ÊÖ±¨µ¥µ÷Õûtick
 	TFocusFtdcVolumeType	SlefHedgeFutureMakerTick;
-	///åæ‰‹æŠ¥å•åç¦»tické‡æ–°æŠ¥å•
+	///·´ÊÖ±¨µ¥Æ«ÀëtickÖØĞÂ±¨µ¥
 	TFocusFtdcVolumeType	SlefHedgeDeviate;
-	///åæ‰‹æŠ¥å•è¶…æ—¶æ’¤å•
+	///·´ÊÖ±¨µ¥³¬Ê±³·µ¥
 	TFocusFtdcVolumeType	SlefHedgeTimeAction;
-	///åæ‰‹è¿½å•æ¬¡æ•°
+	///·´ÊÖ×·µ¥´ÎÊı
 	TFocusFtdcVolumeType	SlefChaseTimes;
-	///æœ€å¤§äºæŸ
+	///×î´ó¿÷Ëğ
 	TFocusFtdcVolumeType	MaxLossTick;
 };
 
-///æœŸè´§å¯¹å†²åˆçº¦å¯¹å†²å‚æ•°
+///ÆÚ»õ¶Ô³åºÏÔ¼¶Ô³å²ÎÊı
 struct CFocusFtdcFutureHedgeStrategyField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///å¯¹å†²åˆçº¦äº¤æ˜“æ‰€ä»£ç 
+	///¶Ô³åºÏÔ¼½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	HedgeExchangeID;
-	///å¯¹å†²åˆçº¦ä»£ç 
+	///¶Ô³åºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	HedgeInstrumentID;
-	///å¯¹å†²èµ„é‡‘è´¦å·
+	///¶Ô³å×Ê½ğÕËºÅ
 	TFocusFtdcInvestorIDType	HedgeInvestorID;
-	///ä»·å·®
+	///¼Û²î
 	TFocusFtdcPriceType	Spread;
-	///æœŸè´§å¯¹å†²æŠ¥ä»·æ–¹å¼
+	///ÆÚ»õ¶Ô³å±¨¼Û·½Ê½
 	TFocusFtdcHedgeFutureMakerFlagType	HedgeFutureMakerFlag;
-	///æœŸè´§å¯¹å†²è°ƒæ•´tick
+	///ÆÚ»õ¶Ô³åµ÷Õûtick
 	TFocusFtdcVolumeType	HedgeFutureMakerTick;
-	///åç¦»tické‡æ–°æŠ¥å•
+	///Æ«ÀëtickÖØĞÂ±¨µ¥
 	TFocusFtdcVolumeType	HedgeDeviate;
-	///æŒ‚å•è¶…æ—¶æ’¤å•
+	///¹Òµ¥³¬Ê±³·µ¥
 	TFocusFtdcVolumeType	HedgeTimeAction;
-	///è¿½å•æ¬¡æ•°
+	///×·µ¥´ÎÊı
 	TFocusFtdcVolumeType	HedgeChaseTimes;
-	///æœŸè´§å¯¹å†²åˆçº¦å¼€å¹³æ ‡å¿—
+	///ÆÚ»õ¶Ô³åºÏÔ¼¿ªÆ½±êÖ¾
 	TFocusFtdcOffsetFlagType	HedgeOffsetFlag;
 };
 
-///åšå¸‚æŠ¥ä»·é¢å¤–å‚æ•°è®¾ç½®
+///×öÊĞ±¨¼Û¶îÍâ²ÎÊıÉèÖÃ
 struct CFocusFtdcQuoteAdditionParmField
 {
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///æŠ¥ä»·ä»·å·®å®½åº¦
+	///±¨¼Û¼Û²î¿í¶È
 	TFocusFtdcMoneyType	QuotePriceWidth;
-	///æŠ¥ä»·ä»·å·®æ¯”
+	///±¨¼Û¼Û²î±È
 	TFocusFtdcLargeVolumeType	QuoteWidthRatio;
-	///æŠ¥ä»·å®½åº¦å•ä½
+	///±¨¼Û¿í¶Èµ¥Î»
 	TFocusFtdcQuoteWidthTypeType	QuoteWidthType;
-	///ä¸­å¿ƒä»·å®¹å¿åº¦
+	///ÖĞĞÄ¼ÛÈİÈÌ¶È
 	TFocusFtdcVolumeType	TOL_TICK;
-	///å¤‡æ³¨
+	///±¸×¢
 	TFocusFtdcRemarkType	Remark;
 };
 
-///æœŸè´§å¯¹å†²æŠ¥ä»·çŠ¶æ€é€šçŸ¥
+///ÆÚ»õ¶Ô³å±¨¼Û×´Ì¬Í¨Öª
 struct CFocusFtdcFutureMakerHedgeStatusField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///åæ‰‹æŠ¥å•çŠ¶æ€ï¼Œ0.æ— æŠ¥å•ï¼Œ1.æœ‰æŠ¥å•
+	///·´ÊÖ±¨µ¥×´Ì¬£¬0.ÎŞ±¨µ¥£¬1.ÓĞ±¨µ¥
 	TFocusFtdcSwitchFlagType	SlefHedgeStatus;
-	///åæ‰‹æŠ¥å•çŠ¶æ€ï¼Œ0.æ— æŠ¥å•ï¼Œ1.æœ‰æŠ¥å•
+	///·´ÊÖ±¨µ¥×´Ì¬£¬0.ÎŞ±¨µ¥£¬1.ÓĞ±¨µ¥
 	TFocusFtdcSwitchFlagType	FutureHedgeStatus;
 };
 
-///ä¸€é”®æ’¤é”€æ‰€æœ‰æœŸè´§åšå¸‚å¯¹å†²å•
+///Ò»¼ü³·ÏúËùÓĞÆÚ»õ×öÊĞ¶Ô³åµ¥
 struct CFocusFtdcStopAllFutureMakerHedgeOfferField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///0ï¼Œåæ‰‹å¯¹å†²å•ï¼Œ2ï¼Œ æœŸè´§å¯¹å†²å•  3. å…¨éƒ¨å¯¹å†²å•
+	///0£¬·´ÊÖ¶Ô³åµ¥£¬2£¬ ÆÚ»õ¶Ô³åµ¥  3. È«²¿¶Ô³åµ¥
 	TFocusFtdcRemarkType	HedgeOfferType;
 };
 
-///æœŸè´§åšå¸‚é”®å€¼
+///ÆÚ»õ×öÊĞ¼üÖµ
 struct CFocusFtdcFutureMakerIndexField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
 };
 
-///æŸ¥è¯¢æœŸè´§åšå¸‚å‚æ•°
+///²éÑ¯ÆÚ»õ×öÊĞ²ÎÊı
 struct CFocusFtdcAllFutureMakerStrategyField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///äº¤æ˜“å‘˜æ€»å¼€å…³
+	///½»Ò×Ô±×Ü¿ª¹Ø
 	TFocusFtdcSwitchFlagType	WholeSwitch;
-	///ä¸€æ¡£å¼€å…³
+	///Ò»µµ¿ª¹Ø
 	TFocusFtdcSwitchFlagType	FirstSwitch;
-	///ä¸€æ¡£æœŸè´§æŠ¥ä»·æ–¹å¼
+	///Ò»µµÆÚ»õ±¨¼Û·½Ê½
 	TFocusFtdcFutureMakerFlagType	FirstFutureMakerFlag;
-	///ä¸€æ¡£å®¹å¿åº¦
+	///Ò»µµÈİÈÌ¶È
 	TFocusFtdcVolumeType	FirstToler;
-	///ä¸€æ¡£ä¸‹å•é‡
+	///Ò»µµÏÂµ¥Á¿
 	TFocusFtdcVolumeType	FirstAmount;
-	///ä¸€æ¡£å®½åº¦ï¼ˆtickï¼‰
+	///Ò»µµ¿í¶È£¨tick£©
 	TFocusFtdcVolumeType	FirstWidth;
-	///äºŒæ¡£å¼€å…³
+	///¶şµµ¿ª¹Ø
 	TFocusFtdcSwitchFlagType	SecondSwitch;
-	///äºŒæ¡£æœŸè´§æŠ¥ä»·æ–¹å¼
+	///¶şµµÆÚ»õ±¨¼Û·½Ê½
 	TFocusFtdcFutureMakerFlagType	SecondFutureMakerFlag;
-	///äºŒæ¡£å®¹å¿åº¦
+	///¶şµµÈİÈÌ¶È
 	TFocusFtdcVolumeType	SecondToler;
-	///äºŒæ¡£ä¸‹å•é‡
+	///¶şµµÏÂµ¥Á¿
 	TFocusFtdcVolumeType	SecondAmount;
-	///äºŒæ¡£å®½åº¦ï¼ˆtickï¼‰
+	///¶şµµ¿í¶È£¨tick£©
 	TFocusFtdcVolumeType	SecondWidth;
-	///ä¸‰æ¡£å¼€å…³
+	///Èıµµ¿ª¹Ø
 	TFocusFtdcSwitchFlagType	ThirdSwitch;
-	///ä¸‰æ¡£æœŸè´§æŠ¥ä»·æ–¹å¼
+	///ÈıµµÆÚ»õ±¨¼Û·½Ê½
 	TFocusFtdcFutureMakerFlagType	ThirdFutureMakerFlag;
-	///ä¸‰æ¡£å®¹å¿åº¦
+	///ÈıµµÈİÈÌ¶È
 	TFocusFtdcVolumeType	ThirdToler;
-	///ä¸‰æ¡£ä¸‹å•é‡
+	///ÈıµµÏÂµ¥Á¿
 	TFocusFtdcVolumeType	ThirdAmount;
-	///ä¸‰æ¡£å®½åº¦ï¼ˆtickï¼‰
+	///Èıµµ¿í¶È£¨tick£©
 	TFocusFtdcVolumeType	ThirdWidth;
-	///æˆäº¤ç»Ÿè®¡æ—¶é—´ï¼ˆç§’ï¼‰
+	///³É½»Í³¼ÆÊ±¼ä£¨Ãë£©
 	TFocusFtdcNumberType	SumVolumeTime;
-	///æˆäº¤æ•°é‡ï¼ˆå‡€æˆäº¤ï¼Œä¸åŒºåˆ†æ­£è´Ÿï¼‰
+	///³É½»ÊıÁ¿£¨¾»³É½»£¬²»Çø·ÖÕı¸º£©
 	TFocusFtdcNumberType	SumVolume;
-	///ç»´æŒæ—¶é—´ï¼ˆç§’ï¼‰
+	///Î¬³ÖÊ±¼ä£¨Ãë£©
 	TFocusFtdcNumberType	KeepTime;
-	///æœŸè´§å¼€å¹³æ ‡å¿—
+	///ÆÚ»õ¿ªÆ½±êÖ¾
 	TFocusFtdcOffsetFlagType	FutureOffsetFlag;
-	///åæ‰‹æŠ¥å•æŠ¥ä»·æ–¹å¼
+	///·´ÊÖ±¨µ¥±¨¼Û·½Ê½
 	TFocusFtdcHedgeFutureMakerFlagType	SlefHedgeFutureMakerFlag;
-	///åæ‰‹æŠ¥å•è°ƒæ•´tick
+	///·´ÊÖ±¨µ¥µ÷Õûtick
 	TFocusFtdcVolumeType	SlefHedgeFutureMakerTick;
-	///åæ‰‹æŠ¥å•åç¦»tické‡æ–°æŠ¥å•
+	///·´ÊÖ±¨µ¥Æ«ÀëtickÖØĞÂ±¨µ¥
 	TFocusFtdcVolumeType	SlefHedgeDeviate;
-	///åæ‰‹æŠ¥å•è¶…æ—¶æ’¤å•
+	///·´ÊÖ±¨µ¥³¬Ê±³·µ¥
 	TFocusFtdcVolumeType	SlefHedgeTimeAction;
-	///åæ‰‹è¿½å•æ¬¡æ•°
+	///·´ÊÖ×·µ¥´ÎÊı
 	TFocusFtdcVolumeType	SlefChaseTimes;
-	///æœ€å¤§äºæŸ
+	///×î´ó¿÷Ëğ
 	TFocusFtdcVolumeType	MaxLossTick;
-	///å¯¹å†²åˆçº¦äº¤æ˜“æ‰€ä»£ç 
+	///¶Ô³åºÏÔ¼½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	HedgeExchangeID;
-	///å¯¹å†²åˆçº¦ä»£ç 
+	///¶Ô³åºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	HedgeInstrumentID;
-	///å¯¹å†²èµ„é‡‘è´¦å·
+	///¶Ô³å×Ê½ğÕËºÅ
 	TFocusFtdcInvestorIDType	HedgeInvestorID;
-	///ä»·å·®
+	///¼Û²î
 	TFocusFtdcPriceType	Spread;
-	///æœŸè´§å¯¹å†²æŠ¥ä»·æ–¹å¼
+	///ÆÚ»õ¶Ô³å±¨¼Û·½Ê½
 	TFocusFtdcHedgeFutureMakerFlagType	HedgeFutureMakerFlag;
-	///æœŸè´§å¯¹å†²è°ƒæ•´tick
+	///ÆÚ»õ¶Ô³åµ÷Õûtick
 	TFocusFtdcVolumeType	HedgeFutureMakerTick;
-	///åç¦»tické‡æ–°æŠ¥å•
+	///Æ«ÀëtickÖØĞÂ±¨µ¥
 	TFocusFtdcVolumeType	HedgeDeviate;
-	///æŒ‚å•è¶…æ—¶æ’¤å•
+	///¹Òµ¥³¬Ê±³·µ¥
 	TFocusFtdcVolumeType	HedgeTimeAction;
-	///è¿½å•æ¬¡æ•°
+	///×·µ¥´ÎÊı
 	TFocusFtdcVolumeType	HedgeChaseTimes;
-	///æœŸè´§å¯¹å†²åˆçº¦å¼€å¹³æ ‡å¿—
+	///ÆÚ»õ¶Ô³åºÏÔ¼¿ªÆ½±êÖ¾
 	TFocusFtdcOffsetFlagType	HedgeOffsetFlag;
 };
 
-///å†…éƒ¨è‚¡ç¥¨é«˜é¢‘ç­–ç•¥è¡¨
+///ÄÚ²¿¹ÉÆ±¸ßÆµ²ßÂÔ±í
 struct CFocusFtdcInnerHighStockStrategyField
 {
-	///äº¤æ˜“æ—¥æœŸ
+	///½»Ò×ÈÕÆÚ
 	TFocusFtdcTradingDayType	TradingDay;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///è‚¡ç¥¨åˆçº¦ä»£ç 
+	///¹ÉÆ±ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///è¯¥è‚¡ç¥¨ç”¨å“ªä¸ªèµ„é‡‘è´¦å·å»ä¸‹å•
+	///¸Ã¹ÉÆ±ÓÃÄÄ¸ö×Ê½ğÕËºÅÈ¥ÏÂµ¥
 	TFocusFtdcInvestorIDType	StockInvestorID;
-	///è‚¡ç¥¨ç­–ç•¥ID
+	///¹ÉÆ±²ßÂÔID
 	TFocusFtdcStrategyIDType	StockStrategyID;
-	///è‚¡ç¥¨ç­–ç•¥å
+	///¹ÉÆ±²ßÂÔÃû
 	TFocusFtdcStrategyNameType	StockStrategyName;
-	///ç­–ç•¥ç±»å‹ï¼ˆå¢ä»“oræ¢ä»“ï¼Œæ¢ä»“ä¸º0ï¼Œå…¶ä½™ä¸ºå¤§äº0ï¼‰
+	///²ßÂÔÀàĞÍ£¨Ôö²Öor»»²Ö£¬»»²ÖÎª0£¬ÆäÓàÎª´óÓÚ0£©
 	TFocusFtdcVolumeType	StockStrategyType;
-	///æ¯ä¸ªè‚¡ç¥¨æƒé‡
+	///Ã¿¸ö¹ÉÆ±È¨ÖØ
 	TFocusFtdcRatioType	Ratio;
-	///æ¯æ¬¡æœ€å¤§ä¸‹å•æ•°ï¼ˆå¦‚éœ€ï¼‰
+	///Ã¿´Î×î´óÏÂµ¥Êı£¨ÈçĞè£©
 	TFocusFtdcVolumeType	MaxVolume;
-	///æ¯æ¬¡æœ€å°å•æ•°ï¼ˆå¦‚éœ€ï¼Œé»˜è®¤ä¸º100ï¼‰
+	///Ã¿´Î×îĞ¡µ¥Êı£¨ÈçĞè£¬Ä¬ÈÏÎª100£©
 	TFocusFtdcVolumeType	MinVolume;
-	///è‚¡ç¥¨æ¯æ¬¡ä¸‹å•æ¯”ä¾‹ï¼ˆ%ï¼‰
+	///¹ÉÆ±Ã¿´ÎÏÂµ¥±ÈÀı£¨%£©
 	TFocusFtdcRatioType	StockRatioAvail;
-	///å¸‚åœºå¹³å‡é›†åˆç«ä»·æˆäº¤é‡1
+	///ÊĞ³¡Æ½¾ù¼¯ºÏ¾º¼Û³É½»Á¿1
 	TFocusFtdcVolumeType	AverMactchTradeVolume1;
-	///å¸‚åœºå¹³å‡é›†åˆç«ä»·æˆäº¤é‡2
+	///ÊĞ³¡Æ½¾ù¼¯ºÏ¾º¼Û³É½»Á¿2
 	TFocusFtdcVolumeType	AverMactchTradeVolume2;
-	///æ˜¨æ”¶ç›˜
+	///×òÊÕÅÌ
 	TFocusFtdcPriceType	PreClosePrice;
-	///è‚¡ç¥¨ä¸‹å•ç±»å‹
+	///¹ÉÆ±ÏÂµ¥ÀàĞÍ
 	TFocusFtdcStockStrategyPriceType	StockPriceType;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æœ€æ–°å§”æ‰˜çš„
+	///×îĞÂÎ¯ÍĞµÄ
 	TFocusFtdcOrderSysIDType	LastOrderSysID;
-	///ä¹°å–æ–¹å‘
+	///ÂòÂô·½Ïò
 	TFocusFtdcDirectionType	Direction;
-	///è‚¡ç¥¨å§”æ‰˜æ‰¹å·(ä»…æ‰¹é‡å§”æ‰˜æœ‰æ•ˆ)
+	///¹ÉÆ±Î¯ÍĞÅúºÅ(½öÅúÁ¿Î¯ÍĞÓĞĞ§)
 	TFocusFtdcOrderSysIDType	LastBatchNum;
-	///æ˜¨æ—¥æŒä»“
+	///×òÈÕ³Ö²Ö
 	TFocusFtdcVolumeType	YPosition;
-	///æ€»æœ€å¼€å§‹çš„ç›®æ ‡æŒä»“
+	///×Ü×î¿ªÊ¼µÄÄ¿±ê³Ö²Ö
 	TFocusFtdcVolumeType	StaticEndPosition;
-	///æ€»ç›®æ ‡æŒä»“
+	///×ÜÄ¿±ê³Ö²Ö
 	TFocusFtdcVolumeType	EndPosition;
-	///æ€»å®é™…ç›®å‰æŒä»“
+	///×ÜÊµ¼ÊÄ¿Ç°³Ö²Ö
 	TFocusFtdcVolumeType	NowPosition;
-	///æ€»æŒä»“å¯å¹³ä»“æ•°é‡
+	///×Ü³Ö²Ö¿ÉÆ½²ÖÊıÁ¿
 	TFocusFtdcVolumeType	PositionClose;
-	///ä»Šæ—¥å¼€ä»“æ•°é‡(ä¸åŒ…æ‹¬å†»ç»“)
+	///½ñÈÕ¿ª²ÖÊıÁ¿(²»°üÀ¨¶³½á)
 	TFocusFtdcVolumeType	OpenVolume;
-	///ä»Šæ—¥å¹³ä»“æ•°é‡(åŒ…æ‹¬æ˜¨æŒä»“çš„å¹³ä»“,ä¸åŒ…æ‹¬å†»ç»“)
+	///½ñÈÕÆ½²ÖÊıÁ¿(°üÀ¨×ò³Ö²ÖµÄÆ½²Ö,²»°üÀ¨¶³½á)
 	TFocusFtdcVolumeType	CloseVolume;
-	///Alphaç›®æ ‡ä¸ªè‚¡å¸‚å€¼(ä»¥æ˜¨ç»“ç®—)
+	///AlphaÄ¿±ê¸ö¹ÉÊĞÖµ(ÒÔ×ò½áËã)
 	TFocusFtdcMoneyType	AlphaTargetValue;
-	///Alphaå½“å‰ä¹°å…¥æ€»èµ„é‡‘(ä»¥æ˜¨ç»“ç®—)
+	///Alphaµ±Ç°ÂòÈë×Ü×Ê½ğ(ÒÔ×ò½áËã)
 	TFocusFtdcMoneyType	AlphaCurrentTotalValue;
-	///å¼€å§‹æ“ä½œæ—¶é—´
+	///¿ªÊ¼²Ù×÷Ê±¼ä
 	TFocusFtdcTimeType	StartOperTime;
-	///æœ€æ–°æ“ä½œæ—¶é—´
+	///×îĞÂ²Ù×÷Ê±¼ä
 	TFocusFtdcTimeType	LastOperTime;
-	///æœ€æ–°éœ€è¦æŠ¥çš„æ•°é‡
+	///×îĞÂĞèÒª±¨µÄÊıÁ¿
 	TFocusFtdcVolumeType	LastNeedSendVolume;
-	///æœ€æ–°æŠ¥çš„ä»·æ ¼
+	///×îĞÂ±¨µÄ¼Û¸ñ
 	TFocusFtdcPriceType	LastSendPrice;
-	///æœ€æ–°å¸‚åœºæ€»æˆäº¤é‡
+	///×îĞÂÊĞ³¡×Ü³É½»Á¿
 	TFocusFtdcVolumeType	PreMarketTradeVolume;
-	///è‚¡ç¥¨å¹³å‡æˆäº¤é‡ç»Ÿè®¡é—´éš”æ¬¡æ•°ï¼ˆMAï¼‰
+	///¹ÉÆ±Æ½¾ù³É½»Á¿Í³¼Æ¼ä¸ô´ÎÊı£¨MA£©
 	TFocusFtdcNumberType	MAStockAvail;
-	///é—´éš”æ—¶é—´å†…çš„å¸‚åœºè‚¡ç¥¨å¹³å‡æˆäº¤é‡
+	///¼ä¸ôÊ±¼äÄÚµÄÊĞ³¡¹ÉÆ±Æ½¾ù³É½»Á¿
 	TFocusFtdcVolumeType	GapVolume;
-	///è¯¥åªè‚¡ç¥¨å½“å‰æ˜¯å¦æ­£åœ¨äº¤æ˜“
+	///¸ÃÖ»¹ÉÆ±µ±Ç°ÊÇ·ñÕıÔÚ½»Ò×
 	TFocusFtdcBoolType	StockIsTrading;
-	///è¯¥è‚¡æ˜¯å¦æ˜¯ä½ä»·è‚¡
+	///¸Ã¹ÉÊÇ·ñÊÇµÍ¼Û¹É
 	TFocusFtdcBoolType	IsLowStock;
-	///å¯åŠ¨ä¹‹å‰æœ€æ–°ä¹°æˆäº¤æ€»é‡
+	///Æô¶¯Ö®Ç°×îĞÂÂò³É½»×ÜÁ¿
 	TFocusFtdcVolumeType	SignalHasBuyTotalPosition;
-	///å¯åŠ¨ä¹‹å‰æœ€æ–°å–æˆäº¤æ€»é‡
+	///Æô¶¯Ö®Ç°×îĞÂÂô³É½»×ÜÁ¿
 	TFocusFtdcVolumeType	SignalHasSellTotalPosition;
-	///ä¸ªè‚¡ä¹°å®Œæˆæ¯”ä¾‹
+	///¸ö¹ÉÂòÍê³É±ÈÀı
 	TFocusFtdcMoneyType	SignalLastPer;
-	///æ“ä½œå¤‡æ³¨
+	///²Ù×÷±¸×¢
 	TFocusFtdcDepositNoteType	Note;
-	///ä¼˜å…ˆæƒ
+	///ÓÅÏÈÈ¨
 	TFocusFtdcDepositNoteType	Priority;
-	///ä¸ªè‚¡è¡Œæƒ…çŠ¶æ€
+	///¸ö¹ÉĞĞÇé×´Ì¬
 	TFocusFtdcDepositNoteType	StkOrderStatus;
-	///å¼€ç›˜ä»·æ ¼
+	///¿ªÅÌ¼Û¸ñ
 	TFocusFtdcPriceType	OpenPrice;
-	///æ€»æˆäº¤é‡ï¼ˆåŒ…æ‹¬äº†ä¹°å’Œå–ï¼‰
+	///×Ü³É½»Á¿£¨°üÀ¨ÁËÂòºÍÂô£©
 	TFocusFtdcVolumeType	TotalTradeVolume;
-	///ä»Šæ—¥ä¹°æ€»æˆæœ¬
+	///½ñÈÕÂò×Ü³É±¾
 	TFocusFtdcMoneyType	TotalBuyCostMoney;
-	///ä»Šæ—¥å–æ€»æˆæœ¬
+	///½ñÈÕÂô×Ü³É±¾
 	TFocusFtdcMoneyType	TotalSellCostMoney;
-	///ä»Šæ—¥å¹³å‡æˆæœ¬
+	///½ñÈÕÆ½¾ù³É±¾
 	TFocusFtdcMoneyType	AverCostMoney;
-	///ç¬¬å‡ è½®æŠ¥å•
+	///µÚ¼¸ÂÖ±¨µ¥
 	TFocusFtdcVolumeType	TotalRoundAmount;
-	///å°¾ç›˜ç­–ç•¥ä¹‹å‰æ€»æˆäº¤é‡ï¼ˆåŒ…æ‹¬äº†ä¹°å’Œå–ï¼‰
+	///Î²ÅÌ²ßÂÔÖ®Ç°×Ü³É½»Á¿£¨°üÀ¨ÁËÂòºÍÂô£©
 	TFocusFtdcVolumeType	AllAddTotalTradeVolume;
-	///å°¾ç›˜ç­–ç•¥ä¹‹å‰ä»Šæ—¥ç´¯ç§¯ä¹°æ€»æˆæœ¬
+	///Î²ÅÌ²ßÂÔÖ®Ç°½ñÈÕÀÛ»ıÂò×Ü³É±¾
 	TFocusFtdcMoneyType	AllAddTotalBuyCostMoney;
-	///å°¾ç›˜ç­–ç•¥ä¹‹å‰ä»Šæ—¥ç´¯ç§¯å–æ€»æˆæœ¬
+	///Î²ÅÌ²ßÂÔÖ®Ç°½ñÈÕÀÛ»ıÂô×Ü³É±¾
 	TFocusFtdcMoneyType	AllAddTotalSellCostMoney;
-	///å°¾ç›˜ç­–ç•¥ä¹‹å‰ä»Šæ—¥ç´¯ç§¯å¹³å‡æˆæœ¬
+	///Î²ÅÌ²ßÂÔÖ®Ç°½ñÈÕÀÛ»ıÆ½¾ù³É±¾
 	TFocusFtdcMoneyType	AllAddAverCostMoney;
-	///å¤šå› å­listæœ€å¼€å§‹çš„ç›®æ ‡æŒä»“
+	///¶àÒò×Ólist×î¿ªÊ¼µÄÄ¿±ê³Ö²Ö
 	TFocusFtdcVolumeType	AlphaListStaticEndPosition;
-	///å¤šå› å­listç›®æ ‡æŒä»“
+	///¶àÒò×ÓlistÄ¿±ê³Ö²Ö
 	TFocusFtdcVolumeType	AlphaListEndPosition;
-	///å¤šå› å­listæœ€æ–°æŒä»“
+	///¶àÒò×Ólist×îĞÂ³Ö²Ö
 	TFocusFtdcVolumeType	AlphaListNowPosition;
-	///AlphaListä¼˜å…ˆæƒ
+	///AlphaListÓÅÏÈÈ¨
 	TFocusFtdcDepositNoteType	AlphaListPriority;
-	///è¯¥åªè‚¡ç¥¨AlphaListå½“å‰æ˜¯å¦æ­£åœ¨äº¤æ˜“
+	///¸ÃÖ»¹ÉÆ±AlphaListµ±Ç°ÊÇ·ñÕıÔÚ½»Ò×
 	TFocusFtdcBoolType	AlphaListStockIsTrading;
-	///å¤šå› å­listæœ€å¼€å§‹çš„ç›®æ ‡æŒä»“
+	///¶àÒò×Ólist×î¿ªÊ¼µÄÄ¿±ê³Ö²Ö
 	TFocusFtdcVolumeType	TZeroStaticEndPosition;
-	///ç›˜ä¸­listæ€»ç›®æ ‡æŒä»“
+	///ÅÌÖĞlist×ÜÄ¿±ê³Ö²Ö
 	TFocusFtdcVolumeType	TZeroEndPosition;
-	///ç›˜ä¸­listå®é™…ç›®å‰æŒä»“
+	///ÅÌÖĞlistÊµ¼ÊÄ¿Ç°³Ö²Ö
 	TFocusFtdcVolumeType	TZeroNowPosition;
-	///t0æœ€æ–°è®¾ç½®æ—¶é—´
+	///t0×îĞÂÉèÖÃÊ±¼ä
 	TFocusFtdcTimeType	TZeroLastOperTime;
-	///TZeroéœ€è¦æ”¹å˜çš„è‚¡æ•°
+	///TZeroĞèÒª¸Ä±äµÄ¹ÉÊı
 	TFocusFtdcVolumeType	TZeroGapVolume;
-	///TZeroæœ€æ™šç»“æŸæ—¶é—´
+	///TZero×îÍí½áÊøÊ±¼ä
 	TFocusFtdcTimeType	TZeroEndOperTime;
-	///TZeroä¸‹å•ä¸Šé™ä»·æ ¼
+	///TZeroÏÂµ¥ÉÏÏŞ¼Û¸ñ
 	TFocusFtdcPriceType	TZeroUpperEndPrice;
-	///TZeroä¸‹å•ä¸‹é™ä»·æ ¼
+	///TZeroÏÂµ¥ÏÂÏŞ¼Û¸ñ
 	TFocusFtdcPriceType	TZeroLowerEndPrice;
-	///TZeroè‚¡ç¥¨ä¸‹å•ç±»å‹
+	///TZero¹ÉÆ±ÏÂµ¥ÀàĞÍ
 	TFocusFtdcStockStrategyPriceType	TZeroStockPriceType;
-	///TZeroæŒä»“ï¼ˆæ€»ï¼‰
+	///TZero³Ö²Ö£¨×Ü£©
 	TFocusFtdcVolumeType	TZeroAddPosition;
-	///TZeroæ€»é™æ€å¼€ä»“å¸‚å€¼
+	///TZero×Ü¾²Ì¬¿ª²ÖÊĞÖµ
 	TFocusFtdcPriceType	T0StaticTotalMoney;
-	///TZeroé™æ€æ”¶ç›Š
+	///TZero¾²Ì¬ÊÕÒæ
 	TFocusFtdcPriceType	TZeroStaticRights;
-	///TZeroå¹³ä»“æ”¶ç›Š
+	///TZeroÆ½²ÖÊÕÒæ
 	TFocusFtdcPriceType	TZeroColseRights;
-	///ä»»ç„¶éœ€è¦äº¤æ˜“çš„é‡
+	///ÈÎÈ»ĞèÒª½»Ò×µÄÁ¿
 	TFocusFtdcVolumeType	StillNeedSendPosition;
-	///ç³»ç»Ÿæ¯å•æŠ¥å•ç¼–å·(æ¯å•ID,ä¸»é”®,å­å•å¸¦å›)
+	///ÏµÍ³Ä¸µ¥±¨µ¥±àºÅ(Ä¸µ¥ID,Ö÷¼ü,×Óµ¥´ø»Ø)
 	TFocusFtdcOrderLocalIDType	AlgoParentOrderSysID;
-	///ç®—æ³•æ“ä½œå¤‡æ³¨
+	///Ëã·¨²Ù×÷±¸×¢
 	TFocusFtdcDepositNoteType	AlgoNote;
 };
 
-///è‚¡ç¥¨ç­–ç•¥å¼€å…³
+///¹ÉÆ±²ßÂÔ¿ª¹Ø
 struct CFocusFtdcWholeHighStockStrategySwitchField
 {
-	///è¯¥è‚¡ç¥¨ç”¨å“ªä¸ªèµ„é‡‘è´¦å·å»ä¸‹å•
+	///¸Ã¹ÉÆ±ÓÃÄÄ¸ö×Ê½ğÕËºÅÈ¥ÏÂµ¥
 	TFocusFtdcInvestorIDType	StockInvestorID;
-	///ç­–ç•¥ç±»å‹ï¼ˆå¢ä»“oræ¢ä»“ï¼Œæ¢ä»“ä¸º0ï¼Œå…¶ä½™ä¸ºå¤§äº0ï¼‰
+	///²ßÂÔÀàĞÍ£¨Ôö²Öor»»²Ö£¬»»²ÖÎª0£¬ÆäÓàÎª´óÓÚ0£©
 	TFocusFtdcVolumeType	StockStrategyType;
-	///è‚¡ç¥¨ç­–ç•¥ID
+	///¹ÉÆ±²ßÂÔID
 	TFocusFtdcStrategyIDType	StockStrategyID;
-	///äº¤æ˜“å‘˜æ€»å¼€å…³
+	///½»Ò×Ô±×Ü¿ª¹Ø
 	TFocusFtdcSwitchFlagType	StockWholeSwitch;
 };
 
-///æŸ¥è¯¢ç­–ç•¥çš„é”®å€¼
+///²éÑ¯²ßÂÔµÄ¼üÖµ
 struct CFocusFtdcQryWholeHighStockStrategyField
 {
-	///è¯¥è‚¡ç¥¨ç”¨å“ªä¸ªèµ„é‡‘è´¦å·å»ä¸‹å•
+	///¸Ã¹ÉÆ±ÓÃÄÄ¸ö×Ê½ğÕËºÅÈ¥ÏÂµ¥
 	TFocusFtdcInvestorIDType	StockInvestorID;
-	///è‚¡ç¥¨ç­–ç•¥ID
+	///¹ÉÆ±²ßÂÔID
 	TFocusFtdcStrategyIDType	StockStrategyID;
-	///ç­–ç•¥ç±»å‹ï¼ˆå¢ä»“oræ¢ä»“ï¼Œæ¢ä»“ä¸º0ï¼Œå…¶ä½™ä¸ºå¤§äº0ï¼‰
+	///²ßÂÔÀàĞÍ£¨Ôö²Öor»»²Ö£¬»»²ÖÎª0£¬ÆäÓàÎª´óÓÚ0£©
 	TFocusFtdcVolumeType	StockStrategyType;
 };
 
-///æŸ¥è¯¢ç­–ç•¥çš„å•ä¸ªè‚¡ç¥¨çš„é”®å€¼
+///²éÑ¯²ßÂÔµÄµ¥¸ö¹ÉÆ±µÄ¼üÖµ
 struct CFocusFtdcQrySignalHighStockStrategyField
 {
-	///è¯¥è‚¡ç¥¨ç”¨å“ªä¸ªèµ„é‡‘è´¦å·å»ä¸‹å•
+	///¸Ã¹ÉÆ±ÓÃÄÄ¸ö×Ê½ğÕËºÅÈ¥ÏÂµ¥
 	TFocusFtdcInvestorIDType	StockInvestorID;
-	///è‚¡ç¥¨ç­–ç•¥ID
+	///¹ÉÆ±²ßÂÔID
 	TFocusFtdcStrategyIDType	StockStrategyID;
-	///ç­–ç•¥ç±»å‹ï¼ˆå¢ä»“oræ¢ä»“ï¼Œæ¢ä»“ä¸º0ï¼Œå…¶ä½™ä¸ºå¤§äº0ï¼‰
+	///²ßÂÔÀàĞÍ£¨Ôö²Öor»»²Ö£¬»»²ÖÎª0£¬ÆäÓàÎª´óÓÚ0£©
 	TFocusFtdcVolumeType	StockStrategyType;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///è‚¡ç¥¨åˆçº¦ä»£ç 
+	///¹ÉÆ±ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
 };
 
-///æŸ¥è¯¢ç­–ç•¥çš„å•ä¸ªè‚¡ç¥¨çš„é”®å€¼
+///²éÑ¯²ßÂÔµÄµ¥¸ö¹ÉÆ±µÄ¼üÖµ
 struct CFocusFtdcSignalHighStockStrategySwitchField
 {
-	///è¯¥è‚¡ç¥¨ç”¨å“ªä¸ªèµ„é‡‘è´¦å·å»ä¸‹å•
+	///¸Ã¹ÉÆ±ÓÃÄÄ¸ö×Ê½ğÕËºÅÈ¥ÏÂµ¥
 	TFocusFtdcInvestorIDType	StockInvestorID;
-	///è‚¡ç¥¨ç­–ç•¥ID
+	///¹ÉÆ±²ßÂÔID
 	TFocusFtdcStrategyIDType	StockStrategyID;
-	///ç­–ç•¥ç±»å‹ï¼ˆå¢ä»“oræ¢ä»“ï¼Œæ¢ä»“ä¸º0ï¼Œå…¶ä½™ä¸ºå¤§äº0ï¼‰
+	///²ßÂÔÀàĞÍ£¨Ôö²Öor»»²Ö£¬»»²ÖÎª0£¬ÆäÓàÎª´óÓÚ0£©
 	TFocusFtdcVolumeType	StockStrategyType;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///è‚¡ç¥¨åˆçº¦ä»£ç 
+	///¹ÉÆ±ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///è‚¡ç¥¨å•ä¸ªå¼€å…³
+	///¹ÉÆ±µ¥¸ö¿ª¹Ø
 	TFocusFtdcSwitchFlagType	StockWholeSwitch;
 };
 
-///è‚¡ç¥¨é«˜é¢‘ç­–ç•¥è¡¨
+///¹ÉÆ±¸ßÆµ²ßÂÔ±í
 struct CFocusFtdcAPIHighStockStrategyField
 {
-	///äº¤æ˜“æ—¥æœŸ
+	///½»Ò×ÈÕÆÚ
 	TFocusFtdcTradingDayType	TradingDay;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///è‚¡ç¥¨åˆçº¦ä»£ç 
+	///¹ÉÆ±ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///è¯¥è‚¡ç¥¨ç”¨å“ªä¸ªèµ„é‡‘è´¦å·å»ä¸‹å•
+	///¸Ã¹ÉÆ±ÓÃÄÄ¸ö×Ê½ğÕËºÅÈ¥ÏÂµ¥
 	TFocusFtdcInvestorIDType	StockInvestorID;
-	///è‚¡ç¥¨ç­–ç•¥ID
+	///¹ÉÆ±²ßÂÔID
 	TFocusFtdcStrategyIDType	StockStrategyID;
-	///è‚¡ç¥¨ç­–ç•¥å
+	///¹ÉÆ±²ßÂÔÃû
 	TFocusFtdcStrategyNameType	StockStrategyName;
-	///ç­–ç•¥ç±»å‹ï¼ˆå¢ä»“oræ¢ä»“ï¼Œæ¢ä»“ä¸º0ï¼Œå…¶ä½™ä¸ºå¤§äº0ï¼‰
+	///²ßÂÔÀàĞÍ£¨Ôö²Öor»»²Ö£¬»»²ÖÎª0£¬ÆäÓàÎª´óÓÚ0£©
 	TFocusFtdcVolumeType	StockStrategyType;
-	///æ¯ä¸ªè‚¡ç¥¨æƒé‡
+	///Ã¿¸ö¹ÉÆ±È¨ÖØ
 	TFocusFtdcRatioType	Ratio;
-	///æ¯æ¬¡æœ€å¤§ä¸‹å•æ•°ï¼ˆå¦‚éœ€ï¼‰
+	///Ã¿´Î×î´óÏÂµ¥Êı£¨ÈçĞè£©
 	TFocusFtdcVolumeType	MaxVolume;
-	///æ¯æ¬¡æœ€å°å•æ•°ï¼ˆå¦‚éœ€ï¼Œé»˜è®¤ä¸º100ï¼‰
+	///Ã¿´Î×îĞ¡µ¥Êı£¨ÈçĞè£¬Ä¬ÈÏÎª100£©
 	TFocusFtdcVolumeType	MinVolume;
-	///è‚¡ç¥¨æ¯æ¬¡ä¸‹å•æ¯”ä¾‹ï¼ˆ%ï¼‰
+	///¹ÉÆ±Ã¿´ÎÏÂµ¥±ÈÀı£¨%£©
 	TFocusFtdcRatioType	StockRatioAvail;
-	///å¸‚åœºå¹³å‡é›†åˆç«ä»·æˆäº¤é‡1
+	///ÊĞ³¡Æ½¾ù¼¯ºÏ¾º¼Û³É½»Á¿1
 	TFocusFtdcVolumeType	AverMactchTradeVolume1;
-	///å¸‚åœºå¹³å‡é›†åˆç«ä»·æˆäº¤é‡2
+	///ÊĞ³¡Æ½¾ù¼¯ºÏ¾º¼Û³É½»Á¿2
 	TFocusFtdcVolumeType	AverMactchTradeVolume2;
-	///æ˜¨æ”¶ç›˜
+	///×òÊÕÅÌ
 	TFocusFtdcPriceType	PreClosePrice;
-	///è‚¡ç¥¨ä¸‹å•ç±»å‹
+	///¹ÉÆ±ÏÂµ¥ÀàĞÍ
 	TFocusFtdcStockStrategyPriceType	StockPriceType;
 };
 
-///è‚¡ç¥¨æœŸè´§å¯¹å†²å…³ç³»è¡¨
+///¹ÉÆ±ÆÚ»õ¶Ô³å¹ØÏµ±í
 struct CFocusFtdcHighFutureStrategyRelationField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///è¯¥è‚¡ç¥¨ç”¨å“ªä¸ªèµ„é‡‘è´¦å·å»ä¸‹å•
+	///¸Ã¹ÉÆ±ÓÃÄÄ¸ö×Ê½ğÕËºÅÈ¥ÏÂµ¥
 	TFocusFtdcInvestorIDType	StockInvestorID;
-	///è‚¡ç¥¨ç­–ç•¥ID
+	///¹ÉÆ±²ßÂÔID
 	TFocusFtdcStrategyIDType	StockStrategyID;
-	///ç­–ç•¥ç±»å‹ï¼ˆå¢ä»“oræ¢ä»“ï¼Œæ¢ä»“ä¸º0ï¼Œå…¶ä½™ä¸ºå¤§äº0ï¼‰
+	///²ßÂÔÀàĞÍ£¨Ôö²Öor»»²Ö£¬»»²ÖÎª0£¬ÆäÓàÎª´óÓÚ0£©
 	TFocusFtdcVolumeType	StockStrategyType;
-	///è‚¡ç¥¨ç­–ç•¥å½“å‰æ˜¯å¦äº¤æ˜“
+	///¹ÉÆ±²ßÂÔµ±Ç°ÊÇ·ñ½»Ò×
 	TFocusFtdcBoolType	StockStrategyIsTrading;
-	///è‚¡ç¥¨è½®è®­æ£€æŸ¥æ—¶é—´é—´éš”ï¼ˆç§’ï¼‰
+	///¹ÉÆ±ÂÖÑµ¼ì²éÊ±¼ä¼ä¸ô£¨Ãë£©
 	TFocusFtdcNumberType	StockTimeAvail;
-	///è‚¡ç¥¨å¹³å‡æˆäº¤é‡ç»Ÿè®¡é—´éš”æ¬¡æ•°ï¼ˆMAï¼‰
+	///¹ÉÆ±Æ½¾ù³É½»Á¿Í³¼Æ¼ä¸ô´ÎÊı£¨MA£©
 	TFocusFtdcNumberType	MAStockAvail;
-	///å•ä¸ªè‚¡ç¥¨æŠ¥ä»·å®¹å¿åº¦ï¼Œæ­£å¸¸ä¸‹å•æ—¶é«˜ä»·è‚¡#ä½ä»·è‚¡@å•è¾¹æ—¶é«˜ä»·è‚¡#ä½ä»·è‚¡ J#A@A#A
+	///µ¥¸ö¹ÉÆ±±¨¼ÛÈİÈÌ¶È£¬Õı³£ÏÂµ¥Ê±¸ß¼Û¹É#µÍ¼Û¹É@µ¥±ßÊ±¸ß¼Û¹É#µÍ¼Û¹É J#A@A#A
 	TFocusFtdcDepositNoteType	StockTolerRatio;
-	///åœæ­¢æŠ¥å•è‚¡ç¥¨æ€»ä¹°å–é‡‘é¢åç¦»æ¯”ç‡ï¼ˆ%ï¼‰
+	///Í£Ö¹±¨µ¥¹ÉÆ±×ÜÂòÂô½ğ¶îÆ«Àë±ÈÂÊ£¨%£©
 	TFocusFtdcRatioType	StopDeviRatio;
-	///æ¢å¤è‚¡ç¥¨æ€»ä¹°å–é‡‘é¢åç¦»æ¯”ç‡ï¼ˆ%ï¼‰
+	///»Ö¸´¹ÉÆ±×ÜÂòÂô½ğ¶îÆ«Àë±ÈÂÊ£¨%£©
 	TFocusFtdcRatioType	RrecovrDeviRatio;
-	///åˆå§‹åŒ–é¢„åˆ†é…æ¢ä»“æ€»èµ„é‡‘
+	///³õÊ¼»¯Ô¤·ÖÅä»»²Ö×Ü×Ê½ğ
 	TFocusFtdcMoneyType	TargetMoney;
-	///æ¯è½®ä¸‹å•å¸‚å€¼ä¸Šé™èµ„é‡‘
+	///Ã¿ÂÖÏÂµ¥ÊĞÖµÉÏÏŞ×Ê½ğ
 	TFocusFtdcMoneyType	RoundMaxMoney;
-	///æœŸè´§äº¤æ˜“æ‰€ä»£ç 
+	///ÆÚ»õ½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	FutureExchangeID;
-	///æœŸè´§åˆçº¦ä»£ç 
+	///ÆÚ»õºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	FutureInstrumentID;
-	///æœŸè´§ä¹°å–æ–¹å‘
+	///ÆÚ»õÂòÂô·½Ïò
 	TFocusFtdcDirectionType	FutureDirection;
-	///æœŸè´§æŠ¥å•ç±»å‹
+	///ÆÚ»õ±¨µ¥ÀàĞÍ
 	TFocusFtdcStockStrategyPriceType	FuturePriceType;
-	///å¯¹åº”æœŸè´§å½“å‰æ˜¯å¦äº¤æ˜“ï¼ˆæ¢ä»“é»˜è®¤å¼€å…³æ— æ•ˆï¼‰
+	///¶ÔÓ¦ÆÚ»õµ±Ç°ÊÇ·ñ½»Ò×£¨»»²ÖÄ¬ÈÏ¿ª¹ØÎŞĞ§£©
 	TFocusFtdcBoolType	FutureIsTrading;
-	///æœŸè´§èµ„é‡‘è´¦å·
+	///ÆÚ»õ×Ê½ğÕËºÅ
 	TFocusFtdcInvestorIDType	FutureInvestorID;
-	///æœŸè´§é»˜è®¤æ£€æŸ¥æ—¶é—´é—´éš”
+	///ÆÚ»õÄ¬ÈÏ¼ì²éÊ±¼ä¼ä¸ô
 	TFocusFtdcNumberType	FutureTimeAvail;
-	///å›ºå®šé€†å›è´­é‡‘é¢
+	///¹Ì¶¨Äæ»Ø¹º½ğ¶î
 	TFocusFtdcMoneyType	StaticRebuyMoney;
-	///æ˜¯å¦å»¶ç»­æ¶¨è·Œåœ
+	///ÊÇ·ñÑÓĞøÕÇµøÍ£
 	TFocusFtdcSwitchFlagType	BRNeedContinue;
-	///æœ€å¤§æ¢ä»“æ¯”ä¾‹
+	///×î´ó»»²Ö±ÈÀı
 	TFocusFtdcRatioType	MaxTradePer;
-	///æœŸè´§ç®—æ³•ç±»å‹
+	///ÆÚ»õËã·¨ÀàĞÍ
 	TFocusFtdcVolumeType	FutureAlgoType;
-	///æŒ‡æ•°äº¤æ˜“æ‰€
+	///Ö¸Êı½»Ò×Ëù
 	TFocusFtdcExchangeIDType	IndexExchangeID;
-	///æŒ‡æ•°åˆçº¦
+	///Ö¸ÊıºÏÔ¼
 	TFocusFtdcInstrumentIDType	IndexInstrumentID;
-	///åŸºå·®
+	///»ù²î
 	TFocusFtdcPriceType	SpreadPrice;
-	///æœŸè´§ä¸‹å•æ‰‹æ•°
+	///ÆÚ»õÏÂµ¥ÊÖÊı
 	TFocusFtdcVolumeType	FutureAmount;
-	///Listä¸­priceçš„ä»·æ ¼ç±»å‹
+	///ListÖĞpriceµÄ¼Û¸ñÀàĞÍ
 	TFocusFtdcListPriceTypeType	ListPriceType;
-	///æœŸç°ä¸‹å•åŒ¹é…åº¦(0~1)
+	///ÆÚÏÖÏÂµ¥Æ¥Åä¶È(0~1)
 	TFocusFtdcRatioType	FuStockRelation;
-	///æ˜¯å¦è·ŸéšæœŸè´§ä¸‹å•
+	///ÊÇ·ñ¸úËæÆÚ»õÏÂµ¥
 	TFocusFtdcBoolType	FlowerFuture;
-	///æœŸè´§é—´éš”æ‰‹æ•°
+	///ÆÚ»õ¼ä¸ôÊÖÊı
 	TFocusFtdcVolumeType	FutureAvailAmount;
-	///ä»“ä½æƒé‡ç±»å‹
+	///²ÖÎ»È¨ÖØÀàĞÍ
 	TFocusFtdcPositionRatioTypeType	PositionRatioType;
-	///è‚¡ç¥¨æ¢ä»“ç®—æ³•(0,è‡ªæœ‰ 1 AlgoTwap 2. AlgoVwap)
+	///¹ÉÆ±»»²ÖËã·¨(0,×ÔÓĞ 1 AlgoTwap 2. AlgoVwap)
 	TFocusFtdcVolumeType	StockAlgoType;
-	///ç­–ç•¥å¼€å§‹æ—¶é—´(HH:mm:ss)
+	///²ßÂÔ¿ªÊ¼Ê±¼ä(HH:mm:ss)
 	TFocusFtdcTimeType	AlgoStrategyStartTime;
-	///ç­–ç•¥åœæ­¢æ—¶é—´(HH:mm:ss)
+	///²ßÂÔÍ£Ö¹Ê±¼ä(HH:mm:ss)
 	TFocusFtdcTimeType	AlgoStrategyEndTime;
 };
 
-///è‚¡ç¥¨æœŸè´§å¯¹å†²å…³ç³»å†…éƒ¨è¡¨
+///¹ÉÆ±ÆÚ»õ¶Ô³å¹ØÏµÄÚ²¿±í
 struct CFocusFtdcHighInnerFutureStrategyRelationField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///è¯¥è‚¡ç¥¨ç”¨å“ªä¸ªèµ„é‡‘è´¦å·å»ä¸‹å•
+	///¸Ã¹ÉÆ±ÓÃÄÄ¸ö×Ê½ğÕËºÅÈ¥ÏÂµ¥
 	TFocusFtdcInvestorIDType	StockInvestorID;
-	///è‚¡ç¥¨ç­–ç•¥ID
+	///¹ÉÆ±²ßÂÔID
 	TFocusFtdcStrategyIDType	StockStrategyID;
-	///ç­–ç•¥ç±»å‹ï¼ˆå¢ä»“oræ¢ä»“ï¼Œæ¢ä»“ä¸º0ï¼Œå…¶ä½™ä¸ºå¤§äº0ï¼‰
+	///²ßÂÔÀàĞÍ£¨Ôö²Öor»»²Ö£¬»»²ÖÎª0£¬ÆäÓàÎª´óÓÚ0£©
 	TFocusFtdcVolumeType	StockStrategyType;
-	///è‚¡ç¥¨ç­–ç•¥å½“å‰æ˜¯å¦äº¤æ˜“
+	///¹ÉÆ±²ßÂÔµ±Ç°ÊÇ·ñ½»Ò×
 	TFocusFtdcBoolType	StockStrategyIsTrading;
-	///è‚¡ç¥¨è½®è®­æ£€æŸ¥æ—¶é—´é—´éš”ï¼ˆç§’ï¼‰
+	///¹ÉÆ±ÂÖÑµ¼ì²éÊ±¼ä¼ä¸ô£¨Ãë£©
 	TFocusFtdcNumberType	StockTimeAvail;
-	///è‚¡ç¥¨å¹³å‡æˆäº¤é‡ç»Ÿè®¡é—´éš”æ¬¡æ•°ï¼ˆMAï¼‰
+	///¹ÉÆ±Æ½¾ù³É½»Á¿Í³¼Æ¼ä¸ô´ÎÊı£¨MA£©
 	TFocusFtdcNumberType	MAStockAvail;
-	///å•ä¸ªè‚¡ç¥¨æŠ¥ä»·å®¹å¿åº¦ï¼Œæ­£å¸¸ä¸‹å•æ—¶é«˜ä»·è‚¡#ä½ä»·è‚¡@å•è¾¹æ—¶é«˜ä»·è‚¡#ä½ä»·è‚¡ J#A@A#A
+	///µ¥¸ö¹ÉÆ±±¨¼ÛÈİÈÌ¶È£¬Õı³£ÏÂµ¥Ê±¸ß¼Û¹É#µÍ¼Û¹É@µ¥±ßÊ±¸ß¼Û¹É#µÍ¼Û¹É J#A@A#A
 	TFocusFtdcDepositNoteType	StockTolerRatio;
-	///åœæ­¢æŠ¥å•è‚¡ç¥¨æ€»ä¹°å–é‡‘é¢åç¦»æ¯”ç‡ï¼ˆ%ï¼‰
+	///Í£Ö¹±¨µ¥¹ÉÆ±×ÜÂòÂô½ğ¶îÆ«Àë±ÈÂÊ£¨%£©
 	TFocusFtdcRatioType	StopDeviRatio;
-	///æ¢å¤è‚¡ç¥¨æ€»ä¹°å–é‡‘é¢åç¦»æ¯”ç‡ï¼ˆ%ï¼‰
+	///»Ö¸´¹ÉÆ±×ÜÂòÂô½ğ¶îÆ«Àë±ÈÂÊ£¨%£©
 	TFocusFtdcRatioType	RrecovrDeviRatio;
-	///åˆå§‹åŒ–é¢„åˆ†é…æ¢ä»“æ€»èµ„é‡‘
+	///³õÊ¼»¯Ô¤·ÖÅä»»²Ö×Ü×Ê½ğ
 	TFocusFtdcMoneyType	TargetMoney;
-	///æ¯è½®ä¸‹å•å¸‚å€¼ä¸Šé™èµ„é‡‘
+	///Ã¿ÂÖÏÂµ¥ÊĞÖµÉÏÏŞ×Ê½ğ
 	TFocusFtdcMoneyType	RoundMaxMoney;
-	///æœŸè´§äº¤æ˜“æ‰€ä»£ç 
+	///ÆÚ»õ½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	FutureExchangeID;
-	///æœŸè´§åˆçº¦ä»£ç 
+	///ÆÚ»õºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	FutureInstrumentID;
-	///æœŸè´§ä¹°å–æ–¹å‘
+	///ÆÚ»õÂòÂô·½Ïò
 	TFocusFtdcDirectionType	FutureDirection;
-	///æœŸè´§æŠ¥å•ç±»å‹
+	///ÆÚ»õ±¨µ¥ÀàĞÍ
 	TFocusFtdcStockStrategyPriceType	FuturePriceType;
-	///å¯¹åº”æœŸè´§å½“å‰æ˜¯å¦äº¤æ˜“ï¼ˆæ¢ä»“é»˜è®¤å¼€å…³æ— æ•ˆï¼‰
+	///¶ÔÓ¦ÆÚ»õµ±Ç°ÊÇ·ñ½»Ò×£¨»»²ÖÄ¬ÈÏ¿ª¹ØÎŞĞ§£©
 	TFocusFtdcBoolType	FutureIsTrading;
-	///æœŸè´§èµ„é‡‘è´¦å·
+	///ÆÚ»õ×Ê½ğÕËºÅ
 	TFocusFtdcInvestorIDType	FutureInvestorID;
-	///æœŸè´§é»˜è®¤æ£€æŸ¥æ—¶é—´é—´éš”
+	///ÆÚ»õÄ¬ÈÏ¼ì²éÊ±¼ä¼ä¸ô
 	TFocusFtdcNumberType	FutureTimeAvail;
-	///å›ºå®šé€†å›è´­é‡‘é¢
+	///¹Ì¶¨Äæ»Ø¹º½ğ¶î
 	TFocusFtdcMoneyType	StaticRebuyMoney;
-	///æ˜¯å¦å»¶ç»­æ¶¨è·Œåœ
+	///ÊÇ·ñÑÓĞøÕÇµøÍ£
 	TFocusFtdcSwitchFlagType	BRNeedContinue;
-	///æœ€å¤§æ¢ä»“æ¯”ä¾‹
+	///×î´ó»»²Ö±ÈÀı
 	TFocusFtdcRatioType	MaxTradePer;
-	///æœŸè´§ç®—æ³•ç±»å‹
+	///ÆÚ»õËã·¨ÀàĞÍ
 	TFocusFtdcVolumeType	FutureAlgoType;
-	///æŒ‡æ•°äº¤æ˜“æ‰€
+	///Ö¸Êı½»Ò×Ëù
 	TFocusFtdcExchangeIDType	IndexExchangeID;
-	///æŒ‡æ•°åˆçº¦
+	///Ö¸ÊıºÏÔ¼
 	TFocusFtdcInstrumentIDType	IndexInstrumentID;
-	///åŸºå·®
+	///»ù²î
 	TFocusFtdcPriceType	SpreadPrice;
-	///æœŸè´§ä¸‹å•æ‰‹æ•°
+	///ÆÚ»õÏÂµ¥ÊÖÊı
 	TFocusFtdcVolumeType	FutureAmount;
-	///Listä¸­priceçš„ä»·æ ¼ç±»å‹
+	///ListÖĞpriceµÄ¼Û¸ñÀàĞÍ
 	TFocusFtdcListPriceTypeType	ListPriceType;
-	///æœŸç°ä¸‹å•åŒ¹é…åº¦(0~1)
+	///ÆÚÏÖÏÂµ¥Æ¥Åä¶È(0~1)
 	TFocusFtdcRatioType	FuStockRelation;
-	///æ˜¯å¦è·ŸéšæœŸè´§ä¸‹å•
+	///ÊÇ·ñ¸úËæÆÚ»õÏÂµ¥
 	TFocusFtdcBoolType	FlowerFuture;
-	///æœŸè´§é—´éš”æ‰‹æ•°
+	///ÆÚ»õ¼ä¸ôÊÖÊı
 	TFocusFtdcVolumeType	FutureAvailAmount;
-	///ä»“ä½æƒé‡ç±»å‹
+	///²ÖÎ»È¨ÖØÀàĞÍ
 	TFocusFtdcPositionRatioTypeType	PositionRatioType;
-	///è‚¡ç¥¨æ¢ä»“ç®—æ³•(0,è‡ªæœ‰ 1 AlgoTwap 2. AlgoVwap)
+	///¹ÉÆ±»»²ÖËã·¨(0,×ÔÓĞ 1 AlgoTwap 2. AlgoVwap)
 	TFocusFtdcVolumeType	StockAlgoType;
-	///ç­–ç•¥å¼€å§‹æ—¶é—´(HH:mm:ss)
+	///²ßÂÔ¿ªÊ¼Ê±¼ä(HH:mm:ss)
 	TFocusFtdcTimeType	AlgoStrategyStartTime;
-	///ç­–ç•¥åœæ­¢æ—¶é—´(HH:mm:ss)
+	///²ßÂÔÍ£Ö¹Ê±¼ä(HH:mm:ss)
 	TFocusFtdcTimeType	AlgoStrategyEndTime;
-	///æ“ä½œå¤‡æ³¨
+	///²Ù×÷±¸×¢
 	TFocusFtdcDepositNoteType	Note;
-	///ç­–ç•¥è¡Œæƒ…çŠ¶æ€
+	///²ßÂÔĞĞÇé×´Ì¬
 	TFocusFtdcDepositNoteType	RelationOrderStatus;
-	///å®é™…åˆ†é…æ€»èµ„é‡‘
+	///Êµ¼Ê·ÖÅä×Ü×Ê½ğ
 	TFocusFtdcMoneyType	RealTargetMoney;
-	///æœ€æ–°ä¹°æ€»æˆäº¤æ€»é‡
+	///×îĞÂÂò×Ü³É½»×ÜÁ¿
 	TFocusFtdcMoneyType	LastTotalBuyMoney;
-	///æœ€æ–°å–æ€»æˆäº¤æ€»é‡
+	///×îĞÂÂô×Ü³É½»×ÜÁ¿
 	TFocusFtdcMoneyType	LastTotalSellMoney;
-	///æœ€æ–°éœ€è¦ä¹°çš„æ€»é‡‘é¢
+	///×îĞÂĞèÒªÂòµÄ×Ü½ğ¶î
 	TFocusFtdcMoneyType	LastTotalNeedBuyMoney;
-	///æœ€æ–°éœ€è¦å–çš„æ€»é‡‘é¢
+	///×îĞÂĞèÒªÂôµÄ×Ü½ğ¶î
 	TFocusFtdcMoneyType	LastTotalNeedSellMoney;
-	///æœ€æ–°å†»ç»“çš„æ€»é‡‘é¢
+	///×îĞÂ¶³½áµÄ×Ü½ğ¶î
 	TFocusFtdcMoneyType	LastFrozenMoney;
-	///ä¹°å®Œæˆæ¯”ä¾‹
+	///ÂòÍê³É±ÈÀı
 	TFocusFtdcMoneyType	LastBuyPer;
-	///å–å®Œæˆæ¯”ä¾‹
+	///ÂôÍê³É±ÈÀı
 	TFocusFtdcMoneyType	LastSellPer;
-	///æœ€æ–°æ“ä½œæ—¶é—´
+	///×îĞÂ²Ù×÷Ê±¼ä
 	TFocusFtdcTimeType	LastOperTime;
-	///ä»Šæ—¥ä¹°æ€»æˆæœ¬
+	///½ñÈÕÂò×Ü³É±¾
 	TFocusFtdcMoneyType	TotalBuyCostMoney;
-	///ä»Šæ—¥å–æ€»æˆæœ¬
+	///½ñÈÕÂô×Ü³É±¾
 	TFocusFtdcMoneyType	TotalSellCostMoney;
-	///ä»Šæ—¥æ‰‹ç»­è´¹æˆæœ¬
+	///½ñÈÕÊÖĞø·Ñ³É±¾
 	TFocusFtdcMoneyType	TotalFeeCostMoney;
-	///ä»Šæ—¥å¹³å‡æˆæœ¬
+	///½ñÈÕÆ½¾ù³É±¾
 	TFocusFtdcMoneyType	AverCostMoney;
-	///æ˜¯å¦ä¹°å–ç›¸ç­‰
+	///ÊÇ·ñÂòÂôÏàµÈ
 	TFocusFtdcDepositNoteType	IsPerEqual;
-	///ä¹°å–ä»·å·®å€¼ï¼ˆæ­£æ•°ï¼‰
+	///ÂòÂô¼Û²îÖµ£¨ÕıÊı£©
 	TFocusFtdcMoneyType	BuySellGapMoney;
-	///å°¾ç›˜å–å‡ºæ€»æˆäº¤é‡‘é¢
+	///Î²ÅÌÂô³ö×Ü³É½»½ğ¶î
 	TFocusFtdcMoneyType	CloseEndSellMoney;
-	///æ•´ä½“æˆæœ¬
+	///ÕûÌå³É±¾
 	TFocusFtdcMoneyType	TotalAverCostMoney;
-	///æ˜¯å¦è‡ªåŠ¨é€†å›è´­
+	///ÊÇ·ñ×Ô¶¯Äæ»Ø¹º
 	TFocusFtdcSwitchFlagType	BRebuySwitch;
-	///å°¾ç›˜ç­–ç•¥ä¹‹å‰ä»Šæ—¥ç´¯ç§¯æœ€æ–°ä¹°æ€»æˆäº¤æ€»é‡
+	///Î²ÅÌ²ßÂÔÖ®Ç°½ñÈÕÀÛ»ı×îĞÂÂò×Ü³É½»×ÜÁ¿
 	TFocusFtdcMoneyType	AllAddLastTotalBuyMoney;
-	///å°¾ç›˜ç­–ç•¥ä¹‹å‰ä»Šæ—¥ç´¯ç§¯æœ€æ–°å–æ€»æˆäº¤æ€»é‡
+	///Î²ÅÌ²ßÂÔÖ®Ç°½ñÈÕÀÛ»ı×îĞÂÂô×Ü³É½»×ÜÁ¿
 	TFocusFtdcMoneyType	AllAddLastTotalSellMoney;
-	///å°¾ç›˜ç­–ç•¥ä¹‹å‰ä»Šæ—¥ç´¯ç§¯ä¹°æ€»æˆæœ¬
+	///Î²ÅÌ²ßÂÔÖ®Ç°½ñÈÕÀÛ»ıÂò×Ü³É±¾
 	TFocusFtdcMoneyType	AllAddTotalBuyCostMoney;
-	///å°¾ç›˜ç­–ç•¥ä¹‹å‰ä»Šæ—¥ç´¯ç§¯å–æ€»æˆæœ¬
+	///Î²ÅÌ²ßÂÔÖ®Ç°½ñÈÕÀÛ»ıÂô×Ü³É±¾
 	TFocusFtdcMoneyType	AllAddTotalSellCostMoney;
-	///å°¾ç›˜ç­–ç•¥ä¹‹å‰ä»Šæ—¥ç´¯ç§¯å–æ‰‹ç»­è´¹æˆæœ¬
+	///Î²ÅÌ²ßÂÔÖ®Ç°½ñÈÕÀÛ»ıÂôÊÖĞø·Ñ³É±¾
 	TFocusFtdcMoneyType	AllAddTotalFeeCostMoney;
-	///å°¾ç›˜ç­–ç•¥ä¹‹å‰ä»Šæ—¥ç´¯ç§¯å¹³å‡æˆæœ¬
+	///Î²ÅÌ²ßÂÔÖ®Ç°½ñÈÕÀÛ»ıÆ½¾ù³É±¾
 	TFocusFtdcMoneyType	AllAddAverCostMoney;
-	///å°¾ç›˜ç­–ç•¥ä¹‹å‰ä»Šæ—¥ç´¯ç§¯æ•´ä½“æˆæœ¬
+	///Î²ÅÌ²ßÂÔÖ®Ç°½ñÈÕÀÛ»ıÕûÌå³É±¾
 	TFocusFtdcMoneyType	AllAddTotalAverCostMoney;
-	///æ‹©æ—¶æ–¹å‘
+	///ÔñÊ±·½Ïò
 	TFocusFtdcDepositNoteType	IndexDirSignal;
-	///æœ€æ–°æœŸè´§æ“ä½œæ—¶é—´
+	///×îĞÂÆÚ»õ²Ù×÷Ê±¼ä
 	TFocusFtdcTimeType	LastFuOperTime;
-	///å·²å®Œæˆå¯¹å†²æ€»äº¤æ˜“é‡
+	///ÒÑÍê³É¶Ô³å×Ü½»Ò×Á¿
 	TFocusFtdcVolumeType	LastFuTarNetPosition;
-	///å¯¹å†²æ“ä½œå¤‡æ³¨
+	///¶Ô³å²Ù×÷±¸×¢
 	TFocusFtdcDepositNoteType	FutureNote;
-	///æœŸè´§ä»·å·®å¯¹å†²æ˜¯å¦éœ€è¦æ£€æŸ¥
+	///ÆÚ»õ¼Û²î¶Ô³åÊÇ·ñĞèÒª¼ì²é
 	TFocusFtdcBoolType	FutureSpreadNeedCheck;
-	///å¼€ä»“é‚£åˆ»æœŸè´§ä»·æ ¼
+	///¿ª²ÖÄÇ¿ÌÆÚ»õ¼Û¸ñ
 	TFocusFtdcPriceType	OpenFuInstrPrice;
-	///ä¸Šæ¬¡å®Œæˆçš„æ€»äº¤æ˜“é‡
+	///ÉÏ´ÎÍê³ÉµÄ×Ü½»Ò×Á¿
 	TFocusFtdcVolumeType	BeforeLastFuTarNetPosition;
-	///ç°è´§å¯¹äºæœŸè´§æ‰‹æ•°
+	///ÏÖ»õ¶ÔÓÚÆÚ»õÊÖÊı
 	TFocusFtdcRatioType	NetFuPosition;
-	///å®æ—¶åŸºå·®
+	///ÊµÊ±»ù²î
 	TFocusFtdcPriceType	RealTimeSpreadPrice;
-	///å®æ—¶æŒ‡æ•°ä»·æ ¼
+	///ÊµÊ±Ö¸Êı¼Û¸ñ
 	TFocusFtdcPriceType	RealIndexPrice;
-	///å®æ—¶æœŸè´§ä»·æ ¼
+	///ÊµÊ±ÆÚ»õ¼Û¸ñ
 	TFocusFtdcPriceType	RealFuturePrice;
-	///æœŸè´§æ“ä½œå¤‡æ³¨2
+	///ÆÚ»õ²Ù×÷±¸×¢2
 	TFocusFtdcDepositNoteType	FutureRelationNote;
-	///æœ€æ–°æœŸè´§å¯¹å†²æ“ä½œæ—¶é—´
+	///×îĞÂÆÚ»õ¶Ô³å²Ù×÷Ê±¼ä
 	TFocusFtdcTimeType	LastHedgeFuOperTime;
-	///ç®—æ³•æ“ä½œå¤‡æ³¨
+	///Ëã·¨²Ù×÷±¸×¢
 	TFocusFtdcDepositNoteType	AlgoNote;
 };
 
-///æŸ¥è¯¢æ‰€æœ‰è‚¡ç¥¨æœŸè´§å¯¹å†²å…³ç³»è¡¨
+///²éÑ¯ËùÓĞ¹ÉÆ±ÆÚ»õ¶Ô³å¹ØÏµ±í
 struct CFocusFtdcQryAllHighFutureStrategyRelationField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///è¯¥è‚¡ç¥¨ç”¨å“ªä¸ªèµ„é‡‘è´¦å·å»ä¸‹å•
+	///¸Ã¹ÉÆ±ÓÃÄÄ¸ö×Ê½ğÕËºÅÈ¥ÏÂµ¥
 	TFocusFtdcInvestorIDType	StockInvestorID;
 };
 
-///è‚¡ç¥¨äº¤æ˜“é˜¶æ®µä¸‹å•æ–¹å¼
+///¹ÉÆ±½»Ò×½×¶ÎÏÂµ¥·½Ê½
 struct CFocusFtdcStockMarketTradingPeriodStrategyField
 {
-	///è¯¥è‚¡ç¥¨ç”¨å“ªä¸ªèµ„é‡‘è´¦å·å»ä¸‹å•
+	///¸Ã¹ÉÆ±ÓÃÄÄ¸ö×Ê½ğÕËºÅÈ¥ÏÂµ¥
 	TFocusFtdcInvestorIDType	StockInvestorID;
-	///è‚¡ç¥¨ç­–ç•¥ID
+	///¹ÉÆ±²ßÂÔID
 	TFocusFtdcStrategyIDType	StockStrategyID;
-	///èµ·å§‹æ—¶é—´
+	///ÆğÊ¼Ê±¼ä
 	TFocusFtdcTimeType	TpStart;
-	///ç»“æŸæ—¶é—´
+	///½áÊøÊ±¼ä
 	TFocusFtdcTimeType	TpEnd;
-	///äº¤æ˜“ç±»å‹ï¼ˆæ­£å¸¸ä¸‹å•æ—¶é«˜ä»·è‚¡#ä½ä»·è‚¡@å•è¾¹æ—¶é«˜ä»·è‚¡#ä½ä»·è‚¡ J#A@A#Aï¼‰
+	///½»Ò×ÀàĞÍ£¨Õı³£ÏÂµ¥Ê±¸ß¼Û¹É#µÍ¼Û¹É@µ¥±ßÊ±¸ß¼Û¹É#µÍ¼Û¹É J#A@A#A£©
 	TFocusFtdcDepositNoteType	StockOrderType;
-	///åœæ­¢æŠ¥å•è‚¡ç¥¨æ€»ä¹°å–é‡‘é¢åç¦»æ¯”ç‡ï¼ˆ%ï¼‰
+	///Í£Ö¹±¨µ¥¹ÉÆ±×ÜÂòÂô½ğ¶îÆ«Àë±ÈÂÊ£¨%£©
 	TFocusFtdcRatioType	StopDeviRatio;
-	///æ¢å¤è‚¡ç¥¨æ€»ä¹°å–é‡‘é¢åç¦»æ¯”ç‡ï¼ˆ%ï¼‰
+	///»Ö¸´¹ÉÆ±×ÜÂòÂô½ğ¶îÆ«Àë±ÈÂÊ£¨%£©
 	TFocusFtdcRatioType	RrecovrDeviRatio;
-	///æ¯è½®ä¸‹å•å¸‚å€¼ä¸Šé™èµ„é‡‘
+	///Ã¿ÂÖÏÂµ¥ÊĞÖµÉÏÏŞ×Ê½ğ
 	TFocusFtdcMoneyType	RoundMaxMoney;
-	///è‚¡ç¥¨è½®è®­æ£€æŸ¥æ—¶é—´é—´éš”ï¼ˆç§’ï¼‰
+	///¹ÉÆ±ÂÖÑµ¼ì²éÊ±¼ä¼ä¸ô£¨Ãë£©
 	TFocusFtdcNumberType	StockTimeAvail;
-	///å•ä¸ªè‚¡ç¥¨æŠ¥ä»·å®¹å¿åº¦ï¼Œæ­£å¸¸ä¸‹å•æ—¶é«˜ä»·è‚¡#ä½ä»·è‚¡@å•è¾¹æ—¶é«˜ä»·è‚¡#ä½ä»·è‚¡ J#A@A#A
+	///µ¥¸ö¹ÉÆ±±¨¼ÛÈİÈÌ¶È£¬Õı³£ÏÂµ¥Ê±¸ß¼Û¹É#µÍ¼Û¹É@µ¥±ßÊ±¸ß¼Û¹É#µÍ¼Û¹É J#A@A#A
 	TFocusFtdcDepositNoteType	StockTolerRatio;
-	///æ˜¯å¦æ–°ä¸‹å•åŠ ä¸Šä¸Šæ¬¡æ’¤å•é‡
+	///ÊÇ·ñĞÂÏÂµ¥¼ÓÉÏÉÏ´Î³·µ¥Á¿
 	TFocusFtdcSwitchFlagType	NeedAddCancelVolumeSwitch;
-	///æ¯æ¬¡ä¸‹å•é‡ç”¨å¯¹æ‰‹é‡å’Œå‰å‡ æ¬¡é‡å¹³å‡é‡å–å¤§
+	///Ã¿´ÎÏÂµ¥Á¿ÓÃ¶ÔÊÖÁ¿ºÍÇ°¼¸´ÎÁ¿Æ½¾ùÁ¿È¡´ó
 	TFocusFtdcSwitchFlagType	NeedGetSideVolumeSwitch;
-	///æ˜¯å¦MaxVolumeç”Ÿæ•ˆ
+	///ÊÇ·ñMaxVolumeÉúĞ§
 	TFocusFtdcSwitchFlagType	CheckMaxVolumeSwitch;
 };
 
-///é€†å›è´­è‡ªåŠ¨å–å‡ºå¼€å…³
+///Äæ»Ø¹º×Ô¶¯Âô³ö¿ª¹Ø
 struct CFocusFtdcRelationAutoReBuySwitchField
 {
-	///è¯¥è‚¡ç¥¨ç”¨å“ªä¸ªèµ„é‡‘è´¦å·å»ä¸‹å•
+	///¸Ã¹ÉÆ±ÓÃÄÄ¸ö×Ê½ğÕËºÅÈ¥ÏÂµ¥
 	TFocusFtdcInvestorIDType	StockInvestorID;
-	///é€†å›è´­å¼€å…³
+	///Äæ»Ø¹º¿ª¹Ø
 	TFocusFtdcSwitchFlagType	RelationReBuySwitch;
 };
 
-///æœŸè´§ç®—æ³•è®¢å•
+///ÆÚ»õËã·¨¶©µ¥
 struct CFocusFtdcFutureStrategyOrderField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ç­–ç•¥IDå·
+	///²ßÂÔIDºÅ
 	TFocusFtdcStrategyIDType	StrategyID;
-	///ç›®æ ‡å‡€æŒä»“é‡
+	///Ä¿±ê¾»³Ö²ÖÁ¿
 	TFocusFtdcVolumeType	TargetNetPosition;
-	///ç­–ç•¥å¼€å§‹æ‰§è¡Œæ—¶é—´
+	///²ßÂÔ¿ªÊ¼Ö´ĞĞÊ±¼ä
 	TFocusFtdcTimeType	StartTradingTime;
-	///ç®—æ³•ç±»å‹
+	///Ëã·¨ÀàĞÍ
 	TFocusFtdcVolumeType	AlgoType;
-	///ç”¨æˆ·è‡ªå®šä¹‰åŸŸ
+	///ÓÃ»§×Ô¶¨ÒåÓò
 	TFocusFtdcCustomType	UserCustom;
-	///ç­–ç•¥å½“å‰æ˜¯å¦äº¤æ˜“
+	///²ßÂÔµ±Ç°ÊÇ·ñ½»Ò×
 	TFocusFtdcBoolType	StrategyIsTrading;
-	///ç­–ç•¥æŠ¥å•ä»·æ ¼æ¡ä»¶
+	///²ßÂÔ±¨µ¥¼Û¸ñÌõ¼ş
 	TFocusFtdcStockStrategyPriceType	StrategyPrice;
-	///å°¾ç›˜é›†åˆç«ä»·éœ€è¦ä¸‹å•é‡
+	///Î²ÅÌ¼¯ºÏ¾º¼ÛĞèÒªÏÂµ¥Á¿
 	TFocusFtdcVolumeType	MactchTrdVol;
-	///å°¾ç›˜é›†åˆç«ä»·ä¸‹å•æ–¹å¼
+	///Î²ÅÌ¼¯ºÏ¾º¼ÛÏÂµ¥·½Ê½
 	TFocusFtdcStockStrategyPriceType	MactchTrdPriceType;
-	///Vwapæ¯è½®æœ€å¤§ä¸‹å•é‡
+	///VwapÃ¿ÂÖ×î´óÏÂµ¥Á¿
 	TFocusFtdcVolumeType	VwapMaxVolume;
-	///æ˜¯å¦åŠ ä»“
+	///ÊÇ·ñ¼Ó²Ö
 	TFocusFtdcSwitchFlagType	IsAddPosi;
-	///ä¸‹å•ä»“ä½ç±»å‹
+	///ÏÂµ¥²ÖÎ»ÀàĞÍ
 	TFocusFtdcAddPositionTypeType	AddPositionType;
-	///ä»·æ ¼è§¦å‘æ¡ä»¶
+	///¼Û¸ñ´¥·¢Ìõ¼ş
 	TFocusFtdcPriceDirectionType	PriceDirection;
-	///è§¦å‘ä»·æ ¼
+	///´¥·¢¼Û¸ñ
 	TFocusFtdcPriceType	TriggerPrice;
-	///æ¯å•ç®—æ³•æ—¶çš„æ—¶é—´é—´éš”
+	///Ä¸µ¥Ëã·¨Ê±µÄÊ±¼ä¼ä¸ô
 	TFocusFtdcVolumeType	TotalTimeAvail;
 };
 
-///ç®—æ³•å‚æ•°
+///Ëã·¨²ÎÊı
 struct CFocusFtdcAlgoParmField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ç­–ç•¥IDå·
+	///²ßÂÔIDºÅ
 	TFocusFtdcStrategyIDType	StrategyID;
-	///å®¹å¿åº¦(tick)
+	///ÈİÈÌ¶È(tick)
 	TFocusFtdcVolumeType	TolerTick;
-	///Twapæ€»æ—¶é—´(s)
+	///Twap×ÜÊ±¼ä(s)
 	TFocusFtdcVolumeType	TwapTotalTime;
-	///Twapæ‹†åˆ†æ•°ç›®
+	///Twap²ğ·ÖÊıÄ¿
 	TFocusFtdcVolumeType	TwapSplitAmount;
-	///Vwapç»Ÿè®¡æ¯ç§’å¹³å‡æˆäº¤é‡çš„æ—¶é—´é—´éš”
+	///VwapÍ³¼ÆÃ¿ÃëÆ½¾ù³É½»Á¿µÄÊ±¼ä¼ä¸ô
 	TFocusFtdcVolumeType	VwapTimeAvail;
-	///Vwapå®¹å¿é—´éš”æ—¶é—´
+	///VwapÈİÈÌ¼ä¸ôÊ±¼ä
 	TFocusFtdcVolumeType	VwapTotalTime;
-	///Vwapè®¡ç®—æ€»æˆäº¤é‡çš„æ—¶é—´é—´éš”ï¼ˆç§’ï¼‰
+	///Vwap¼ÆËã×Ü³É½»Á¿µÄÊ±¼ä¼ä¸ô£¨Ãë£©
 	TFocusFtdcNumberType	VwapVolumeTotalTime;
-	///ç­–ç•¥æŠ¥å•ä»·æ ¼æ¡ä»¶
+	///²ßÂÔ±¨µ¥¼Û¸ñÌõ¼ş
 	TFocusFtdcStockStrategyPriceType	StockStrategyPrice;
-	///æœ€å¤§ç›®æ ‡å‡€æŒä»“
+	///×î´óÄ¿±ê¾»³Ö²Ö
 	TFocusFtdcVolumeType	MaxNetPosition;
-	///è·ç¦»ä¸Šæ¬¡çš„æœ€å°å˜åŠ¨ä»“ä½
+	///¾àÀëÉÏ´ÎµÄ×îĞ¡±ä¶¯²ÖÎ»
 	TFocusFtdcVolumeType	MinChangePosition;
-	///æ˜¯å¦æ¯”è¾ƒå¯¹æ‰‹é‡ï¼Œç™¾åˆ†æ¯”å–å¤§å€¼
+	///ÊÇ·ñ±È½Ï¶ÔÊÖÁ¿£¬°Ù·Ö±ÈÈ¡´óÖµ
 	TFocusFtdcSwitchFlagType	NeedGetSideVolumeSwitch;
-	///å¯¹æ‰‹é‡çš„æ¯”ä¾‹
+	///¶ÔÊÖÁ¿µÄ±ÈÀı
 	TFocusFtdcRatioType	SideVolumePer;
 };
 
-///æœŸè´§ç®—æ³•è®¢å•è¯¦æƒ…
+///ÆÚ»õËã·¨¶©µ¥ÏêÇé
 struct CFocusFtdcInnerFutureStrategyOrderField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ç­–ç•¥IDå·
+	///²ßÂÔIDºÅ
 	TFocusFtdcStrategyIDType	StrategyID;
-	///ç›®æ ‡å‡€æŒä»“é‡
+	///Ä¿±ê¾»³Ö²ÖÁ¿
 	TFocusFtdcVolumeType	TargetNetPosition;
-	///ç­–ç•¥å¼€å§‹æ‰§è¡Œæ—¶é—´
+	///²ßÂÔ¿ªÊ¼Ö´ĞĞÊ±¼ä
 	TFocusFtdcTimeType	StartTradingTime;
-	///ç®—æ³•ç±»å‹
+	///Ëã·¨ÀàĞÍ
 	TFocusFtdcVolumeType	AlgoType;
-	///ç”¨æˆ·è‡ªå®šä¹‰åŸŸ
+	///ÓÃ»§×Ô¶¨ÒåÓò
 	TFocusFtdcCustomType	UserCustom;
-	///ç­–ç•¥å½“å‰æ˜¯å¦äº¤æ˜“
+	///²ßÂÔµ±Ç°ÊÇ·ñ½»Ò×
 	TFocusFtdcBoolType	StrategyIsTrading;
-	///ç­–ç•¥æŠ¥å•ä»·æ ¼æ¡ä»¶
+	///²ßÂÔ±¨µ¥¼Û¸ñÌõ¼ş
 	TFocusFtdcStockStrategyPriceType	StrategyPrice;
-	///å°¾ç›˜é›†åˆç«ä»·éœ€è¦ä¸‹å•é‡
+	///Î²ÅÌ¼¯ºÏ¾º¼ÛĞèÒªÏÂµ¥Á¿
 	TFocusFtdcVolumeType	MactchTrdVol;
-	///å°¾ç›˜é›†åˆç«ä»·ä¸‹å•æ–¹å¼
+	///Î²ÅÌ¼¯ºÏ¾º¼ÛÏÂµ¥·½Ê½
 	TFocusFtdcStockStrategyPriceType	MactchTrdPriceType;
-	///Vwapæ¯è½®æœ€å¤§ä¸‹å•é‡
+	///VwapÃ¿ÂÖ×î´óÏÂµ¥Á¿
 	TFocusFtdcVolumeType	VwapMaxVolume;
-	///æ˜¯å¦åŠ ä»“
+	///ÊÇ·ñ¼Ó²Ö
 	TFocusFtdcSwitchFlagType	IsAddPosi;
-	///ä¸‹å•ä»“ä½ç±»å‹
+	///ÏÂµ¥²ÖÎ»ÀàĞÍ
 	TFocusFtdcAddPositionTypeType	AddPositionType;
-	///ä»·æ ¼è§¦å‘æ¡ä»¶
+	///¼Û¸ñ´¥·¢Ìõ¼ş
 	TFocusFtdcPriceDirectionType	PriceDirection;
-	///è§¦å‘ä»·æ ¼
+	///´¥·¢¼Û¸ñ
 	TFocusFtdcPriceType	TriggerPrice;
-	///æ¯å•ç®—æ³•æ—¶çš„æ—¶é—´é—´éš”
+	///Ä¸µ¥Ëã·¨Ê±µÄÊ±¼ä¼ä¸ô
 	TFocusFtdcVolumeType	TotalTimeAvail;
-	///å®¹å¿åº¦(tick)
+	///ÈİÈÌ¶È(tick)
 	TFocusFtdcVolumeType	TolerTick;
-	///Twapæ€»æ—¶é—´(s)
+	///Twap×ÜÊ±¼ä(s)
 	TFocusFtdcVolumeType	TwapTotalTime;
-	///æ‹†åˆ†æ•°ç›®
+	///²ğ·ÖÊıÄ¿
 	TFocusFtdcVolumeType	TwapSplitAmount;
-	///Vwapç»Ÿè®¡æ—¶é—´é—´éš”
+	///VwapÍ³¼ÆÊ±¼ä¼ä¸ô
 	TFocusFtdcVolumeType	VwapTimeAvail;
-	///Vwapå®¹å¿é—´éš”æ—¶é—´
+	///VwapÈİÈÌ¼ä¸ôÊ±¼ä
 	TFocusFtdcVolumeType	VwapTotalTime;
-	///Vwapè®¡ç®—æ€»æˆäº¤é‡çš„æ—¶é—´é—´éš”ï¼ˆç§’ï¼‰
+	///Vwap¼ÆËã×Ü³É½»Á¿µÄÊ±¼ä¼ä¸ô£¨Ãë£©
 	TFocusFtdcNumberType	VwapVolumeTotalTime;
-	///ç­–ç•¥æŠ¥å•ä»·æ ¼æ¡ä»¶
+	///²ßÂÔ±¨µ¥¼Û¸ñÌõ¼ş
 	TFocusFtdcStockStrategyPriceType	StockStrategyPrice;
-	///æœ€å¤§ç›®æ ‡å‡€æŒä»“
+	///×î´óÄ¿±ê¾»³Ö²Ö
 	TFocusFtdcVolumeType	MaxNetPosition;
-	///è·ç¦»ä¸Šæ¬¡çš„æœ€å°å˜åŠ¨ä»“ä½
+	///¾àÀëÉÏ´ÎµÄ×îĞ¡±ä¶¯²ÖÎ»
 	TFocusFtdcVolumeType	MinChangePosition;
-	///æ˜¯å¦æ¯”è¾ƒå¯¹æ‰‹é‡ï¼Œç™¾åˆ†æ¯”å–å¤§å€¼
+	///ÊÇ·ñ±È½Ï¶ÔÊÖÁ¿£¬°Ù·Ö±ÈÈ¡´óÖµ
 	TFocusFtdcSwitchFlagType	NeedGetSideVolumeSwitch;
-	///å¯¹æ‰‹é‡çš„æ¯”ä¾‹
+	///¶ÔÊÖÁ¿µÄ±ÈÀı
 	TFocusFtdcRatioType	SideVolumePer;
-	///ä¹°å–æ–¹å‘
+	///ÂòÂô·½Ïò
 	TFocusFtdcDirectionType	Direction;
-	///å¼€å¹³æ ‡å¿—
+	///¿ªÆ½±êÖ¾
 	TFocusFtdcOffsetFlagType	OffsetFlag;
-	///åˆ†æ®µæ“ä½œæ—¶é—´ï¼ˆæ¯«ç§’ï¼‰
+	///·Ö¶Î²Ù×÷Ê±¼ä£¨ºÁÃë£©
 	TFocusFtdcLocalTimeType	GapMillisec;
-	///å°åˆ†æ®µéœ€è¦äº¤æ˜“çš„é‡
+	///Ğ¡·Ö¶ÎĞèÒª½»Ò×µÄÁ¿
 	TFocusFtdcVolumeType	SplitVolume;
-	///å°åˆ†æ®µéœ€è¦äº¤æ˜“çš„é‡(åŸå§‹)
+	///Ğ¡·Ö¶ÎĞèÒª½»Ò×µÄÁ¿(Ô­Ê¼)
 	TFocusFtdcVolumeType	OrginalSplitVolume;
-	///å…¨å¤©éœ€è¦æˆäº¤é‡
+	///È«ÌìĞèÒª³É½»Á¿
 	TFocusFtdcVolumeType	StaticlTotalNeedTradeVolume;
-	///æœ€æ–°æ“ä½œæ—¶é—´(s)
+	///×îĞÂ²Ù×÷Ê±¼ä(s)
 	TFocusFtdcLocalTimeType	LastCurrOperTime;
-	///æœ€æ–°æ“ä½œæ—¶é—´ï¼ˆæ¯«ç§’ï¼‰
+	///×îĞÂ²Ù×÷Ê±¼ä£¨ºÁÃë£©
 	TFocusFtdcLocalTimeType	LastCurrMillisec;
-	///å®¹å¿æ—¶é—´é—´éš”ï¼ˆmsï¼‰
+	///ÈİÈÌÊ±¼ä¼ä¸ô£¨ms£©
 	TFocusFtdcNumberType	TolerTimeAvail;
-	///ä¹°å®Œæˆæ¯”ä¾‹
+	///ÂòÍê³É±ÈÀı
 	TFocusFtdcMoneyType	SignalLastPer;
-	///æ¯”è¾ƒåŸºå‡†å¼€ç›˜ä»·æ ¼
+	///±È½Ï»ù×¼¿ªÅÌ¼Û¸ñ
 	TFocusFtdcPriceType	PreparPrice;
-	///æ€»æˆæœ¬
+	///×Ü³É±¾
 	TFocusFtdcMoneyType	TotalCostMoney;
-	///å–æ‰‹ç»­è´¹æˆæœ¬
+	///ÂôÊÖĞø·Ñ³É±¾
 	TFocusFtdcMoneyType	TotalFeeCostMoney;
-	///å¹³å‡æˆæœ¬
+	///Æ½¾ù³É±¾
 	TFocusFtdcMoneyType	AverCostMoney;
-	///æ“ä½œå¤‡æ³¨
+	///²Ù×÷±¸×¢
 	TFocusFtdcDepositNoteType	Note;
-	///æœ¬ç­–ç•¥å·²æˆäº¤æ•°é‡
+	///±¾²ßÂÔÒÑ³É½»ÊıÁ¿
 	TFocusFtdcVolumeType	StrategyTradeVolume;
-	///å®é™…ç›®å‰æŒä»“
+	///Êµ¼ÊÄ¿Ç°³Ö²Ö
 	TFocusFtdcVolumeType	NowPosition;
-	///æœ€æ—©æ–°å»ºè®¢å•æ—¶é—´ï¼ˆç§’ï¼‰
+	///×îÔçĞÂ½¨¶©µ¥Ê±¼ä£¨Ãë£©
 	TFocusFtdcTimeType	OrginRecvOrderTime;
-	///æœ€åæ”¶åˆ°æ”¹å˜è®¢å•æ—¶é—´ï¼ˆç§’ï¼‰
+	///×îºóÊÕµ½¸Ä±ä¶©µ¥Ê±¼ä£¨Ãë£©
 	TFocusFtdcTimeType	LastRecvOrderTime;
-	///æœ€æ–°æ“ä½œæ—¶é—´ï¼ˆç§’ï¼‰
+	///×îĞÂ²Ù×÷Ê±¼ä£¨Ãë£©
 	TFocusFtdcTimeType	LastOperTime;
-	///ç³»ç»Ÿæ¯å•æŠ¥å•ç¼–å·(æ¯å•ID,ä¸»é”®,å­å•å¸¦å›)
+	///ÏµÍ³Ä¸µ¥±¨µ¥±àºÅ(Ä¸µ¥ID,Ö÷¼ü,×Óµ¥´ø»Ø)
 	TFocusFtdcOrderLocalIDType	AlgoParentOrderSysID;
 };
 
-///æœŸè´§ç®—æ³•äº¤æ˜“è®¢å•é”®å€¼
+///ÆÚ»õËã·¨½»Ò×¶©µ¥¼üÖµ
 struct CFocusFtdcFutureStrategyOrderIndexField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ç­–ç•¥IDå·
+	///²ßÂÔIDºÅ
 	TFocusFtdcStrategyIDType	StrategyID;
 };
 
-///å¤§ç›˜ä¿¡å·
+///´óÅÌĞÅºÅ
 struct CFocusFtdcIndexDirSignalField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///æ¶ˆæ¯ç±»å‹
+	///ÏûÏ¢ÀàĞÍ
 	TFocusFtdcStrategyMessageTypeType	MessageType;
-	///æ¶ˆæ¯IDç¼–å·
+	///ÏûÏ¢ID±àºÅ
 	TFocusFtdcVolumeType	MessageID;
-	///æ˜¯å¦éœ€è¦è½¬å‘
+	///ÊÇ·ñĞèÒª×ª·¢
 	TFocusFtdcBoolType	NeedNtfMessage;
-	///æ“ä½œæ—¶é—´
+	///²Ù×÷Ê±¼ä
 	TFocusFtdcTimeType	OperTime;
-	///æ¶ˆæ¯å†…å®¹
+	///ÏûÏ¢ÄÚÈİ
 	TFocusFtdcStrategyMessageNoteType	Note;
 };
 
-///è·¨æœŸç­–ç•¥è®¢å•é”®å€¼
+///¿çÆÚ²ßÂÔ¶©µ¥¼üÖµ
 struct CFocusFtdcSpreadInstrStrategyIndexField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç­–ç•¥IDå·
+	///²ßÂÔIDºÅ
 	TFocusFtdcStrategyIDType	StrategyID;
 };
 
-///è·¨æœŸç­–ç•¥
+///¿çÆÚ²ßÂÔ
 struct CFocusFtdcSpreadInstrStrategyField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç­–ç•¥IDå·
+	///²ßÂÔIDºÅ
 	TFocusFtdcStrategyIDType	StrategyID;
-	///äº¤æ˜“æ‰€1ä»£ç 
+	///½»Ò×Ëù1´úÂë
 	TFocusFtdcExchangeIDType	ExchangeIDLeg1;
-	///ä¹°å–æ–¹å‘1
+	///ÂòÂô·½Ïò1
 	TFocusFtdcDirectionType	DirectionLeg1;
-	///è…¿1åˆçº¦ä»£ç 
+	///ÍÈ1ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrLeg1;
-	///äº¤æ˜“æ‰€2ä»£ç 
+	///½»Ò×Ëù2´úÂë
 	TFocusFtdcExchangeIDType	ExchangeIDLeg2;
-	///ä¹°å–æ–¹å‘2
+	///ÂòÂô·½Ïò2
 	TFocusFtdcDirectionType	DirectionLeg2;
-	///è…¿2åˆçº¦ä»£ç 
+	///ÍÈ2ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrLeg2;
-	///è…¿1è…¿2æ¯”ä¾‹
+	///ÍÈ1ÍÈ2±ÈÀı
 	TFocusFtdcMoneyType	LegPer;
-	///ç­–ç•¥å¼€å§‹æ‰§è¡Œæ—¶é—´
+	///²ßÂÔ¿ªÊ¼Ö´ĞĞÊ±¼ä
 	TFocusFtdcTimeType	StartTradingTime;
-	///ç­–ç•¥ç»“æŸæ‰§è¡Œæ—¶é—´
+	///²ßÂÔ½áÊøÖ´ĞĞÊ±¼ä
 	TFocusFtdcTimeType	EndTradingTime;
-	///æ£€æŸ¥æ—¶é—´é—´éš”
+	///¼ì²éÊ±¼ä¼ä¸ô
 	TFocusFtdcVolumeType	TimeAvail;
-	///ç›®æ ‡äº¤æ˜“é‡
+	///Ä¿±ê½»Ò×Á¿
 	TFocusFtdcVolumeType	TargetTradeVolume;
-	///æŠ¥å•ç±»å‹
+	///±¨µ¥ÀàĞÍ
 	TFocusFtdcStockStrategyPriceType	OrderPriceType;
-	///ç®—æ³•ç±»å‹
+	///Ëã·¨ÀàĞÍ
 	TFocusFtdcVolumeType	AlgoType;
-	///ä»·å·®
+	///¼Û²î
 	TFocusFtdcPriceType	SpreadPrice;
-	///æ¯æ¬¡ä¸‹å•æ•°é‡
+	///Ã¿´ÎÏÂµ¥ÊıÁ¿
 	TFocusFtdcVolumeType	EachTrdvolume;
-	///æ˜¯å¦äº¤æ˜“
+	///ÊÇ·ñ½»Ò×
 	TFocusFtdcBoolType	StrategyIsTrading;
-	///ç¼ºä¹æµåŠ¨æ€§æ ‡è¯†
+	///È±·¦Á÷¶¯ĞÔ±êÊ¶
 	TFocusFtdcVolumeType	LiquidLack;
-	///ç³»ç»Ÿæ¯å•æŠ¥å•ç¼–å·(æ¯å•ID,ä¸»é”®,å­å•å¸¦å›)
+	///ÏµÍ³Ä¸µ¥±¨µ¥±àºÅ(Ä¸µ¥ID,Ö÷¼ü,×Óµ¥´ø»Ø)
 	TFocusFtdcOrderLocalIDType	AlgoParentOrderSysID;
-	///æ“ä½œå¤‡æ³¨
+	///²Ù×÷±¸×¢
 	TFocusFtdcDepositNoteType	Note;
 };
 
-///è·¨æœŸç­–ç•¥è®¢å•è¯¦æƒ…
+///¿çÆÚ²ßÂÔ¶©µ¥ÏêÇé
 struct CFocusFtdcInnerSpreadInstrStrategyField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç­–ç•¥IDå·
+	///²ßÂÔIDºÅ
 	TFocusFtdcStrategyIDType	StrategyID;
-	///äº¤æ˜“æ‰€1ä»£ç 
+	///½»Ò×Ëù1´úÂë
 	TFocusFtdcExchangeIDType	ExchangeIDLeg1;
-	///ä¹°å–æ–¹å‘1
+	///ÂòÂô·½Ïò1
 	TFocusFtdcDirectionType	DirectionLeg1;
-	///è…¿1åˆçº¦ä»£ç 
+	///ÍÈ1ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrLeg1;
-	///äº¤æ˜“æ‰€2ä»£ç 
+	///½»Ò×Ëù2´úÂë
 	TFocusFtdcExchangeIDType	ExchangeIDLeg2;
-	///ä¹°å–æ–¹å‘2
+	///ÂòÂô·½Ïò2
 	TFocusFtdcDirectionType	DirectionLeg2;
-	///è…¿2åˆçº¦ä»£ç 
+	///ÍÈ2ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrLeg2;
-	///è…¿1è…¿2æ¯”ä¾‹
+	///ÍÈ1ÍÈ2±ÈÀı
 	TFocusFtdcMoneyType	LegPer;
-	///ç­–ç•¥å¼€å§‹æ‰§è¡Œæ—¶é—´
+	///²ßÂÔ¿ªÊ¼Ö´ĞĞÊ±¼ä
 	TFocusFtdcTimeType	StartTradingTime;
-	///ç­–ç•¥ç»“æŸæ‰§è¡Œæ—¶é—´
+	///²ßÂÔ½áÊøÖ´ĞĞÊ±¼ä
 	TFocusFtdcTimeType	EndTradingTime;
-	///æ£€æŸ¥æ—¶é—´é—´éš”
+	///¼ì²éÊ±¼ä¼ä¸ô
 	TFocusFtdcVolumeType	TimeAvail;
-	///ç›®æ ‡äº¤æ˜“é‡
+	///Ä¿±ê½»Ò×Á¿
 	TFocusFtdcVolumeType	TargetTradeVolume;
-	///æŠ¥å•ç±»å‹
+	///±¨µ¥ÀàĞÍ
 	TFocusFtdcStockStrategyPriceType	OrderPriceType;
-	///ç®—æ³•ç±»å‹
+	///Ëã·¨ÀàĞÍ
 	TFocusFtdcVolumeType	AlgoType;
-	///ä»·å·®
+	///¼Û²î
 	TFocusFtdcPriceType	SpreadPrice;
-	///æ¯æ¬¡ä¸‹å•æ•°é‡
+	///Ã¿´ÎÏÂµ¥ÊıÁ¿
 	TFocusFtdcVolumeType	EachTrdvolume;
-	///æ˜¯å¦äº¤æ˜“
+	///ÊÇ·ñ½»Ò×
 	TFocusFtdcBoolType	StrategyIsTrading;
-	///ç¼ºä¹æµåŠ¨æ€§æ ‡è¯†
+	///È±·¦Á÷¶¯ĞÔ±êÊ¶
 	TFocusFtdcVolumeType	LiquidLack;
-	///ç³»ç»Ÿæ¯å•æŠ¥å•ç¼–å·(æ¯å•ID,ä¸»é”®,å­å•å¸¦å›)
+	///ÏµÍ³Ä¸µ¥±¨µ¥±àºÅ(Ä¸µ¥ID,Ö÷¼ü,×Óµ¥´ø»Ø)
 	TFocusFtdcOrderLocalIDType	AlgoParentOrderSysID;
-	///æ“ä½œå¤‡æ³¨
+	///²Ù×÷±¸×¢
 	TFocusFtdcDepositNoteType	Note;
-	///æœ€æ–°æ“ä½œæ—¶é—´
+	///×îĞÂ²Ù×÷Ê±¼ä
 	TFocusFtdcTimeType	LastOperTime;
-	///ä¹°å®Œæˆæ¯”ä¾‹
+	///ÂòÍê³É±ÈÀı
 	TFocusFtdcMoneyType	SignalLastPer;
-	///ç”¨æˆ·è‡ªå®šä¹‰åŸŸ
+	///ÓÃ»§×Ô¶¨ÒåÓò
 	TFocusFtdcCustomType	UserCustom;
 };
 
-///ç›˜ä¸­listè¯·æ±‚åŸŸ
+///ÅÌÖĞlistÇëÇóÓò
 struct CFocusFtdcTZeroHighStockStrategyField
 {
-	///äº¤æ˜“æ—¥æœŸ
+	///½»Ò×ÈÕÆÚ
 	TFocusFtdcTradingDayType	TradingDay;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///è‚¡ç¥¨åˆçº¦ä»£ç 
+	///¹ÉÆ±ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///è¯¥è‚¡ç¥¨ç”¨å“ªä¸ªèµ„é‡‘è´¦å·å»ä¸‹å•
+	///¸Ã¹ÉÆ±ÓÃÄÄ¸ö×Ê½ğÕËºÅÈ¥ÏÂµ¥
 	TFocusFtdcInvestorIDType	StockInvestorID;
-	///è‚¡ç¥¨ç­–ç•¥ID
+	///¹ÉÆ±²ßÂÔID
 	TFocusFtdcStrategyIDType	StockStrategyID;
-	///TZeroéœ€è¦æ”¹å˜çš„è‚¡æ•°
+	///TZeroĞèÒª¸Ä±äµÄ¹ÉÊı
 	TFocusFtdcVolumeType	TZeroGapVolume;
-	///è‚¡ç¥¨ä¸‹å•ç±»å‹
+	///¹ÉÆ±ÏÂµ¥ÀàĞÍ
 	TFocusFtdcStockStrategyPriceType	TZeroStockPriceType;
-	///TZeroæœ€æ™šç»“æŸæ—¶é—´
+	///TZero×îÍí½áÊøÊ±¼ä
 	TFocusFtdcTimeType	TZeroEndOperTime;
-	///TZeroä¸‹å•ä¸Šé™ä»·æ ¼
+	///TZeroÏÂµ¥ÉÏÏŞ¼Û¸ñ
 	TFocusFtdcPriceType	TZeroUpperEndPrice;
-	///TZeroä¸‹å•ä¸‹é™ä»·æ ¼
+	///TZeroÏÂµ¥ÏÂÏŞ¼Û¸ñ
 	TFocusFtdcPriceType	TZeroLowerEndPrice;
-	///t0æœ€æ–°è®¾ç½®æ—¶é—´
+	///t0×îĞÂÉèÖÃÊ±¼ä
 	TFocusFtdcTimeType	TZeroLastOperTime;
 };
 
-///è·ŸéšæœŸè´§åˆå§‹æ€»èµ„é‡‘
+///¸úËæÆÚ»õ³õÊ¼×Ü×Ê½ğ
 struct CFocusFtdcFlowerFutureTargetMoneyField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ—¥æœŸ
+	///½»Ò×ÈÕÆÚ
 	TFocusFtdcTradingDayType	TradingDay;
-	///æœ€æ–°æ“ä½œæ—¶é—´
+	///×îĞÂ²Ù×÷Ê±¼ä
 	TFocusFtdcTimeType	LastOperTime;
-	///åˆå§‹åŒ–é¢„åˆ†é…æ¢ä»“æ€»èµ„é‡‘
+	///³õÊ¼»¯Ô¤·ÖÅä»»²Ö×Ü×Ê½ğ
 	TFocusFtdcMoneyType	FlowerFutureTarMoney;
-	///æ˜¯å¦ç”Ÿæ•ˆ
+	///ÊÇ·ñÉúĞ§
 	TFocusFtdcSwitchFlagType	WholeSwitch;
 };
 
-///æ¯å•ä¿¡æ¯
+///Ä¸µ¥ĞÅÏ¢
 struct CFocusFtdcParentOrderField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æ¯å•èµ„é‡‘ä»£ç 
+	///Ä¸µ¥×Ê½ğ´úÂë
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç³»ç»Ÿæ¯å•æŠ¥å•ç¼–å·(æ¯å•ID,ä¸»é”®,å­å•å¸¦å›)
+	///ÏµÍ³Ä¸µ¥±¨µ¥±àºÅ(Ä¸µ¥ID,Ö÷¼ü,×Óµ¥´ø»Ø)
 	TFocusFtdcOrderLocalIDType	AlgoParentOrderSysID;
-	///ç®—æ³•ç­–ç•¥ç±»å‹(Twap,11,Vwap 12)
+	///Ëã·¨²ßÂÔÀàĞÍ(Twap,11,Vwap 12)
 	TFocusFtdcVolumeType	AlgoStrategyType;
-	///ç­–ç•¥å¼€å§‹æ—¥æœŸ(YYYYMMDD)
+	///²ßÂÔ¿ªÊ¼ÈÕÆÚ(YYYYMMDD)
 	TFocusFtdcTradingDayType	StrategyStartDay;
-	///ç­–ç•¥åœæ­¢æ—¥æœŸ(YYYYMMDD)
+	///²ßÂÔÍ£Ö¹ÈÕÆÚ(YYYYMMDD)
 	TFocusFtdcTradingDayType	StrategyEndDay;
-	///ç­–ç•¥å¼€å§‹æ—¶é—´(HH:mm:ss)
+	///²ßÂÔ¿ªÊ¼Ê±¼ä(HH:mm:ss)
 	TFocusFtdcTimeType	StrategyStartTime;
-	///ç­–ç•¥åœæ­¢æ—¶é—´(HH:mm:ss)
+	///²ßÂÔÍ£Ö¹Ê±¼ä(HH:mm:ss)
 	TFocusFtdcTimeType	StrategyEndTime;
-	///ä¿å®ˆ->æ¿€è¿› 1--5
+	///±£ÊØ->¼¤½ø 1--5
 	TFocusFtdcNumberType	style;
-	///æœ€å¤§å¸‚åœºå æ¯” TWAP/VWAP (0, 50]
+	///×î´óÊĞ³¡Õ¼±È TWAP/VWAP (0, 50]
 	TFocusFtdcRatioType	maxVolumeP;
-	///æœ€å°æŒ‚å•é‡ï¼Œé»˜è®¤ä¸º0
+	///×îĞ¡¹Òµ¥Á¿£¬Ä¬ÈÏÎª0
 	TFocusFtdcVolumeType	minDisplaySize;
-	///æœ€å¤§æŒ‚å•é‡ï¼ˆå•ä¸€æ¡£ä½ï¼‰ï¼Œé»˜è®¤ä¸º0
+	///×î´ó¹Òµ¥Á¿£¨µ¥Ò»µµÎ»£©£¬Ä¬ÈÏÎª0
 	TFocusFtdcVolumeType	displaySize;
-	///é‡æ¯”ç»Ÿè®¡å£å¾„ï¼Œé»˜è®¤ä¸ºé™ä»·å†…ã€‚é™ä»·å†… - 0ï¼Œ å…¨å¸‚åœº - 1
+	///Á¿±ÈÍ³¼Æ¿Ú¾¶£¬Ä¬ÈÏÎªÏŞ¼ÛÄÚ¡£ÏŞ¼ÛÄÚ - 0£¬ È«ÊĞ³¡ - 1
 	TFocusFtdcVolumeType	countVolInLimitPx;
-	///é‡å¯æ—¶é‡ç½®é‡æ¯”ã€‚true - 1, false - 0
+	///ÖØÆôÊ±ÖØÖÃÁ¿±È¡£true - 1, false - 0
 	TFocusFtdcVolumeType	resetVolOnAmend;
-	///ä»·æ ¼é™åˆ¶ï¼Œé»˜è®¤ä¸º0
+	///¼Û¸ñÏŞÖÆ£¬Ä¬ÈÏÎª0
 	TFocusFtdcPriceType	limitPrice;
-	///ç›¸å¯¹é™ä»·åŸºå‡†
+	///Ïà¶ÔÏŞ¼Û»ù×¼
 	TFocusFtdcVolumeType	relativePriceLimitBase;
-	///ç›¸å¯¹é™ä»·åç§»å•ä½
+	///Ïà¶ÔÏŞ¼ÛÆ«ÒÆµ¥Î»
 	TFocusFtdcVolumeType	relativePriceLimitType;
-	///ç›¸å¯¹é™ä»·åç§»é‡
+	///Ïà¶ÔÏŞ¼ÛÆ«ÒÆÁ¿
 	TFocusFtdcPriceTickType	relativePriceLimitOffset;
-	///æ˜¯å¦è¿›ä»·å·®ï¼Œé»˜è®¤è¿›ä»·å·®
+	///ÊÇ·ñ½ø¼Û²î£¬Ä¬ÈÏ½ø¼Û²î
 	TFocusFtdcVolumeType	stepSpread;
-	///æ¶¨è·ŒåœåŠ¨ä½œï¼Œæ¶¨è·Œåœæ—¶å¯æš‚åœã€åŠ é€Ÿ
+	///ÕÇµøÍ£¶¯×÷£¬ÕÇµøÍ£Ê±¿ÉÔİÍ£¡¢¼ÓËÙ
 	TFocusFtdcVolumeType	optOnExtreme;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///æ–¹å‘
+	///·½Ïò
 	TFocusFtdcDirectionType	Direction;
-	///æ€»æ•°é‡
+	///×ÜÊıÁ¿
 	TFocusFtdcVolumeType	orderQty;
-	///æ€»é‡‘é¢
+	///×Ü½ğ¶î
 	TFocusFtdcMoneyType	orderAmt;
-	///æ¯å•æ¨é€æ—¥æœŸ
+	///Ä¸µ¥ÍÆËÍÈÕÆÚ
 	TFocusFtdcTradingDayType	TradingDay;
-	///æ¯å•æ¨é€æ—¶é—´
+	///Ä¸µ¥ÍÆËÍÊ±¼ä
 	TFocusFtdcTimeType	LastOperTime;
-	///ç”¨æˆ·è‡ªå®šä¹‰åŸŸ(ä¿ç•™å­—æ®µ)
+	///ÓÃ»§×Ô¶¨ÒåÓò(±£Áô×Ö¶Î)
 	TFocusFtdcCustomType	UserCustom;
-	///å¤‡æ³¨(ä¿ç•™å­—æ®µ)
+	///±¸×¢(±£Áô×Ö¶Î)
 	TFocusFtdcDepositNoteType	Note;
-	///ç­–ç•¥IDå·
+	///²ßÂÔIDºÅ
 	TFocusFtdcStrategyIDType	StrategyID;
 };
 
-///æ¯å•æ“ä½œä¿¡æ¯
+///Ä¸µ¥²Ù×÷ĞÅÏ¢
 struct CFocusFtdcParentOrderActionField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ç­–ç•¥IDå·
+	///²ßÂÔIDºÅ
 	TFocusFtdcStrategyIDType	StrategyID;
-	///ç³»ç»Ÿæ¯å•æŠ¥å•ç¼–å·(æ¯å•ID,ä¸»é”®,å­å•å¸¦å›)
+	///ÏµÍ³Ä¸µ¥±¨µ¥±àºÅ(Ä¸µ¥ID,Ö÷¼ü,×Óµ¥´ø»Ø)
 	TFocusFtdcOrderLocalIDType	AlgoParentOrderSysID;
-	///æ“ä½œé€‰é¡¹
+	///²Ù×÷Ñ¡Ïî
 	TFocusFtdcVolumeType	ActionOption;
 };
 
-///ä¿®æ”¹æ¯å•ä¿¡æ¯
+///ĞŞ¸ÄÄ¸µ¥ĞÅÏ¢
 struct CFocusFtdcAmendParentOrderField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æ¯å•èµ„é‡‘ä»£ç 
+	///Ä¸µ¥×Ê½ğ´úÂë
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç³»ç»Ÿæ¯å•æŠ¥å•ç¼–å·(æ¯å•ID,ä¸»é”®,å­å•å¸¦å›)
+	///ÏµÍ³Ä¸µ¥±¨µ¥±àºÅ(Ä¸µ¥ID,Ö÷¼ü,×Óµ¥´ø»Ø)
 	TFocusFtdcOrderLocalIDType	AlgoParentOrderSysID;
-	///ç®—æ³•ç­–ç•¥ç±»å‹(Twap,11,Vwap 12)
+	///Ëã·¨²ßÂÔÀàĞÍ(Twap,11,Vwap 12)
 	TFocusFtdcVolumeType	AlgoStrategyType;
-	///ç­–ç•¥å¼€å§‹æ—¥æœŸ(YYYYMMDD)
+	///²ßÂÔ¿ªÊ¼ÈÕÆÚ(YYYYMMDD)
 	TFocusFtdcTradingDayType	StrategyStartDay;
-	///ç­–ç•¥åœæ­¢æ—¥æœŸ(YYYYMMDD)
+	///²ßÂÔÍ£Ö¹ÈÕÆÚ(YYYYMMDD)
 	TFocusFtdcTradingDayType	StrategyEndDay;
-	///ç­–ç•¥å¼€å§‹æ—¶é—´(HH:mm:ss)
+	///²ßÂÔ¿ªÊ¼Ê±¼ä(HH:mm:ss)
 	TFocusFtdcTimeType	StrategyStartTime;
-	///ç­–ç•¥åœæ­¢æ—¶é—´(HH:mm:ss)
+	///²ßÂÔÍ£Ö¹Ê±¼ä(HH:mm:ss)
 	TFocusFtdcTimeType	StrategyEndTime;
-	///ä¿å®ˆ->æ¿€è¿› 1--5
+	///±£ÊØ->¼¤½ø 1--5
 	TFocusFtdcNumberType	style;
-	///æœ€å¤§å¸‚åœºå æ¯” TWAP/VWAP (0, 50]
+	///×î´óÊĞ³¡Õ¼±È TWAP/VWAP (0, 50]
 	TFocusFtdcRatioType	maxVolumeP;
-	///æœ€å°æŒ‚å•é‡ï¼Œé»˜è®¤ä¸º0
+	///×îĞ¡¹Òµ¥Á¿£¬Ä¬ÈÏÎª0
 	TFocusFtdcVolumeType	minDisplaySize;
-	///æœ€å¤§æŒ‚å•é‡ï¼ˆå•ä¸€æ¡£ä½ï¼‰ï¼Œé»˜è®¤ä¸º0
+	///×î´ó¹Òµ¥Á¿£¨µ¥Ò»µµÎ»£©£¬Ä¬ÈÏÎª0
 	TFocusFtdcVolumeType	displaySize;
-	///é‡æ¯”ç»Ÿè®¡å£å¾„ï¼Œé»˜è®¤ä¸ºé™ä»·å†…ã€‚é™ä»·å†… - 0ï¼Œ å…¨å¸‚åœº - 1
+	///Á¿±ÈÍ³¼Æ¿Ú¾¶£¬Ä¬ÈÏÎªÏŞ¼ÛÄÚ¡£ÏŞ¼ÛÄÚ - 0£¬ È«ÊĞ³¡ - 1
 	TFocusFtdcVolumeType	countVolInLimitPx;
-	///é‡å¯æ—¶é‡ç½®é‡æ¯”ã€‚true - 1, false - 0
+	///ÖØÆôÊ±ÖØÖÃÁ¿±È¡£true - 1, false - 0
 	TFocusFtdcVolumeType	resetVolOnAmend;
-	///ä»·æ ¼é™åˆ¶ï¼Œé»˜è®¤ä¸º0
+	///¼Û¸ñÏŞÖÆ£¬Ä¬ÈÏÎª0
 	TFocusFtdcPriceType	limitPrice;
-	///ç›¸å¯¹é™ä»·åŸºå‡†
+	///Ïà¶ÔÏŞ¼Û»ù×¼
 	TFocusFtdcVolumeType	relativePriceLimitBase;
-	///ç›¸å¯¹é™ä»·åç§»å•ä½
+	///Ïà¶ÔÏŞ¼ÛÆ«ÒÆµ¥Î»
 	TFocusFtdcVolumeType	relativePriceLimitType;
-	///ç›¸å¯¹é™ä»·åç§»é‡
+	///Ïà¶ÔÏŞ¼ÛÆ«ÒÆÁ¿
 	TFocusFtdcPriceTickType	relativePriceLimitOffset;
-	///æ˜¯å¦è¿›ä»·å·®ï¼Œé»˜è®¤è¿›ä»·å·®
+	///ÊÇ·ñ½ø¼Û²î£¬Ä¬ÈÏ½ø¼Û²î
 	TFocusFtdcVolumeType	stepSpread;
-	///æ¶¨è·ŒåœåŠ¨ä½œï¼Œæ¶¨è·Œåœæ—¶å¯æš‚åœã€åŠ é€Ÿ
+	///ÕÇµøÍ£¶¯×÷£¬ÕÇµøÍ£Ê±¿ÉÔİÍ£¡¢¼ÓËÙ
 	TFocusFtdcVolumeType	optOnExtreme;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///æ–¹å‘
+	///·½Ïò
 	TFocusFtdcDirectionType	Direction;
-	///æ€»æ•°é‡
+	///×ÜÊıÁ¿
 	TFocusFtdcVolumeType	orderQty;
-	///æ€»é‡‘é¢
+	///×Ü½ğ¶î
 	TFocusFtdcMoneyType	orderAmt;
-	///æ¯å•æ¨é€æ—¥æœŸ
+	///Ä¸µ¥ÍÆËÍÈÕÆÚ
 	TFocusFtdcTradingDayType	TradingDay;
-	///æ¯å•æ¨é€æ—¶é—´
+	///Ä¸µ¥ÍÆËÍÊ±¼ä
 	TFocusFtdcTimeType	LastOperTime;
-	///ç”¨æˆ·è‡ªå®šä¹‰åŸŸ(ä¿ç•™å­—æ®µ)
+	///ÓÃ»§×Ô¶¨ÒåÓò(±£Áô×Ö¶Î)
 	TFocusFtdcCustomType	UserCustom;
-	///å¤‡æ³¨(ä¿ç•™å­—æ®µ)
+	///±¸×¢(±£Áô×Ö¶Î)
 	TFocusFtdcDepositNoteType	Note;
-	///ç­–ç•¥IDå·
+	///²ßÂÔIDºÅ
 	TFocusFtdcStrategyIDType	StrategyID;
 };
 
-///æ¯å•æ“ä½œæ‰‹åŠ¨æ“ä½œä¿¡æ¯
+///Ä¸µ¥²Ù×÷ÊÖ¶¯²Ù×÷ĞÅÏ¢
 struct CFocusFtdcExtraManualParentOrderField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æ¯å•ç”¨æˆ·ä»£ç 
+	///Ä¸µ¥ÓÃ»§´úÂë
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç­–ç•¥IDå·
+	///²ßÂÔIDºÅ
 	TFocusFtdcStrategyIDType	StrategyID;
-	///ç³»ç»Ÿæ¯å•æŠ¥å•ç¼–å·(æ¯å•ID,ä¸»é”®,å­å•å¸¦å›)
+	///ÏµÍ³Ä¸µ¥±¨µ¥±àºÅ(Ä¸µ¥ID,Ö÷¼ü,×Óµ¥´ø»Ø)
 	TFocusFtdcOrderLocalIDType	AlgoParentOrderSysID;
-	///äººå·¥å•æ•°é‡
+	///ÈË¹¤µ¥ÊıÁ¿
 	TFocusFtdcVolumeType	sliceQty;
-	///äººå·¥å•ä»·æ ¼
+	///ÈË¹¤µ¥¼Û¸ñ
 	TFocusFtdcPriceType	slicePrice;
-	///äººå·¥å•ç‰¹åˆ«å¤‡æ³¨(ä¿ç•™å­—æ®µ)
+	///ÈË¹¤µ¥ÌØ±ğ±¸×¢(±£Áô×Ö¶Î)
 	TFocusFtdcCustomType	UserCustom;
 };
 
-///å‘é€æ¯å•è¿›å±•è¯¦ç»†ä¿¡æ¯
+///·¢ËÍÄ¸µ¥½øÕ¹ÏêÏ¸ĞÅÏ¢
 struct CFocusFtdcParentDetialUpdateMessageField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ç­–ç•¥IDå·
+	///²ßÂÔIDºÅ
 	TFocusFtdcStrategyIDType	StrategyID;
-	///ç³»ç»Ÿæ¯å•æŠ¥å•ç¼–å·(æ¯å•ID,ä¸»é”®,å­å•å¸¦å›)
+	///ÏµÍ³Ä¸µ¥±¨µ¥±àºÅ(Ä¸µ¥ID,Ö÷¼ü,×Óµ¥´ø»Ø)
 	TFocusFtdcOrderLocalIDType	AlgoParentOrderSysID;
-	///æ›´æ–°æ—¥æœŸ
+	///¸üĞÂÈÕÆÚ
 	TFocusFtdcTradingDayType	transactDay;
-	///æ›´æ–°æ—¶é—´
+	///¸üĞÂÊ±¼ä
 	TFocusFtdcTimeType	transactTime;
-	///ç­–ç•¥çŠ¶æ€
+	///²ßÂÔ×´Ì¬
 	TFocusFtdcVolumeType	strategyStatus;
-	///æš‚åœåŸå› 
+	///ÔİÍ£Ô­Òò
 	TFocusFtdcStrategyMessageNoteType	pauseReason;
-	///æ–¹å‘
+	///·½Ïò
 	TFocusFtdcDirectionType	Direction;
-	///æ€»æ•°é‡
+	///×ÜÊıÁ¿
 	TFocusFtdcVolumeType	orderQty;
-	///æˆäº¤æ•°é‡
+	///³É½»ÊıÁ¿
 	TFocusFtdcVolumeType	knockQty;
-	///æˆäº¤é‡‘é¢
+	///³É½»½ğ¶î
 	TFocusFtdcMoneyType	knockAmt;
-	///æ¸…ç®—é‡‘é¢
+	///ÇåËã½ğ¶î
 	TFocusFtdcPriceType	knockAmtWithFee;
-	///æ¯å•çŠ¶æ€
+	///Ä¸µ¥×´Ì¬
 	TFocusFtdcVolumeType	orderStatus;
-	///å¹³å‡ä»·æ ¼
+	///Æ½¾ù¼Û¸ñ
 	TFocusFtdcPriceType	avgPrice;
-	///å¸‚åœºTWAPå‡ä»·
+	///ÊĞ³¡TWAP¾ù¼Û
 	TFocusFtdcPriceType	marketTwap;
-	///å¸‚åœºVWAPå‡ä»·
+	///ÊĞ³¡VWAP¾ù¼Û
 	TFocusFtdcPriceType	marketVwap;
-	///åˆ°è¾¾ä»· 
+	///µ½´ï¼Û 
 	TFocusFtdcPriceType	arrivalPrice;
-	///å‡ä»·åå·®_T 
+	///¾ù¼ÛÆ«²î_T 
 	TFocusFtdcRatioType	avgOffset_T;
-	///å‡ä»·åå·®_V 
+	///¾ù¼ÛÆ«²î_V 
 	TFocusFtdcRatioType	avgOffset_V;
-	///å‡ä»·åå·®_A 
+	///¾ù¼ÛÆ«²î_A 
 	TFocusFtdcRatioType	avgOffset_A;
-	///çœŸå®å‚ä¸ç‡ 
+	///ÕæÊµ²ÎÓëÂÊ 
 	TFocusFtdcRatioType	realParticipateRate;
-	///æ’¤å•ç‡ 
+	///³·µ¥ÂÊ 
 	TFocusFtdcRatioType	cancelRate;
-	///å¹³å‡æŒ‚å•æ—¶é•¿ 
+	///Æ½¾ù¹Òµ¥Ê±³¤ 
 	TFocusFtdcTimeValueType	avgOpenTime;
-	///è¢«åŠ¨æˆäº¤ç‡ 
+	///±»¶¯³É½»ÂÊ 
 	TFocusFtdcRatioType	passiveRate;
-	///åºåˆ—å· 
+	///ĞòÁĞºÅ 
 	TFocusFtdcOrderLocalIDType	serialNum;
-	///æ‹’ç»åŸå›  
+	///¾Ü¾øÔ­Òò 
 	TFocusFtdcErrorMsgType	failReason;
-	///ç›®æ ‡è¿›åº¦ 
+	///Ä¿±ê½ø¶È 
 	TFocusFtdcRatioType	targetProgress;
-	///æˆäº¤æ¯”ä¾‹ 
+	///³É½»±ÈÀı 
 	TFocusFtdcRatioType	knockPercent;
-	///è¿›åº¦åå·® 
+	///½ø¶ÈÆ«²î 
 	TFocusFtdcRatioType	progressOffset;
-	///é‡è¦æ€§ 
+	///ÖØÒªĞÔ 
 	TFocusFtdcVolumeType	pushFlag;
-	///é”™è¯¯ä»£ç 
+	///´íÎó´úÂë
 	TFocusFtdcErrorIDType	ErrorID;
-	///åŠŸèƒ½å·
+	///¹¦ÄÜºÅ
 	TFocusFtdcVolumeType	FunctionID;
-	///ç­–ç•¥å¼€å§‹æ—¶é—´(HH:mm:ss)
+	///²ßÂÔ¿ªÊ¼Ê±¼ä(HH:mm:ss)
 	TFocusFtdcTimeType	StrategyStartTime;
-	///ç­–ç•¥åœæ­¢æ—¶é—´(HH:mm:ss)
+	///²ßÂÔÍ£Ö¹Ê±¼ä(HH:mm:ss)
 	TFocusFtdcTimeType	StrategyEndTime;
 };
 
-///äº§å“ä»£ç æŸ¥è¯¢è¯·æ±‚
+///²úÆ·´úÂë²éÑ¯ÇëÇó
 struct CFocusFtdcAPIQryMarketTradingTimeField
 {
-	///å¸‚åœºid
+	///ÊĞ³¡id
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///å¸‚åœºåç§°
+	///ÊĞ³¡Ãû³Æ
 	TFocusFtdcTimeType	ExchangeName;
-	///äº§å“ä»£ç 
+	///²úÆ·´úÂë
 	TFocusFtdcProductIDType	ProductID;
 };
 
-///å¸‚åœºäº¤æ˜“æ—¶é—´æ®µä¿¡æ¯
+///ÊĞ³¡½»Ò×Ê±¼ä¶ÎĞÅÏ¢
 struct CFocusFtdcMarketTradingPeriodInfoField
 {
-	///å¸‚åœºid
+	///ÊĞ³¡id
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///å¸‚åœºåç§°
+	///ÊĞ³¡Ãû³Æ
 	TFocusFtdcTimeType	ExchangeName;
-	///äº§å“åç§°
+	///²úÆ·Ãû³Æ
 	TFocusFtdcProductIDType	ProductID;
-	///èµ·å§‹æ—¶é—´
+	///ÆğÊ¼Ê±¼ä
 	TFocusFtdcTimeType	TpStart;
-	///ç»“æŸæ—¶é—´
+	///½áÊøÊ±¼ä
 	TFocusFtdcTimeType	TpEnd;
-	///ç±»å‹æ ‡å¿—
+	///ÀàĞÍ±êÖ¾
 	TFocusFtdcTpFlagType	Flags;
 };
 
-///ç®—æ³•2è‚¡ç¥¨æœŸè´§å¯¹å†²å…³ç³»è¡¨
+///Ëã·¨2¹ÉÆ±ÆÚ»õ¶Ô³å¹ØÏµ±í
 struct CFocusFtdcFutureStrategyTotalSecondRelationField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///è¯¥è‚¡ç¥¨ç”¨å“ªä¸ªèµ„é‡‘è´¦å·å»ä¸‹å•
+	///¸Ã¹ÉÆ±ÓÃÄÄ¸ö×Ê½ğÕËºÅÈ¥ÏÂµ¥
 	TFocusFtdcInvestorIDType	StockInvestorID;
-	///è‚¡ç¥¨ç­–ç•¥ID
+	///¹ÉÆ±²ßÂÔID
 	TFocusFtdcStrategyIDType	StockStrategyID;
-	///è‚¡ç¥¨ç­–ç•¥å½“å‰æ˜¯å¦äº¤æ˜“
+	///¹ÉÆ±²ßÂÔµ±Ç°ÊÇ·ñ½»Ò×
 	TFocusFtdcBoolType	StockStrategyIsTrading;
-	///æœŸè´§äº¤æ˜“æ‰€ä»£ç 
+	///ÆÚ»õ½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	FutureExchangeID;
-	///æœŸè´§åˆçº¦ä»£ç 
+	///ÆÚ»õºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	FutureInstrumentID;
-	///æœŸè´§ä¹°å–æ–¹å‘
+	///ÆÚ»õÂòÂô·½Ïò
 	TFocusFtdcDirectionType	FutureDirection;
-	///æœŸè´§æŠ¥å•ç±»å‹
+	///ÆÚ»õ±¨µ¥ÀàĞÍ
 	TFocusFtdcStockStrategyPriceType	FuturePriceType;
-	///å¯¹åº”æœŸè´§å½“å‰æ˜¯å¦äº¤æ˜“ï¼ˆæ¢ä»“é»˜è®¤å¼€å…³æ— æ•ˆï¼‰
+	///¶ÔÓ¦ÆÚ»õµ±Ç°ÊÇ·ñ½»Ò×£¨»»²ÖÄ¬ÈÏ¿ª¹ØÎŞĞ§£©
 	TFocusFtdcBoolType	FutureIsTrading;
-	///æœŸè´§èµ„é‡‘è´¦å·
+	///ÆÚ»õ×Ê½ğÕËºÅ
 	TFocusFtdcInvestorIDType	FutureInvestorID;
-	///æœŸè´§é»˜è®¤æ£€æŸ¥æ—¶é—´é—´éš”
+	///ÆÚ»õÄ¬ÈÏ¼ì²éÊ±¼ä¼ä¸ô
 	TFocusFtdcNumberType	FutureTimeAvail;
-	///æœŸè´§é—´éš”æ‰‹æ•°
+	///ÆÚ»õ¼ä¸ôÊÖÊı
 	TFocusFtdcVolumeType	FutureAvailAmount;
-	///æœŸè´§ç®—æ³•ç±»å‹
+	///ÆÚ»õËã·¨ÀàĞÍ
 	TFocusFtdcVolumeType	FutureAlgoType;
-	///æŒ‡æ•°äº¤æ˜“æ‰€
+	///Ö¸Êı½»Ò×Ëù
 	TFocusFtdcExchangeIDType	IndexExchangeID;
-	///æŒ‡æ•°åˆçº¦
+	///Ö¸ÊıºÏÔ¼
 	TFocusFtdcInstrumentIDType	IndexInstrumentID;
-	///åŸºå·®
+	///»ù²î
 	TFocusFtdcPriceType	SpreadPrice;
-	///æœŸè´§æ€»ä¸‹å•æ‰‹æ•°
+	///ÆÚ»õ×ÜÏÂµ¥ÊÖÊı
 	TFocusFtdcVolumeType	FutureAmount;
-	///Listä¸­priceçš„ä»·æ ¼ç±»å‹
+	///ListÖĞpriceµÄ¼Û¸ñÀàĞÍ
 	TFocusFtdcListPriceTypeType	ListPriceType;
-	///æœŸç°ä¸‹å•åŒ¹é…åº¦(0~1)
+	///ÆÚÏÖÏÂµ¥Æ¥Åä¶È(0~1)
 	TFocusFtdcRatioType	FuStockRelation;
-	///åŠ å‡ä»“èµ·å§‹æ—¶é—´
+	///¼Ó¼õ²ÖÆğÊ¼Ê±¼ä
 	TFocusFtdcTimeType	TpStart;
-	///åŠ å‡ä»“ç»“æŸæ—¶é—´
+	///¼Ó¼õ²Ö½áÊøÊ±¼ä
 	TFocusFtdcTimeType	TpEnd;
 };
 
-///ç®—æ³•2è‚¡ç¥¨æœŸè´§å¯¹å†²å†…éƒ¨è¡¨è¯¦æƒ…
+///Ëã·¨2¹ÉÆ±ÆÚ»õ¶Ô³åÄÚ²¿±íÏêÇé
 struct CFocusFtdcInnerFutureStrategyTotalSecondRelationField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///è¯¥è‚¡ç¥¨ç”¨å“ªä¸ªèµ„é‡‘è´¦å·å»ä¸‹å•
+	///¸Ã¹ÉÆ±ÓÃÄÄ¸ö×Ê½ğÕËºÅÈ¥ÏÂµ¥
 	TFocusFtdcInvestorIDType	StockInvestorID;
-	///è‚¡ç¥¨ç­–ç•¥ID
+	///¹ÉÆ±²ßÂÔID
 	TFocusFtdcStrategyIDType	StockStrategyID;
-	///è‚¡ç¥¨ç­–ç•¥å½“å‰æ˜¯å¦äº¤æ˜“
+	///¹ÉÆ±²ßÂÔµ±Ç°ÊÇ·ñ½»Ò×
 	TFocusFtdcBoolType	StockStrategyIsTrading;
-	///æœŸè´§äº¤æ˜“æ‰€ä»£ç 
+	///ÆÚ»õ½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	FutureExchangeID;
-	///æœŸè´§åˆçº¦ä»£ç 
+	///ÆÚ»õºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	FutureInstrumentID;
-	///æœŸè´§ä¹°å–æ–¹å‘
+	///ÆÚ»õÂòÂô·½Ïò
 	TFocusFtdcDirectionType	FutureDirection;
-	///æœŸè´§æŠ¥å•ç±»å‹
+	///ÆÚ»õ±¨µ¥ÀàĞÍ
 	TFocusFtdcStockStrategyPriceType	FuturePriceType;
-	///å¯¹åº”æœŸè´§å½“å‰æ˜¯å¦äº¤æ˜“ï¼ˆæ¢ä»“é»˜è®¤å¼€å…³æ— æ•ˆï¼‰
+	///¶ÔÓ¦ÆÚ»õµ±Ç°ÊÇ·ñ½»Ò×£¨»»²ÖÄ¬ÈÏ¿ª¹ØÎŞĞ§£©
 	TFocusFtdcBoolType	FutureIsTrading;
-	///æœŸè´§èµ„é‡‘è´¦å·
+	///ÆÚ»õ×Ê½ğÕËºÅ
 	TFocusFtdcInvestorIDType	FutureInvestorID;
-	///æœŸè´§é»˜è®¤æ£€æŸ¥æ—¶é—´é—´éš”
+	///ÆÚ»õÄ¬ÈÏ¼ì²éÊ±¼ä¼ä¸ô
 	TFocusFtdcNumberType	FutureTimeAvail;
-	///æœŸè´§é—´éš”æ‰‹æ•°
+	///ÆÚ»õ¼ä¸ôÊÖÊı
 	TFocusFtdcVolumeType	FutureAvailAmount;
-	///æœŸè´§ç®—æ³•ç±»å‹
+	///ÆÚ»õËã·¨ÀàĞÍ
 	TFocusFtdcVolumeType	FutureAlgoType;
-	///æŒ‡æ•°äº¤æ˜“æ‰€
+	///Ö¸Êı½»Ò×Ëù
 	TFocusFtdcExchangeIDType	IndexExchangeID;
-	///æŒ‡æ•°åˆçº¦
+	///Ö¸ÊıºÏÔ¼
 	TFocusFtdcInstrumentIDType	IndexInstrumentID;
-	///åŸºå·®
+	///»ù²î
 	TFocusFtdcPriceType	SpreadPrice;
-	///æœŸè´§æ€»ä¸‹å•æ‰‹æ•°
+	///ÆÚ»õ×ÜÏÂµ¥ÊÖÊı
 	TFocusFtdcVolumeType	FutureAmount;
-	///Listä¸­priceçš„ä»·æ ¼ç±»å‹
+	///ListÖĞpriceµÄ¼Û¸ñÀàĞÍ
 	TFocusFtdcListPriceTypeType	ListPriceType;
-	///æœŸç°ä¸‹å•åŒ¹é…åº¦(0~1)
+	///ÆÚÏÖÏÂµ¥Æ¥Åä¶È(0~1)
 	TFocusFtdcRatioType	FuStockRelation;
-	///åŠ å‡ä»“èµ·å§‹æ—¶é—´
+	///¼Ó¼õ²ÖÆğÊ¼Ê±¼ä
 	TFocusFtdcTimeType	TpStart;
-	///åŠ å‡ä»“ç»“æŸæ—¶é—´
+	///¼Ó¼õ²Ö½áÊøÊ±¼ä
 	TFocusFtdcTimeType	TpEnd;
-	///æ“ä½œå¤‡æ³¨
+	///²Ù×÷±¸×¢
 	TFocusFtdcDepositNoteType	Note;
-	///æœ€æ–°ä¹°æ€»æˆäº¤æ€»é‡
+	///×îĞÂÂò×Ü³É½»×ÜÁ¿
 	TFocusFtdcMoneyType	LastTotalBuyMoney;
-	///æœ€æ–°å–æ€»æˆäº¤æ€»é‡
+	///×îĞÂÂô×Ü³É½»×ÜÁ¿
 	TFocusFtdcMoneyType	LastTotalSellMoney;
-	///æœ€æ–°éœ€è¦ä¹°çš„æ€»é‡‘é¢
+	///×îĞÂĞèÒªÂòµÄ×Ü½ğ¶î
 	TFocusFtdcMoneyType	LastTotalNeedBuyMoney;
-	///æœ€æ–°éœ€è¦å–çš„æ€»é‡‘é¢
+	///×îĞÂĞèÒªÂôµÄ×Ü½ğ¶î
 	TFocusFtdcMoneyType	LastTotalNeedSellMoney;
-	///æœ€æ–°æœŸè´§å¯¹å†²æ“ä½œæ—¶é—´
+	///×îĞÂÆÚ»õ¶Ô³å²Ù×÷Ê±¼ä
 	TFocusFtdcTimeType	LastFuOperTime;
-	///å·²å®Œæˆå¯¹å†²æ€»äº¤æ˜“é‡
+	///ÒÑÍê³É¶Ô³å×Ü½»Ò×Á¿
 	TFocusFtdcVolumeType	LastFuTarNetPosition;
-	///å¯¹å†²æ“ä½œå¤‡æ³¨
+	///¶Ô³å²Ù×÷±¸×¢
 	TFocusFtdcDepositNoteType	FutureNote;
-	///æœŸè´§ä»·å·®å¯¹å†²æ˜¯å¦éœ€è¦æ£€æŸ¥
+	///ÆÚ»õ¼Û²î¶Ô³åÊÇ·ñĞèÒª¼ì²é
 	TFocusFtdcBoolType	FutureSpreadNeedCheck;
-	///å¼€ä»“é‚£åˆ»æœŸè´§ä»·æ ¼
+	///¿ª²ÖÄÇ¿ÌÆÚ»õ¼Û¸ñ
 	TFocusFtdcPriceType	OpenFuInstrPrice;
-	///ä¸Šæ¬¡å®Œæˆçš„æ€»äº¤æ˜“é‡
+	///ÉÏ´ÎÍê³ÉµÄ×Ü½»Ò×Á¿
 	TFocusFtdcVolumeType	BeforeLastFuTarNetPosition;
-	///ç°è´§å¯¹äºæœŸè´§æ‰‹æ•°
+	///ÏÖ»õ¶ÔÓÚÆÚ»õÊÖÊı
 	TFocusFtdcRatioType	NetFuPosition;
-	///å®æ—¶åŸºå·®
+	///ÊµÊ±»ù²î
 	TFocusFtdcPriceType	RealTimeSpreadPrice;
-	///å®æ—¶æŒ‡æ•°ä»·æ ¼
+	///ÊµÊ±Ö¸Êı¼Û¸ñ
 	TFocusFtdcPriceType	RealIndexPrice;
-	///å®æ—¶æœŸè´§ä»·æ ¼
+	///ÊµÊ±ÆÚ»õ¼Û¸ñ
 	TFocusFtdcPriceType	RealFuturePrice;
-	///æœ€æ–°æœŸè´§å¯¹å†²æ“ä½œæ—¶é—´
+	///×îĞÂÆÚ»õ¶Ô³å²Ù×÷Ê±¼ä
 	TFocusFtdcTimeType	LastHedgeFuOperTime;
-	///æœŸè´§å®é™…åŒ¹é…æ•°é‡
+	///ÆÚ»õÊµ¼ÊÆ¥ÅäÊıÁ¿
 	TFocusFtdcRatioType	DoubleFutureAmount;
 };
 
-///æœŸè´§ç®—æ³•äº¤æ˜“è®¢å•é”®å€¼
+///ÆÚ»õËã·¨½»Ò×¶©µ¥¼üÖµ
 struct CFocusFtdcParentOrderIndexField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ç­–ç•¥IDå·
+	///²ßÂÔIDºÅ
 	TFocusFtdcStrategyIDType	StrategyID;
 };
 
-///æ¯å•ç®—æ³•åŸºæœ¬ä¿¡æ¯å‚æ•°
+///Ä¸µ¥Ëã·¨»ù±¾ĞÅÏ¢²ÎÊı
 struct CFocusFtdcParentOrderStaticParamField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ç­–ç•¥IDå·
+	///²ßÂÔIDºÅ
 	TFocusFtdcStrategyIDType	StrategyID;
-	///ä¿å®ˆ->æ¿€è¿› 1--5
+	///±£ÊØ->¼¤½ø 1--5
 	TFocusFtdcNumberType	style;
-	///æœ€å¤§å¸‚åœºå æ¯” TWAP/VWAP (0, 0.5]
+	///×î´óÊĞ³¡Õ¼±È TWAP/VWAP (0, 0.5]
 	TFocusFtdcRatioType	maxVolumeP;
-	///æœ€å°æŒ‚å•é‡ï¼Œé»˜è®¤ä¸º0
+	///×îĞ¡¹Òµ¥Á¿£¬Ä¬ÈÏÎª0
 	TFocusFtdcVolumeType	minDisplaySize;
-	///æœ€å¤§æŒ‚å•é‡ï¼ˆå•ä¸€æ¡£ä½ï¼‰ï¼Œé»˜è®¤ä¸º0
+	///×î´ó¹Òµ¥Á¿£¨µ¥Ò»µµÎ»£©£¬Ä¬ÈÏÎª0
 	TFocusFtdcVolumeType	displaySize;
-	///é‡æ¯”ç»Ÿè®¡å£å¾„ï¼Œé»˜è®¤ä¸ºé™ä»·å†…ã€‚é™ä»·å†… - 0ï¼Œ å…¨å¸‚åœº - 1
+	///Á¿±ÈÍ³¼Æ¿Ú¾¶£¬Ä¬ÈÏÎªÏŞ¼ÛÄÚ¡£ÏŞ¼ÛÄÚ - 0£¬ È«ÊĞ³¡ - 1
 	TFocusFtdcVolumeType	countVolInLimitPx;
-	///é‡å¯æ—¶é‡ç½®é‡æ¯”ã€‚true - 1, false - 0
+	///ÖØÆôÊ±ÖØÖÃÁ¿±È¡£true - 1, false - 0
 	TFocusFtdcVolumeType	resetVolOnAmend;
-	///ä»·æ ¼é™åˆ¶ï¼Œé»˜è®¤ä¸º0
+	///¼Û¸ñÏŞÖÆ£¬Ä¬ÈÏÎª0
 	TFocusFtdcPriceType	limitPrice;
-	///ç›¸å¯¹é™ä»·åŸºå‡† 
+	///Ïà¶ÔÏŞ¼Û»ù×¼ 
 	TFocusFtdcVolumeType	relativePriceLimitBase;
-	///ç›¸å¯¹é™ä»·åç§»å•ä½ æšä¸¾å‹ 
+	///Ïà¶ÔÏŞ¼ÛÆ«ÒÆµ¥Î» Ã¶¾ÙĞÍ 
 	TFocusFtdcVolumeType	relativePriceLimitType;
-	///ç›¸å¯¹é™ä»·åç§»é‡  double
+	///Ïà¶ÔÏŞ¼ÛÆ«ÒÆÁ¿  double
 	TFocusFtdcPriceTickType	relativePriceLimitOffset;
-	///æ˜¯å¦è¿›ä»·å·®ï¼Œé»˜è®¤è¿›ä»·å·® 0ï¼Œä¸è¿›ï¼Œ1 è¿›
+	///ÊÇ·ñ½ø¼Û²î£¬Ä¬ÈÏ½ø¼Û²î 0£¬²»½ø£¬1 ½ø
 	TFocusFtdcVolumeType	stepSpread;
-	///æ¶¨è·ŒåœåŠ¨ä½œï¼Œæ¶¨è·Œåœæ—¶å¯æš‚åœã€åŠ é€Ÿï¼Œ0æ˜¯æ²¡åŠ¨ä½œï¼Œ1æ˜¯åŠ é€Ÿï¼Œ2æ˜¯æš‚åœ
+	///ÕÇµøÍ£¶¯×÷£¬ÕÇµøÍ£Ê±¿ÉÔİÍ£¡¢¼ÓËÙ£¬0ÊÇÃ»¶¯×÷£¬1ÊÇ¼ÓËÙ£¬2ÊÇÔİÍ£
 	TFocusFtdcVolumeType	optOnExtreme;
 };
 
-///æœŸç°è´¦æˆ·å…³ç³»
+///ÆÚÏÖÕË»§¹ØÏµ
 struct CFocusFtdcFuSkAccountRelationField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///ç°è´§æŠ•èµ„è€…ç¼–å·
+	///ÏÖ»õÍ¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	StockInvestorID;
-	///æœŸè´§æŠ•èµ„è€…ç¼–å·
+	///ÆÚ»õÍ¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	FutureInvestorID;
-	///æœŸè´§èµ„é‡‘å¯†ç 
+	///ÆÚ»õ×Ê½ğÃÜÂë
 	TFocusFtdcPasswordType	FuturePasswd;
 };
 
-///æ‰¹é‡æŠ¥å•å½•å…¥
+///ÅúÁ¿±¨µ¥Â¼Èë
 struct CFocusFtdcBatchInputOrderField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æ‰¹é‡ç”¨æˆ·æœ¬åœ°æŠ¥å•å·
+	///ÅúÁ¿ÓÃ»§±¾µØ±¨µ¥ºÅ
 	TFocusFtdcBatchUserOrderLocalIDType	UserOrderLocalID;
-	///æ‰¹é‡ç”¨æˆ·è‡ªå®šä¹‰åŸŸ
+	///ÅúÁ¿ÓÃ»§×Ô¶¨ÒåÓò
 	TFocusFtdcBatchCustomType	UserCustom;
-	///æ‰¹é‡äº¤æ˜“æ‰€ä»£ç 
+	///ÅúÁ¿½»Ò×Ëù´úÂë
 	TFocusFtdcBatchExchangeIDType	ExchangeID;
-	///æ‰¹é‡åˆçº¦ä»£ç 
+	///ÅúÁ¿ºÏÔ¼´úÂë
 	TFocusFtdcBatchInstrumentIDType	InstrumentID;
-	///æ‰¹é‡ä¹°å–æ–¹å‘
+	///ÅúÁ¿ÂòÂô·½Ïò
 	TFocusFtdcBatchDirectionType	Direction;
-	///æ‰¹é‡å¼€å¹³æ ‡å¿—
+	///ÅúÁ¿¿ªÆ½±êÖ¾
 	TFocusFtdcBatchOffsetFlagType	OffsetFlag;
-	///æ‰¹é‡ä»·æ ¼
+	///ÅúÁ¿¼Û¸ñ
 	TFocusFtdcBatchPriceType	LimitPrice;
-	///æ‰¹é‡æ•°é‡
+	///ÅúÁ¿ÊıÁ¿
 	TFocusFtdcBatchVolumeType	Volume;
 };
 
-///æ‰¹é‡æŠ¥å•æ“ä½œ
+///ÅúÁ¿±¨µ¥²Ù×÷
 struct CFocusFtdcBatchOrderActionField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æ‰¹é‡ç”¨æˆ·æœ¬åœ°æŠ¥å•å·
+	///ÅúÁ¿ÓÃ»§±¾µØ±¨µ¥ºÅ
 	TFocusFtdcBatchUserOrderLocalIDType	UserOrderLocalID;
-	///æ‰¹é‡ç”¨æˆ·è‡ªå®šä¹‰åŸŸ
+	///ÅúÁ¿ÓÃ»§×Ô¶¨ÒåÓò
 	TFocusFtdcBatchCustomType	UserCustom;
-	///æ‰¹é‡äº¤æ˜“æ‰€ä»£ç 
+	///ÅúÁ¿½»Ò×Ëù´úÂë
 	TFocusFtdcBatchExchangeIDType	ExchangeID;
-	///æ‰¹é‡æŠ¥å•ç¼–å·(768)
+	///ÅúÁ¿±¨µ¥±àºÅ(768)
 	TFocusFtdcBatchOrderSysIDType	OrderSysID;
-	///æ‰¹é‡åˆçº¦ä»£ç 
+	///ÅúÁ¿ºÏÔ¼´úÂë
 	TFocusFtdcBatchInstrumentIDType	InstrumentID;
-	///æ‰¹é‡æœ¬æ¬¡æ’¤å•æ“ä½œçš„æœ¬åœ°ç¼–å·
+	///ÅúÁ¿±¾´Î³·µ¥²Ù×÷µÄ±¾µØ±àºÅ
 	TFocusFtdcBatchUserOrderLocalIDType	UserOrderActionLocalID;
-	///å‰ç½®ç¼–å·
+	///Ç°ÖÃ±àºÅ
 	TFocusFtdcFrontIDType	FrontID;
-	///ä¼šè¯ç¼–å·
+	///»á»°±àºÅ
 	TFocusFtdcSessionIDType	SessionID;
 };
 
-///æŠ•èµ„è€…è´¦æˆ·å¸­ä½åŸºæœ¬ä¿¡æ¯
+///Í¶×ÊÕßÕË»§Ï¯Î»»ù±¾ĞÅÏ¢
 struct CFocusFtdcUserInvestorSeatBaseField
 {
-	///ç»çºªå…¬å¸ç¼–å·
+	///¾­¼Í¹«Ë¾±àºÅ
 	TFocusFtdcBrokerIDType	BrokerID;
-	///äº¤æ˜“ç”¨æˆ·ä»£ç 
+	///½»Ò×ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æ—§æ“ä½œå‘˜å¯†ç 
+	///¾É²Ù×÷Ô±ÃÜÂë
 	TFocusFtdcPasswordType	OldUserPassword;
-	///æ–°æ“ä½œå‘˜å¯†ç 
+	///ĞÂ²Ù×÷Ô±ÃÜÂë
 	TFocusFtdcPasswordType	NewUserPassword;
-	///å¸­ä½ä»£ç 
+	///Ï¯Î»´úÂë
 	TFocusFtdcSeatIDType	SeatID;
-	///æ—§å¸­ä½å¯†ç 
+	///¾ÉÏ¯Î»ÃÜÂë
 	TFocusFtdcPasswordType	OldSeatPassword;
-	///æ–°å¸­ä½å¯†ç 
+	///ĞÂÏ¯Î»ÃÜÂë
 	TFocusFtdcPasswordType	NewSeatPassword;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///æ—§èµ„é‡‘è´¦å·å¯†ç 
+	///¾É×Ê½ğÕËºÅÃÜÂë
 	TFocusFtdcPasswordType	OldInvestorPasswd;
-	///æ–°èµ„é‡‘è´¦å·å¯†ç 
+	///ĞÂ×Ê½ğÕËºÅÃÜÂë
 	TFocusFtdcPasswordType	NewInvestorPasswd;
 };
 
-///æœŸè´§äº¤æ˜“è¯¦æƒ…ç®—æ³•äº¤æ˜“è®¢å•é”®å€¼
+///ÆÚ»õ½»Ò×ÏêÇéËã·¨½»Ò×¶©µ¥¼üÖµ
 struct CFocusFtdcParentOrderDetialIndexField
 {
-	///ç”¨æˆ·ä»£ç 
+	///ÓÃ»§´úÂë
 	TFocusFtdcUserIDType	UserID;
-	///æŠ•èµ„è€…ç¼–å·
+	///Í¶×ÊÕß±àºÅ
 	TFocusFtdcInvestorIDType	InvestorID;
-	///äº¤æ˜“æ‰€ä»£ç 
+	///½»Ò×Ëù´úÂë
 	TFocusFtdcExchangeIDType	ExchangeID;
-	///åˆçº¦ä»£ç 
+	///ºÏÔ¼´úÂë
 	TFocusFtdcInstrumentIDType	InstrumentID;
-	///ç­–ç•¥IDå·
+	///²ßÂÔIDºÅ
 	TFocusFtdcStrategyIDType	StrategyID;
-	///ç³»ç»Ÿæ¯å•æŠ¥å•ç¼–å·(æ¯å•ID,ä¸»é”®,å­å•å¸¦å›)
+	///ÏµÍ³Ä¸µ¥±¨µ¥±àºÅ(Ä¸µ¥ID,Ö÷¼ü,×Óµ¥´ø»Ø)
+	TFocusFtdcOrderLocalIDType	AlgoParentOrderSysID;
+};
+
+///Î´Íê³ÉÄ¸µ¥ĞÅÏ¢
+struct CFocusFtdcUnFinshPutureOrderField
+{
+	///ÓÃ»§´úÂë
+	TFocusFtdcUserIDType	UserID;
+	///Í¶×ÊÕß±àºÅ
+	TFocusFtdcInvestorIDType	InvestorID;
+	///½»Ò×Ëù´úÂë
+	TFocusFtdcExchangeIDType	ExchangeID;
+	///ºÏÔ¼´úÂë
+	TFocusFtdcInstrumentIDType	InstrumentID;
+	///²ßÂÔIDºÅ
+	TFocusFtdcStrategyIDType	StrategyID;
+	///Ä¿±ê¾»³Ö²ÖÁ¿
+	TFocusFtdcVolumeType	TargetNetPosition;
+	///ÏµÍ³Ä¸µ¥±¨µ¥±àºÅ(Ä¸µ¥ID,Ö÷¼ü,×Óµ¥´ø»Ø)
 	TFocusFtdcOrderLocalIDType	AlgoParentOrderSysID;
 };
 

@@ -49,23 +49,24 @@ using namespace boost;
 #define ONRTNMESSAGENOTIFY 12
 #define ONRSPQRYORDER 13
 #define ONRSPQRYTRADE 14
-#define ONRSPQRYINSTRUMENT 15
-#define ONRSPQRYEXCHANGE 16
-#define ONRSPQRYINVESTORPOSITION 17
-#define ONRSPSUBSCRIBETOPIC 18
-#define ONRSPQRYTOPIC 19
-#define ONRSPQRYPRODUCT 20
-#define ONRTNSTRATEGYLOG 21
-#define ONRTNINVESTORPOSITION 22
-#define ONRTNPARENTORDER 23
-#define ONRTNPARENTORDERACTION 24
-#define ONRTNAMENDPARENTORDER 25
-#define ONRTNEXTRAMANUALPARENTORDER 26
-#define ONRSPQRYMARKETTRADINGTIME 27
-#define ONRSPBATCHORDERINSERT 28
-#define ONRSPBATCHORDERACTION 29
-#define ONRTNSPREADINSTRSTRATEGY 30
-#define ONRTNAMENDPSPREADINSTRSTRATEGY 31
+#define ONRSPQRYINVESTORACCOUNT 15
+#define ONRSPQRYINSTRUMENT 16
+#define ONRSPQRYEXCHANGE 17
+#define ONRSPQRYINVESTORPOSITION 18
+#define ONRSPSUBSCRIBETOPIC 19
+#define ONRSPQRYTOPIC 20
+#define ONRSPQRYPRODUCT 21
+#define ONRTNSTRATEGYLOG 22
+#define ONRTNINVESTORPOSITION 23
+#define ONRTNPARENTORDER 24
+#define ONRTNPARENTORDERACTION 25
+#define ONRTNAMENDPARENTORDER 26
+#define ONRTNEXTRAMANUALPARENTORDER 27
+#define ONRSPQRYMARKETTRADINGTIME 28
+#define ONRSPBATCHORDERINSERT 29
+#define ONRSPBATCHORDERACTION 30
+#define ONRTNSPREADINSTRSTRATEGY 31
+#define ONRTNAMENDPSPREADINSTRSTRATEGY 32
 
 
 
@@ -227,6 +228,8 @@ public:
 
 	void processRspQryTrade(Task task);
 
+	void processRspQryInvestorAccount(Task task);
+
 	void processRspQryInstrument(Task task);
 
 	void processRspQryExchange(Task task);
@@ -312,6 +315,9 @@ public:
 
 	virtual void OnRspQryTrade(CFocusFtdcTradeField *pTrade, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) ;
 	virtual void onRspQryTrade(dict data, dict error, int id, bool last) {};
+
+	virtual void OnRspQryInvestorAccount(CFocusFtdcRspInvestorAccountField *pRspInvestorAccount, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) ;
+	virtual void onRspQryInvestorAccount(dict data, dict error, int id, bool last) {};
 
 	virtual void OnRspQryInstrument(CFocusFtdcRspInstrumentField *pRspInstrument, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) ;
 	virtual void onRspQryInstrument(dict data, dict error, int id, bool last) {};
@@ -399,6 +405,8 @@ public:
 	int reqQryOrder(dict req, int nRequestID);
 
 	int reqQryTrade(dict req, int nRequestID);
+
+	int reqQryInvestorAccount(dict req, int nRequestID);
 
 	int reqQryInstrument(dict req, int nRequestID);
 

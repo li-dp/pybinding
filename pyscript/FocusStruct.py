@@ -4931,6 +4931,25 @@ CFocusFtdcParentOrderDetialIndexField["AlgoParentOrderSysID"] = "string"
 structDict['CFocusFtdcParentOrderDetialIndexField'] = CFocusFtdcParentOrderDetialIndexField
 
 
+#未完成母单信息
+CFocusFtdcUnFinshPutureOrderField = {}
+#用户代码
+CFocusFtdcUnFinshPutureOrderField["UserID"] = "string"
+#投资者编号
+CFocusFtdcUnFinshPutureOrderField["InvestorID"] = "string"
+#交易所代码
+CFocusFtdcUnFinshPutureOrderField["ExchangeID"] = "string"
+#合约代码
+CFocusFtdcUnFinshPutureOrderField["InstrumentID"] = "string"
+#策略ID号
+CFocusFtdcUnFinshPutureOrderField["StrategyID"] = "string"
+#目标净持仓量
+CFocusFtdcUnFinshPutureOrderField["TargetNetPosition"] = "int"
+#系统母单报单编号(母单ID,主键,子单带回)
+CFocusFtdcUnFinshPutureOrderField["AlgoParentOrderSysID"] = "string"
+structDict['CFocusFtdcUnFinshPutureOrderField'] = CFocusFtdcUnFinshPutureOrderField
+
+
 
 
 
