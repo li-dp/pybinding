@@ -5199,6 +5199,68 @@ void UserApi::OnRtnAmendPSpreadInstrStrategy(CFocusFtdcSpreadInstrStrategyField 
 	this->task_queue.push(task);
 };
 
+void UserApi::OnRspQryUnFinshPutureOrder(CFocusFtdcUnFinshPutureOrderField *pUnFinshPutureOrder, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) 
+{
+	Task task = Task();
+	task.task_name = ONRSPQRYUNFINSHPUTUREORDER;
+
+	if (pUnFinshPutureOrder)
+	{
+		task.task_data = *pUnFinshPutureOrder;
+	}
+	else
+	{
+		CFocusFtdcUnFinshPutureOrderField empty_data = CFocusFtdcUnFinshPutureOrderField();
+		memset(&empty_data, 0, sizeof(empty_data));
+		task.task_data = empty_data;
+	}
+
+	if (pRspInfo)
+	{
+		task.task_error = *pRspInfo;
+	}
+	else
+	{
+		CFocusFtdcRspInfoField empty_error = CFocusFtdcRspInfoField();
+		memset(&empty_error, 0, sizeof(empty_error));
+		task.task_error = empty_error;
+	}
+	task.task_id = nRequestID;
+	task.task_last = bIsLast;
+	this->task_queue.push(task);
+};
+
+void UserApi::OnRspQryTodayTayoutDetails(CFocusFtdcTodayTayoutDetailsField *pTodayTayoutDetails, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) 
+{
+	Task task = Task();
+	task.task_name = ONRSPQRYTODAYTAYOUTDETAILS;
+
+	if (pTodayTayoutDetails)
+	{
+		task.task_data = *pTodayTayoutDetails;
+	}
+	else
+	{
+		CFocusFtdcTodayTayoutDetailsField empty_data = CFocusFtdcTodayTayoutDetailsField();
+		memset(&empty_data, 0, sizeof(empty_data));
+		task.task_data = empty_data;
+	}
+
+	if (pRspInfo)
+	{
+		task.task_error = *pRspInfo;
+	}
+	else
+	{
+		CFocusFtdcRspInfoField empty_error = CFocusFtdcRspInfoField();
+		memset(&empty_error, 0, sizeof(empty_error));
+		task.task_error = empty_error;
+	}
+	task.task_id = nRequestID;
+	task.task_last = bIsLast;
+	this->task_queue.push(task);
+};
+
 
 
 ///-------------------------------------------------------------------------------------
@@ -6314,6 +6376,18 @@ void UserApi::processTask()
 		case ONRTNAMENDPSPREADINSTRSTRATEGY:
 		{
 			this->processRtnAmendPSpreadInstrStrategy(task);
+			break;
+		}
+
+		case ONRSPQRYUNFINSHPUTUREORDER:
+		{
+			this->processRspQryUnFinshPutureOrder(task);
+			break;
+		}
+
+		case ONRSPQRYTODAYTAYOUTDETAILS:
+		{
+			this->processRspQryTodayTayoutDetails(task);
 			break;
 		}
 
@@ -11639,6 +11713,53 @@ void UserApi::processRtnAmendPSpreadInstrStrategy(Task task)
 	this->onRtnAmendPSpreadInstrStrategy(data);
 };
 
+void UserApi::processRspQryUnFinshPutureOrder(Task task)
+{
+	PyLock lock;
+	CFocusFtdcUnFinshPutureOrderField task_data = any_cast<CFocusFtdcUnFinshPutureOrderField>(task.task_data);
+	dict data;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
+	data["InvestorID"] = task_data.InvestorID;
+	data["ExchangeID"] = task_data.ExchangeID;
+	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
+	data["StrategyID"] = task_data.StrategyID;
+	data["TargetNetPosition"] = task_data.TargetNetPosition;
+	data["AlgoParentOrderSysID"] = task_data.AlgoParentOrderSysID;
+
+	CFocusFtdcRspInfoField task_error = any_cast<CFocusFtdcRspInfoField>(task.task_error);
+	dict error;
+	error["ErrorID"] = task_error.ErrorID;
+	error["ErrorMsg"] = GBK_TO_UTF8(task_error.ErrorMsg);
+	this->onRspQryUnFinshPutureOrder(data, error, task.task_id, task.task_last);
+};
+
+void UserApi::processRspQryTodayTayoutDetails(Task task)
+{
+	PyLock lock;
+	CFocusFtdcTodayTayoutDetailsField task_data = any_cast<CFocusFtdcTodayTayoutDetailsField>(task.task_data);
+	dict data;
+	data["BrokerID"] = task_data.BrokerID;
+	data["InvestorID"] = task_data.InvestorID;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
+	data["occurTime"] = task_data.occurTime;
+	data["bankId"] = task_data.bankId;
+	data["bankAcctId"] = task_data.bankAcctId;
+	data["contractNum"] = task_data.contractNum;
+	data["acctName"] = GBK_TO_UTF8(task_data.acctName);
+	data["TodayInOut"] = task_data.TodayInOut;
+	data["memo"] = task_data.memo;
+	data["briefId"] = task_data.briefId;
+	data["postAmt"] = task_data.postAmt;
+	data["custId"] = task_data.custId;
+	data["undoFlagDesc"] = task_data.undoFlagDesc;
+
+	CFocusFtdcRspInfoField task_error = any_cast<CFocusFtdcRspInfoField>(task.task_error);
+	dict error;
+	error["ErrorID"] = task_error.ErrorID;
+	error["ErrorMsg"] = GBK_TO_UTF8(task_error.ErrorMsg);
+	this->onRspQryTodayTayoutDetails(data, error, task.task_id, task.task_last);
+};
+
 
 
 
@@ -14123,6 +14244,31 @@ int UserApi::reqSetUserInvestorSeatBasePasswd(dict req, int nRequestID)
 	return i;
 };
 
+int UserApi::reqQryUnFinshPutureOrder(dict req, int nRequestID)
+{
+	CFocusFtdcParentOrderIndexField myreq = CFocusFtdcParentOrderIndexField();
+	memset(&myreq, 0, sizeof(myreq));
+	getStr(req, "UserID", myreq.UserID);
+	getStr(req, "InvestorID", myreq.InvestorID);
+	getStr(req, "ExchangeID", myreq.ExchangeID);
+	getStr(req, "InstrumentID", myreq.InstrumentID);
+	getStr(req, "StrategyID", myreq.StrategyID);
+	int i = this->api->ReqQryUnFinshPutureOrder(&myreq, nRequestID);
+	return i;
+};
+
+int UserApi::reqQryTodayTayoutDetails(dict req, int nRequestID)
+{
+	CFocusFtdcQryTodayTayoutDetailsIndexField myreq = CFocusFtdcQryTodayTayoutDetailsIndexField();
+	memset(&myreq, 0, sizeof(myreq));
+	getStr(req, "BrokerID", myreq.BrokerID);
+	getStr(req, "InvestorID", myreq.InvestorID);
+	getStr(req, "UserID", myreq.UserID);
+	getStr(req, "contractNum", myreq.contractNum);
+	int i = this->api->ReqQryTodayTayoutDetails(&myreq, nRequestID);
+	return i;
+};
+
 
 
 ///-------------------------------------------------------------------------------------
@@ -16526,6 +16672,32 @@ struct UserApiWrap : UserApi, wrapper < UserApi >
 		}
 	};
 
+	virtual void onRspQryUnFinshPutureOrder(dict data, dict error, int id, bool last)
+	{
+		try
+		{
+			this->get_override("onRspQryUnFinshPutureOrder")(data, error, id, last);
+		}
+		catch (error_already_set const &)
+		{
+			std::cerr << __FILE__ << __LINE__ << std::endl;;
+			PyErr_Print();
+		}
+	};
+
+	virtual void onRspQryTodayTayoutDetails(dict data, dict error, int id, bool last)
+	{
+		try
+		{
+			this->get_override("onRspQryTodayTayoutDetails")(data, error, id, last);
+		}
+		catch (error_already_set const &)
+		{
+			std::cerr << __FILE__ << __LINE__ << std::endl;;
+			PyErr_Print();
+		}
+	};
+
 
 };
 
@@ -16727,6 +16899,8 @@ BOOST_PYTHON_MODULE(userbinding)
 		.def("onRspSetUserInvestorSeatBasePasswd", pure_virtual(&UserApiWrap::onRspSetUserInvestorSeatBasePasswd))
 		.def("onRtnSpreadInstrStrategy", pure_virtual(&UserApiWrap::onRtnSpreadInstrStrategy))
 		.def("onRtnAmendPSpreadInstrStrategy", pure_virtual(&UserApiWrap::onRtnAmendPSpreadInstrStrategy))
+		.def("onRspQryUnFinshPutureOrder", pure_virtual(&UserApiWrap::onRspQryUnFinshPutureOrder))
+		.def("onRspQryTodayTayoutDetails", pure_virtual(&UserApiWrap::onRspQryTodayTayoutDetails))
 		.def("reqUserLogin", &UserApiWrap::reqUserLogin)
 		.def("reqUserLogout", &UserApiWrap::reqUserLogout)
 		.def("reqUserPasswordUpdate", &UserApiWrap::reqUserPasswordUpdate)
@@ -16873,6 +17047,8 @@ BOOST_PYTHON_MODULE(userbinding)
 		.def("reqBatchOrderInsert", &UserApiWrap::reqBatchOrderInsert)
 		.def("reqBatchOrderAction", &UserApiWrap::reqBatchOrderAction)
 		.def("reqSetUserInvestorSeatBasePasswd", &UserApiWrap::reqSetUserInvestorSeatBasePasswd)
+		.def("reqQryUnFinshPutureOrder", &UserApiWrap::reqQryUnFinshPutureOrder)
+		.def("reqQryTodayTayoutDetails", &UserApiWrap::reqQryTodayTayoutDetails)
 
 		;
 }

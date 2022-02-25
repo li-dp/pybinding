@@ -212,6 +212,8 @@ using namespace boost;
 #define ONRSPSETUSERINVESTORSEATBASEPASSWD 182
 #define ONRTNSPREADINSTRSTRATEGY 183
 #define ONRTNAMENDPSPREADINSTRSTRATEGY 184
+#define ONRSPQRYUNFINSHPUTUREORDER 185
+#define ONRSPQRYTODAYTAYOUTDETAILS 186
 
 
 
@@ -712,6 +714,10 @@ public:
 	void processRtnSpreadInstrStrategy(Task task);
 
 	void processRtnAmendPSpreadInstrStrategy(Task task);
+
+	void processRspQryUnFinshPutureOrder(Task task);
+
+	void processRspQryTodayTayoutDetails(Task task);
 
 
 
@@ -1275,6 +1281,12 @@ public:
 	virtual void OnRtnAmendPSpreadInstrStrategy(CFocusFtdcSpreadInstrStrategyField *pSpreadInstrStrategy) ;
 	virtual void onRtnAmendPSpreadInstrStrategy(dict data) {};
 
+	virtual void OnRspQryUnFinshPutureOrder(CFocusFtdcUnFinshPutureOrderField *pUnFinshPutureOrder, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) ;
+	virtual void onRspQryUnFinshPutureOrder(dict data, dict error, int id, bool last) {};
+
+	virtual void OnRspQryTodayTayoutDetails(CFocusFtdcTodayTayoutDetailsField *pTodayTayoutDetails, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) ;
+	virtual void onRspQryTodayTayoutDetails(dict data, dict error, int id, bool last) {};
+
 
 
 	//-------------------------------------------------------------------------------------
@@ -1590,6 +1602,10 @@ public:
 	int reqBatchOrderAction(dict req, int nRequestID);
 
 	int reqSetUserInvestorSeatBasePasswd(dict req, int nRequestID);
+
+	int reqQryUnFinshPutureOrder(dict req, int nRequestID);
+
+	int reqQryTodayTayoutDetails(dict req, int nRequestID);
 
 
 };
