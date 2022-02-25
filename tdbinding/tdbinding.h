@@ -67,6 +67,7 @@ using namespace boost;
 #define ONRSPBATCHORDERACTION 30
 #define ONRTNSPREADINSTRSTRATEGY 31
 #define ONRTNAMENDPSPREADINSTRSTRATEGY 32
+#define ONRSPQRYTODAYTAYOUTDETAILS 33
 
 
 
@@ -264,6 +265,8 @@ public:
 
 	void processRtnAmendPSpreadInstrStrategy(Task task);
 
+	void processRspQryTodayTayoutDetails(Task task);
+
 
 
 	//-------------------------------------------------------------------------------------
@@ -370,6 +373,9 @@ public:
 	virtual void OnRtnAmendPSpreadInstrStrategy(CFocusFtdcSpreadInstrStrategyField *pSpreadInstrStrategy) ;
 	virtual void onRtnAmendPSpreadInstrStrategy(dict data) {};
 
+	virtual void OnRspQryTodayTayoutDetails(CFocusFtdcTodayTayoutDetailsField *pTodayTayoutDetails, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) ;
+	virtual void onRspQryTodayTayoutDetails(dict data, dict error, int id, bool last) {};
+
 
 
 	//-------------------------------------------------------------------------------------
@@ -429,6 +435,8 @@ public:
 	int reqBatchOrderInsert(dict req, int nRequestID);
 
 	int reqBatchOrderAction(dict req, int nRequestID);
+
+	int reqQryTodayTayoutDetails(dict req, int nRequestID);
 
 
 };

@@ -144,6 +144,9 @@ public:
 
 	///通知修改跨期策略原始订单详情
 	virtual void OnRtnAmendPSpreadInstrStrategy(CFocusFtdcSpreadInstrStrategyField *pSpreadInstrStrategy) {};
+
+	///查询出入金应答
+	virtual void OnRspQryTodayTayoutDetails(CFocusFtdcTodayTayoutDetailsField *pTodayTayoutDetails, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {};
 };
 
 class TRADER_API_EXPORT CFocusFtdcTraderApi
@@ -300,6 +303,9 @@ public:
 
 	///股票批量撤单请求
 	virtual int ReqBatchOrderAction(CFocusFtdcBatchOrderActionField *pBatchOrderAction, int nRequestID) = 0;
+
+	///查询出入金
+	virtual int ReqQryTodayTayoutDetails(CFocusFtdcQryTodayTayoutDetailsIndexField *pQryTodayTayoutDetailsIndex, int nRequestID) = 0;
 protected:
 	~CFocusFtdcTraderApi(){};
 };

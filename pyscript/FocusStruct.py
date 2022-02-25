@@ -4950,6 +4950,52 @@ CFocusFtdcUnFinshPutureOrderField["AlgoParentOrderSysID"] = "string"
 structDict['CFocusFtdcUnFinshPutureOrderField'] = CFocusFtdcUnFinshPutureOrderField
 
 
+#查询出入金键值
+CFocusFtdcQryTodayTayoutDetailsIndexField = {}
+#经纪公司编号
+CFocusFtdcQryTodayTayoutDetailsIndexField["BrokerID"] = "string"
+#投资者编号
+CFocusFtdcQryTodayTayoutDetailsIndexField["InvestorID"] = "string"
+#用户代码
+CFocusFtdcQryTodayTayoutDetailsIndexField["UserID"] = "string"
+#合同序号
+CFocusFtdcQryTodayTayoutDetailsIndexField["contractNum"] = "string"
+structDict['CFocusFtdcQryTodayTayoutDetailsIndexField'] = CFocusFtdcQryTodayTayoutDetailsIndexField
+
+
+#未完成母单信息
+CFocusFtdcTodayTayoutDetailsField = {}
+#经纪公司编号
+CFocusFtdcTodayTayoutDetailsField["BrokerID"] = "string"
+#投资者编号
+CFocusFtdcTodayTayoutDetailsField["InvestorID"] = "string"
+#用户代码
+CFocusFtdcTodayTayoutDetailsField["UserID"] = "string"
+#发生时间
+CFocusFtdcTodayTayoutDetailsField["occurTime"] = "string"
+#银行代码
+CFocusFtdcTodayTayoutDetailsField["bankId"] = "string"
+#银行账号
+CFocusFtdcTodayTayoutDetailsField["bankAcctId"] = "string"
+#合同序号
+CFocusFtdcTodayTayoutDetailsField["contractNum"] = "string"
+#帐号名称
+CFocusFtdcTodayTayoutDetailsField["acctName"] = "string"
+#今日出入金
+CFocusFtdcTodayTayoutDetailsField["TodayInOut"] = "float"
+#备注
+CFocusFtdcTodayTayoutDetailsField["memo"] = "string"
+#操作摘要
+CFocusFtdcTodayTayoutDetailsField["briefId"] = "string"
+#资金本次余额
+CFocusFtdcTodayTayoutDetailsField["postAmt"] = "float"
+#客户代码
+CFocusFtdcTodayTayoutDetailsField["custId"] = "string"
+#冲正标志
+CFocusFtdcTodayTayoutDetailsField["undoFlagDesc"] = "string"
+structDict['CFocusFtdcTodayTayoutDetailsField'] = CFocusFtdcTodayTayoutDetailsField
+
+
 
 
 

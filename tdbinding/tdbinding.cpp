@@ -829,6 +829,37 @@ void TdApi::OnRtnAmendPSpreadInstrStrategy(CFocusFtdcSpreadInstrStrategyField *p
 	this->task_queue.push(task);
 };
 
+void TdApi::OnRspQryTodayTayoutDetails(CFocusFtdcTodayTayoutDetailsField *pTodayTayoutDetails, CFocusFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) 
+{
+	Task task = Task();
+	task.task_name = ONRSPQRYTODAYTAYOUTDETAILS;
+
+	if (pTodayTayoutDetails)
+	{
+		task.task_data = *pTodayTayoutDetails;
+	}
+	else
+	{
+		CFocusFtdcTodayTayoutDetailsField empty_data = CFocusFtdcTodayTayoutDetailsField();
+		memset(&empty_data, 0, sizeof(empty_data));
+		task.task_data = empty_data;
+	}
+
+	if (pRspInfo)
+	{
+		task.task_error = *pRspInfo;
+	}
+	else
+	{
+		CFocusFtdcRspInfoField empty_error = CFocusFtdcRspInfoField();
+		memset(&empty_error, 0, sizeof(empty_error));
+		task.task_error = empty_error;
+	}
+	task.task_id = nRequestID;
+	task.task_last = bIsLast;
+	this->task_queue.push(task);
+};
+
 
 
 ///-------------------------------------------------------------------------------------
@@ -1032,6 +1063,12 @@ void TdApi::processTask()
 		case ONRTNAMENDPSPREADINSTRSTRATEGY:
 		{
 			this->processRtnAmendPSpreadInstrStrategy(task);
+			break;
+		}
+
+		case ONRSPQRYTODAYTAYOUTDETAILS:
+		{
+			this->processRspQryTodayTayoutDetails(task);
 			break;
 		}
 
@@ -1925,6 +1962,33 @@ void TdApi::processRtnAmendPSpreadInstrStrategy(Task task)
 	this->onRtnAmendPSpreadInstrStrategy(data);
 };
 
+void TdApi::processRspQryTodayTayoutDetails(Task task)
+{
+	PyLock lock;
+	CFocusFtdcTodayTayoutDetailsField task_data = any_cast<CFocusFtdcTodayTayoutDetailsField>(task.task_data);
+	dict data;
+	data["BrokerID"] = task_data.BrokerID;
+	data["InvestorID"] = task_data.InvestorID;
+	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
+	data["occurTime"] = task_data.occurTime;
+	data["bankId"] = task_data.bankId;
+	data["bankAcctId"] = task_data.bankAcctId;
+	data["contractNum"] = task_data.contractNum;
+	data["acctName"] = GBK_TO_UTF8(task_data.acctName);
+	data["TodayInOut"] = task_data.TodayInOut;
+	data["memo"] = task_data.memo;
+	data["briefId"] = task_data.briefId;
+	data["postAmt"] = task_data.postAmt;
+	data["custId"] = task_data.custId;
+	data["undoFlagDesc"] = task_data.undoFlagDesc;
+
+	CFocusFtdcRspInfoField task_error = any_cast<CFocusFtdcRspInfoField>(task.task_error);
+	dict error;
+	error["ErrorID"] = task_error.ErrorID;
+	error["ErrorMsg"] = GBK_TO_UTF8(task_error.ErrorMsg);
+	this->onRspQryTodayTayoutDetails(data, error, task.task_id, task.task_last);
+};
+
 
 
 
@@ -2322,6 +2386,18 @@ int TdApi::reqBatchOrderAction(dict req, int nRequestID)
 	getInt(req, "FrontID", &myreq.FrontID);
 	getInt(req, "SessionID", &myreq.SessionID);
 	int i = this->api->ReqBatchOrderAction(&myreq, nRequestID);
+	return i;
+};
+
+int TdApi::reqQryTodayTayoutDetails(dict req, int nRequestID)
+{
+	CFocusFtdcQryTodayTayoutDetailsIndexField myreq = CFocusFtdcQryTodayTayoutDetailsIndexField();
+	memset(&myreq, 0, sizeof(myreq));
+	getStr(req, "BrokerID", myreq.BrokerID);
+	getStr(req, "InvestorID", myreq.InvestorID);
+	getStr(req, "UserID", myreq.UserID);
+	getStr(req, "contractNum", myreq.contractNum);
+	int i = this->api->ReqQryTodayTayoutDetails(&myreq, nRequestID);
 	return i;
 };
 
@@ -2752,6 +2828,19 @@ struct TdApiWrap : TdApi, wrapper < TdApi >
 		}
 	};
 
+	virtual void onRspQryTodayTayoutDetails(dict data, dict error, int id, bool last)
+	{
+		try
+		{
+			this->get_override("onRspQryTodayTayoutDetails")(data, error, id, last);
+		}
+		catch (error_already_set const &)
+		{
+			std::cerr << __FILE__ << __LINE__ << std::endl;;
+			PyErr_Print();
+		}
+	};
+
 
 };
 
@@ -2801,6 +2890,7 @@ BOOST_PYTHON_MODULE(focusbinding)
 		.def("onRspBatchOrderAction", pure_virtual(&TdApiWrap::onRspBatchOrderAction))
 		.def("onRtnSpreadInstrStrategy", pure_virtual(&TdApiWrap::onRtnSpreadInstrStrategy))
 		.def("onRtnAmendPSpreadInstrStrategy", pure_virtual(&TdApiWrap::onRtnAmendPSpreadInstrStrategy))
+		.def("onRspQryTodayTayoutDetails", pure_virtual(&TdApiWrap::onRspQryTodayTayoutDetails))
 		.def("reqUserLogin", &TdApiWrap::reqUserLogin)
 		.def("reqUserLogout", &TdApiWrap::reqUserLogout)
 		.def("reqOrderInsert", &TdApiWrap::reqOrderInsert)
@@ -2819,6 +2909,7 @@ BOOST_PYTHON_MODULE(focusbinding)
 		.def("reqSetJavaAlgoStatus", &TdApiWrap::reqSetJavaAlgoStatus)
 		.def("reqBatchOrderInsert", &TdApiWrap::reqBatchOrderInsert)
 		.def("reqBatchOrderAction", &TdApiWrap::reqBatchOrderAction)
+		.def("reqQryTodayTayoutDetails", &TdApiWrap::reqQryTodayTayoutDetails)
 
 		;
 }

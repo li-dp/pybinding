@@ -4946,6 +4946,52 @@ struct CFocusFtdcUnFinshPutureOrderField
 	TFocusFtdcOrderLocalIDType	AlgoParentOrderSysID;
 };
 
+///查询出入金键值
+struct CFocusFtdcQryTodayTayoutDetailsIndexField
+{
+	///经纪公司编号
+	TFocusFtdcBrokerIDType	BrokerID;
+	///投资者编号
+	TFocusFtdcInvestorIDType	InvestorID;
+	///用户代码
+	TFocusFtdcUserIDType	UserID;
+	///合同序号
+	TFocusFtdcOrderSysIDType	contractNum;
+};
+
+///未完成母单信息
+struct CFocusFtdcTodayTayoutDetailsField
+{
+	///经纪公司编号
+	TFocusFtdcBrokerIDType	BrokerID;
+	///投资者编号
+	TFocusFtdcInvestorIDType	InvestorID;
+	///用户代码
+	TFocusFtdcUserIDType	UserID;
+	///发生时间
+	TFocusFtdcCustomType	occurTime;
+	///银行代码
+	TFocusFtdcInvestorIDType	bankId;
+	///银行账号
+	TFocusFtdcInvestorIDType	bankAcctId;
+	///合同序号
+	TFocusFtdcOrderSysIDType	contractNum;
+	///帐号名称
+	TFocusFtdcInstrumentNameType	acctName;
+	///今日出入金
+	TFocusFtdcMoneyType	TodayInOut;
+	///备注
+	TFocusFtdcDepositNoteType	memo;
+	///操作摘要
+	TFocusFtdcDepositNoteType	briefId;
+	///资金本次余额
+	TFocusFtdcMoneyType	postAmt;
+	///客户代码
+	TFocusFtdcInvestorIDType	custId;
+	///冲正标志
+	TFocusFtdcCustomType	undoFlagDesc;
+};
+
 
 
 #endif
