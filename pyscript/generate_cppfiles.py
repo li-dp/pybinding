@@ -234,7 +234,7 @@ def createProcess(cbName, cbArgsTypeList, cbArgsValueList):
             struct = _structPy.structDict[type_]
             for key, cpp_type in struct.items():
                 need_convet_2_utf8 = False
-                for s in ['Name', 'Msg', 'Note', 'User', 'Info', 'Instrument', 'Business', 'Product', 'Branch', 'Local']:
+                for s in ['Name', 'Msg', 'Note', 'User', 'Info', 'Instrument', 'Business', 'Product', 'Branch', 'Local', 'memo', 'Desc' ]:
                     if s in key and cpp_type in ['string', ]:
                         need_convet_2_utf8 = True
                         break

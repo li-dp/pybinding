@@ -1976,11 +1976,11 @@ void TdApi::processRspQryTodayTayoutDetails(Task task)
 	data["contractNum"] = task_data.contractNum;
 	data["acctName"] = GBK_TO_UTF8(task_data.acctName);
 	data["TodayInOut"] = task_data.TodayInOut;
-	data["memo"] = task_data.memo;
+	data["memo"] = GBK_TO_UTF8(task_data.memo);
 	data["briefId"] = task_data.briefId;
 	data["postAmt"] = task_data.postAmt;
 	data["custId"] = task_data.custId;
-	data["undoFlagDesc"] = task_data.undoFlagDesc;
+	data["undoFlagDesc"] = GBK_TO_UTF8(task_data.undoFlagDesc);
 
 	CFocusFtdcRspInfoField task_error = any_cast<CFocusFtdcRspInfoField>(task.task_error);
 	dict error;
