@@ -5,7 +5,7 @@ set(CPPAPI_BASE GuAPI)
 
 # 设置使用的编译器
 if (CMAKE_COMPILER_IS_GNUC OR CMAKE_COMPILER_IS_GNUCXX)
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -std=c++11 -D_GLIBCXX_USE_CXX11_ABI=0")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -std=c++11")
 endif ()
 # disable: pyerrors replace snprintf with _snprintf
 add_definitions(-DHAVE_SNPRINTF)
@@ -39,7 +39,7 @@ if (WIN32)
     set(Boost_USE_STATIC_LIBS        ON)    #链接boost静态库
 endif()
 set(Boost_USE_MULTITHREADED      ON)
-find_package(Boost 1.69 REQUIRED COMPONENTS python36 locale thread date_time system chrono ) # 如果boost库没有完全编译，需要将编译的库明确地指出，否者message(${Boost_LIBRARIES})会出错
+find_package(Boost 1.74 REQUIRED COMPONENTS python310 locale thread date_time system chrono ) # 如果boost库没有完全编译，需要将编译的库明确地指出，否者message(${Boost_LIBRARIES})会出错
 include_directories(${Boost_INCLUDE_DIRS})
 
 # 设置编译源文件
