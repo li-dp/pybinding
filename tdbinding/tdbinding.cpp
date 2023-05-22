@@ -1113,7 +1113,7 @@ void TdApi::processRspUserLogin(Task task)
 	data["TradingDay"] = task_data.TradingDay;
 	data["BrokerID"] = task_data.BrokerID;
 	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
-	data["LoginTime"] = task_data.LoginTime;
+	data["LoginTime"] = GBK_TO_UTF8(task_data.LoginTime);
 	data["MaxOrderLocalID"] = GBK_TO_UTF8(task_data.MaxOrderLocalID);
 	data["TradingSystemName"] = GBK_TO_UTF8(task_data.TradingSystemName);
 	data["DataCenterID"] = task_data.DataCenterID;
@@ -1677,7 +1677,7 @@ void TdApi::processRtnStrategyLog(Task task)
 	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
 	data["InvestorID"] = task_data.InvestorID;
 	data["InstrumentID"] = GBK_TO_UTF8(task_data.InstrumentID);
-	data["Log_Content"] = task_data.Log_Content;
+	data["Log_Content"] = GBK_TO_UTF8(task_data.Log_Content);
 	data["OperDate"] = task_data.OperDate;
 	data["OperTime"] = task_data.OperTime;
 

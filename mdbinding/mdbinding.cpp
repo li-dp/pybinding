@@ -805,7 +805,7 @@ void MdApi::processRspUserLogin(Task task)
 	data["TradingDay"] = task_data.TradingDay;
 	data["BrokerID"] = task_data.BrokerID;
 	data["UserID"] = GBK_TO_UTF8(task_data.UserID);
-	data["LoginTime"] = task_data.LoginTime;
+	data["LoginTime"] = GBK_TO_UTF8(task_data.LoginTime);
 	data["MaxOrderLocalID"] = GBK_TO_UTF8(task_data.MaxOrderLocalID);
 	data["TradingSystemName"] = GBK_TO_UTF8(task_data.TradingSystemName);
 	data["DataCenterID"] = task_data.DataCenterID;
